@@ -3,6 +3,7 @@
 
 import csv
 import re
+import argparse
 
 from collections import Counter
 from enum import IntFlag, auto
@@ -13,6 +14,12 @@ class Socket(IntFlag):
     CHADEMO = auto()
     CCS = auto()
 
+MAX_POWER_KW = {
+    Socket.EF: 4,
+    Socket.T2: 43,
+    Socket.CHADEMO: 63
+}
+
 station_list = {}
 station_attributes = [ 'nom_amenageur', 'siren_amenageur', 'contact_amenageur', 'nom_operateur', 'contact_operateur', 'telephone_operateur', 'nom_enseigne', 'id_station_itinerance', 'id_station_local', 'nom_station', 'implantation_station', 'code_insee_commune', 'nbre_pdc', 'station_deux_roues', 'raccordement', 'num_pdl', 'date_mise_en_service', 'observations', 'adresse_station' ]
 pdc_attributes = [ 'id_pdc_itinerance', 'id_pdc_local', 'puissance_nominale', 'prise_type_ef', 'prise_type_2', 'prise_type_combo_ccs', 'prise_type_chademo', 'prise_type_autre', 'gratuit', 'paiement_acte', 'paiement_cb', 'paiement_autre', 'tarification', 'condition_acces', 'reservation', 'accessibilite_pmr', 'restriction_gabarit', 'observations', 'date_maj', 'cable_t2_attache', 'datagouv_organization_or_owner', 'horaires' ]
@@ -21,6 +28,13 @@ socket_attributes = { 'prise_type_ef': Socket.EF, 'prise_type_2': Socket.T2, 'pr
 errors = []
 power_stats = []
 wrong_ortho = {}
+
+parser = argparse.ArgumentParser(description='This will group, validate and sanitize a previously "consolidated" export of IRVE data from data.gouv.fr')
+parser.add_argument('input', metavar='Input file', nargs='?', default='opendata_irve.csv',
+                    help='csv input file')
+parser.add_argument('-s','--power-stats', required=False, default=False, action='store_true',
+                    help='Print power statistics on stdout')
+args = parser.parse_args()
 
 with open('fixes_networks.csv', 'r') as csv_file:
     csv_reader = csv.DictReader(csv_file, delimiter=',')
@@ -92,11 +106,39 @@ def compute_max_power_per_socket_type(station, errors):
             # FIXME: Probably not usefull anymore. Data looks fine.
             if power_ccs >= 2000:
                 power_ccs /= 1000
-        power_ef = max(power_ef, min(4, power if Socket.EF in socket_mask else 0))
-        power_t2 = max(power_t2, min(43, power if Socket.T2 in socket_mask else 0))
-        power_chademo = max(power_chademo, min(63, power if Socket.CHADEMO in socket_mask else 0))
+
+        err_socket = report_socket_power_out_of_specs(power, socket_mask)
+        if err_socket is not None:
+            errors.append({"station_id" :  station['attributes']['id_station_itinerance'],
+                    "source": station['attributes']['source_grouped'],
+                    "error": "puissance nominale déclarée pour prise {} supérieure à la norme (valeur retenue: {})".format(err_socket.name, MAX_POWER_KW[err_socket]),
+                    "detail": "puissance: {}, prises: {}".format(pdc['puissance_nominale'], socket_mask.name)
+                    })
+
+        power_ef = max(power_ef, min(MAX_POWER_KW[Socket.EF], power if Socket.EF in socket_mask else 0))
+        power_t2 = max(power_t2, min(MAX_POWER_KW[Socket.T2], power if Socket.T2 in socket_mask else 0))
+        power_chademo = max(power_chademo, min(MAX_POWER_KW[Socket.CHADEMO], power if Socket.CHADEMO in socket_mask else 0))
         power_ccs = max(power_ccs, power if Socket.CCS in socket_mask else 0)
+
     return (power_ef, power_t2, power_chademo, power_ccs)
+
+def report_socket_power_out_of_specs(power, socket_mask):
+    """
+    This check can only be done on the most powerfull socket of the PDC:
+    EF < T2 < CHADEMO < CCS
+    Allow rounding errors (max +1 kw). No limits known for CCS.
+    """
+    err_socket = None
+    if Socket.CHADEMO in socket_mask and Socket.CCS in ~socket_mask:
+        if power > MAX_POWER_KW[Socket.CHADEMO] + 1:
+            err_socket = Socket.CHADEMO
+    elif Socket.T2 in socket_mask and Socket.CCS | Socket.CHADEMO in ~socket_mask:
+        if power > MAX_POWER_KW[Socket.T2] + 1:
+            err_socket = Socket.T2
+    elif Socket.EF in socket_mask and Socket.CCS | Socket.CHADEMO | Socket.T2 in ~socket_mask:
+        if power > MAX_POWER_KW[Socket.EF] + 1:
+            err_socket = Socket.EF
+    return err_socket
 
 def stringBoolToInt(strbool):
     return 1 if strbool.lower() == 'true' else 0
@@ -114,9 +156,7 @@ def transformRef(refIti, refLoc):
     else:
         return None
 
-errors = []
-
-with open('opendata_irve.csv') as csvfile:
+with open(args.input) as csvfile:
     reader = csv.DictReader(csvfile, delimiter=',')
     for row in reader:
         if not row['id_station_itinerance']:
@@ -296,10 +336,11 @@ for station_id, station in station_list.items() :
     power_props = ['power_ef_grouped', 'power_t2_grouped', 'power_chademo_grouped', 'power_ccs_grouped']
     station['attributes'].update(zip(power_props, power_grouped_values))
 
-print("Computed power stats:")
-print("       EF  |   T2  | Chademo |  CCS  |")
-for power_set, count in Counter(power_stats).most_common():
-    print(" >    {:4.2f}   {:5.2f}    {:5.2f}   {:6.2f} : {} occurences".format(*power_set, count))
+if args.power_stats:
+    print("Computed power stats:")
+    print("       EF  |   T2  | Chademo |  CCS  |")
+    for power_set, count in Counter(power_stats).most_common():
+        print(" >    {:4.2f}   {:5.2f}    {:5.2f}   {:6.2f} : {} occurences".format(*power_set, count))
 
 print("{} stations".format(len(station_list)))
 
