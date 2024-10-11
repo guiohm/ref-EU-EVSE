@@ -5,9 +5,9 @@ import csv
 import re
 import argparse
 
-from collections import Counter
 from enum import IntFlag, auto
 import modules.import_logger as log
+from modules.report import Report
 
 class Socket(IntFlag):
     EF = auto()
@@ -30,10 +30,10 @@ power_stats = []
 wrong_ortho = {}
 
 parser = argparse.ArgumentParser(description='This will group, validate and sanitize a previously "consolidated" export of IRVE data from data.gouv.fr')
-parser.add_argument('input', metavar='Input file', nargs='?', default='opendata_irve.csv',
-                    help='csv input file')
-parser.add_argument('-s','--power-stats', required=False, default=False, action='store_true',
-                    help='Print power statistics on stdout')
+parser.add_argument('-i', '--input', required=False, default='opendata_irve.csv', nargs='?',
+                    help='CSV input filename. Default is opendata_irve.csv')
+parser.add_argument('--html-report', required=False, default=False, action='store_true',
+                    help='Generate a report at output/report.html')
 args = parser.parse_args()
 
 with open('fixes_networks.csv', 'r') as csv_file:
@@ -225,8 +225,6 @@ with open(args.input) as csvfile:
         pdc_prop = {key: row[key] for key in pdc_attributes}
         station_list[cleanRef]['pdc_list'].append(pdc_prop)
 
-# ~ all_prises_types = set()
-
 for station_id, station in station_list.items() :
     station['attributes']['id_station_itinerance'] = station_id
     sources = set([elem['datagouv_organization_or_owner'] for elem in station['pdc_list']])
@@ -332,49 +330,14 @@ for station_id, station in station_list.items() :
     power_props = ['power_ef_grouped', 'power_t2_grouped', 'power_chademo_grouped', 'power_ccs_grouped']
     station['attributes'].update(zip(power_props, power_grouped_values))
 
-if args.power_stats:
-    print("Computed power stats:")
-    print("       EF  |   T2  | Chademo |  CCS  |")
-    for power_set, count in Counter(power_stats).most_common():
-        print(" >    {:4.2f}   {:5.2f}    {:5.2f}   {:6.2f} : {} occurences".format(*power_set, count))
 
 logs = log._import_logged_data
-source_distinct_station_id_count = 0
-source_distinct_pdc_id_count = 0
-source_line_count = 0
-errors_by_source = None
-severity_stats = None
 
-try:
-    import pandas as pd
-
-    dfinput = pd.read_csv(args.input, memory_map=True, usecols=['id_station_itinerance', 'id_pdc_itinerance'])
-    source_line_count = len(dfinput)
-    source_distinct_station_id_count = len(set(dfinput["id_station_itinerance"]))
-    source_distinct_pdc_id_count = len(set(dfinput["id_pdc_itinerance"]))
-    dflogs = pd.DataFrame(logs)
-    severity_stats = dflogs['level'].value_counts().rename_axis(['Severité'])
-    errors_by_source = dflogs.groupby(['source', 'level'], observed=True, group_keys=True, sort=False).size().sort_values(ascending=False).rename_axis(['Organisation', 'Severité']).unstack(fill_value='-',sort=False)
-except ImportError:
-    source_distinct_station_id_count = 'N/A'
-    source_distinct_pdc_id_count = 'N/A'
-    print("WARNING! Some stats are disabled!")
-    print("==> Please install missing Python libs with: `pip install -r requirements.txt` <==")
-
-if source_line_count > 0:
-    print(f"{source_line_count} lignes (PDCs) en entrée | {source_line_count - source_distinct_pdc_id_count} PDCs en double")
-
-print(f"{len(station_list)} stations reconnues sur {source_distinct_station_id_count} station_id distincts en entrée")
-print(f"{len(logs)} problèmes trouvés pour {source_distinct_pdc_id_count} PDCs distincts en entrée (il peut exister plusieurs problèmes par PDC/station):")
-for (level, msg), count in sorted(Counter([(elem['level'], elem['msg']) for elem in logs]).items()):
-    print(f" > {'['+level+']':>10s} {count:>5d} x {msg}")
-
-if severity_stats is not None:
-    print("\n"+str(severity_stats))
-
-if errors_by_source is not None:
-    print("\nOrganisations les plus problematiques :\n")
-    print(errors_by_source.head(25))
+r = Report(args.input, logs, station_list, power_stats)
+r.generate_report()
+r.render_stdout()
+if args.html_report:
+    r.render_html()
 
 with open("output/opendata_errors.csv", 'w') as ofile:
     tt = csv.DictWriter(ofile, fieldnames=logs[0].keys())
