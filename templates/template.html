@@ -59,8 +59,10 @@
             {% if chunk.title is not none %}
                 <h2>{{ chunk.title }}</h2>
             {% endif %}
+                {% if chunk.collapsable %}
                 <details open>
                     <summary>Expand/Collapse</summary>
+                {% endif %}
                     {% if chunk.html %}
                         <object>{{ chunk.out }}</object>
                     {% elif chunk.markdown %}
@@ -68,7 +70,9 @@
                     {% else %}
                         <pre><code class="language-python">{{ chunk.out|e }}</code></pre>
                     {% endif %}
+                {% if chunk.collapsable %}
                 </details>
+                {% endif %}
             </div>
         {% endfor %}
         </div>

@@ -17,13 +17,14 @@ class Chunk:
     title: str = ""
     html: bool = False
     markdown: bool = False
+    collapsable: bool = True
 
 class Report:
     template_data = {
         "format": "html",
         "toc": True,
         "title": "Rapport de run Jungle-Bus Group IRVE OpenData",
-        "file_name": "output/report.html",
+        "file_name": "output/index.html",
         "timestamp": datetime.now().astimezone().strftime("%Y-%m-%d %H:%M:%S %Z"),
     }
 
@@ -103,6 +104,22 @@ class Report:
         jinja.filters["markdown"] = lambda content: markdown(content, extensions=["tables", ])
 
         chunks = []
+
+        readme_url = utils.get_github_repo_url() + "/README.md"
+        chunks.append(Chunk(
+            title="Présentation",
+            markdown=True,
+            collapsable=False,
+            out=f"Ceci est la page de résultats générée automatiquement. Pour plus d'informations sur le process, voir [{readme_url}]({readme_url})"
+        ))
+        chunks.append(Chunk(
+            title="Fichiers",
+            markdown=True,
+            collapsable=False,
+            out="* [opendata_stations.csv](opendata_stations.csv) : Liste des stations\n"
+                "* [opendata_networks.csv](opendata_networks.csv) : Liste des couples opérateurs / réseau (à des fins de corrections de typo, ajout de tag wikidata, etc)\n"
+                "* [opendata_errors.csv](opendata_errors.csv) : Liste des erreurs rencontrées durant le traitement (avec détail au cas par cas)\n"
+        ))
         with utils.Capturing() as output:
             self.render_stdout()
         chunks.append(Chunk(
