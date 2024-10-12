@@ -1,10 +1,12 @@
 from collections import Counter
 from dataclasses import dataclass, field
-from datetime import datetime
+import datetime as dt
 import itertools
 from markdown import markdown
 
 from . import utils
+
+HISTORY_FILE = "output/history.csv"
 
 id_count = itertools.count()
 def id_increment():
@@ -25,7 +27,7 @@ class Report:
         "toc": True,
         "title": "Rapport de run Jungle-Bus Group IRVE OpenData",
         "file_name": "output/index.html",
-        "timestamp": datetime.now().astimezone().strftime("%Y-%m-%d %H:%M:%S %Z"),
+        "timestamp": dt.datetime.now().astimezone().strftime("%Y-%m-%d %H:%M:%S %Z"),
     }
 
     def __init__(self, input_file, logs, station_list, power_stats):
@@ -43,6 +45,7 @@ class Report:
     def generate_report(self):
         try:
             self._build()
+            self._store_history()
             self.are_packages_installed = True
         except ImportError:
             self.source_distinct_station_id_count = 'N/A'
@@ -153,6 +156,24 @@ class Report:
         report = template.render({**self.template_data, "chunks": chunks, })
         with open(self.template_data.get("file_name"), "w") as out:
             out.write(report)
+
+    def _store_history(self):
+        data = {
+            "date": dt.date.today(),
+            "in_line_count": self.source_line_count,
+            "in_distinct_pdc_id_count": self.source_distinct_pdc_id_count,
+            "in_distinct_station_id_count": self.source_distinct_station_id_count,
+            "out_station_count": len(self.station_list),
+            "logs_count": len(self.logs),
+            "blocking_count": int(self.severity_stats.loc[["blocking"]].iloc[0]),
+            "error_count": int(self.severity_stats.loc[["error"]].iloc[0]),
+            "warning_count": int(self.severity_stats.loc[["warning"]].iloc[0]),
+        }
+        with open(HISTORY_FILE, "+a") as f:
+            if f.tell() == 0:
+                print("WARNING! Creating new history file")
+                f.write(",".join(data.keys()) + "\n")
+            f.write(",".join(map(str, data.values())) + "\n")
 
 if __name__ == "__main__":
     """ This part is used for testing/development.
