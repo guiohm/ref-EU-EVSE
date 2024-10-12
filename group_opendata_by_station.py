@@ -8,6 +8,7 @@ import argparse
 from enum import IntFlag, auto
 import modules.import_logger as log
 from modules.report import Report
+from modules import utils
 
 class Socket(IntFlag):
     EF = auto()
@@ -32,8 +33,10 @@ wrong_ortho = {}
 parser = argparse.ArgumentParser(description='This will group, validate and sanitize a previously "consolidated" export of IRVE data from data.gouv.fr')
 parser.add_argument('-i', '--input', required=False, default='opendata_irve.csv', nargs='?',
                     help='CSV input filename. Default is opendata_irve.csv')
+parser.add_argument('--create-sqlite', required=False, default=False, action='store_true',
+                    help='Generate an sqlite database at output/irve.db')
 parser.add_argument('--html-report', required=False, default=False, action='store_true',
-                    help='Generate a report at output/report.html')
+                    help='Generate a report at output/index.html')
 args = parser.parse_args()
 
 with open('fixes_networks.csv', 'r') as csv_file:
@@ -333,13 +336,6 @@ for station_id, station in station_list.items() :
 
 
 logs = log._import_logged_data
-
-r = Report(args.input, logs, station_list, power_stats)
-r.generate_report()
-r.render_stdout()
-if args.html_report:
-    r.render_html()
-
 with open("output/opendata_errors.csv", 'w') as ofile:
     tt = csv.DictWriter(ofile, fieldnames=logs[0].keys())
     tt.writeheader()
@@ -351,3 +347,11 @@ with open("output/opendata_stations.csv", 'w') as ofile:
     tt.writeheader()
     for station_id, station in station_list.items():
         tt.writerow(station['attributes'])
+
+r = Report(args.input, logs, station_list, power_stats)
+r.generate_report()
+r.render_stdout()
+if args.html_report:
+    r.render_html()
+if args.create_sqlite:
+    utils.create_sqlite(args.input)
