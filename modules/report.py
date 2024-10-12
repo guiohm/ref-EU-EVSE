@@ -105,7 +105,7 @@ class Report:
 
         chunks = []
 
-        readme_url = utils.get_github_repo_url() + "/README.md"
+        readme_url = utils.get_github_repo_url()
         chunks.append(Chunk(
             title="Présentation",
             markdown=True,
