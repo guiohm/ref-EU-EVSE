@@ -2,7 +2,7 @@ name: Get and group data
 
 on:
   schedule:
-    - cron:  '0 4 5 * *'
+    - cron:  '54 6 * * *'
   push:
     branches-ignore:
       - 'gh-pages'
