@@ -1,5 +1,15 @@
 from io import StringIO
+import re
 import sys
+
+def get_github_repo_url():
+    with open(".git/config", "r") as file:
+        config = file.read()
+        match = re.search(r"[/:]([\w\-]+/ref-EU-EVSE)", config, flags=re.I|re.M)
+        if match is not None:
+            return "https://github.com/"+match.group(1)
+    return ""
+
 
 class Capturing(list):
     """Captures stdout into a list of lines.
