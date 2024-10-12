@@ -38,7 +38,7 @@ jobs:
         test `cat output/opendata_stations.csv | xsv count` -ge 2
         cat output/opendata_stations.csv |xsv select nom_operateur,nom_enseigne |xsv sort |uniq > output/opendata_networks.csv
     - name: Deploy
-      if: ${{ github.ref == 'refs/heads/master' }}
+      if: ${{ github.ref == 'refs/heads/main' }}
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
