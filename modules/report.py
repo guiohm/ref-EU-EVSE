@@ -87,6 +87,8 @@ class Report:
             print(f" > {'['+level+']':>10s} {count:>5d} x {msg}")
 
         if self.are_packages_installed:
+            import pandas as pd
+            pd.options.display.max_colwidth = 100
             print("\n"+self.severity_stats.to_string())
 
             print("\nTop 25 Organisations les plus problematiques:\n")
