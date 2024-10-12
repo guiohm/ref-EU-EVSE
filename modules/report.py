@@ -2,6 +2,7 @@ from collections import Counter
 from dataclasses import dataclass, field
 import datetime as dt
 import itertools
+import re
 from markdown import markdown
 
 from . import utils
@@ -20,6 +21,9 @@ class Chunk:
     html: bool = False
     markdown: bool = False
     collapsable: bool = True
+    bigtable: bool = False
+    theader: str = ""
+    trows: str = ""
 
 class Report:
     template_data = {
@@ -102,6 +106,7 @@ class Report:
             return
 
         import pandas as pd
+        import panel as pn
         from jinja2 import Environment, FileSystemLoader
         jinja = Environment(
             loader=FileSystemLoader("./templates")
@@ -151,6 +156,28 @@ class Report:
                 title="Statistiques puissance par station",
                 out="\n".join(output),
             ))
+
+        import sqlite3
+
+        conn = sqlite3.connect('output/irve.db')
+        df = pd.read_sql_query("SELECT * FROM view_logs", conn)
+        conn.close()
+
+        data = df.to_html(border=0)
+        chunks.append(Chunk(
+            title="Problèmes",
+            out=None,
+            theader=data.split("<thead>")[1].split("</thead>")[0],
+            trows=re.sub(r"\n *", "", data).split("<tbody>")[1].split("</tbody>")[0].replace("'", "\\'").replace("</tr><tr>", "</tr>','<tr>"),
+            bigtable=True,
+        ))
+
+        # import perspective
+        # dflogs = pd.DataFrame(self.logs)
+        # t = perspective.table(dflogs)
+        # v = t.view()
+        # with open("output/logs.html", "w") as out:
+        #     out.write(utils.perspective_to_html(v))
 
         template = jinja.get_template(f"template.{self.template_data.get('format')}")
         report = template.render({**self.template_data, "chunks": chunks, })

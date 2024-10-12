@@ -13,6 +13,8 @@
     <style id="prism-light" media="max-width: 1px">{% include "assets/prism-default.css" %}</style>
     <style>{% include "assets/report.css" %}</style>
     <script>{% include "assets/report-themes.js" %}</script>
+    <style>{% include "assets/clusterize.css" %}</style>
+    <script>{% include "assets/clusterize.min.js" %}</script>
 </head>
 <body>
     <nav class="container report-container report-head">
@@ -63,7 +65,32 @@
                 <details open>
                     <summary>Expand/Collapse</summary>
                 {% endif %}
-                    {% if chunk.html %}
+                    {% if chunk.bigtable %}
+                    <div class="clusterize">
+                        <table>
+                            <thead>
+                                {{ chunk.theader }}
+                            </thead>
+                        </table>
+                        <div id="scrollArea" class="clusterize-scroll">
+                            <table>
+                            <tbody id="contentArea" class="clusterize-content">
+                                <tr class="clusterize-no-data">
+                                    <td>Loading data…</td>
+                                </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <script>
+var data = ['{{ chunk.trows }}'];
+var clusterize = new Clusterize({
+  rows: data,
+  scrollId: 'scrollArea',
+  contentId: 'contentArea'
+});
+                    </script>
+                    {% elif chunk.html %}
                         <object>{{ chunk.out }}</object>
                     {% elif chunk.markdown %}
                         {{ markdown(chunk.out) }}
