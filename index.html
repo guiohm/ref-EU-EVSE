@@ -97,7 +97,7 @@ tr:hover {
             <li>
                 <hgroup>
                     <h1>Rapport de run Jungle-Bus Group IRVE OpenData</h1>
-                    <p>2024-10-12 08:48:38 UTC</p>
+                    <p>2024-10-12 11:00:36 UTC</p>
                 </hgroup>
             </li>
         </ul>
@@ -119,23 +119,35 @@ tr:hover {
                         
                             <li><a href="#report-chunk-0">
                             
-                                Récap
+                                Présentation
                             
                             </a></li>
                         
                             <li><a href="#report-chunk-1">
                             
-                                Sévérité par organisation
+                                Fichiers
                             
                             </a></li>
                         
                             <li><a href="#report-chunk-2">
                             
-                                Problèmes par organisation
+                                Récap
                             
                             </a></li>
                         
                             <li><a href="#report-chunk-3">
+                            
+                                Sévérité par organisation
+                            
+                            </a></li>
+                        
+                            <li><a href="#report-chunk-4">
+                            
+                                Problèmes par organisation
+                            
+                            </a></li>
+                        
+                            <li><a href="#report-chunk-5">
                             
                                 Statistiques puissance par station
                             
@@ -150,10 +162,42 @@ tr:hover {
         
             <div class="report-code-block" id="report-chunk-0">
             
+                <h2>Présentation</h2>
+            
+                
+                    
+                        
+    <div><p>Ceci est la page de résultats générée automatiquement. Pour plus d'informations sur le process, voir <a href="https://github.com/guiohm/ref-EU-EVSE/README.md">https://github.com/guiohm/ref-EU-EVSE/README.md</a></p></div>
+
+                    
+                
+            </div>
+        
+            <div class="report-code-block" id="report-chunk-1">
+            
+                <h2>Fichiers</h2>
+            
+                
+                    
+                        
+    <div><ul>
+<li><a href="opendata_stations.csv">opendata_stations.csv</a> : Liste des stations</li>
+<li><a href="opendata_networks.csv">opendata_networks.csv</a> : Liste des couples opérateurs / réseau (à des fins de corrections de typo, ajout de tag wikidata, etc)</li>
+<li><a href="opendata_errors.csv">opendata_errors.csv</a> : Liste des erreurs rencontrées durant le traitement (avec détail au cas par cas)</li>
+</ul></div>
+
+                    
+                
+            </div>
+        
+            <div class="report-code-block" id="report-chunk-2">
+            
                 <h2>Récap</h2>
             
+                
                 <details open>
                     <summary>Expand/Collapse</summary>
+                
                     
                         <pre><code class="language-python">103544 lignes (PDCs) en entrée | 6243 PDCs en double
 27015 stations reconnues sur 37453 station_id distincts en entrée
@@ -186,7 +230,7 @@ Organisation
 TOTAL                                      25169  10830    5394  41393
 alize-charge                               15573      -       -  15573
 izivia                                         -   5764     602   6366
-gireve-2                                     364   1808    2943   5115
+gireve-2                                     364   1810    2945   5119
 lidl                                        4111      -       -   4111
 multiples                                      -   1399       -   1399
 engie-mobilites-electriques                    -    502     502   1004
@@ -195,7 +239,7 @@ allego-1                                     616      -       -    616
 syndicat-departemental-denergie-du-tarn      604      -       -    604
 bump                                         529      -       -    529
 driveco                                        -    325     173    498
-totalenergies-marketing-france               210     21     260    491
+totalenergies-marketing-france               210     22     262    494
 soregies                                     478      -       -    478
 zeborne                                      367      -       -    367
 sowatt-solutions                             275      -       -    275
@@ -210,15 +254,19 @@ car2plug                                     140      -       -    140
 greenspot-enersoft                             -    126      11    137
 ionity-gmbh                                  121      -       -    121</code></pre>
                     
+                
                 </details>
+                
             </div>
         
-            <div class="report-code-block" id="report-chunk-1">
+            <div class="report-code-block" id="report-chunk-3">
             
                 <h2>Sévérité par organisation</h2>
             
+                
                 <details open>
                     <summary>Expand/Collapse</summary>
+                
                     
                         <object><table class="dataframe">
   <thead>
@@ -262,9 +310,9 @@ ionity-gmbh                                  121      -       -    121</code></p
     <tr>
       <th>gireve-2</th>
       <td>364</td>
-      <td>1808</td>
-      <td>2943</td>
-      <td>5115</td>
+      <td>1810</td>
+      <td>2945</td>
+      <td>5119</td>
     </tr>
     <tr>
       <th>lidl</th>
@@ -325,9 +373,9 @@ ionity-gmbh                                  121      -       -    121</code></p
     <tr>
       <th>totalenergies-marketing-france</th>
       <td>210</td>
-      <td>21</td>
-      <td>260</td>
-      <td>491</td>
+      <td>22</td>
+      <td>262</td>
+      <td>494</td>
     </tr>
     <tr>
       <th>soregies</th>
@@ -603,20 +651,6 @@ ionity-gmbh                                  121      -       -    121</code></p
       <td>10</td>
     </tr>
     <tr>
-      <th>spbr1</th>
-      <td>-</td>
-      <td>2</td>
-      <td>8</td>
-      <td>10</td>
-    </tr>
-    <tr>
-      <th>territoire-denergie-orne</th>
-      <td>-</td>
-      <td>4</td>
-      <td>5</td>
-      <td>9</td>
-    </tr>
-    <tr>
       <th>regie-municipale-delectricite-de-loos</th>
       <td>9</td>
       <td>-</td>
@@ -645,13 +679,6 @@ ionity-gmbh                                  121      -       -    121</code></p
       <td>8</td>
     </tr>
     <tr>
-      <th>charge-in</th>
-      <td>6</td>
-      <td>-</td>
-      <td>1</td>
-      <td>7</td>
-    </tr>
-    <tr>
       <th>see-you-sun</th>
       <td>7</td>
       <td>-</td>
@@ -659,10 +686,17 @@ ionity-gmbh                                  121      -       -    121</code></p
       <td>7</td>
     </tr>
     <tr>
-      <th>syndicat-intercommunal-de-lelectricite-et-du-gaz-de-leure</th>
-      <td>2</td>
-      <td>4</td>
+      <th>charge-in</th>
+      <td>6</td>
       <td>-</td>
+      <td>1</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>territoire-denergie-orne</th>
+      <td>-</td>
+      <td>3</td>
+      <td>3</td>
       <td>6</td>
     </tr>
     <tr>
@@ -670,6 +704,20 @@ ionity-gmbh                                  121      -       -    121</code></p
       <td>-</td>
       <td>1</td>
       <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>spbr1</th>
+      <td>-</td>
+      <td>-</td>
+      <td>6</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>syndicat-intercommunal-de-lelectricite-et-du-gaz-de-leure</th>
+      <td>2</td>
+      <td>4</td>
+      <td>-</td>
       <td>6</td>
     </tr>
     <tr>
@@ -1095,15 +1143,19 @@ ionity-gmbh                                  121      -       -    121</code></p
   </tbody>
 </table></object>
                     
+                
                 </details>
+                
             </div>
         
-            <div class="report-code-block" id="report-chunk-2">
+            <div class="report-code-block" id="report-chunk-4">
             
                 <h2>Problèmes par organisation</h2>
             
+                
                 <details open>
                     <summary>Expand/Collapse</summary>
+                
                     
                         <object><table class="dataframe">
   <thead>
@@ -1520,12 +1572,12 @@ ionity-gmbh                                  121      -       -    121</code></p
       <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
     <tr>
-      <th>1395</th>
+      <th>1397</th>
       <th>warning</th>
       <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
     </tr>
     <tr>
-      <th>1804</th>
+      <th>1806</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -2009,16 +2061,7 @@ ionity-gmbh                                  121      -       -    121</code></p
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th rowspan="3" valign="top">spbr1</th>
-      <th rowspan="2" valign="top">2</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th>warning</th>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
+      <th>spbr1</th>
       <th>6</th>
       <th>warning</th>
       <th>plusieurs infos de gratuité (gratuit) pour une même station</th>
@@ -2119,13 +2162,8 @@ ionity-gmbh                                  121      -       -    121</code></p
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th rowspan="3" valign="top">territoire-denergie-orne</th>
-      <th>1</th>
-      <th>warning</th>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">4</th>
+      <th rowspan="2" valign="top">territoire-denergie-orne</th>
+      <th rowspan="2" valign="top">3</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -2140,7 +2178,12 @@ ionity-gmbh                                  121      -       -    121</code></p
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
-      <th rowspan="7" valign="top">totalenergies-marketing-france</th>
+      <th rowspan="8" valign="top">totalenergies-marketing-france</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
       <th>2</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise EF supérieure à la norme (valeur retenue: 4)</th>
@@ -2151,7 +2194,7 @@ ionity-gmbh                                  121      -       -    121</code></p
       <th>plusieurs horaires pour une même station</th>
     </tr>
     <tr>
-      <th>21</th>
+      <th>22</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -2166,7 +2209,7 @@ ionity-gmbh                                  121      -       -    121</code></p
       <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
     <tr>
-      <th>180</th>
+      <th>181</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (valeur retenue: 63)</th>
     </tr>
@@ -2223,15 +2266,19 @@ ionity-gmbh                                  121      -       -    121</code></p
   </tbody>
 </table></object>
                     
+                
                 </details>
+                
             </div>
         
-            <div class="report-code-block" id="report-chunk-3">
+            <div class="report-code-block" id="report-chunk-5">
             
                 <h2>Statistiques puissance par station</h2>
             
+                
                 <details open>
                     <summary>Expand/Collapse</summary>
+                
                     
                         <pre><code class="language-python"> EF  |   T2  | Chademo |  CCS  |
 4.00   22.00     0.00     0.00 | 9553 stations
@@ -2607,14 +2654,16 @@ ionity-gmbh                                  121      -       -    121</code></p
 0.00   17.00     0.00     0.00 | 1 stations
 0.00   43.00    43.00     0.00 | 1 stations</code></pre>
                     
+                
                 </details>
+                
             </div>
         
         </div>
     </main>
     <footer class="container report-container report-foot">
         <small>
-            <p>Généré le 2024-10-12 08:48:38 UTC</p>
+            <p>Généré le 2024-10-12 11:00:36 UTC</p>
         </small>
     </footer>
     <script>/* PrismJS 1.29.0
