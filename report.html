@@ -1,0 +1,2625 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport de run Jungle-Bus Group IRVE OpenData</title>
+    <style>@charset "UTF-8";/*!
+ * Pico CSS ✨ v2.0.6 (https://picocss.com)
+ * Copyright 2019-2024 - Licensed under MIT
+ */:root{--pico-font-family-emoji:"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--pico-font-family-sans-serif:system-ui,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,Helvetica,Arial,"Helvetica Neue",sans-serif,var(--pico-font-family-emoji);--pico-font-family-monospace:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace,var(--pico-font-family-emoji);--pico-font-family:var(--pico-font-family-sans-serif);--pico-line-height:1.5;--pico-font-weight:400;--pico-font-size:100%;--pico-text-underline-offset:0.1rem;--pico-border-radius:0.25rem;--pico-border-width:0.0625rem;--pico-outline-width:0.125rem;--pico-transition:0.2s ease-in-out;--pico-spacing:1rem;--pico-typography-spacing-vertical:1rem;--pico-block-spacing-vertical:var(--pico-spacing);--pico-block-spacing-horizontal:var(--pico-spacing);--pico-grid-column-gap:var(--pico-spacing);--pico-grid-row-gap:var(--pico-spacing);--pico-form-element-spacing-vertical:0.75rem;--pico-form-element-spacing-horizontal:1rem;--pico-group-box-shadow:0 0 0 rgba(0, 0, 0, 0);--pico-group-box-shadow-focus-with-button:0 0 0 var(--pico-outline-width) var(--pico-primary-focus);--pico-group-box-shadow-focus-with-input:0 0 0 0.0625rem var(--pico-form-element-border-color);--pico-modal-overlay-backdrop-filter:blur(0.375rem);--pico-nav-element-spacing-vertical:1rem;--pico-nav-element-spacing-horizontal:0.5rem;--pico-nav-link-spacing-vertical:0.5rem;--pico-nav-link-spacing-horizontal:0.5rem;--pico-nav-breadcrumb-divider:">";--pico-icon-checkbox:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(255, 255, 255)' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");--pico-icon-minus:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(255, 255, 255)' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='5' y1='12' x2='19' y2='12'%3E%3C/line%3E%3C/svg%3E");--pico-icon-chevron:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(136, 145, 164)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");--pico-icon-date:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(136, 145, 164)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='4' width='18' height='18' rx='2' ry='2'%3E%3C/rect%3E%3Cline x1='16' y1='2' x2='16' y2='6'%3E%3C/line%3E%3Cline x1='8' y1='2' x2='8' y2='6'%3E%3C/line%3E%3Cline x1='3' y1='10' x2='21' y2='10'%3E%3C/line%3E%3C/svg%3E");--pico-icon-time:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(136, 145, 164)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cpolyline points='12 6 12 12 16 14'%3E%3C/polyline%3E%3C/svg%3E");--pico-icon-search:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(136, 145, 164)' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");--pico-icon-close:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(136, 145, 164)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E");--pico-icon-loading:url("data:image/svg+xml,%3Csvg fill='none' height='24' width='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' %3E%3Cstyle%3E g %7B animation: rotate 2s linear infinite; transform-origin: center center; %7D circle %7B stroke-dasharray: 75,100; stroke-dashoffset: -5; animation: dash 1.5s ease-in-out infinite; stroke-linecap: round; %7D @keyframes rotate %7B 0%25 %7B transform: rotate(0deg); %7D 100%25 %7B transform: rotate(360deg); %7D %7D @keyframes dash %7B 0%25 %7B stroke-dasharray: 1,100; stroke-dashoffset: 0; %7D 50%25 %7B stroke-dasharray: 44.5,100; stroke-dashoffset: -17.5; %7D 100%25 %7B stroke-dasharray: 44.5,100; stroke-dashoffset: -62; %7D %7D %3C/style%3E%3Cg%3E%3Ccircle cx='12' cy='12' r='10' fill='none' stroke='rgb(136, 145, 164)' stroke-width='4' /%3E%3C/g%3E%3C/svg%3E")}@media (min-width:576px){:root{--pico-font-size:106.25%}}@media (min-width:768px){:root{--pico-font-size:112.5%}}@media (min-width:1024px){:root{--pico-font-size:118.75%}}@media (min-width:1280px){:root{--pico-font-size:125%}}@media (min-width:1536px){:root{--pico-font-size:131.25%}}a{--pico-text-decoration:underline}a.contrast,a.secondary{--pico-text-decoration:underline}small{--pico-font-size:0.875em}h1,h2,h3,h4,h5,h6{--pico-font-weight:700}h1{--pico-font-size:2rem;--pico-line-height:1.125;--pico-typography-spacing-top:3rem}h2{--pico-font-size:1.75rem;--pico-line-height:1.15;--pico-typography-spacing-top:2.625rem}h3{--pico-font-size:1.5rem;--pico-line-height:1.175;--pico-typography-spacing-top:2.25rem}h4{--pico-font-size:1.25rem;--pico-line-height:1.2;--pico-typography-spacing-top:1.874rem}h5{--pico-font-size:1.125rem;--pico-line-height:1.225;--pico-typography-spacing-top:1.6875rem}h6{--pico-font-size:1rem;--pico-line-height:1.25;--pico-typography-spacing-top:1.5rem}tfoot td,tfoot th,thead td,thead th{--pico-font-weight:600;--pico-border-width:0.1875rem}code,kbd,pre,samp{--pico-font-family:var(--pico-font-family-monospace)}kbd{--pico-font-weight:bolder}:where(select,textarea),input:not([type=submit],[type=button],[type=reset],[type=checkbox],[type=radio],[type=file]){--pico-outline-width:0.0625rem}[type=search]{--pico-border-radius:5rem}[type=checkbox],[type=radio]{--pico-border-width:0.125rem}[type=checkbox][role=switch]{--pico-border-width:0.1875rem}details.dropdown summary:not([role=button]){--pico-outline-width:0.0625rem}nav details.dropdown summary:focus-visible{--pico-outline-width:0.125rem}[role=search]{--pico-border-radius:5rem}[role=group]:has(button.secondary:focus,[type=submit].secondary:focus,[type=button].secondary:focus,[role=button].secondary:focus),[role=search]:has(button.secondary:focus,[type=submit].secondary:focus,[type=button].secondary:focus,[role=button].secondary:focus){--pico-group-box-shadow-focus-with-button:0 0 0 var(--pico-outline-width) var(--pico-secondary-focus)}[role=group]:has(button.contrast:focus,[type=submit].contrast:focus,[type=button].contrast:focus,[role=button].contrast:focus),[role=search]:has(button.contrast:focus,[type=submit].contrast:focus,[type=button].contrast:focus,[role=button].contrast:focus){--pico-group-box-shadow-focus-with-button:0 0 0 var(--pico-outline-width) var(--pico-contrast-focus)}[role=group] [role=button],[role=group] [type=button],[role=group] [type=submit],[role=group] button,[role=search] [role=button],[role=search] [type=button],[role=search] [type=submit],[role=search] button{--pico-form-element-spacing-horizontal:2rem}details summary[role=button]:not(.outline)::after{filter:brightness(0) invert(1)}[aria-busy=true]:not(input,select,textarea):is(button,[type=submit],[type=button],[type=reset],[role=button]):not(.outline)::before{filter:brightness(0) invert(1)}:root:not([data-theme=dark]),[data-theme=light]{--pico-background-color:#fff;--pico-color:#373c44;--pico-text-selection-color:rgba(2, 154, 232, 0.25);--pico-muted-color:#646b79;--pico-muted-border-color:#e7eaf0;--pico-primary:#0172ad;--pico-primary-background:#0172ad;--pico-primary-border:var(--pico-primary-background);--pico-primary-underline:rgba(1, 114, 173, 0.5);--pico-primary-hover:#015887;--pico-primary-hover-background:#02659a;--pico-primary-hover-border:var(--pico-primary-hover-background);--pico-primary-hover-underline:var(--pico-primary-hover);--pico-primary-focus:rgba(2, 154, 232, 0.5);--pico-primary-inverse:#fff;--pico-secondary:#5d6b89;--pico-secondary-background:#525f7a;--pico-secondary-border:var(--pico-secondary-background);--pico-secondary-underline:rgba(93, 107, 137, 0.5);--pico-secondary-hover:#48536b;--pico-secondary-hover-background:#48536b;--pico-secondary-hover-border:var(--pico-secondary-hover-background);--pico-secondary-hover-underline:var(--pico-secondary-hover);--pico-secondary-focus:rgba(93, 107, 137, 0.25);--pico-secondary-inverse:#fff;--pico-contrast:#181c25;--pico-contrast-background:#181c25;--pico-contrast-border:var(--pico-contrast-background);--pico-contrast-underline:rgba(24, 28, 37, 0.5);--pico-contrast-hover:#000;--pico-contrast-hover-background:#000;--pico-contrast-hover-border:var(--pico-contrast-hover-background);--pico-contrast-hover-underline:var(--pico-secondary-hover);--pico-contrast-focus:rgba(93, 107, 137, 0.25);--pico-contrast-inverse:#fff;--pico-box-shadow:0.0145rem 0.029rem 0.174rem rgba(129, 145, 181, 0.01698),0.0335rem 0.067rem 0.402rem rgba(129, 145, 181, 0.024),0.0625rem 0.125rem 0.75rem rgba(129, 145, 181, 0.03),0.1125rem 0.225rem 1.35rem rgba(129, 145, 181, 0.036),0.2085rem 0.417rem 2.502rem rgba(129, 145, 181, 0.04302),0.5rem 1rem 6rem rgba(129, 145, 181, 0.06),0 0 0 0.0625rem rgba(129, 145, 181, 0.015);--pico-h1-color:#2d3138;--pico-h2-color:#373c44;--pico-h3-color:#424751;--pico-h4-color:#4d535e;--pico-h5-color:#5c6370;--pico-h6-color:#646b79;--pico-mark-background-color:#fde7c0;--pico-mark-color:#0f1114;--pico-ins-color:#1d6a54;--pico-del-color:#883935;--pico-blockquote-border-color:var(--pico-muted-border-color);--pico-blockquote-footer-color:var(--pico-muted-color);--pico-button-box-shadow:0 0 0 rgba(0, 0, 0, 0);--pico-button-hover-box-shadow:0 0 0 rgba(0, 0, 0, 0);--pico-table-border-color:var(--pico-muted-border-color);--pico-table-row-stripped-background-color:rgba(111, 120, 135, 0.0375);--pico-code-background-color:#f3f5f7;--pico-code-color:#646b79;--pico-code-kbd-background-color:var(--pico-color);--pico-code-kbd-color:var(--pico-background-color);--pico-form-element-background-color:#fbfcfc;--pico-form-element-selected-background-color:#dfe3eb;--pico-form-element-border-color:#cfd5e2;--pico-form-element-color:#23262c;--pico-form-element-placeholder-color:var(--pico-muted-color);--pico-form-element-active-background-color:#fff;--pico-form-element-active-border-color:var(--pico-primary-border);--pico-form-element-focus-color:var(--pico-primary-border);--pico-form-element-disabled-opacity:0.5;--pico-form-element-invalid-border-color:#b86a6b;--pico-form-element-invalid-active-border-color:#c84f48;--pico-form-element-invalid-focus-color:var(--pico-form-element-invalid-active-border-color);--pico-form-element-valid-border-color:#4c9b8a;--pico-form-element-valid-active-border-color:#279977;--pico-form-element-valid-focus-color:var(--pico-form-element-valid-active-border-color);--pico-switch-background-color:#bfc7d9;--pico-switch-checked-background-color:var(--pico-primary-background);--pico-switch-color:#fff;--pico-switch-thumb-box-shadow:0 0 0 rgba(0, 0, 0, 0);--pico-range-border-color:#dfe3eb;--pico-range-active-border-color:#bfc7d9;--pico-range-thumb-border-color:var(--pico-background-color);--pico-range-thumb-color:var(--pico-secondary-background);--pico-range-thumb-active-color:var(--pico-primary-background);--pico-accordion-border-color:var(--pico-muted-border-color);--pico-accordion-active-summary-color:var(--pico-primary-hover);--pico-accordion-close-summary-color:var(--pico-color);--pico-accordion-open-summary-color:var(--pico-muted-color);--pico-card-background-color:var(--pico-background-color);--pico-card-border-color:var(--pico-muted-border-color);--pico-card-box-shadow:var(--pico-box-shadow);--pico-card-sectioning-background-color:#fbfcfc;--pico-dropdown-background-color:#fff;--pico-dropdown-border-color:#eff1f4;--pico-dropdown-box-shadow:var(--pico-box-shadow);--pico-dropdown-color:var(--pico-color);--pico-dropdown-hover-background-color:#eff1f4;--pico-loading-spinner-opacity:0.5;--pico-modal-overlay-background-color:rgba(232, 234, 237, 0.75);--pico-progress-background-color:#dfe3eb;--pico-progress-color:var(--pico-primary-background);--pico-tooltip-background-color:var(--pico-contrast-background);--pico-tooltip-color:var(--pico-contrast-inverse);--pico-icon-valid:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(76, 155, 138)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");--pico-icon-invalid:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(200, 79, 72)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cline x1='12' y1='8' x2='12' y2='12'%3E%3C/line%3E%3Cline x1='12' y1='16' x2='12.01' y2='16'%3E%3C/line%3E%3C/svg%3E");color-scheme:light}:root:not([data-theme=dark]) input:is([type=submit],[type=button],[type=reset],[type=checkbox],[type=radio],[type=file]),[data-theme=light] input:is([type=submit],[type=button],[type=reset],[type=checkbox],[type=radio],[type=file]){--pico-form-element-focus-color:var(--pico-primary-focus)}@media only screen and (prefers-color-scheme:dark){:root:not([data-theme]){--pico-background-color:#13171f;--pico-color:#c2c7d0;--pico-text-selection-color:rgba(1, 170, 255, 0.1875);--pico-muted-color:#7b8495;--pico-muted-border-color:#202632;--pico-primary:#01aaff;--pico-primary-background:#0172ad;--pico-primary-border:var(--pico-primary-background);--pico-primary-underline:rgba(1, 170, 255, 0.5);--pico-primary-hover:#79c0ff;--pico-primary-hover-background:#017fc0;--pico-primary-hover-border:var(--pico-primary-hover-background);--pico-primary-hover-underline:var(--pico-primary-hover);--pico-primary-focus:rgba(1, 170, 255, 0.375);--pico-primary-inverse:#fff;--pico-secondary:#969eaf;--pico-secondary-background:#525f7a;--pico-secondary-border:var(--pico-secondary-background);--pico-secondary-underline:rgba(150, 158, 175, 0.5);--pico-secondary-hover:#b3b9c5;--pico-secondary-hover-background:#5d6b89;--pico-secondary-hover-border:var(--pico-secondary-hover-background);--pico-secondary-hover-underline:var(--pico-secondary-hover);--pico-secondary-focus:rgba(144, 158, 190, 0.25);--pico-secondary-inverse:#fff;--pico-contrast:#dfe3eb;--pico-contrast-background:#eff1f4;--pico-contrast-border:var(--pico-contrast-background);--pico-contrast-underline:rgba(223, 227, 235, 0.5);--pico-contrast-hover:#fff;--pico-contrast-hover-background:#fff;--pico-contrast-hover-border:var(--pico-contrast-hover-background);--pico-contrast-hover-underline:var(--pico-contrast-hover);--pico-contrast-focus:rgba(207, 213, 226, 0.25);--pico-contrast-inverse:#000;--pico-box-shadow:0.0145rem 0.029rem 0.174rem rgba(7, 9, 12, 0.01698),0.0335rem 0.067rem 0.402rem rgba(7, 9, 12, 0.024),0.0625rem 0.125rem 0.75rem rgba(7, 9, 12, 0.03),0.1125rem 0.225rem 1.35rem rgba(7, 9, 12, 0.036),0.2085rem 0.417rem 2.502rem rgba(7, 9, 12, 0.04302),0.5rem 1rem 6rem rgba(7, 9, 12, 0.06),0 0 0 0.0625rem rgba(7, 9, 12, 0.015);--pico-h1-color:#f0f1f3;--pico-h2-color:#e0e3e7;--pico-h3-color:#c2c7d0;--pico-h4-color:#b3b9c5;--pico-h5-color:#a4acba;--pico-h6-color:#8891a4;--pico-mark-background-color:#014063;--pico-mark-color:#fff;--pico-ins-color:#62af9a;--pico-del-color:#ce7e7b;--pico-blockquote-border-color:var(--pico-muted-border-color);--pico-blockquote-footer-color:var(--pico-muted-color);--pico-button-box-shadow:0 0 0 rgba(0, 0, 0, 0);--pico-button-hover-box-shadow:0 0 0 rgba(0, 0, 0, 0);--pico-table-border-color:var(--pico-muted-border-color);--pico-table-row-stripped-background-color:rgba(111, 120, 135, 0.0375);--pico-code-background-color:#1a1f28;--pico-code-color:#8891a4;--pico-code-kbd-background-color:var(--pico-color);--pico-code-kbd-color:var(--pico-background-color);--pico-form-element-background-color:#1c212c;--pico-form-element-selected-background-color:#2a3140;--pico-form-element-border-color:#2a3140;--pico-form-element-color:#e0e3e7;--pico-form-element-placeholder-color:#8891a4;--pico-form-element-active-background-color:#1a1f28;--pico-form-element-active-border-color:var(--pico-primary-border);--pico-form-element-focus-color:var(--pico-primary-border);--pico-form-element-disabled-opacity:0.5;--pico-form-element-invalid-border-color:#964a50;--pico-form-element-invalid-active-border-color:#b7403b;--pico-form-element-invalid-focus-color:var(--pico-form-element-invalid-active-border-color);--pico-form-element-valid-border-color:#2a7b6f;--pico-form-element-valid-active-border-color:#16896a;--pico-form-element-valid-focus-color:var(--pico-form-element-valid-active-border-color);--pico-switch-background-color:#333c4e;--pico-switch-checked-background-color:var(--pico-primary-background);--pico-switch-color:#fff;--pico-switch-thumb-box-shadow:0 0 0 rgba(0, 0, 0, 0);--pico-range-border-color:#202632;--pico-range-active-border-color:#2a3140;--pico-range-thumb-border-color:var(--pico-background-color);--pico-range-thumb-color:var(--pico-secondary-background);--pico-range-thumb-active-color:var(--pico-primary-background);--pico-accordion-border-color:var(--pico-muted-border-color);--pico-accordion-active-summary-color:var(--pico-primary-hover);--pico-accordion-close-summary-color:var(--pico-color);--pico-accordion-open-summary-color:var(--pico-muted-color);--pico-card-background-color:#181c25;--pico-card-border-color:var(--pico-card-background-color);--pico-card-box-shadow:var(--pico-box-shadow);--pico-card-sectioning-background-color:#1a1f28;--pico-dropdown-background-color:#181c25;--pico-dropdown-border-color:#202632;--pico-dropdown-box-shadow:var(--pico-box-shadow);--pico-dropdown-color:var(--pico-color);--pico-dropdown-hover-background-color:#202632;--pico-loading-spinner-opacity:0.5;--pico-modal-overlay-background-color:rgba(8, 9, 10, 0.75);--pico-progress-background-color:#202632;--pico-progress-color:var(--pico-primary-background);--pico-tooltip-background-color:var(--pico-contrast-background);--pico-tooltip-color:var(--pico-contrast-inverse);--pico-icon-valid:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(42, 123, 111)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");--pico-icon-invalid:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(150, 74, 80)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cline x1='12' y1='8' x2='12' y2='12'%3E%3C/line%3E%3Cline x1='12' y1='16' x2='12.01' y2='16'%3E%3C/line%3E%3C/svg%3E");color-scheme:dark}:root:not([data-theme]) input:is([type=submit],[type=button],[type=reset],[type=checkbox],[type=radio],[type=file]){--pico-form-element-focus-color:var(--pico-primary-focus)}:root:not([data-theme]) details summary[role=button].contrast:not(.outline)::after{filter:brightness(0)}:root:not([data-theme]) [aria-busy=true]:not(input,select,textarea).contrast:is(button,[type=submit],[type=button],[type=reset],[role=button]):not(.outline)::before{filter:brightness(0)}}[data-theme=dark]{--pico-background-color:#13171f;--pico-color:#c2c7d0;--pico-text-selection-color:rgba(1, 170, 255, 0.1875);--pico-muted-color:#7b8495;--pico-muted-border-color:#202632;--pico-primary:#01aaff;--pico-primary-background:#0172ad;--pico-primary-border:var(--pico-primary-background);--pico-primary-underline:rgba(1, 170, 255, 0.5);--pico-primary-hover:#79c0ff;--pico-primary-hover-background:#017fc0;--pico-primary-hover-border:var(--pico-primary-hover-background);--pico-primary-hover-underline:var(--pico-primary-hover);--pico-primary-focus:rgba(1, 170, 255, 0.375);--pico-primary-inverse:#fff;--pico-secondary:#969eaf;--pico-secondary-background:#525f7a;--pico-secondary-border:var(--pico-secondary-background);--pico-secondary-underline:rgba(150, 158, 175, 0.5);--pico-secondary-hover:#b3b9c5;--pico-secondary-hover-background:#5d6b89;--pico-secondary-hover-border:var(--pico-secondary-hover-background);--pico-secondary-hover-underline:var(--pico-secondary-hover);--pico-secondary-focus:rgba(144, 158, 190, 0.25);--pico-secondary-inverse:#fff;--pico-contrast:#dfe3eb;--pico-contrast-background:#eff1f4;--pico-contrast-border:var(--pico-contrast-background);--pico-contrast-underline:rgba(223, 227, 235, 0.5);--pico-contrast-hover:#fff;--pico-contrast-hover-background:#fff;--pico-contrast-hover-border:var(--pico-contrast-hover-background);--pico-contrast-hover-underline:var(--pico-contrast-hover);--pico-contrast-focus:rgba(207, 213, 226, 0.25);--pico-contrast-inverse:#000;--pico-box-shadow:0.0145rem 0.029rem 0.174rem rgba(7, 9, 12, 0.01698),0.0335rem 0.067rem 0.402rem rgba(7, 9, 12, 0.024),0.0625rem 0.125rem 0.75rem rgba(7, 9, 12, 0.03),0.1125rem 0.225rem 1.35rem rgba(7, 9, 12, 0.036),0.2085rem 0.417rem 2.502rem rgba(7, 9, 12, 0.04302),0.5rem 1rem 6rem rgba(7, 9, 12, 0.06),0 0 0 0.0625rem rgba(7, 9, 12, 0.015);--pico-h1-color:#f0f1f3;--pico-h2-color:#e0e3e7;--pico-h3-color:#c2c7d0;--pico-h4-color:#b3b9c5;--pico-h5-color:#a4acba;--pico-h6-color:#8891a4;--pico-mark-background-color:#014063;--pico-mark-color:#fff;--pico-ins-color:#62af9a;--pico-del-color:#ce7e7b;--pico-blockquote-border-color:var(--pico-muted-border-color);--pico-blockquote-footer-color:var(--pico-muted-color);--pico-button-box-shadow:0 0 0 rgba(0, 0, 0, 0);--pico-button-hover-box-shadow:0 0 0 rgba(0, 0, 0, 0);--pico-table-border-color:var(--pico-muted-border-color);--pico-table-row-stripped-background-color:rgba(111, 120, 135, 0.0375);--pico-code-background-color:#1a1f28;--pico-code-color:#8891a4;--pico-code-kbd-background-color:var(--pico-color);--pico-code-kbd-color:var(--pico-background-color);--pico-form-element-background-color:#1c212c;--pico-form-element-selected-background-color:#2a3140;--pico-form-element-border-color:#2a3140;--pico-form-element-color:#e0e3e7;--pico-form-element-placeholder-color:#8891a4;--pico-form-element-active-background-color:#1a1f28;--pico-form-element-active-border-color:var(--pico-primary-border);--pico-form-element-focus-color:var(--pico-primary-border);--pico-form-element-disabled-opacity:0.5;--pico-form-element-invalid-border-color:#964a50;--pico-form-element-invalid-active-border-color:#b7403b;--pico-form-element-invalid-focus-color:var(--pico-form-element-invalid-active-border-color);--pico-form-element-valid-border-color:#2a7b6f;--pico-form-element-valid-active-border-color:#16896a;--pico-form-element-valid-focus-color:var(--pico-form-element-valid-active-border-color);--pico-switch-background-color:#333c4e;--pico-switch-checked-background-color:var(--pico-primary-background);--pico-switch-color:#fff;--pico-switch-thumb-box-shadow:0 0 0 rgba(0, 0, 0, 0);--pico-range-border-color:#202632;--pico-range-active-border-color:#2a3140;--pico-range-thumb-border-color:var(--pico-background-color);--pico-range-thumb-color:var(--pico-secondary-background);--pico-range-thumb-active-color:var(--pico-primary-background);--pico-accordion-border-color:var(--pico-muted-border-color);--pico-accordion-active-summary-color:var(--pico-primary-hover);--pico-accordion-close-summary-color:var(--pico-color);--pico-accordion-open-summary-color:var(--pico-muted-color);--pico-card-background-color:#181c25;--pico-card-border-color:var(--pico-card-background-color);--pico-card-box-shadow:var(--pico-box-shadow);--pico-card-sectioning-background-color:#1a1f28;--pico-dropdown-background-color:#181c25;--pico-dropdown-border-color:#202632;--pico-dropdown-box-shadow:var(--pico-box-shadow);--pico-dropdown-color:var(--pico-color);--pico-dropdown-hover-background-color:#202632;--pico-loading-spinner-opacity:0.5;--pico-modal-overlay-background-color:rgba(8, 9, 10, 0.75);--pico-progress-background-color:#202632;--pico-progress-color:var(--pico-primary-background);--pico-tooltip-background-color:var(--pico-contrast-background);--pico-tooltip-color:var(--pico-contrast-inverse);--pico-icon-valid:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(42, 123, 111)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");--pico-icon-invalid:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(150, 74, 80)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cline x1='12' y1='8' x2='12' y2='12'%3E%3C/line%3E%3Cline x1='12' y1='16' x2='12.01' y2='16'%3E%3C/line%3E%3C/svg%3E");color-scheme:dark}[data-theme=dark] input:is([type=submit],[type=button],[type=reset],[type=checkbox],[type=radio],[type=file]){--pico-form-element-focus-color:var(--pico-primary-focus)}[data-theme=dark] details summary[role=button].contrast:not(.outline)::after{filter:brightness(0)}[data-theme=dark] [aria-busy=true]:not(input,select,textarea).contrast:is(button,[type=submit],[type=button],[type=reset],[role=button]):not(.outline)::before{filter:brightness(0)}[type=checkbox],[type=radio],[type=range],progress{accent-color:var(--pico-primary)}*,::after,::before{box-sizing:border-box;background-repeat:no-repeat}::after,::before{text-decoration:inherit;vertical-align:inherit}:where(:root){-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;text-size-adjust:100%;background-color:var(--pico-background-color);color:var(--pico-color);font-weight:var(--pico-font-weight);font-size:var(--pico-font-size);line-height:var(--pico-line-height);font-family:var(--pico-font-family);text-underline-offset:var(--pico-text-underline-offset);text-rendering:optimizeLegibility;overflow-wrap:break-word;-moz-tab-size:4;-o-tab-size:4;tab-size:4}body{width:100%;margin:0}main{display:block}body>footer,body>header,body>main{padding-block:var(--pico-block-spacing-vertical)}section{margin-bottom:var(--pico-block-spacing-vertical)}.container,.container-fluid{width:100%;margin-right:auto;margin-left:auto;padding-right:var(--pico-spacing);padding-left:var(--pico-spacing)}@media (min-width:576px){.container{max-width:510px;padding-right:0;padding-left:0}}@media (min-width:768px){.container{max-width:700px}}@media (min-width:1024px){.container{max-width:950px}}@media (min-width:1280px){.container{max-width:1200px}}@media (min-width:1536px){.container{max-width:1450px}}.grid{grid-column-gap:var(--pico-grid-column-gap);grid-row-gap:var(--pico-grid-row-gap);display:grid;grid-template-columns:1fr}@media (min-width:768px){.grid{grid-template-columns:repeat(auto-fit,minmax(0%,1fr))}}.grid>*{min-width:0}.overflow-auto{overflow:auto}b,strong{font-weight:bolder}sub,sup{position:relative;font-size:.75em;line-height:0;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}address,blockquote,dl,ol,p,pre,table,ul{margin-top:0;margin-bottom:var(--pico-typography-spacing-vertical);color:var(--pico-color);font-style:normal;font-weight:var(--pico-font-weight)}h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:var(--pico-typography-spacing-vertical);color:var(--pico-color);font-weight:var(--pico-font-weight);font-size:var(--pico-font-size);line-height:var(--pico-line-height);font-family:var(--pico-font-family)}h1{--pico-color:var(--pico-h1-color)}h2{--pico-color:var(--pico-h2-color)}h3{--pico-color:var(--pico-h3-color)}h4{--pico-color:var(--pico-h4-color)}h5{--pico-color:var(--pico-h5-color)}h6{--pico-color:var(--pico-h6-color)}:where(article,address,blockquote,dl,figure,form,ol,p,pre,table,ul)~:is(h1,h2,h3,h4,h5,h6){margin-top:var(--pico-typography-spacing-top)}p{margin-bottom:var(--pico-typography-spacing-vertical)}hgroup{margin-bottom:var(--pico-typography-spacing-vertical)}hgroup>*{margin-top:0;margin-bottom:0}hgroup>:not(:first-child):last-child{--pico-color:var(--pico-muted-color);--pico-font-weight:unset;font-size:1rem}:where(ol,ul) li{margin-bottom:calc(var(--pico-typography-spacing-vertical) * .25)}:where(dl,ol,ul) :where(dl,ol,ul){margin:0;margin-top:calc(var(--pico-typography-spacing-vertical) * .25)}ul li{list-style:square}mark{padding:.125rem .25rem;background-color:var(--pico-mark-background-color);color:var(--pico-mark-color);vertical-align:baseline}blockquote{display:block;margin:var(--pico-typography-spacing-vertical) 0;padding:var(--pico-spacing);border-right:none;border-left:.25rem solid var(--pico-blockquote-border-color);border-inline-start:0.25rem solid var(--pico-blockquote-border-color);border-inline-end:none}blockquote footer{margin-top:calc(var(--pico-typography-spacing-vertical) * .5);color:var(--pico-blockquote-footer-color)}abbr[title]{border-bottom:1px dotted;text-decoration:none;cursor:help}ins{color:var(--pico-ins-color);text-decoration:none}del{color:var(--pico-del-color)}::-moz-selection{background-color:var(--pico-text-selection-color)}::selection{background-color:var(--pico-text-selection-color)}:where(a:not([role=button])),[role=link]{--pico-color:var(--pico-primary);--pico-background-color:transparent;--pico-underline:var(--pico-primary-underline);outline:0;background-color:var(--pico-background-color);color:var(--pico-color);-webkit-text-decoration:var(--pico-text-decoration);text-decoration:var(--pico-text-decoration);text-decoration-color:var(--pico-underline);text-underline-offset:0.125em;transition:background-color var(--pico-transition),color var(--pico-transition),box-shadow var(--pico-transition),-webkit-text-decoration var(--pico-transition);transition:background-color var(--pico-transition),color var(--pico-transition),text-decoration var(--pico-transition),box-shadow var(--pico-transition);transition:background-color var(--pico-transition),color var(--pico-transition),text-decoration var(--pico-transition),box-shadow var(--pico-transition),-webkit-text-decoration var(--pico-transition)}:where(a:not([role=button])):is([aria-current]:not([aria-current=false]),:hover,:active,:focus),[role=link]:is([aria-current]:not([aria-current=false]),:hover,:active,:focus){--pico-color:var(--pico-primary-hover);--pico-underline:var(--pico-primary-hover-underline);--pico-text-decoration:underline}:where(a:not([role=button])):focus-visible,[role=link]:focus-visible{box-shadow:0 0 0 var(--pico-outline-width) var(--pico-primary-focus)}:where(a:not([role=button])).secondary,[role=link].secondary{--pico-color:var(--pico-secondary);--pico-underline:var(--pico-secondary-underline)}:where(a:not([role=button])).secondary:is([aria-current]:not([aria-current=false]),:hover,:active,:focus),[role=link].secondary:is([aria-current]:not([aria-current=false]),:hover,:active,:focus){--pico-color:var(--pico-secondary-hover);--pico-underline:var(--pico-secondary-hover-underline)}:where(a:not([role=button])).contrast,[role=link].contrast{--pico-color:var(--pico-contrast);--pico-underline:var(--pico-contrast-underline)}:where(a:not([role=button])).contrast:is([aria-current]:not([aria-current=false]),:hover,:active,:focus),[role=link].contrast:is([aria-current]:not([aria-current=false]),:hover,:active,:focus){--pico-color:var(--pico-contrast-hover);--pico-underline:var(--pico-contrast-hover-underline)}a[role=button]{display:inline-block}button{margin:0;overflow:visible;font-family:inherit;text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[role=button],[type=button],[type=file]::file-selector-button,[type=reset],[type=submit],button{--pico-background-color:var(--pico-primary-background);--pico-border-color:var(--pico-primary-border);--pico-color:var(--pico-primary-inverse);--pico-box-shadow:var(--pico-button-box-shadow, 0 0 0 rgba(0, 0, 0, 0));padding:var(--pico-form-element-spacing-vertical) var(--pico-form-element-spacing-horizontal);border:var(--pico-border-width) solid var(--pico-border-color);border-radius:var(--pico-border-radius);outline:0;background-color:var(--pico-background-color);box-shadow:var(--pico-box-shadow);color:var(--pico-color);font-weight:var(--pico-font-weight);font-size:1rem;line-height:var(--pico-line-height);text-align:center;text-decoration:none;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;user-select:none;transition:background-color var(--pico-transition),border-color var(--pico-transition),color var(--pico-transition),box-shadow var(--pico-transition)}[role=button]:is(:hover,:active,:focus),[role=button]:is([aria-current]:not([aria-current=false])),[type=button]:is(:hover,:active,:focus),[type=button]:is([aria-current]:not([aria-current=false])),[type=file]::file-selector-button:is(:hover,:active,:focus),[type=file]::file-selector-button:is([aria-current]:not([aria-current=false])),[type=reset]:is(:hover,:active,:focus),[type=reset]:is([aria-current]:not([aria-current=false])),[type=submit]:is(:hover,:active,:focus),[type=submit]:is([aria-current]:not([aria-current=false])),button:is(:hover,:active,:focus),button:is([aria-current]:not([aria-current=false])){--pico-background-color:var(--pico-primary-hover-background);--pico-border-color:var(--pico-primary-hover-border);--pico-box-shadow:var(--pico-button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0));--pico-color:var(--pico-primary-inverse)}[role=button]:focus,[role=button]:is([aria-current]:not([aria-current=false])):focus,[type=button]:focus,[type=button]:is([aria-current]:not([aria-current=false])):focus,[type=file]::file-selector-button:focus,[type=file]::file-selector-button:is([aria-current]:not([aria-current=false])):focus,[type=reset]:focus,[type=reset]:is([aria-current]:not([aria-current=false])):focus,[type=submit]:focus,[type=submit]:is([aria-current]:not([aria-current=false])):focus,button:focus,button:is([aria-current]:not([aria-current=false])):focus{--pico-box-shadow:var(--pico-button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),0 0 0 var(--pico-outline-width) var(--pico-primary-focus)}[type=button],[type=reset],[type=submit]{margin-bottom:var(--pico-spacing)}:is(button,[type=submit],[type=button],[role=button]).secondary,[type=file]::file-selector-button,[type=reset]{--pico-background-color:var(--pico-secondary-background);--pico-border-color:var(--pico-secondary-border);--pico-color:var(--pico-secondary-inverse);cursor:pointer}:is(button,[type=submit],[type=button],[role=button]).secondary:is([aria-current]:not([aria-current=false]),:hover,:active,:focus),[type=file]::file-selector-button:is([aria-current]:not([aria-current=false]),:hover,:active,:focus),[type=reset]:is([aria-current]:not([aria-current=false]),:hover,:active,:focus){--pico-background-color:var(--pico-secondary-hover-background);--pico-border-color:var(--pico-secondary-hover-border);--pico-color:var(--pico-secondary-inverse)}:is(button,[type=submit],[type=button],[role=button]).secondary:focus,:is(button,[type=submit],[type=button],[role=button]).secondary:is([aria-current]:not([aria-current=false])):focus,[type=file]::file-selector-button:focus,[type=file]::file-selector-button:is([aria-current]:not([aria-current=false])):focus,[type=reset]:focus,[type=reset]:is([aria-current]:not([aria-current=false])):focus{--pico-box-shadow:var(--pico-button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),0 0 0 var(--pico-outline-width) var(--pico-secondary-focus)}:is(button,[type=submit],[type=button],[role=button]).contrast{--pico-background-color:var(--pico-contrast-background);--pico-border-color:var(--pico-contrast-border);--pico-color:var(--pico-contrast-inverse)}:is(button,[type=submit],[type=button],[role=button]).contrast:is([aria-current]:not([aria-current=false]),:hover,:active,:focus){--pico-background-color:var(--pico-contrast-hover-background);--pico-border-color:var(--pico-contrast-hover-border);--pico-color:var(--pico-contrast-inverse)}:is(button,[type=submit],[type=button],[role=button]).contrast:focus,:is(button,[type=submit],[type=button],[role=button]).contrast:is([aria-current]:not([aria-current=false])):focus{--pico-box-shadow:var(--pico-button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),0 0 0 var(--pico-outline-width) var(--pico-contrast-focus)}:is(button,[type=submit],[type=button],[role=button]).outline,[type=reset].outline{--pico-background-color:transparent;--pico-color:var(--pico-primary);--pico-border-color:var(--pico-primary)}:is(button,[type=submit],[type=button],[role=button]).outline:is([aria-current]:not([aria-current=false]),:hover,:active,:focus),[type=reset].outline:is([aria-current]:not([aria-current=false]),:hover,:active,:focus){--pico-background-color:transparent;--pico-color:var(--pico-primary-hover);--pico-border-color:var(--pico-primary-hover)}:is(button,[type=submit],[type=button],[role=button]).outline.secondary,[type=reset].outline{--pico-color:var(--pico-secondary);--pico-border-color:var(--pico-secondary)}:is(button,[type=submit],[type=button],[role=button]).outline.secondary:is([aria-current]:not([aria-current=false]),:hover,:active,:focus),[type=reset].outline:is([aria-current]:not([aria-current=false]),:hover,:active,:focus){--pico-color:var(--pico-secondary-hover);--pico-border-color:var(--pico-secondary-hover)}:is(button,[type=submit],[type=button],[role=button]).outline.contrast{--pico-color:var(--pico-contrast);--pico-border-color:var(--pico-contrast)}:is(button,[type=submit],[type=button],[role=button]).outline.contrast:is([aria-current]:not([aria-current=false]),:hover,:active,:focus){--pico-color:var(--pico-contrast-hover);--pico-border-color:var(--pico-contrast-hover)}:where(button,[type=submit],[type=reset],[type=button],[role=button])[disabled],:where(fieldset[disabled]) :is(button,[type=submit],[type=button],[type=reset],[role=button]){opacity:.5;pointer-events:none}:where(table){width:100%;border-collapse:collapse;border-spacing:0;text-indent:0}td,th{padding:calc(var(--pico-spacing)/ 2) var(--pico-spacing);border-bottom:var(--pico-border-width) solid var(--pico-table-border-color);background-color:var(--pico-background-color);color:var(--pico-color);font-weight:var(--pico-font-weight);text-align:left;text-align:start}tfoot td,tfoot th{border-top:var(--pico-border-width) solid var(--pico-table-border-color);border-bottom:0}table.striped tbody tr:nth-child(odd) td,table.striped tbody tr:nth-child(odd) th{background-color:var(--pico-table-row-stripped-background-color)}:where(audio,canvas,iframe,img,svg,video){vertical-align:middle}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}:where(iframe){border-style:none}img{max-width:100%;height:auto;border-style:none}:where(svg:not([fill])){fill:currentColor}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-size:.875em;font-family:var(--pico-font-family)}pre code{font-size:inherit;font-family:inherit}pre{-ms-overflow-style:scrollbar;overflow:auto}code,kbd,pre{border-radius:var(--pico-border-radius);background:var(--pico-code-background-color);color:var(--pico-code-color);font-weight:var(--pico-font-weight);line-height:initial}code,kbd{display:inline-block;padding:.375rem}pre{display:block;margin-bottom:var(--pico-spacing);overflow-x:auto}pre>code{display:block;padding:var(--pico-spacing);background:0 0;line-height:var(--pico-line-height)}kbd{background-color:var(--pico-code-kbd-background-color);color:var(--pico-code-kbd-color);vertical-align:baseline}figure{display:block;margin:0;padding:0}figure figcaption{padding:calc(var(--pico-spacing) * .5) 0;color:var(--pico-muted-color)}hr{height:0;margin:var(--pico-typography-spacing-vertical) 0;border:0;border-top:1px solid var(--pico-muted-border-color);color:inherit}[hidden],template{display:none!important}canvas{display:inline-block}input,optgroup,select,textarea{margin:0;font-size:1rem;line-height:var(--pico-line-height);font-family:inherit;letter-spacing:inherit}input{overflow:visible}select{text-transform:none}legend{max-width:100%;padding:0;color:inherit;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{padding:0}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}::-moz-focus-inner{padding:0;border-style:none}:-moz-focusring{outline:0}:-moz-ui-invalid{box-shadow:none}::-ms-expand{display:none}[type=file],[type=range]{padding:0;border-width:0}input:not([type=checkbox],[type=radio],[type=range]){height:calc(1rem * var(--pico-line-height) + var(--pico-form-element-spacing-vertical) * 2 + var(--pico-border-width) * 2)}fieldset{width:100%;margin:0;margin-bottom:var(--pico-spacing);padding:0;border:0}fieldset legend,label{display:block;margin-bottom:calc(var(--pico-spacing) * .375);color:var(--pico-color);font-weight:var(--pico-form-label-font-weight,var(--pico-font-weight))}fieldset legend{margin-bottom:calc(var(--pico-spacing) * .5)}button[type=submit],input:not([type=checkbox],[type=radio]),select,textarea{width:100%}input:not([type=checkbox],[type=radio],[type=range],[type=file]),select,textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none;padding:var(--pico-form-element-spacing-vertical) var(--pico-form-element-spacing-horizontal)}input,select,textarea{--pico-background-color:var(--pico-form-element-background-color);--pico-border-color:var(--pico-form-element-border-color);--pico-color:var(--pico-form-element-color);--pico-box-shadow:none;border:var(--pico-border-width) solid var(--pico-border-color);border-radius:var(--pico-border-radius);outline:0;background-color:var(--pico-background-color);box-shadow:var(--pico-box-shadow);color:var(--pico-color);font-weight:var(--pico-font-weight);transition:background-color var(--pico-transition),border-color var(--pico-transition),color var(--pico-transition),box-shadow var(--pico-transition)}:where(select,textarea):not([readonly]):is(:active,:focus),input:not([type=submit],[type=button],[type=reset],[type=checkbox],[type=radio],[readonly]):is(:active,:focus){--pico-background-color:var(--pico-form-element-active-background-color)}:where(select,textarea):not([readonly]):is(:active,:focus),input:not([type=submit],[type=button],[type=reset],[role=switch],[readonly]):is(:active,:focus){--pico-border-color:var(--pico-form-element-active-border-color)}:where(select,textarea):not([readonly]):focus,input:not([type=submit],[type=button],[type=reset],[type=range],[type=file],[readonly]):focus{--pico-box-shadow:0 0 0 var(--pico-outline-width) var(--pico-form-element-focus-color)}:where(fieldset[disabled]) :is(input:not([type=submit],[type=button],[type=reset]),select,textarea),input:not([type=submit],[type=button],[type=reset])[disabled],label[aria-disabled=true],select[disabled],textarea[disabled]{opacity:var(--pico-form-element-disabled-opacity);pointer-events:none}label[aria-disabled=true] input[disabled]{opacity:1}:where(input,select,textarea):not([type=checkbox],[type=radio],[type=date],[type=datetime-local],[type=month],[type=time],[type=week],[type=range])[aria-invalid]{padding-right:calc(var(--pico-form-element-spacing-horizontal) + 1.5rem)!important;padding-left:var(--pico-form-element-spacing-horizontal);padding-inline-start:var(--pico-form-element-spacing-horizontal)!important;padding-inline-end:calc(var(--pico-form-element-spacing-horizontal) + 1.5rem)!important;background-position:center right .75rem;background-size:1rem auto;background-repeat:no-repeat}:where(input,select,textarea):not([type=checkbox],[type=radio],[type=date],[type=datetime-local],[type=month],[type=time],[type=week],[type=range])[aria-invalid=false]:not(select){background-image:var(--pico-icon-valid)}:where(input,select,textarea):not([type=checkbox],[type=radio],[type=date],[type=datetime-local],[type=month],[type=time],[type=week],[type=range])[aria-invalid=true]:not(select){background-image:var(--pico-icon-invalid)}:where(input,select,textarea)[aria-invalid=false]{--pico-border-color:var(--pico-form-element-valid-border-color)}:where(input,select,textarea)[aria-invalid=false]:is(:active,:focus){--pico-border-color:var(--pico-form-element-valid-active-border-color)!important}:where(input,select,textarea)[aria-invalid=false]:is(:active,:focus):not([type=checkbox],[type=radio]){--pico-box-shadow:0 0 0 var(--pico-outline-width) var(--pico-form-element-valid-focus-color)!important}:where(input,select,textarea)[aria-invalid=true]{--pico-border-color:var(--pico-form-element-invalid-border-color)}:where(input,select,textarea)[aria-invalid=true]:is(:active,:focus){--pico-border-color:var(--pico-form-element-invalid-active-border-color)!important}:where(input,select,textarea)[aria-invalid=true]:is(:active,:focus):not([type=checkbox],[type=radio]){--pico-box-shadow:0 0 0 var(--pico-outline-width) var(--pico-form-element-invalid-focus-color)!important}[dir=rtl] :where(input,select,textarea):not([type=checkbox],[type=radio]):is([aria-invalid],[aria-invalid=true],[aria-invalid=false]){background-position:center left .75rem}input::-webkit-input-placeholder,input::placeholder,select:invalid,textarea::-webkit-input-placeholder,textarea::placeholder{color:var(--pico-form-element-placeholder-color);opacity:1}input:not([type=checkbox],[type=radio]),select,textarea{margin-bottom:var(--pico-spacing)}select::-ms-expand{border:0;background-color:transparent}select:not([multiple],[size]){padding-right:calc(var(--pico-form-element-spacing-horizontal) + 1.5rem);padding-left:var(--pico-form-element-spacing-horizontal);padding-inline-start:var(--pico-form-element-spacing-horizontal);padding-inline-end:calc(var(--pico-form-element-spacing-horizontal) + 1.5rem);background-image:var(--pico-icon-chevron);background-position:center right .75rem;background-size:1rem auto;background-repeat:no-repeat}select[multiple] option:checked{background:var(--pico-form-element-selected-background-color);color:var(--pico-form-element-color)}[dir=rtl] select:not([multiple],[size]){background-position:center left .75rem}textarea{display:block;resize:vertical}textarea[aria-invalid]{--pico-icon-height:calc(1rem * var(--pico-line-height) + var(--pico-form-element-spacing-vertical) * 2 + var(--pico-border-width) * 2);background-position:top right .75rem!important;background-size:1rem var(--pico-icon-height)!important}:where(input,select,textarea,fieldset,.grid)+small{display:block;width:100%;margin-top:calc(var(--pico-spacing) * -.75);margin-bottom:var(--pico-spacing);color:var(--pico-muted-color)}:where(input,select,textarea,fieldset,.grid)[aria-invalid=false]+small{color:var(--pico-ins-color)}:where(input,select,textarea,fieldset,.grid)[aria-invalid=true]+small{color:var(--pico-del-color)}label>:where(input,select,textarea){margin-top:calc(var(--pico-spacing) * .25)}label:has([type=checkbox],[type=radio]){width:-moz-fit-content;width:fit-content;cursor:pointer}[type=checkbox],[type=radio]{-webkit-appearance:none;-moz-appearance:none;appearance:none;width:1.25em;height:1.25em;margin-top:-.125em;margin-inline-end:.5em;border-width:var(--pico-border-width);vertical-align:middle;cursor:pointer}[type=checkbox]::-ms-check,[type=radio]::-ms-check{display:none}[type=checkbox]:checked,[type=checkbox]:checked:active,[type=checkbox]:checked:focus,[type=radio]:checked,[type=radio]:checked:active,[type=radio]:checked:focus{--pico-background-color:var(--pico-primary-background);--pico-border-color:var(--pico-primary-border);background-image:var(--pico-icon-checkbox);background-position:center;background-size:.75em auto;background-repeat:no-repeat}[type=checkbox]~label,[type=radio]~label{display:inline-block;margin-bottom:0;cursor:pointer}[type=checkbox]~label:not(:last-of-type),[type=radio]~label:not(:last-of-type){margin-inline-end:1em}[type=checkbox]:indeterminate{--pico-background-color:var(--pico-primary-background);--pico-border-color:var(--pico-primary-border);background-image:var(--pico-icon-minus);background-position:center;background-size:.75em auto;background-repeat:no-repeat}[type=radio]{border-radius:50%}[type=radio]:checked,[type=radio]:checked:active,[type=radio]:checked:focus{--pico-background-color:var(--pico-primary-inverse);border-width:.35em;background-image:none}[type=checkbox][role=switch]{--pico-background-color:var(--pico-switch-background-color);--pico-color:var(--pico-switch-color);width:2.25em;height:1.25em;border:var(--pico-border-width) solid var(--pico-border-color);border-radius:1.25em;background-color:var(--pico-background-color);line-height:1.25em}[type=checkbox][role=switch]:not([aria-invalid]){--pico-border-color:var(--pico-switch-background-color)}[type=checkbox][role=switch]:before{display:block;aspect-ratio:1;height:100%;border-radius:50%;background-color:var(--pico-color);box-shadow:var(--pico-switch-thumb-box-shadow);content:"";transition:margin .1s ease-in-out}[type=checkbox][role=switch]:focus{--pico-background-color:var(--pico-switch-background-color);--pico-border-color:var(--pico-switch-background-color)}[type=checkbox][role=switch]:checked{--pico-background-color:var(--pico-switch-checked-background-color);--pico-border-color:var(--pico-switch-checked-background-color);background-image:none}[type=checkbox][role=switch]:checked::before{margin-inline-start:calc(2.25em - 1.25em)}[type=checkbox][role=switch][disabled]{--pico-background-color:var(--pico-border-color)}[type=checkbox][aria-invalid=false]:checked,[type=checkbox][aria-invalid=false]:checked:active,[type=checkbox][aria-invalid=false]:checked:focus,[type=checkbox][role=switch][aria-invalid=false]:checked,[type=checkbox][role=switch][aria-invalid=false]:checked:active,[type=checkbox][role=switch][aria-invalid=false]:checked:focus{--pico-background-color:var(--pico-form-element-valid-border-color)}[type=checkbox]:checked:active[aria-invalid=true],[type=checkbox]:checked:focus[aria-invalid=true],[type=checkbox]:checked[aria-invalid=true],[type=checkbox][role=switch]:checked:active[aria-invalid=true],[type=checkbox][role=switch]:checked:focus[aria-invalid=true],[type=checkbox][role=switch]:checked[aria-invalid=true]{--pico-background-color:var(--pico-form-element-invalid-border-color)}[type=checkbox][aria-invalid=false]:checked,[type=checkbox][aria-invalid=false]:checked:active,[type=checkbox][aria-invalid=false]:checked:focus,[type=checkbox][role=switch][aria-invalid=false]:checked,[type=checkbox][role=switch][aria-invalid=false]:checked:active,[type=checkbox][role=switch][aria-invalid=false]:checked:focus,[type=radio][aria-invalid=false]:checked,[type=radio][aria-invalid=false]:checked:active,[type=radio][aria-invalid=false]:checked:focus{--pico-border-color:var(--pico-form-element-valid-border-color)}[type=checkbox]:checked:active[aria-invalid=true],[type=checkbox]:checked:focus[aria-invalid=true],[type=checkbox]:checked[aria-invalid=true],[type=checkbox][role=switch]:checked:active[aria-invalid=true],[type=checkbox][role=switch]:checked:focus[aria-invalid=true],[type=checkbox][role=switch]:checked[aria-invalid=true],[type=radio]:checked:active[aria-invalid=true],[type=radio]:checked:focus[aria-invalid=true],[type=radio]:checked[aria-invalid=true]{--pico-border-color:var(--pico-form-element-invalid-border-color)}[type=color]::-webkit-color-swatch-wrapper{padding:0}[type=color]::-moz-focus-inner{padding:0}[type=color]::-webkit-color-swatch{border:0;border-radius:calc(var(--pico-border-radius) * .5)}[type=color]::-moz-color-swatch{border:0;border-radius:calc(var(--pico-border-radius) * .5)}input:not([type=checkbox],[type=radio],[type=range],[type=file]):is([type=date],[type=datetime-local],[type=month],[type=time],[type=week]){--pico-icon-position:0.75rem;--pico-icon-width:1rem;padding-right:calc(var(--pico-icon-width) + var(--pico-icon-position));background-image:var(--pico-icon-date);background-position:center right var(--pico-icon-position);background-size:var(--pico-icon-width) auto;background-repeat:no-repeat}input:not([type=checkbox],[type=radio],[type=range],[type=file])[type=time]{background-image:var(--pico-icon-time)}[type=date]::-webkit-calendar-picker-indicator,[type=datetime-local]::-webkit-calendar-picker-indicator,[type=month]::-webkit-calendar-picker-indicator,[type=time]::-webkit-calendar-picker-indicator,[type=week]::-webkit-calendar-picker-indicator{width:var(--pico-icon-width);margin-right:calc(var(--pico-icon-width) * -1);margin-left:var(--pico-icon-position);opacity:0}@-moz-document url-prefix(){[type=date],[type=datetime-local],[type=month],[type=time],[type=week]{padding-right:var(--pico-form-element-spacing-horizontal)!important;background-image:none!important}}[dir=rtl] :is([type=date],[type=datetime-local],[type=month],[type=time],[type=week]){text-align:right}[type=file]{--pico-color:var(--pico-muted-color);margin-left:calc(var(--pico-outline-width) * -1);padding:calc(var(--pico-form-element-spacing-vertical) * .5) 0;padding-left:var(--pico-outline-width);border:0;border-radius:0;background:0 0}[type=file]::file-selector-button{margin-right:calc(var(--pico-spacing)/ 2);padding:calc(var(--pico-form-element-spacing-vertical) * .5) var(--pico-form-element-spacing-horizontal)}[type=file]:is(:hover,:active,:focus)::file-selector-button{--pico-background-color:var(--pico-secondary-hover-background);--pico-border-color:var(--pico-secondary-hover-border)}[type=file]:focus::file-selector-button{--pico-box-shadow:var(--pico-button-hover-box-shadow, 0 0 0 rgba(0, 0, 0, 0)),0 0 0 var(--pico-outline-width) var(--pico-secondary-focus)}[type=range]{-webkit-appearance:none;-moz-appearance:none;appearance:none;width:100%;height:1.25rem;background:0 0}[type=range]::-webkit-slider-runnable-track{width:100%;height:.375rem;border-radius:var(--pico-border-radius);background-color:var(--pico-range-border-color);-webkit-transition:background-color var(--pico-transition),box-shadow var(--pico-transition);transition:background-color var(--pico-transition),box-shadow var(--pico-transition)}[type=range]::-moz-range-track{width:100%;height:.375rem;border-radius:var(--pico-border-radius);background-color:var(--pico-range-border-color);-moz-transition:background-color var(--pico-transition),box-shadow var(--pico-transition);transition:background-color var(--pico-transition),box-shadow var(--pico-transition)}[type=range]::-ms-track{width:100%;height:.375rem;border-radius:var(--pico-border-radius);background-color:var(--pico-range-border-color);-ms-transition:background-color var(--pico-transition),box-shadow var(--pico-transition);transition:background-color var(--pico-transition),box-shadow var(--pico-transition)}[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:1.25rem;height:1.25rem;margin-top:-.4375rem;border:2px solid var(--pico-range-thumb-border-color);border-radius:50%;background-color:var(--pico-range-thumb-color);cursor:pointer;-webkit-transition:background-color var(--pico-transition),transform var(--pico-transition);transition:background-color var(--pico-transition),transform var(--pico-transition)}[type=range]::-moz-range-thumb{-webkit-appearance:none;width:1.25rem;height:1.25rem;margin-top:-.4375rem;border:2px solid var(--pico-range-thumb-border-color);border-radius:50%;background-color:var(--pico-range-thumb-color);cursor:pointer;-moz-transition:background-color var(--pico-transition),transform var(--pico-transition);transition:background-color var(--pico-transition),transform var(--pico-transition)}[type=range]::-ms-thumb{-webkit-appearance:none;width:1.25rem;height:1.25rem;margin-top:-.4375rem;border:2px solid var(--pico-range-thumb-border-color);border-radius:50%;background-color:var(--pico-range-thumb-color);cursor:pointer;-ms-transition:background-color var(--pico-transition),transform var(--pico-transition);transition:background-color var(--pico-transition),transform var(--pico-transition)}[type=range]:active,[type=range]:focus-within{--pico-range-border-color:var(--pico-range-active-border-color);--pico-range-thumb-color:var(--pico-range-thumb-active-color)}[type=range]:active::-webkit-slider-thumb{transform:scale(1.25)}[type=range]:active::-moz-range-thumb{transform:scale(1.25)}[type=range]:active::-ms-thumb{transform:scale(1.25)}input:not([type=checkbox],[type=radio],[type=range],[type=file])[type=search]{padding-inline-start:calc(var(--pico-form-element-spacing-horizontal) + 1.75rem);background-image:var(--pico-icon-search);background-position:center left calc(var(--pico-form-element-spacing-horizontal) + .125rem);background-size:1rem auto;background-repeat:no-repeat}input:not([type=checkbox],[type=radio],[type=range],[type=file])[type=search][aria-invalid]{padding-inline-start:calc(var(--pico-form-element-spacing-horizontal) + 1.75rem)!important;background-position:center left 1.125rem,center right .75rem}input:not([type=checkbox],[type=radio],[type=range],[type=file])[type=search][aria-invalid=false]{background-image:var(--pico-icon-search),var(--pico-icon-valid)}input:not([type=checkbox],[type=radio],[type=range],[type=file])[type=search][aria-invalid=true]{background-image:var(--pico-icon-search),var(--pico-icon-invalid)}[dir=rtl] :where(input):not([type=checkbox],[type=radio],[type=range],[type=file])[type=search]{background-position:center right 1.125rem}[dir=rtl] :where(input):not([type=checkbox],[type=radio],[type=range],[type=file])[type=search][aria-invalid]{background-position:center right 1.125rem,center left .75rem}details{display:block;margin-bottom:var(--pico-spacing)}details summary{line-height:1rem;list-style-type:none;cursor:pointer;transition:color var(--pico-transition)}details summary:not([role]){color:var(--pico-accordion-close-summary-color)}details summary::-webkit-details-marker{display:none}details summary::marker{display:none}details summary::-moz-list-bullet{list-style-type:none}details summary::after{display:block;width:1rem;height:1rem;margin-inline-start:calc(var(--pico-spacing,1rem) * .5);float:right;transform:rotate(-90deg);background-image:var(--pico-icon-chevron);background-position:right center;background-size:1rem auto;background-repeat:no-repeat;content:"";transition:transform var(--pico-transition)}details summary:focus{outline:0}details summary:focus:not([role]){color:var(--pico-accordion-active-summary-color)}details summary:focus-visible:not([role]){outline:var(--pico-outline-width) solid var(--pico-primary-focus);outline-offset:calc(var(--pico-spacing,1rem) * 0.5);color:var(--pico-primary)}details summary[role=button]{width:100%;text-align:left}details summary[role=button]::after{height:calc(1rem * var(--pico-line-height,1.5))}details[open]>summary{margin-bottom:var(--pico-spacing)}details[open]>summary:not([role]):not(:focus){color:var(--pico-accordion-open-summary-color)}details[open]>summary::after{transform:rotate(0)}[dir=rtl] details summary{text-align:right}[dir=rtl] details summary::after{float:left;background-position:left center}article{margin-bottom:var(--pico-block-spacing-vertical);padding:var(--pico-block-spacing-vertical) var(--pico-block-spacing-horizontal);border-radius:var(--pico-border-radius);background:var(--pico-card-background-color);box-shadow:var(--pico-card-box-shadow)}article>footer,article>header{margin-right:calc(var(--pico-block-spacing-horizontal) * -1);margin-left:calc(var(--pico-block-spacing-horizontal) * -1);padding:calc(var(--pico-block-spacing-vertical) * .66) var(--pico-block-spacing-horizontal);background-color:var(--pico-card-sectioning-background-color)}article>header{margin-top:calc(var(--pico-block-spacing-vertical) * -1);margin-bottom:var(--pico-block-spacing-vertical);border-bottom:var(--pico-border-width) solid var(--pico-card-border-color);border-top-right-radius:var(--pico-border-radius);border-top-left-radius:var(--pico-border-radius)}article>footer{margin-top:var(--pico-block-spacing-vertical);margin-bottom:calc(var(--pico-block-spacing-vertical) * -1);border-top:var(--pico-border-width) solid var(--pico-card-border-color);border-bottom-right-radius:var(--pico-border-radius);border-bottom-left-radius:var(--pico-border-radius)}details.dropdown{position:relative;border-bottom:none}details.dropdown summary::after,details.dropdown>a::after,details.dropdown>button::after{display:block;width:1rem;height:calc(1rem * var(--pico-line-height,1.5));margin-inline-start:.25rem;float:right;transform:rotate(0) translateX(.2rem);background-image:var(--pico-icon-chevron);background-position:right center;background-size:1rem auto;background-repeat:no-repeat;content:""}nav details.dropdown{margin-bottom:0}details.dropdown summary:not([role]){height:calc(1rem * var(--pico-line-height) + var(--pico-form-element-spacing-vertical) * 2 + var(--pico-border-width) * 2);padding:var(--pico-form-element-spacing-vertical) var(--pico-form-element-spacing-horizontal);border:var(--pico-border-width) solid var(--pico-form-element-border-color);border-radius:var(--pico-border-radius);background-color:var(--pico-form-element-background-color);color:var(--pico-form-element-placeholder-color);line-height:inherit;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;user-select:none;transition:background-color var(--pico-transition),border-color var(--pico-transition),color var(--pico-transition),box-shadow var(--pico-transition)}details.dropdown summary:not([role]):active,details.dropdown summary:not([role]):focus{border-color:var(--pico-form-element-active-border-color);background-color:var(--pico-form-element-active-background-color)}details.dropdown summary:not([role]):focus{box-shadow:0 0 0 var(--pico-outline-width) var(--pico-form-element-focus-color)}details.dropdown summary:not([role]):focus-visible{outline:0}details.dropdown summary:not([role])[aria-invalid=false]{--pico-form-element-border-color:var(--pico-form-element-valid-border-color);--pico-form-element-active-border-color:var(--pico-form-element-valid-focus-color);--pico-form-element-focus-color:var(--pico-form-element-valid-focus-color)}details.dropdown summary:not([role])[aria-invalid=true]{--pico-form-element-border-color:var(--pico-form-element-invalid-border-color);--pico-form-element-active-border-color:var(--pico-form-element-invalid-focus-color);--pico-form-element-focus-color:var(--pico-form-element-invalid-focus-color)}nav details.dropdown{display:inline;margin:calc(var(--pico-nav-element-spacing-vertical) * -1) 0}nav details.dropdown summary::after{transform:rotate(0) translateX(0)}nav details.dropdown summary:not([role]){height:calc(1rem * var(--pico-line-height) + var(--pico-nav-link-spacing-vertical) * 2);padding:calc(var(--pico-nav-link-spacing-vertical) - var(--pico-border-width) * 2) var(--pico-nav-link-spacing-horizontal)}nav details.dropdown summary:not([role]):focus-visible{box-shadow:0 0 0 var(--pico-outline-width) var(--pico-primary-focus)}details.dropdown summary+ul{display:flex;z-index:99;position:absolute;left:0;flex-direction:column;width:100%;min-width:-moz-fit-content;min-width:fit-content;margin:0;margin-top:var(--pico-outline-width);padding:0;border:var(--pico-border-width) solid var(--pico-dropdown-border-color);border-radius:var(--pico-border-radius);background-color:var(--pico-dropdown-background-color);box-shadow:var(--pico-dropdown-box-shadow);color:var(--pico-dropdown-color);white-space:nowrap;opacity:0;transition:opacity var(--pico-transition),transform 0s ease-in-out 1s}details.dropdown summary+ul[dir=rtl]{right:0;left:auto}details.dropdown summary+ul li{width:100%;margin-bottom:0;padding:calc(var(--pico-form-element-spacing-vertical) * .5) var(--pico-form-element-spacing-horizontal);list-style:none}details.dropdown summary+ul li:first-of-type{margin-top:calc(var(--pico-form-element-spacing-vertical) * .5)}details.dropdown summary+ul li:last-of-type{margin-bottom:calc(var(--pico-form-element-spacing-vertical) * .5)}details.dropdown summary+ul li a{display:block;margin:calc(var(--pico-form-element-spacing-vertical) * -.5) calc(var(--pico-form-element-spacing-horizontal) * -1);padding:calc(var(--pico-form-element-spacing-vertical) * .5) var(--pico-form-element-spacing-horizontal);overflow:hidden;border-radius:0;color:var(--pico-dropdown-color);text-decoration:none;text-overflow:ellipsis}details.dropdown summary+ul li a:active,details.dropdown summary+ul li a:focus,details.dropdown summary+ul li a:focus-visible,details.dropdown summary+ul li a:hover,details.dropdown summary+ul li a[aria-current]:not([aria-current=false]){background-color:var(--pico-dropdown-hover-background-color)}details.dropdown summary+ul li label{width:100%}details.dropdown summary+ul li:has(label):hover{background-color:var(--pico-dropdown-hover-background-color)}details.dropdown[open] summary{margin-bottom:0}details.dropdown[open] summary+ul{transform:scaleY(1);opacity:1;transition:opacity var(--pico-transition),transform 0s ease-in-out 0s}details.dropdown[open] summary::before{display:block;z-index:1;position:fixed;width:100vw;height:100vh;inset:0;background:0 0;content:"";cursor:default}label>details.dropdown{margin-top:calc(var(--pico-spacing) * .25)}[role=group],[role=search]{display:inline-flex;position:relative;width:100%;margin-bottom:var(--pico-spacing);border-radius:var(--pico-border-radius);box-shadow:var(--pico-group-box-shadow,0 0 0 transparent);vertical-align:middle;transition:box-shadow var(--pico-transition)}[role=group] input:not([type=checkbox],[type=radio]),[role=group] select,[role=group]>*,[role=search] input:not([type=checkbox],[type=radio]),[role=search] select,[role=search]>*{position:relative;flex:1 1 auto;margin-bottom:0}[role=group] input:not([type=checkbox],[type=radio]):not(:first-child),[role=group] select:not(:first-child),[role=group]>:not(:first-child),[role=search] input:not([type=checkbox],[type=radio]):not(:first-child),[role=search] select:not(:first-child),[role=search]>:not(:first-child){margin-left:0;border-top-left-radius:0;border-bottom-left-radius:0}[role=group] input:not([type=checkbox],[type=radio]):not(:last-child),[role=group] select:not(:last-child),[role=group]>:not(:last-child),[role=search] input:not([type=checkbox],[type=radio]):not(:last-child),[role=search] select:not(:last-child),[role=search]>:not(:last-child){border-top-right-radius:0;border-bottom-right-radius:0}[role=group] input:not([type=checkbox],[type=radio]):focus,[role=group] select:focus,[role=group]>:focus,[role=search] input:not([type=checkbox],[type=radio]):focus,[role=search] select:focus,[role=search]>:focus{z-index:2}[role=group] [role=button]:not(:first-child),[role=group] [type=button]:not(:first-child),[role=group] [type=reset]:not(:first-child),[role=group] [type=submit]:not(:first-child),[role=group] button:not(:first-child),[role=group] input:not([type=checkbox],[type=radio]):not(:first-child),[role=group] select:not(:first-child),[role=search] [role=button]:not(:first-child),[role=search] [type=button]:not(:first-child),[role=search] [type=reset]:not(:first-child),[role=search] [type=submit]:not(:first-child),[role=search] button:not(:first-child),[role=search] input:not([type=checkbox],[type=radio]):not(:first-child),[role=search] select:not(:first-child){margin-left:calc(var(--pico-border-width) * -1)}[role=group] [role=button],[role=group] [type=button],[role=group] [type=reset],[role=group] [type=submit],[role=group] button,[role=search] [role=button],[role=search] [type=button],[role=search] [type=reset],[role=search] [type=submit],[role=search] button{width:auto}@supports selector(:has(*)){[role=group]:has(button:focus,[type=submit]:focus,[type=button]:focus,[role=button]:focus),[role=search]:has(button:focus,[type=submit]:focus,[type=button]:focus,[role=button]:focus){--pico-group-box-shadow:var(--pico-group-box-shadow-focus-with-button)}[role=group]:has(button:focus,[type=submit]:focus,[type=button]:focus,[role=button]:focus) input:not([type=checkbox],[type=radio]),[role=group]:has(button:focus,[type=submit]:focus,[type=button]:focus,[role=button]:focus) select,[role=search]:has(button:focus,[type=submit]:focus,[type=button]:focus,[role=button]:focus) input:not([type=checkbox],[type=radio]),[role=search]:has(button:focus,[type=submit]:focus,[type=button]:focus,[role=button]:focus) select{border-color:transparent}[role=group]:has(input:not([type=submit],[type=button]):focus,select:focus),[role=search]:has(input:not([type=submit],[type=button]):focus,select:focus){--pico-group-box-shadow:var(--pico-group-box-shadow-focus-with-input)}[role=group]:has(input:not([type=submit],[type=button]):focus,select:focus) [role=button],[role=group]:has(input:not([type=submit],[type=button]):focus,select:focus) [type=button],[role=group]:has(input:not([type=submit],[type=button]):focus,select:focus) [type=submit],[role=group]:has(input:not([type=submit],[type=button]):focus,select:focus) button,[role=search]:has(input:not([type=submit],[type=button]):focus,select:focus) [role=button],[role=search]:has(input:not([type=submit],[type=button]):focus,select:focus) [type=button],[role=search]:has(input:not([type=submit],[type=button]):focus,select:focus) [type=submit],[role=search]:has(input:not([type=submit],[type=button]):focus,select:focus) button{--pico-button-box-shadow:0 0 0 var(--pico-border-width) var(--pico-primary-border);--pico-button-hover-box-shadow:0 0 0 var(--pico-border-width) var(--pico-primary-hover-border)}[role=group] [role=button]:focus,[role=group] [type=button]:focus,[role=group] [type=reset]:focus,[role=group] [type=submit]:focus,[role=group] button:focus,[role=search] [role=button]:focus,[role=search] [type=button]:focus,[role=search] [type=reset]:focus,[role=search] [type=submit]:focus,[role=search] button:focus{box-shadow:none}}[role=search]>:first-child{border-top-left-radius:5rem;border-bottom-left-radius:5rem}[role=search]>:last-child{border-top-right-radius:5rem;border-bottom-right-radius:5rem}[aria-busy=true]:not(input,select,textarea,html){white-space:nowrap}[aria-busy=true]:not(input,select,textarea,html)::before{display:inline-block;width:1em;height:1em;background-image:var(--pico-icon-loading);background-size:1em auto;background-repeat:no-repeat;content:"";vertical-align:-.125em}[aria-busy=true]:not(input,select,textarea,html):not(:empty)::before{margin-inline-end:calc(var(--pico-spacing) * .5)}[aria-busy=true]:not(input,select,textarea,html):empty{text-align:center}[role=button][aria-busy=true],[type=button][aria-busy=true],[type=reset][aria-busy=true],[type=submit][aria-busy=true],a[aria-busy=true],button[aria-busy=true]{pointer-events:none}:root{--pico-scrollbar-width:0px}dialog{display:flex;z-index:999;position:fixed;top:0;right:0;bottom:0;left:0;align-items:center;justify-content:center;width:inherit;min-width:100%;height:inherit;min-height:100%;padding:0;border:0;-webkit-backdrop-filter:var(--pico-modal-overlay-backdrop-filter);backdrop-filter:var(--pico-modal-overlay-backdrop-filter);background-color:var(--pico-modal-overlay-background-color);color:var(--pico-color)}dialog article{width:100%;max-height:calc(100vh - var(--pico-spacing) * 2);margin:var(--pico-spacing);overflow:auto}@media (min-width:576px){dialog article{max-width:510px}}@media (min-width:768px){dialog article{max-width:700px}}dialog article>header>*{margin-bottom:0}dialog article>header .close,dialog article>header :is(a,button)[rel=prev]{margin:0;margin-left:var(--pico-spacing);padding:0;float:right}dialog article>footer{text-align:right}dialog article>footer [role=button],dialog article>footer button{margin-bottom:0}dialog article>footer [role=button]:not(:first-of-type),dialog article>footer button:not(:first-of-type){margin-left:calc(var(--pico-spacing) * .5)}dialog article .close,dialog article :is(a,button)[rel=prev]{display:block;width:1rem;height:1rem;margin-top:calc(var(--pico-spacing) * -1);margin-bottom:var(--pico-spacing);margin-left:auto;border:none;background-image:var(--pico-icon-close);background-position:center;background-size:auto 1rem;background-repeat:no-repeat;background-color:transparent;opacity:.5;transition:opacity var(--pico-transition)}dialog article .close:is([aria-current]:not([aria-current=false]),:hover,:active,:focus),dialog article :is(a,button)[rel=prev]:is([aria-current]:not([aria-current=false]),:hover,:active,:focus){opacity:1}dialog:not([open]),dialog[open=false]{display:none}.modal-is-open{padding-right:var(--pico-scrollbar-width,0);overflow:hidden;pointer-events:none;touch-action:none}.modal-is-open dialog{pointer-events:auto;touch-action:auto}:where(.modal-is-opening,.modal-is-closing) dialog,:where(.modal-is-opening,.modal-is-closing) dialog>article{animation-duration:.2s;animation-timing-function:ease-in-out;animation-fill-mode:both}:where(.modal-is-opening,.modal-is-closing) dialog{animation-duration:.8s;animation-name:modal-overlay}:where(.modal-is-opening,.modal-is-closing) dialog>article{animation-delay:.2s;animation-name:modal}.modal-is-closing dialog,.modal-is-closing dialog>article{animation-delay:0s;animation-direction:reverse}@keyframes modal-overlay{from{-webkit-backdrop-filter:none;backdrop-filter:none;background-color:transparent}}@keyframes modal{from{transform:translateY(-100%);opacity:0}}:where(nav li)::before{float:left;content:"​"}nav,nav ul{display:flex}nav{justify-content:space-between;overflow:visible}nav ol,nav ul{align-items:center;margin-bottom:0;padding:0;list-style:none}nav ol:first-of-type,nav ul:first-of-type{margin-left:calc(var(--pico-nav-element-spacing-horizontal) * -1)}nav ol:last-of-type,nav ul:last-of-type{margin-right:calc(var(--pico-nav-element-spacing-horizontal) * -1)}nav li{display:inline-block;margin:0;padding:var(--pico-nav-element-spacing-vertical) var(--pico-nav-element-spacing-horizontal)}nav li :where(a,[role=link]){display:inline-block;margin:calc(var(--pico-nav-link-spacing-vertical) * -1) calc(var(--pico-nav-link-spacing-horizontal) * -1);padding:var(--pico-nav-link-spacing-vertical) var(--pico-nav-link-spacing-horizontal);border-radius:var(--pico-border-radius)}nav li :where(a,[role=link]):not(:hover){text-decoration:none}nav li [role=button],nav li [type=button],nav li button,nav li input:not([type=checkbox],[type=radio],[type=range],[type=file]),nav li select{height:auto;margin-right:inherit;margin-bottom:0;margin-left:inherit;padding:calc(var(--pico-nav-link-spacing-vertical) - var(--pico-border-width) * 2) var(--pico-nav-link-spacing-horizontal)}nav[aria-label=breadcrumb]{align-items:center;justify-content:start}nav[aria-label=breadcrumb] ul li:not(:first-child){margin-inline-start:var(--pico-nav-link-spacing-horizontal)}nav[aria-label=breadcrumb] ul li a{margin:calc(var(--pico-nav-link-spacing-vertical) * -1) 0;margin-inline-start:calc(var(--pico-nav-link-spacing-horizontal) * -1)}nav[aria-label=breadcrumb] ul li:not(:last-child)::after{display:inline-block;position:absolute;width:calc(var(--pico-nav-link-spacing-horizontal) * 4);margin:0 calc(var(--pico-nav-link-spacing-horizontal) * -1);content:var(--pico-nav-breadcrumb-divider);color:var(--pico-muted-color);text-align:center;text-decoration:none;white-space:nowrap}nav[aria-label=breadcrumb] a[aria-current]:not([aria-current=false]){background-color:transparent;color:inherit;text-decoration:none;pointer-events:none}aside li,aside nav,aside ol,aside ul{display:block}aside li{padding:calc(var(--pico-nav-element-spacing-vertical) * .5) var(--pico-nav-element-spacing-horizontal)}aside li a{display:block}aside li [role=button]{margin:inherit}[dir=rtl] nav[aria-label=breadcrumb] ul li:not(:last-child) ::after{content:"\\"}progress{display:inline-block;vertical-align:baseline}progress{-webkit-appearance:none;-moz-appearance:none;display:inline-block;appearance:none;width:100%;height:.5rem;margin-bottom:calc(var(--pico-spacing) * .5);overflow:hidden;border:0;border-radius:var(--pico-border-radius);background-color:var(--pico-progress-background-color);color:var(--pico-progress-color)}progress::-webkit-progress-bar{border-radius:var(--pico-border-radius);background:0 0}progress[value]::-webkit-progress-value{background-color:var(--pico-progress-color);-webkit-transition:inline-size var(--pico-transition);transition:inline-size var(--pico-transition)}progress::-moz-progress-bar{background-color:var(--pico-progress-color)}@media (prefers-reduced-motion:no-preference){progress:indeterminate{background:var(--pico-progress-background-color) linear-gradient(to right,var(--pico-progress-color) 30%,var(--pico-progress-background-color) 30%) top left/150% 150% no-repeat;animation:progress-indeterminate 1s linear infinite}progress:indeterminate[value]::-webkit-progress-value{background-color:transparent}progress:indeterminate::-moz-progress-bar{background-color:transparent}}@media (prefers-reduced-motion:no-preference){[dir=rtl] progress:indeterminate{animation-direction:reverse}}@keyframes progress-indeterminate{0%{background-position:200% 0}100%{background-position:-200% 0}}[data-tooltip]{position:relative}[data-tooltip]:not(a,button,input){border-bottom:1px dotted;text-decoration:none;cursor:help}[data-tooltip]::after,[data-tooltip]::before,[data-tooltip][data-placement=top]::after,[data-tooltip][data-placement=top]::before{display:block;z-index:99;position:absolute;bottom:100%;left:50%;padding:.25rem .5rem;overflow:hidden;transform:translate(-50%,-.25rem);border-radius:var(--pico-border-radius);background:var(--pico-tooltip-background-color);content:attr(data-tooltip);color:var(--pico-tooltip-color);font-style:normal;font-weight:var(--pico-font-weight);font-size:.875rem;text-decoration:none;text-overflow:ellipsis;white-space:nowrap;opacity:0;pointer-events:none}[data-tooltip]::after,[data-tooltip][data-placement=top]::after{padding:0;transform:translate(-50%,0);border-top:.3rem solid;border-right:.3rem solid transparent;border-left:.3rem solid transparent;border-radius:0;background-color:transparent;content:"";color:var(--pico-tooltip-background-color)}[data-tooltip][data-placement=bottom]::after,[data-tooltip][data-placement=bottom]::before{top:100%;bottom:auto;transform:translate(-50%,.25rem)}[data-tooltip][data-placement=bottom]:after{transform:translate(-50%,-.3rem);border:.3rem solid transparent;border-bottom:.3rem solid}[data-tooltip][data-placement=left]::after,[data-tooltip][data-placement=left]::before{top:50%;right:100%;bottom:auto;left:auto;transform:translate(-.25rem,-50%)}[data-tooltip][data-placement=left]:after{transform:translate(.3rem,-50%);border:.3rem solid transparent;border-left:.3rem solid}[data-tooltip][data-placement=right]::after,[data-tooltip][data-placement=right]::before{top:50%;right:auto;bottom:auto;left:100%;transform:translate(.25rem,-50%)}[data-tooltip][data-placement=right]:after{transform:translate(-.3rem,-50%);border:.3rem solid transparent;border-right:.3rem solid}[data-tooltip]:focus::after,[data-tooltip]:focus::before,[data-tooltip]:hover::after,[data-tooltip]:hover::before{opacity:1}@media (hover:hover) and (pointer:fine){[data-tooltip]:focus::after,[data-tooltip]:focus::before,[data-tooltip]:hover::after,[data-tooltip]:hover::before{--pico-tooltip-slide-to:translate(-50%, -0.25rem);transform:translate(-50%,.75rem);animation-duration:.2s;animation-fill-mode:forwards;animation-name:tooltip-slide;opacity:0}[data-tooltip]:focus::after,[data-tooltip]:hover::after{--pico-tooltip-caret-slide-to:translate(-50%, 0rem);transform:translate(-50%,-.25rem);animation-name:tooltip-caret-slide}[data-tooltip][data-placement=bottom]:focus::after,[data-tooltip][data-placement=bottom]:focus::before,[data-tooltip][data-placement=bottom]:hover::after,[data-tooltip][data-placement=bottom]:hover::before{--pico-tooltip-slide-to:translate(-50%, 0.25rem);transform:translate(-50%,-.75rem);animation-name:tooltip-slide}[data-tooltip][data-placement=bottom]:focus::after,[data-tooltip][data-placement=bottom]:hover::after{--pico-tooltip-caret-slide-to:translate(-50%, -0.3rem);transform:translate(-50%,-.5rem);animation-name:tooltip-caret-slide}[data-tooltip][data-placement=left]:focus::after,[data-tooltip][data-placement=left]:focus::before,[data-tooltip][data-placement=left]:hover::after,[data-tooltip][data-placement=left]:hover::before{--pico-tooltip-slide-to:translate(-0.25rem, -50%);transform:translate(.75rem,-50%);animation-name:tooltip-slide}[data-tooltip][data-placement=left]:focus::after,[data-tooltip][data-placement=left]:hover::after{--pico-tooltip-caret-slide-to:translate(0.3rem, -50%);transform:translate(.05rem,-50%);animation-name:tooltip-caret-slide}[data-tooltip][data-placement=right]:focus::after,[data-tooltip][data-placement=right]:focus::before,[data-tooltip][data-placement=right]:hover::after,[data-tooltip][data-placement=right]:hover::before{--pico-tooltip-slide-to:translate(0.25rem, -50%);transform:translate(-.75rem,-50%);animation-name:tooltip-slide}[data-tooltip][data-placement=right]:focus::after,[data-tooltip][data-placement=right]:hover::after{--pico-tooltip-caret-slide-to:translate(-0.3rem, -50%);transform:translate(-.05rem,-50%);animation-name:tooltip-caret-slide}}@keyframes tooltip-slide{to{transform:var(--pico-tooltip-slide-to);opacity:1}}@keyframes tooltip-caret-slide{50%{opacity:0}to{transform:var(--pico-tooltip-caret-slide-to);opacity:1}}[aria-controls]{cursor:pointer}[aria-disabled=true],[disabled]{cursor:not-allowed}[aria-hidden=false][hidden]{display:initial}[aria-hidden=false][hidden]:not(:focus){clip:rect(0,0,0,0);position:absolute}[tabindex],a,area,button,input,label,select,summary,textarea{-ms-touch-action:manipulation}[dir=rtl]{direction:rtl}@media (prefers-reduced-motion:reduce){:not([aria-busy=true]),:not([aria-busy=true])::after,:not([aria-busy=true])::before{background-attachment:initial!important;animation-duration:1ms!important;animation-delay:-1ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-delay:0s!important;transition-duration:0s!important}}</style>
+    <style id="prism-dark">/* PrismJS 1.29.0
+https://prismjs.com/download.html#themes=prism-tomorrow&languages=python */
+code[class*=language-],pre[class*=language-]{color:#ccc;background:0 0;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}</style>
+    <style id="prism-light" media="max-width: 1px">/* PrismJS 1.29.0
+https://prismjs.com/download.html#themes=prism&languages=python */
+code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shadow:0 1px #fff;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{text-shadow:none;background:#b3d4fc}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}</style>
+    <style>:root {
+  --pico-font-size: 66%;
+  --pico-spacing: .8rem;
+  --pico-typography-spacing-vertical: .8rem;
+}
+.report-code-block {
+  margin-bottom: 2em;
+}
+.report-foot {
+  text-align: center;
+  padding-top: 0 !important;
+}
+.report-head {
+  padding-top: 1em;
+}
+#dark-light-mode {
+  margin: 0;
+}
+.container {
+  max-width: none;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: none;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+@media (min-width:992px) {
+  .report-toc {
+    position: sticky;
+    align-self: start;
+    top: 0;
+    max-height: calc(100vh - 5em);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  main {
+    display: grid;
+    align-items: start;
+    grid-template-columns: 8% auto;
+    column-gap: 1em;
+  }
+}
+
+
+:where(table) {
+  width: auto;
+}
+table.dataframe th,
+table.dataframe td {
+  padding: 0 4px;
+  background-color: transparent;
+}
+tr:hover {
+  background-color: #7171602b;
+}</style>
+    <script>function change_theme() {
+    var theme = document.getElementById("dark-light-mode").checked ? "light" : "dark";
+    var html = document.getElementsByTagName("html")[0];
+    var prism_dark = document.getElementById("prism-dark");
+    var prism_light = document.getElementById("prism-light");
+    html.setAttribute("data-theme", theme);
+    if (theme == "light") {
+        prism_light.removeAttribute("media")
+        prism_dark.setAttribute("media", "max-width: 1px")
+    } else {
+        prism_dark.removeAttribute("media")
+        prism_light.setAttribute("media", "max-width: 1px")
+    }
+}</script>
+</head>
+<body>
+    <nav class="container report-container report-head">
+        <ul>
+            <li>
+                <hgroup>
+                    <h1>Rapport de run Jungle-Bus Group IRVE OpenData</h1>
+                    <p>2024-10-12 08:48:38 UTC</p>
+                </hgroup>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-moon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg>
+                <input type="checkbox" id="dark-light-mode" name="dark-light-mode" role="switch" onchange="change_theme()">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>
+            </li>
+        </ul>
+    </nav>
+    <main class="container report-container">
+        
+            <aside class="report-toc">
+                <nav>
+                    <h2>Contents</h2>
+                    <div>
+                        <ul>
+                        
+                            <li><a href="#report-chunk-0">
+                            
+                                Récap
+                            
+                            </a></li>
+                        
+                            <li><a href="#report-chunk-1">
+                            
+                                Sévérité par organisation
+                            
+                            </a></li>
+                        
+                            <li><a href="#report-chunk-2">
+                            
+                                Problèmes par organisation
+                            
+                            </a></li>
+                        
+                            <li><a href="#report-chunk-3">
+                            
+                                Statistiques puissance par station
+                            
+                            </a></li>
+                        
+                        </ul>
+                    </div>
+                </nav>
+            </aside>
+        
+        <div role="document">
+        
+            <div class="report-code-block" id="report-chunk-0">
+            
+                <h2>Récap</h2>
+            
+                <details open>
+                    <summary>Expand/Collapse</summary>
+                    
+                        <pre><code class="language-python">103544 lignes (PDCs) en entrée | 6243 PDCs en double
+27015 stations reconnues sur 37453 station_id distincts en entrée
+41393 problèmes trouvés pour 97301 PDCs distincts en entrée (il peut exister plusieurs problèmes par PDC/station):
+ &gt; [blocking] 25169 x le format de l&#39;identifiant ref:EU:EVSE (id_station_itinerance) n&#39;est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l&#39;analyse Osmose
+ &gt;    [error]    10 x aucun type de prise précisé sur l&#39;ensemble des points de charge
+ &gt;    [error]  9421 x le nombre de point de charge de la station n&#39;est pas cohérent avec la liste des points de charge fournie
+ &gt;    [error]  1399 x plusieurs sources pour un même id
+ &gt;  [warning]     5 x le champ station_deux_roues n&#39;est pas valide
+ &gt;  [warning]   981 x le numéro de téléphone de l&#39;opérateur (telephone_operateur) est dans un format invalide
+ &gt;  [warning]     8 x plusieurs horaires pour une même station
+ &gt;  [warning]   818 x plusieurs infos d&#39;accessibilité PMR (accessibilite_pmr) pour une même station
+ &gt;  [warning]    15 x plusieurs infos de gratuité (gratuit) pour une même station
+ &gt;  [warning]    54 x plusieurs infos de paiement (paiement_acte) pour une même station
+ &gt;  [warning]  1607 x plusieurs infos de paiement (paiement_cb) pour une même station
+ &gt;  [warning]   293 x plusieurs infos de réservation pour une même station
+ &gt;  [warning]   279 x puissance nominale déclarée pour prise CHADEMO supérieure à la norme (valeur retenue: 63)
+ &gt;  [warning]   809 x puissance nominale déclarée pour prise EF supérieure à la norme (valeur retenue: 4)
+ &gt;  [warning]   525 x puissance nominale déclarée pour prise T2 supérieure à la norme (valeur retenue: 43)
+
+Severité
+blocking    25169
+error       10830
+warning      5394
+
+Top 25 Organisations les plus problematiques:
+
+Sévérité                                blocking  error warning  TOTAL
+Organisation                                                          
+TOTAL                                      25169  10830    5394  41393
+alize-charge                               15573      -       -  15573
+izivia                                         -   5764     602   6366
+gireve-2                                     364   1808    2943   5115
+lidl                                        4111      -       -   4111
+multiples                                      -   1399       -   1399
+engie-mobilites-electriques                    -    502     502   1004
+rossini-energy                               846      -       -    846
+allego-1                                     616      -       -    616
+syndicat-departemental-denergie-du-tarn      604      -       -    604
+bump                                         529      -       -    529
+driveco                                        -    325     173    498
+totalenergies-marketing-france               210     21     260    491
+soregies                                     478      -       -    478
+zeborne                                      367      -       -    367
+sowatt-solutions                             275      -       -    275
+evzen-smeg-developpement                       -      4     263    267
+ubitricity                                   257      -       -    257
+ev-cars                                        -     64     159    223
+sieml                                          -    209       -    209
+sydela                                         -    192       -    192
+plus-de-bornes                                 -    168       4    172
+easycharge-services                            -      -     145    145
+car2plug                                     140      -       -    140
+greenspot-enersoft                             -    126      11    137
+ionity-gmbh                                  121      -       -    121</code></pre>
+                    
+                </details>
+            </div>
+        
+            <div class="report-code-block" id="report-chunk-1">
+            
+                <h2>Sévérité par organisation</h2>
+            
+                <details open>
+                    <summary>Expand/Collapse</summary>
+                    
+                        <object><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Sévérité</th>
+      <th>blocking</th>
+      <th>error</th>
+      <th>warning</th>
+      <th>TOTAL</th>
+    </tr>
+    <tr>
+      <th>Organisation</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>TOTAL</th>
+      <td>25169</td>
+      <td>10830</td>
+      <td>5394</td>
+      <td>41393</td>
+    </tr>
+    <tr>
+      <th>alize-charge</th>
+      <td>15573</td>
+      <td>-</td>
+      <td>-</td>
+      <td>15573</td>
+    </tr>
+    <tr>
+      <th>izivia</th>
+      <td>-</td>
+      <td>5764</td>
+      <td>602</td>
+      <td>6366</td>
+    </tr>
+    <tr>
+      <th>gireve-2</th>
+      <td>364</td>
+      <td>1808</td>
+      <td>2943</td>
+      <td>5115</td>
+    </tr>
+    <tr>
+      <th>lidl</th>
+      <td>4111</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4111</td>
+    </tr>
+    <tr>
+      <th>multiples</th>
+      <td>-</td>
+      <td>1399</td>
+      <td>-</td>
+      <td>1399</td>
+    </tr>
+    <tr>
+      <th>engie-mobilites-electriques</th>
+      <td>-</td>
+      <td>502</td>
+      <td>502</td>
+      <td>1004</td>
+    </tr>
+    <tr>
+      <th>rossini-energy</th>
+      <td>846</td>
+      <td>-</td>
+      <td>-</td>
+      <td>846</td>
+    </tr>
+    <tr>
+      <th>allego-1</th>
+      <td>616</td>
+      <td>-</td>
+      <td>-</td>
+      <td>616</td>
+    </tr>
+    <tr>
+      <th>syndicat-departemental-denergie-du-tarn</th>
+      <td>604</td>
+      <td>-</td>
+      <td>-</td>
+      <td>604</td>
+    </tr>
+    <tr>
+      <th>bump</th>
+      <td>529</td>
+      <td>-</td>
+      <td>-</td>
+      <td>529</td>
+    </tr>
+    <tr>
+      <th>driveco</th>
+      <td>-</td>
+      <td>325</td>
+      <td>173</td>
+      <td>498</td>
+    </tr>
+    <tr>
+      <th>totalenergies-marketing-france</th>
+      <td>210</td>
+      <td>21</td>
+      <td>260</td>
+      <td>491</td>
+    </tr>
+    <tr>
+      <th>soregies</th>
+      <td>478</td>
+      <td>-</td>
+      <td>-</td>
+      <td>478</td>
+    </tr>
+    <tr>
+      <th>zeborne</th>
+      <td>367</td>
+      <td>-</td>
+      <td>-</td>
+      <td>367</td>
+    </tr>
+    <tr>
+      <th>sowatt-solutions</th>
+      <td>275</td>
+      <td>-</td>
+      <td>-</td>
+      <td>275</td>
+    </tr>
+    <tr>
+      <th>evzen-smeg-developpement</th>
+      <td>-</td>
+      <td>4</td>
+      <td>263</td>
+      <td>267</td>
+    </tr>
+    <tr>
+      <th>ubitricity</th>
+      <td>257</td>
+      <td>-</td>
+      <td>-</td>
+      <td>257</td>
+    </tr>
+    <tr>
+      <th>ev-cars</th>
+      <td>-</td>
+      <td>64</td>
+      <td>159</td>
+      <td>223</td>
+    </tr>
+    <tr>
+      <th>sieml</th>
+      <td>-</td>
+      <td>209</td>
+      <td>-</td>
+      <td>209</td>
+    </tr>
+    <tr>
+      <th>sydela</th>
+      <td>-</td>
+      <td>192</td>
+      <td>-</td>
+      <td>192</td>
+    </tr>
+    <tr>
+      <th>plus-de-bornes</th>
+      <td>-</td>
+      <td>168</td>
+      <td>4</td>
+      <td>172</td>
+    </tr>
+    <tr>
+      <th>easycharge-services</th>
+      <td>-</td>
+      <td>-</td>
+      <td>145</td>
+      <td>145</td>
+    </tr>
+    <tr>
+      <th>car2plug</th>
+      <td>140</td>
+      <td>-</td>
+      <td>-</td>
+      <td>140</td>
+    </tr>
+    <tr>
+      <th>greenspot-enersoft</th>
+      <td>-</td>
+      <td>126</td>
+      <td>11</td>
+      <td>137</td>
+    </tr>
+    <tr>
+      <th>ionity-gmbh</th>
+      <td>121</td>
+      <td>-</td>
+      <td>-</td>
+      <td>121</td>
+    </tr>
+    <tr>
+      <th>e-totem</th>
+      <td>-</td>
+      <td>59</td>
+      <td>54</td>
+      <td>113</td>
+    </tr>
+    <tr>
+      <th>zeenco</th>
+      <td>104</td>
+      <td>-</td>
+      <td>-</td>
+      <td>104</td>
+    </tr>
+    <tr>
+      <th>lumiin</th>
+      <td>98</td>
+      <td>-</td>
+      <td>-</td>
+      <td>98</td>
+    </tr>
+    <tr>
+      <th>e-charge50</th>
+      <td>-</td>
+      <td>6</td>
+      <td>78</td>
+      <td>84</td>
+    </tr>
+    <tr>
+      <th>mobilize-power-solutions</th>
+      <td>74</td>
+      <td>-</td>
+      <td>-</td>
+      <td>74</td>
+    </tr>
+    <tr>
+      <th>tem53</th>
+      <td>-</td>
+      <td>60</td>
+      <td>1</td>
+      <td>61</td>
+    </tr>
+    <tr>
+      <th>reseau-alterbase-79</th>
+      <td>-</td>
+      <td>16</td>
+      <td>41</td>
+      <td>57</td>
+    </tr>
+    <tr>
+      <th>allego</th>
+      <td>-</td>
+      <td>18</td>
+      <td>27</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>securecharge</th>
+      <td>44</td>
+      <td>1</td>
+      <td>-</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>syndicat-departemental-des-energies-de-seine-et-marne-3</th>
+      <td>-</td>
+      <td>2</td>
+      <td>42</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <th>qwello</th>
+      <td>44</td>
+      <td>-</td>
+      <td>-</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <th>nvh</th>
+      <td>35</td>
+      <td>-</td>
+      <td>-</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>borneco</th>
+      <td>34</td>
+      <td>-</td>
+      <td>-</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <th>properphi</th>
+      <td>30</td>
+      <td>-</td>
+      <td>-</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>eoliberty</th>
+      <td>1</td>
+      <td>7</td>
+      <td>16</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>maneo</th>
+      <td>18</td>
+      <td>-</td>
+      <td>1</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>qowatt</th>
+      <td>18</td>
+      <td>-</td>
+      <td>-</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>energie-eure-et-loir</th>
+      <td>17</td>
+      <td>-</td>
+      <td>-</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>syndicat-departemental-denergie-dille-et-vilaine</th>
+      <td>-</td>
+      <td>2</td>
+      <td>13</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>bornevo</th>
+      <td>13</td>
+      <td>-</td>
+      <td>-</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>autorecharge</th>
+      <td>13</td>
+      <td>-</td>
+      <td>-</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>sodel</th>
+      <td>13</td>
+      <td>-</td>
+      <td>-</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>voltania</th>
+      <td>-</td>
+      <td>9</td>
+      <td>3</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>sas-satcoms</th>
+      <td>12</td>
+      <td>-</td>
+      <td>-</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>ev-map</th>
+      <td>-</td>
+      <td>11</td>
+      <td>-</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>jerecharge-com</th>
+      <td>-</td>
+      <td>2</td>
+      <td>8</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>spbr1</th>
+      <td>-</td>
+      <td>2</td>
+      <td>8</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>territoire-denergie-orne</th>
+      <td>-</td>
+      <td>4</td>
+      <td>5</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>regie-municipale-delectricite-de-loos</th>
+      <td>9</td>
+      <td>-</td>
+      <td>-</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>herve-thermique</th>
+      <td>7</td>
+      <td>-</td>
+      <td>2</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>i-bornes</th>
+      <td>1</td>
+      <td>4</td>
+      <td>3</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>tesla-motors</th>
+      <td>-</td>
+      <td>8</td>
+      <td>-</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>charge-in</th>
+      <td>6</td>
+      <td>-</td>
+      <td>1</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>see-you-sun</th>
+      <td>7</td>
+      <td>-</td>
+      <td>-</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>syndicat-intercommunal-de-lelectricite-et-du-gaz-de-leure</th>
+      <td>2</td>
+      <td>4</td>
+      <td>-</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>power-dot-france</th>
+      <td>-</td>
+      <td>1</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>equipe-transport-data-gouv-fr</th>
+      <td>-</td>
+      <td>1</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>citeos-boulogne-sur-mer</th>
+      <td>-</td>
+      <td>-</td>
+      <td>6</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>conectys</th>
+      <td>4</td>
+      <td>1</td>
+      <td>-</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>inouid-smart-mobility</th>
+      <td>3</td>
+      <td>2</td>
+      <td>-</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>2ems</th>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>allcoms-technologies</th>
+      <td>5</td>
+      <td>-</td>
+      <td>-</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>eranovum-e-mobility-france</th>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>kap-enerj</th>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>nm-securelec</th>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>virta-global-gifi-caudebec-1</th>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>indelec-mobility</th>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>area-tech</th>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>kallista-bdr</th>
+      <td>-</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>hagenum</th>
+      <td>1</td>
+      <td>2</td>
+      <td>-</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>france-solar-sas</th>
+      <td>-</td>
+      <td>3</td>
+      <td>-</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>enerjump</th>
+      <td>3</td>
+      <td>-</td>
+      <td>-</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>imac2</th>
+      <td>-</td>
+      <td>3</td>
+      <td>-</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>acelec-charge</th>
+      <td>-</td>
+      <td>2</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>suraya</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>sas-road54</th>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>normatech</th>
+      <td>1</td>
+      <td>1</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>morbihan-energies</th>
+      <td>-</td>
+      <td>2</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>lg-electricite</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>sb-energy</th>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>citeos-bordeaux</th>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>ecarmobility</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>guillaume</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>citeos-poitiers</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>spie-citynetworks</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>snmg2e</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>wellborne</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>swish</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>startn-move-1</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>peretti-groupe</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>r3</th>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>la-borne-electrique</th>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>philippi</th>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>abe-electricite</th>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>agglomeration-montargoise-et-rives-du-loing</th>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>borne-de-recharge-ad-bauducel</th>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>chariag</th>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>chargepoly</th>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>dubois-1</th>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>dupuis-electricite</th>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>inforomu</th>
+      <td>-</td>
+      <td>1</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>irve-territoire-denergie-90</th>
+      <td>-</td>
+      <td>1</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>idex-solar-charging-stations</th>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>garage-chene-total-energie-citroen</th>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>e-leclerc-millau</th>
+      <td>-</td>
+      <td>1</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>mdg-fibre-sas</th>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>nexteneo</th>
+      <td>-</td>
+      <td>1</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>lamia-jp</th>
+      <td>-</td>
+      <td>1</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>rsb-zni-non-parking-camping-supervision-non</th>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>pf-automobiles-bourg-de-peage</th>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>neogroup-consulting</th>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>l2b-lorette-beaucamp-bonnet</th>
+      <td>-</td>
+      <td>1</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>stations-e</th>
+      <td>-</td>
+      <td>1</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>sorel-energies</th>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>sebalyo-solar</th>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>territoire-denergie-alsace</th>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table></object>
+                    
+                </details>
+            </div>
+        
+            <div class="report-code-block" id="report-chunk-2">
+            
+                <h2>Problèmes par organisation</h2>
+            
+                <details open>
+                    <summary>Expand/Collapse</summary>
+                    
+                        <object><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <th>Organisation</th>
+      <th>Occurences</th>
+      <th>Sévérité</th>
+      <th>Problème</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="3" valign="top">2ems</th>
+      <th rowspan="2" valign="top">1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th>3</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>abe-electricite</th>
+      <th>1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>acelec-charge</th>
+      <th>2</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>agglomeration-montargoise-et-rives-du-loing</th>
+      <th>1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>alize-charge</th>
+      <th>15573</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>allcoms-technologies</th>
+      <th>5</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">allego</th>
+      <th>7</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (valeur retenue: 63)</th>
+    </tr>
+    <tr>
+      <th>18</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>20</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>allego-1</th>
+      <th>616</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>area-tech</th>
+      <th>4</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>autorecharge</th>
+      <th>13</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>borne-de-recharge-ad-bauducel</th>
+      <th>1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>borneco</th>
+      <th>34</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>bornevo</th>
+      <th>13</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>bump</th>
+      <th>529</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>car2plug</th>
+      <th>140</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">charge-in</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>6</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>chargepoly</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>plusieurs infos de réservation pour une même station</th>
+    </tr>
+    <tr>
+      <th>chariag</th>
+      <th>1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">citeos-bordeaux</th>
+      <th rowspan="2" valign="top">1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th>citeos-boulogne-sur-mer</th>
+      <th>6</th>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th>citeos-poitiers</th>
+      <th>2</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">conectys</th>
+      <th>1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>4</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">driveco</th>
+      <th>8</th>
+      <th>warning</th>
+      <th>plusieurs infos de gratuité (gratuit) pour une même station</th>
+    </tr>
+    <tr>
+      <th>165</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>325</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>dubois-1</th>
+      <th>1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>dupuis-electricite</th>
+      <th>1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">e-charge50</th>
+      <th>4</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (valeur retenue: 63)</th>
+    </tr>
+    <tr>
+      <th>6</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>74</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (valeur retenue: 4)</th>
+    </tr>
+    <tr>
+      <th>e-leclerc-millau</th>
+      <th>1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">e-totem</th>
+      <th rowspan="2" valign="top">1</th>
+      <th rowspan="2" valign="top">warning</th>
+      <th>plusieurs infos de gratuité (gratuit) pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
+    </tr>
+    <tr>
+      <th>52</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (valeur retenue: 4)</th>
+    </tr>
+    <tr>
+      <th>59</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>easycharge-services</th>
+      <th>145</th>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th>ecarmobility</th>
+      <th>2</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>energie-eure-et-loir</th>
+      <th>17</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>enerjump</th>
+      <th>3</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">engie-mobilites-electriques</th>
+      <th rowspan="2" valign="top">502</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">eoliberty</th>
+      <th>1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>7</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>16</th>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th rowspan="6" valign="top">equipe-transport-data-gouv-fr</th>
+      <th rowspan="6" valign="top">1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">warning</th>
+      <th>plusieurs horaires pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de réservation pour une même station</th>
+    </tr>
+    <tr>
+      <th>eranovum-e-mobility-france</th>
+      <th>4</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">ev-cars</th>
+      <th>64</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>159</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
+      <th>ev-map</th>
+      <th>11</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">evzen-smeg-developpement</th>
+      <th>4</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>263</th>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th>france-solar-sas</th>
+      <th>3</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>garage-chene-total-energie-citroen</th>
+      <th>1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="11" valign="top">gireve-2</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>plusieurs horaires pour une même station</th>
+    </tr>
+    <tr>
+      <th>4</th>
+      <th>error</th>
+      <th>aucun type de prise précisé sur l'ensemble des points de charge</th>
+    </tr>
+    <tr>
+      <th>20</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise T2 supérieure à la norme (valeur retenue: 43)</th>
+    </tr>
+    <tr>
+      <th>52</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
+    </tr>
+    <tr>
+      <th>59</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (valeur retenue: 63)</th>
+    </tr>
+    <tr>
+      <th>291</th>
+      <th>warning</th>
+      <th>plusieurs infos de réservation pour une même station</th>
+    </tr>
+    <tr>
+      <th>364</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>541</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (valeur retenue: 4)</th>
+    </tr>
+    <tr>
+      <th>584</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
+      <th>1395</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>1804</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">greenspot-enersoft</th>
+      <th>2</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise T2 supérieure à la norme (valeur retenue: 43)</th>
+    </tr>
+    <tr>
+      <th>3</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
+      <th>6</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (valeur retenue: 4)</th>
+    </tr>
+    <tr>
+      <th>126</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>guillaume</th>
+      <th>2</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">hagenum</th>
+      <th rowspan="3" valign="top">1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">error</th>
+      <th>aucun type de prise précisé sur l'ensemble des points de charge</th>
+    </tr>
+    <tr>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">herve-thermique</th>
+      <th rowspan="2" valign="top">1</th>
+      <th rowspan="2" valign="top">warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th>plusieurs horaires pour une même station</th>
+    </tr>
+    <tr>
+      <th>7</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">i-bornes</th>
+      <th rowspan="2" valign="top">1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>le champ station_deux_roues n'est pas valide</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">2</th>
+      <th rowspan="2" valign="top">error</th>
+      <th>aucun type de prise précisé sur l'ensemble des points de charge</th>
+    </tr>
+    <tr>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th>idex-solar-charging-stations</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
+      <th>imac2</th>
+      <th>3</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>indelec-mobility</th>
+      <th>4</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>inforomu</th>
+      <th>1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">inouid-smart-mobility</th>
+      <th>2</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>3</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>ionity-gmbh</th>
+      <th>121</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>irve-territoire-denergie-90</th>
+      <th>1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">izivia</th>
+      <th>20</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (valeur retenue: 63)</th>
+    </tr>
+    <tr>
+      <th>93</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (valeur retenue: 4)</th>
+    </tr>
+    <tr>
+      <th>489</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise T2 supérieure à la norme (valeur retenue: 43)</th>
+    </tr>
+    <tr>
+      <th>5764</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">jerecharge-com</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>plusieurs horaires pour une même station</th>
+    </tr>
+    <tr>
+      <th>2</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>7</th>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">kallista-bdr</th>
+      <th rowspan="3" valign="top">1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">warning</th>
+      <th>le champ station_deux_roues n'est pas valide</th>
+    </tr>
+    <tr>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th>kap-enerj</th>
+      <th>4</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>l2b-lorette-beaucamp-bonnet</th>
+      <th>1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">la-borne-electrique</th>
+      <th rowspan="2" valign="top">1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th>lamia-jp</th>
+      <th>1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>lg-electricite</th>
+      <th>2</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>lidl</th>
+      <th>4111</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>lumiin</th>
+      <th>98</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">maneo</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th>18</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>mdg-fibre-sas</th>
+      <th>1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>mobilize-power-solutions</th>
+      <th>74</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>morbihan-energies</th>
+      <th>2</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>multiples</th>
+      <th>1399</th>
+      <th>error</th>
+      <th>plusieurs sources pour un même id</th>
+    </tr>
+    <tr>
+      <th>neogroup-consulting</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th>nexteneo</th>
+      <th>1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>nm-securelec</th>
+      <th>4</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">normatech</th>
+      <th rowspan="2" valign="top">1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>nvh</th>
+      <th>35</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>peretti-groupe</th>
+      <th>2</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>pf-automobiles-bourg-de-peage</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">philippi</th>
+      <th rowspan="2" valign="top">1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">plus-de-bornes</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise T2 supérieure à la norme (valeur retenue: 43)</th>
+    </tr>
+    <tr>
+      <th>3</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
+      <th>168</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">power-dot-france</th>
+      <th>1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>5</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (valeur retenue: 63)</th>
+    </tr>
+    <tr>
+      <th>properphi</th>
+      <th>30</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>qowatt</th>
+      <th>18</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>qwello</th>
+      <th>44</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">r3</th>
+      <th rowspan="2" valign="top">1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>plusieurs horaires pour une même station</th>
+    </tr>
+    <tr>
+      <th>regie-municipale-delectricite-de-loos</th>
+      <th>9</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">reseau-alterbase-79</th>
+      <th>16</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>41</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (valeur retenue: 4)</th>
+    </tr>
+    <tr>
+      <th>rossini-energy</th>
+      <th>846</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>rsb-zni-non-parking-camping-supervision-non</th>
+      <th>1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">sas-road54</th>
+      <th rowspan="2" valign="top">1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th>sas-satcoms</th>
+      <th>12</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">sb-energy</th>
+      <th rowspan="2" valign="top">1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th>sebalyo-solar</th>
+      <th>1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">securecharge</th>
+      <th>1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>44</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>see-you-sun</th>
+      <th>7</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>sieml</th>
+      <th>209</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>snmg2e</th>
+      <th>2</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>sodel</th>
+      <th>13</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>soregies</th>
+      <th>478</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>sorel-energies</th>
+      <th>1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>sowatt-solutions</th>
+      <th>275</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">spbr1</th>
+      <th rowspan="2" valign="top">2</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>6</th>
+      <th>warning</th>
+      <th>plusieurs infos de gratuité (gratuit) pour une même station</th>
+    </tr>
+    <tr>
+      <th>spie-citynetworks</th>
+      <th>2</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>startn-move-1</th>
+      <th>2</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>stations-e</th>
+      <th>1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>suraya</th>
+      <th>2</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>swish</th>
+      <th>2</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>sydela</th>
+      <th>192</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">syndicat-departemental-denergie-dille-et-vilaine</th>
+      <th>2</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>13</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise T2 supérieure à la norme (valeur retenue: 43)</th>
+    </tr>
+    <tr>
+      <th>syndicat-departemental-denergie-du-tarn</th>
+      <th>604</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">syndicat-departemental-des-energies-de-seine-et-marne-3</th>
+      <th>2</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">21</th>
+      <th rowspan="2" valign="top">warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">syndicat-intercommunal-de-lelectricite-et-du-gaz-de-leure</th>
+      <th>2</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>4</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">tem53</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>60</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>territoire-denergie-alsace</th>
+      <th>1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">territoire-denergie-orne</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">4</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (valeur retenue: 63)</th>
+    </tr>
+    <tr>
+      <th>tesla-motors</th>
+      <th>8</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="7" valign="top">totalenergies-marketing-france</th>
+      <th>2</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (valeur retenue: 4)</th>
+    </tr>
+    <tr>
+      <th>3</th>
+      <th>warning</th>
+      <th>plusieurs horaires pour une même station</th>
+    </tr>
+    <tr>
+      <th>21</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>29</th>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th>46</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
+      <th>180</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (valeur retenue: 63)</th>
+    </tr>
+    <tr>
+      <th>210</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>ubitricity</th>
+      <th>257</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>virta-global-gifi-caudebec-1</th>
+      <th>4</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">voltania</th>
+      <th rowspan="2" valign="top">3</th>
+      <th>error</th>
+      <th>aucun type de prise précisé sur l'ensemble des points de charge</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>le champ station_deux_roues n'est pas valide</th>
+    </tr>
+    <tr>
+      <th>6</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>wellborne</th>
+      <th>2</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>zeborne</th>
+      <th>367</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>zeenco</th>
+      <th>104</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+  </tbody>
+</table></object>
+                    
+                </details>
+            </div>
+        
+            <div class="report-code-block" id="report-chunk-3">
+            
+                <h2>Statistiques puissance par station</h2>
+            
+                <details open>
+                    <summary>Expand/Collapse</summary>
+                    
+                        <pre><code class="language-python"> EF  |   T2  | Chademo |  CCS  |
+4.00   22.00     0.00     0.00 | 9553 stations
+4.00    7.36     0.00     0.00 | 2512 stations
+3.68    3.68     0.00     0.00 | 1588 stations
+0.00   22.00     0.00     0.00 | 1560 stations
+4.00   18.00     0.00     0.00 | 1066 stations
+0.00    0.00     0.00   150.00 | 647 stations
+4.00    7.00     0.00     0.00 | 625 stations
+0.00    7.36     0.00     0.00 | 586 stations
+4.00   22.08     0.00     0.00 | 555 stations
+0.00   43.00     0.00     0.00 | 491 stations
+0.00   22.00     0.00    24.00 | 370 stations
+0.00   43.00    50.00    50.00 | 303 stations
+0.00    0.00    24.00    24.00 | 297 stations
+0.00   24.00     0.00     0.00 | 292 stations
+0.00    7.40     0.00     0.00 | 220 stations
+0.00   22.00    22.00     0.00 | 212 stations
+0.00   22.00    50.00    50.00 | 192 stations
+4.00    7.40     0.00     0.00 | 191 stations
+0.00   22.00    50.00   100.00 | 183 stations
+0.00   22.00    50.00   200.00 | 182 stations
+4.00   22.00     0.00   150.00 | 181 stations
+0.00   22.00     0.00   150.00 | 179 stations
+4.00   22.08    50.00    50.00 | 171 stations
+4.00    0.00     0.00     0.00 | 160 stations
+4.00   22.00    24.00    24.00 | 155 stations
+0.00    0.00     0.00   250.00 | 144 stations
+0.00   22.08     0.00    50.00 | 141 stations
+0.00   22.00     0.00   120.00 | 140 stations
+4.00   22.00    25.00    25.00 | 121 stations
+0.00   22.00     0.00    25.00 | 117 stations
+0.00   22.00     0.00    50.00 | 106 stations
+0.00   22.00    24.00    24.00 | 105 stations
+0.00    0.00     0.00   180.00 | 103 stations
+0.00   22.00     0.00    60.00 | 100 stations
+0.00    0.00     0.00   300.00 | 99 stations
+0.00    0.00    50.00    50.00 | 94 stations
+0.00   22.00     0.00   300.00 | 94 stations
+2.30   22.00     0.00     0.00 | 92 stations
+4.00   22.00    22.00    22.00 | 91 stations
+0.00    0.00     0.00    50.00 | 87 stations
+4.00   22.08     0.00    50.00 | 86 stations
+4.00   43.00    50.00    50.00 | 86 stations
+0.00   22.00    25.00    25.00 | 80 stations
+0.00   43.00    63.00   300.00 | 73 stations
+4.00   22.00     0.00   300.00 | 72 stations
+4.00   11.00     0.00     0.00 | 70 stations
+0.00   22.00    63.00   300.00 | 68 stations
+0.00    0.00     0.00   200.00 | 62 stations
+0.00    0.00     0.00     0.00 | 61 stations
+0.00    0.00    50.00     0.00 | 61 stations
+0.00   11.00     0.00     0.00 | 59 stations
+0.00    0.00    63.00   150.00 | 57 stations
+0.00   22.00    50.00   120.00 | 56 stations
+0.00   22.08     0.00     0.00 | 55 stations
+0.00   22.00    50.00   150.00 | 53 stations
+0.00   22.00    50.00   187.50 | 50 stations
+3.00    0.00     0.00     0.00 | 46 stations
+0.00   22.00    50.00    60.00 | 45 stations
+0.00   22.00     0.00   180.00 | 45 stations
+0.00   43.00    54.00   175.00 | 42 stations
+0.00   22.00     0.00   100.00 | 40 stations
+0.00   25.00    25.00    25.00 | 40 stations
+4.00   22.00     0.00    24.00 | 36 stations
+0.00    0.00    63.00     0.00 | 33 stations
+0.00   22.08     0.00    24.00 | 33 stations
+4.00   22.00     0.00    25.00 | 32 stations
+0.00   22.08     0.00   200.00 | 31 stations
+0.00   22.00    62.50   300.00 | 31 stations
+4.00   22.00    50.00    50.00 | 30 stations
+0.00   43.00    63.00   100.00 | 30 stations
+0.00   22.00    50.00   300.00 | 30 stations
+4.00   22.08     0.00    24.00 | 30 stations
+0.00   22.00     0.00    90.00 | 29 stations
+0.00   12.00     0.00   120.00 | 29 stations
+4.00   22.08     0.00   200.00 | 27 stations
+0.00    0.00     0.00   100.00 | 25 stations
+4.00   22.00     0.00    50.00 | 25 stations
+0.00   43.00    44.00    44.00 | 23 stations
+0.00    0.00     0.00   400.00 | 23 stations
+0.00    7.40     7.40     0.00 | 22 stations
+4.00   24.00    24.00    24.00 | 20 stations
+0.00   43.00    54.00   150.00 | 20 stations
+0.00    3.68     0.00     0.00 | 20 stations
+0.00    7.00     0.00     0.00 | 19 stations
+0.00   22.00    50.00   160.00 | 18 stations
+0.00   11.00    11.00     0.00 | 18 stations
+4.00   43.00     0.00    50.00 | 17 stations
+0.00   43.00    63.00   150.00 | 17 stations
+0.00   22.00    50.00   188.00 | 17 stations
+0.00    0.00     0.00   225.00 | 16 stations
+0.00   43.00     0.00    50.00 | 16 stations
+0.00   22.00    63.00   150.00 | 16 stations
+0.00   43.00    54.00   300.00 | 16 stations
+0.00   18.00     0.00     0.00 | 15 stations
+0.00    0.00     0.00    63.00 | 14 stations
+0.00   22.00     0.00   160.00 | 14 stations
+3.68    0.00     0.00     0.00 | 14 stations
+0.00    0.00    63.00   200.00 | 13 stations
+0.00    0.00     0.00    60.00 | 13 stations
+4.00   36.00    36.00    36.00 | 13 stations
+4.00   22.00     0.00    22.00 | 13 stations
+4.00   22.00     0.00    60.00 | 13 stations
+0.00   36.00    36.00    36.00 | 13 stations
+4.00   36.00     0.00     0.00 | 13 stations
+4.00   43.00    54.00   175.00 | 12 stations
+0.00   43.00    54.00    54.00 | 12 stations
+0.00    0.00     0.00    24.00 | 11 stations
+4.00   24.00     0.00     0.00 | 11 stations
+0.00   43.00     0.00    60.00 | 10 stations
+4.00   25.00    25.00    25.00 | 10 stations
+0.00   43.00    54.00     0.00 | 10 stations
+0.00   43.00    63.00     0.00 | 10 stations
+0.00   22.17    50.00   200.00 | 10 stations
+1.70   22.00     0.00     0.00 | 10 stations
+0.00   22.00     0.00   200.00 | 9 stations
+4.00   22.00     0.00   100.00 | 9 stations
+3.70    0.00     0.00     0.00 | 9 stations
+4.00   43.00    63.00     0.00 | 9 stations
+0.00   22.00    50.00   180.00 | 9 stations
+4.00   43.00    50.00   300.00 | 8 stations
+0.00   43.00     0.00   150.00 | 8 stations
+0.00    0.00     0.00    25.00 | 8 stations
+4.00   43.00    63.00   300.00 | 8 stations
+4.00   43.00    54.00     0.00 | 8 stations
+0.00    0.00     0.00   320.00 | 8 stations
+0.00    0.00    24.00     0.00 | 8 stations
+0.00    6.90     0.00     0.00 | 8 stations
+4.00   11.04     0.00     0.00 | 7 stations
+4.00   24.00     0.00    24.00 | 7 stations
+4.00   43.00     0.00     0.00 | 7 stations
+0.00    0.00     0.00   125.00 | 7 stations
+0.00    0.00     0.00    30.00 | 6 stations
+3.70   43.00    50.00    50.00 | 6 stations
+4.00   22.08     0.00   100.00 | 6 stations
+0.00    0.00    63.00   300.00 | 5 stations
+0.00    0.00    63.00   350.00 | 5 stations
+0.00   24.00     0.00    24.00 | 5 stations
+0.00   43.00     0.00   120.00 | 5 stations
+0.00   22.00    60.00    60.00 | 5 stations
+0.00    3.70     0.00     0.00 | 5 stations
+0.00   43.00    50.00   150.00 | 5 stations
+0.00   22.00     0.00   400.00 | 5 stations
+0.00    0.00     0.00   120.00 | 5 stations
+0.00   22.00     0.00   240.00 | 5 stations
+4.00   43.00     0.00    60.00 | 5 stations
+3.00    3.00     0.00     0.00 | 5 stations
+3.70    3.70     0.00     0.00 | 5 stations
+0.00   22.00     0.00    36.00 | 5 stations
+0.00    0.00     0.00    47.00 | 5 stations
+4.00   43.00    63.00   175.00 | 5 stations
+0.00   22.00    63.00   200.00 | 5 stations
+0.00   14.00     0.00     0.00 | 5 stations
+2.30   22.08     0.00     0.00 | 4 stations
+4.00   43.00    50.00   350.00 | 4 stations
+4.00    0.00    50.00    50.00 | 4 stations
+0.00    0.00    63.00   100.00 | 4 stations
+4.00    9.00     0.00     0.00 | 4 stations
+0.00   43.00    50.00   100.00 | 4 stations
+0.00   22.00     0.00    40.00 | 4 stations
+4.00   25.00     0.00    25.00 | 4 stations
+4.00   43.00    50.00     0.00 | 4 stations
+0.00   43.00    63.00   175.00 | 4 stations
+0.00   22.00     0.00   188.00 | 4 stations
+0.00    0.00    50.00   100.00 | 4 stations
+0.00    0.00    50.00   200.00 | 4 stations
+0.00   22.00     0.00   187.50 | 4 stations
+0.00   22.00     0.00    54.00 | 4 stations
+0.00   22.08    50.00    50.00 | 4 stations
+0.00   22.00    47.00     0.00 | 4 stations
+4.00   22.00    63.00   300.00 | 3 stations
+4.00    0.00    24.00    24.00 | 3 stations
+0.00   24.00    24.00    24.00 | 3 stations
+0.00    0.00     0.00    70.00 | 3 stations
+0.00   43.00     0.00    80.00 | 3 stations
+0.00    0.00     0.00    20.00 | 3 stations
+4.00   22.00     0.00   180.00 | 3 stations
+0.00   43.00     0.00   100.00 | 3 stations
+3.00   43.00    50.00    50.00 | 3 stations
+0.00   43.00    63.00    75.00 | 3 stations
+0.00   43.00    60.00    60.00 | 3 stations
+0.00    0.00    60.00    60.00 | 3 stations
+0.00   22.00     0.00    80.00 | 3 stations
+0.00   43.00    63.00    63.00 | 3 stations
+4.00   43.00    63.00   150.00 | 3 stations
+0.00   42.00    42.00    42.00 | 3 stations
+0.00   43.00    50.00     0.00 | 3 stations
+0.00    0.00    63.00   160.00 | 3 stations
+4.00    6.90     0.00     0.00 | 3 stations
+2.30    7.36     0.00     0.00 | 2 stations
+4.00   43.00    50.00   160.00 | 2 stations
+0.00   43.00    50.00   160.00 | 2 stations
+0.00   22.00     0.00    75.00 | 2 stations
+0.00   22.00    40.00    40.00 | 2 stations
+0.00   12.00     0.00   180.00 | 2 stations
+0.00   12.00    63.00   180.00 | 2 stations
+0.00   12.00     0.00   240.00 | 2 stations
+0.00   43.00     0.00    90.00 | 2 stations
+0.00   43.00     0.00   180.00 | 2 stations
+0.00   43.00    60.00   160.00 | 2 stations
+4.00    3.00     0.00     0.00 | 2 stations
+0.00   22.00    63.00   100.00 | 2 stations
+0.00   25.00     0.00    25.00 | 2 stations
+0.00   22.00    63.00    75.00 | 2 stations
+4.00   43.00    60.00    60.00 | 2 stations
+0.00   22.00    62.00   100.00 | 2 stations
+4.00    0.00     0.00     7.40 | 2 stations
+0.00   22.00     0.00    22.00 | 2 stations
+0.00    0.00    63.00    75.00 | 2 stations
+0.00   22.00    60.00   160.00 | 2 stations
+0.00   22.00    22.00    22.00 | 2 stations
+0.00   43.00    22.00    50.00 | 2 stations
+4.00   22.00     0.00   120.00 | 2 stations
+0.00   30.00     0.00    30.00 | 2 stations
+4.00   43.00    54.00   150.00 | 2 stations
+0.00   22.00    50.00   210.00 | 2 stations
+0.00    0.00    50.00   150.00 | 2 stations
+3.70   22.00     0.00     0.00 | 2 stations
+0.00    0.00     0.00    65.00 | 2 stations
+0.00   22.00     0.00   110.00 | 2 stations
+0.00   22.00    50.00    80.00 | 2 stations
+0.00   22.00    50.00   125.00 | 2 stations
+0.00   22.17    50.00   100.00 | 2 stations
+4.00   43.00    63.00   100.00 | 2 stations
+4.00   43.00    50.00   100.00 | 2 stations
+4.00   43.00    44.00    44.00 | 2 stations
+0.00    0.00     0.00   206.00 | 2 stations
+4.00   36.00     0.00     7.40 | 2 stations
+0.00   43.00     0.00   124.00 | 2 stations
+4.00   43.00    63.00   160.00 | 2 stations
+4.00   22.08    24.00    24.00 | 2 stations
+0.00    0.00     0.00   130.00 | 2 stations
+0.00   22.00    62.00   300.00 | 2 stations
+0.00   22.00     0.00    48.00 | 2 stations
+0.00    7.60     0.00     0.00 | 2 stations
+0.00    7.00     0.00   100.00 | 1 stations
+0.00   43.00     0.00    75.00 | 1 stations
+2.30   11.04     0.00     0.00 | 1 stations
+0.00   43.00    50.00   350.00 | 1 stations
+0.00   43.00    50.00   300.00 | 1 stations
+0.00   15.00     0.00   300.00 | 1 stations
+0.00    0.00     0.00    29.00 | 1 stations
+0.00   22.00     0.00   360.00 | 1 stations
+4.00   22.08    50.00   200.00 | 1 stations
+0.00    0.00     0.00   184.00 | 1 stations
+4.00   27.00     0.00     0.00 | 1 stations
+4.00    7.40    22.00    22.00 | 1 stations
+0.00    0.00     0.00    90.00 | 1 stations
+0.00   22.00     0.00   130.00 | 1 stations
+0.00   43.00    50.00   240.00 | 1 stations
+0.00   28.00     0.00     0.00 | 1 stations
+0.00   43.00    50.00   360.00 | 1 stations
+0.00   43.00    63.00   396.00 | 1 stations
+0.00    0.00     0.00    13.00 | 1 stations
+0.00   22.00     0.00   105.00 | 1 stations
+0.00    0.00     0.00   240.00 | 1 stations
+0.00   43.00     0.00   176.00 | 1 stations
+0.00   22.00    63.00   360.00 | 1 stations
+0.00   22.00    63.00   176.00 | 1 stations
+0.00    1.40     0.00     0.00 | 1 stations
+0.00   11.00     0.00   150.00 | 1 stations
+0.00   11.00     0.00   300.00 | 1 stations
+4.00   22.00    50.00   150.00 | 1 stations
+0.00   12.00    63.00   240.00 | 1 stations
+0.00   11.00     0.00   120.00 | 1 stations
+0.00   22.00     0.00   225.00 | 1 stations
+4.00   43.00    50.00    22.00 | 1 stations
+0.00    0.00    25.00    25.00 | 1 stations
+0.00    0.00    40.00    40.00 | 1 stations
+0.00   43.00    25.00   100.00 | 1 stations
+4.00   43.00     0.00   100.00 | 1 stations
+0.00   43.00    63.00   120.00 | 1 stations
+3.00   30.00    30.00    30.00 | 1 stations
+0.00   22.00     0.00    44.00 | 1 stations
+4.00   43.00     0.00   175.00 | 1 stations
+4.00   22.00    50.00   100.00 | 1 stations
+0.00   22.00     0.00    47.00 | 1 stations
+0.00   11.00     0.00    60.00 | 1 stations
+0.00   20.00     0.00    20.00 | 1 stations
+4.00   22.00    63.00   150.00 | 1 stations
+0.00   22.00    60.00   150.00 | 1 stations
+4.00   43.00     0.00   240.00 | 1 stations
+3.00   36.00    50.00    50.00 | 1 stations
+0.00    7.40    25.00    25.00 | 1 stations
+4.00    0.00     0.00   100.00 | 1 stations
+0.00    7.40    24.00    24.00 | 1 stations
+4.00    3.00    30.00    30.00 | 1 stations
+3.00    0.00    50.00    50.00 | 1 stations
+4.00   43.00    22.00   160.00 | 1 stations
+0.00    0.00     0.00   124.00 | 1 stations
+3.00    3.00     0.00   175.00 | 1 stations
+0.00    3.00     0.00     0.00 | 1 stations
+4.00    0.00     7.40     0.00 | 1 stations
+0.00   22.00    50.00    75.00 | 1 stations
+0.00   22.00    50.00     0.00 | 1 stations
+4.00    7.40    24.00    24.00 | 1 stations
+4.00    0.00    25.00    25.00 | 1 stations
+0.00   22.00     0.00   175.00 | 1 stations
+3.00   22.00     0.00     0.00 | 1 stations
+0.00    7.40     7.40    40.00 | 1 stations
+0.00    0.00    63.00   175.00 | 1 stations
+0.00    0.00    23.00     0.00 | 1 stations
+0.00   12.00     0.00     0.00 | 1 stations
+4.00    0.00     0.00   150.00 | 1 stations
+0.00   43.00     0.00   175.00 | 1 stations
+0.00   43.00    63.00   225.00 | 1 stations
+0.00   43.00    50.00   175.00 | 1 stations
+0.00   43.00     0.00   225.00 | 1 stations
+0.00   24.00    24.00     0.00 | 1 stations
+4.00   43.00     0.00   180.00 | 1 stations
+0.00   22.00    63.00   210.00 | 1 stations
+0.00   22.00    60.00   300.00 | 1 stations
+4.00    7.00     7.00     7.00 | 1 stations
+0.00    0.00     0.00    40.00 | 1 stations
+0.00    0.00     0.00   360.00 | 1 stations
+0.00    0.00     0.00   252.00 | 1 stations
+0.00    0.00    63.00    63.00 | 1 stations
+0.00    0.00    22.00    22.00 | 1 stations
+0.00   22.00    50.00   178.00 | 1 stations
+0.00    0.00    50.00   188.00 | 1 stations
+0.00   10.00    50.00   120.00 | 1 stations
+0.00   22.00    50.00   175.00 | 1 stations
+0.00   10.00     0.00   120.00 | 1 stations
+0.00   22.17    50.00    50.00 | 1 stations
+0.00    7.40    50.00   100.00 | 1 stations
+0.00   22.17     0.00   188.00 | 1 stations
+0.00   22.17     0.00   200.00 | 1 stations
+0.00   24.00    50.00   187.50 | 1 stations
+0.00   22.00    30.00    30.00 | 1 stations
+0.00    0.00     0.00   187.50 | 1 stations
+0.00   22.17    63.00   188.00 | 1 stations
+0.00   22.00    38.00    38.00 | 1 stations
+0.00   22.00    50.00   114.00 | 1 stations
+0.00    0.00    50.00    80.00 | 1 stations
+0.00    0.00    50.00   187.50 | 1 stations
+0.00    0.00    50.00   120.00 | 1 stations
+0.00    7.36     0.00   100.00 | 1 stations
+4.00   22.08     0.00   300.00 | 1 stations
+0.00   22.00    63.00   180.00 | 1 stations
+0.00   36.00     0.00     0.00 | 1 stations
+0.00    0.00    36.00     0.00 | 1 stations
+0.00    0.00     0.00    36.00 | 1 stations
+0.00   43.00    22.00   100.00 | 1 stations
+0.00   22.00     0.00   108.00 | 1 stations
+4.00   43.00    44.00    50.00 | 1 stations
+4.00   15.00     0.00     0.00 | 1 stations
+4.00   12.00     0.00     0.00 | 1 stations
+3.00   43.00    36.00    36.00 | 1 stations
+0.00   43.00    43.00    43.00 | 1 stations
+0.00    0.00    63.00    66.00 | 1 stations
+0.00   43.00     0.00    72.00 | 1 stations
+3.22    3.22     0.00     0.00 | 1 stations
+4.00    7.36     0.00   200.00 | 1 stations
+4.00    7.36     0.00    24.00 | 1 stations
+3.68   22.08     0.00     0.00 | 1 stations
+4.00   22.08    24.00    50.00 | 1 stations
+4.00   22.08     0.00    20.00 | 1 stations
+0.00   22.08    24.00    24.00 | 1 stations
+0.00   22.08     0.00   150.00 | 1 stations
+0.00   43.00    44.00     0.00 | 1 stations
+0.00   43.00     0.00   300.00 | 1 stations
+0.00   22.00    62.50   210.00 | 1 stations
+0.00   22.00    62.50   150.00 | 1 stations
+0.00   22.00    61.00   300.00 | 1 stations
+0.00    0.00     0.00   480.00 | 1 stations
+0.00    0.00    62.50   300.00 | 1 stations
+0.00    0.00     0.00   210.00 | 1 stations
+0.00    0.00     0.00    19.00 | 1 stations
+4.00    0.00     0.00    24.00 | 1 stations
+3.70    7.40     0.00     0.00 | 1 stations
+0.00    6.00     0.00     0.00 | 1 stations
+0.00   17.00     0.00     0.00 | 1 stations
+0.00   43.00    43.00     0.00 | 1 stations</code></pre>
+                    
+                </details>
+            </div>
+        
+        </div>
+    </main>
+    <footer class="container report-container report-foot">
+        <small>
+            <p>Généré le 2024-10-12 08:48:38 UTC</p>
+        </small>
+    </footer>
+    <script>/* PrismJS 1.29.0
+https://prismjs.com/download.html#themes=prism&languages=python */
+var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(e){var n=/(?:^|\s)lang(?:uage)?-([\w-]+)(?=\s|$)/i,t=0,r={},a={manual:e.Prism&&e.Prism.manual,disableWorkerMessageHandler:e.Prism&&e.Prism.disableWorkerMessageHandler,util:{encode:function e(n){return n instanceof i?new i(n.type,e(n.content),n.alias):Array.isArray(n)?n.map(e):n.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).slice(8,-1)},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function e(n,t){var r,i;switch(t=t||{},a.util.type(n)){case"Object":if(i=a.util.objId(n),t[i])return t[i];for(var l in r={},t[i]=r,n)n.hasOwnProperty(l)&&(r[l]=e(n[l],t));return r;case"Array":return i=a.util.objId(n),t[i]?t[i]:(r=[],t[i]=r,n.forEach((function(n,a){r[a]=e(n,t)})),r);default:return n}},getLanguage:function(e){for(;e;){var t=n.exec(e.className);if(t)return t[1].toLowerCase();e=e.parentElement}return"none"},setLanguage:function(e,t){e.className=e.className.replace(RegExp(n,"gi"),""),e.classList.add("language-"+t)},currentScript:function(){if("undefined"==typeof document)return null;if("currentScript"in document)return document.currentScript;try{throw new Error}catch(r){var e=(/at [^(\r\n]*\((.*):[^:]+:[^:]+\)$/i.exec(r.stack)||[])[1];if(e){var n=document.getElementsByTagName("script");for(var t in n)if(n[t].src==e)return n[t]}return null}},isActive:function(e,n,t){for(var r="no-"+n;e;){var a=e.classList;if(a.contains(n))return!0;if(a.contains(r))return!1;e=e.parentElement}return!!t}},languages:{plain:r,plaintext:r,text:r,txt:r,extend:function(e,n){var t=a.util.clone(a.languages[e]);for(var r in n)t[r]=n[r];return t},insertBefore:function(e,n,t,r){var i=(r=r||a.languages)[e],l={};for(var o in i)if(i.hasOwnProperty(o)){if(o==n)for(var s in t)t.hasOwnProperty(s)&&(l[s]=t[s]);t.hasOwnProperty(o)||(l[o]=i[o])}var u=r[e];return r[e]=l,a.languages.DFS(a.languages,(function(n,t){t===u&&n!=e&&(this[n]=l)})),l},DFS:function e(n,t,r,i){i=i||{};var l=a.util.objId;for(var o in n)if(n.hasOwnProperty(o)){t.call(n,o,n[o],r||o);var s=n[o],u=a.util.type(s);"Object"!==u||i[l(s)]?"Array"!==u||i[l(s)]||(i[l(s)]=!0,e(s,t,o,i)):(i[l(s)]=!0,e(s,t,null,i))}}},plugins:{},highlightAll:function(e,n){a.highlightAllUnder(document,e,n)},highlightAllUnder:function(e,n,t){var r={callback:t,container:e,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};a.hooks.run("before-highlightall",r),r.elements=Array.prototype.slice.apply(r.container.querySelectorAll(r.selector)),a.hooks.run("before-all-elements-highlight",r);for(var i,l=0;i=r.elements[l++];)a.highlightElement(i,!0===n,r.callback)},highlightElement:function(n,t,r){var i=a.util.getLanguage(n),l=a.languages[i];a.util.setLanguage(n,i);var o=n.parentElement;o&&"pre"===o.nodeName.toLowerCase()&&a.util.setLanguage(o,i);var s={element:n,language:i,grammar:l,code:n.textContent};function u(e){s.highlightedCode=e,a.hooks.run("before-insert",s),s.element.innerHTML=s.highlightedCode,a.hooks.run("after-highlight",s),a.hooks.run("complete",s),r&&r.call(s.element)}if(a.hooks.run("before-sanity-check",s),(o=s.element.parentElement)&&"pre"===o.nodeName.toLowerCase()&&!o.hasAttribute("tabindex")&&o.setAttribute("tabindex","0"),!s.code)return a.hooks.run("complete",s),void(r&&r.call(s.element));if(a.hooks.run("before-highlight",s),s.grammar)if(t&&e.Worker){var c=new Worker(a.filename);c.onmessage=function(e){u(e.data)},c.postMessage(JSON.stringify({language:s.language,code:s.code,immediateClose:!0}))}else u(a.highlight(s.code,s.grammar,s.language));else u(a.util.encode(s.code))},highlight:function(e,n,t){var r={code:e,grammar:n,language:t};if(a.hooks.run("before-tokenize",r),!r.grammar)throw new Error('The language "'+r.language+'" has no grammar.');return r.tokens=a.tokenize(r.code,r.grammar),a.hooks.run("after-tokenize",r),i.stringify(a.util.encode(r.tokens),r.language)},tokenize:function(e,n){var t=n.rest;if(t){for(var r in t)n[r]=t[r];delete n.rest}var a=new s;return u(a,a.head,e),o(e,a,n,a.head,0),function(e){for(var n=[],t=e.head.next;t!==e.tail;)n.push(t.value),t=t.next;return n}(a)},hooks:{all:{},add:function(e,n){var t=a.hooks.all;t[e]=t[e]||[],t[e].push(n)},run:function(e,n){var t=a.hooks.all[e];if(t&&t.length)for(var r,i=0;r=t[i++];)r(n)}},Token:i};function i(e,n,t,r){this.type=e,this.content=n,this.alias=t,this.length=0|(r||"").length}function l(e,n,t,r){e.lastIndex=n;var a=e.exec(t);if(a&&r&&a[1]){var i=a[1].length;a.index+=i,a[0]=a[0].slice(i)}return a}function o(e,n,t,r,s,g){for(var f in t)if(t.hasOwnProperty(f)&&t[f]){var h=t[f];h=Array.isArray(h)?h:[h];for(var d=0;d<h.length;++d){if(g&&g.cause==f+","+d)return;var v=h[d],p=v.inside,m=!!v.lookbehind,y=!!v.greedy,k=v.alias;if(y&&!v.pattern.global){var x=v.pattern.toString().match(/[imsuy]*$/)[0];v.pattern=RegExp(v.pattern.source,x+"g")}for(var b=v.pattern||v,w=r.next,A=s;w!==n.tail&&!(g&&A>=g.reach);A+=w.value.length,w=w.next){var E=w.value;if(n.length>e.length)return;if(!(E instanceof i)){var P,L=1;if(y){if(!(P=l(b,A,e,m))||P.index>=e.length)break;var S=P.index,O=P.index+P[0].length,j=A;for(j+=w.value.length;S>=j;)j+=(w=w.next).value.length;if(A=j-=w.value.length,w.value instanceof i)continue;for(var C=w;C!==n.tail&&(j<O||"string"==typeof C.value);C=C.next)L++,j+=C.value.length;L--,E=e.slice(A,j),P.index-=A}else if(!(P=l(b,0,E,m)))continue;S=P.index;var N=P[0],_=E.slice(0,S),M=E.slice(S+N.length),W=A+E.length;g&&W>g.reach&&(g.reach=W);var z=w.prev;if(_&&(z=u(n,z,_),A+=_.length),c(n,z,L),w=u(n,z,new i(f,p?a.tokenize(N,p):N,k,N)),M&&u(n,w,M),L>1){var I={cause:f+","+d,reach:W};o(e,n,t,w.prev,A,I),g&&I.reach>g.reach&&(g.reach=I.reach)}}}}}}function s(){var e={value:null,prev:null,next:null},n={value:null,prev:e,next:null};e.next=n,this.head=e,this.tail=n,this.length=0}function u(e,n,t){var r=n.next,a={value:t,prev:n,next:r};return n.next=a,r.prev=a,e.length++,a}function c(e,n,t){for(var r=n.next,a=0;a<t&&r!==e.tail;a++)r=r.next;n.next=r,r.prev=n,e.length-=a}if(e.Prism=a,i.stringify=function e(n,t){if("string"==typeof n)return n;if(Array.isArray(n)){var r="";return n.forEach((function(n){r+=e(n,t)})),r}var i={type:n.type,content:e(n.content,t),tag:"span",classes:["token",n.type],attributes:{},language:t},l=n.alias;l&&(Array.isArray(l)?Array.prototype.push.apply(i.classes,l):i.classes.push(l)),a.hooks.run("wrap",i);var o="";for(var s in i.attributes)o+=" "+s+'="'+(i.attributes[s]||"").replace(/"/g,"&quot;")+'"';return"<"+i.tag+' class="'+i.classes.join(" ")+'"'+o+">"+i.content+"</"+i.tag+">"},!e.document)return e.addEventListener?(a.disableWorkerMessageHandler||e.addEventListener("message",(function(n){var t=JSON.parse(n.data),r=t.language,i=t.code,l=t.immediateClose;e.postMessage(a.highlight(i,a.languages[r],r)),l&&e.close()}),!1),a):a;var g=a.util.currentScript();function f(){a.manual||a.highlightAll()}if(g&&(a.filename=g.src,g.hasAttribute("data-manual")&&(a.manual=!0)),!a.manual){var h=document.readyState;"loading"===h||"interactive"===h&&g&&g.defer?document.addEventListener("DOMContentLoaded",f):window.requestAnimationFrame?window.requestAnimationFrame(f):window.setTimeout(f,16)}return a}(_self);"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
+Prism.languages.python={comment:{pattern:/(^|[^\\])#.*/,lookbehind:!0,greedy:!0},"string-interpolation":{pattern:/(?:f|fr|rf)(?:("""|''')[\s\S]*?\1|("|')(?:\\.|(?!\2)[^\\\r\n])*\2)/i,greedy:!0,inside:{interpolation:{pattern:/((?:^|[^{])(?:\{\{)*)\{(?!\{)(?:[^{}]|\{(?!\{)(?:[^{}]|\{(?!\{)(?:[^{}])+\})+\})+\}/,lookbehind:!0,inside:{"format-spec":{pattern:/(:)[^:(){}]+(?=\}$)/,lookbehind:!0},"conversion-option":{pattern:/![sra](?=[:}]$)/,alias:"punctuation"},rest:null}},string:/[\s\S]+/}},"triple-quoted-string":{pattern:/(?:[rub]|br|rb)?("""|''')[\s\S]*?\1/i,greedy:!0,alias:"string"},string:{pattern:/(?:[rub]|br|rb)?("|')(?:\\.|(?!\1)[^\\\r\n])*\1/i,greedy:!0},function:{pattern:/((?:^|\s)def[ \t]+)[a-zA-Z_]\w*(?=\s*\()/g,lookbehind:!0},"class-name":{pattern:/(\bclass\s+)\w+/i,lookbehind:!0},decorator:{pattern:/(^[\t ]*)@\w+(?:\.\w+)*/m,lookbehind:!0,alias:["annotation","punctuation"],inside:{punctuation:/\./}},keyword:/\b(?:_(?=\s*:)|and|as|assert|async|await|break|case|class|continue|def|del|elif|else|except|exec|finally|for|from|global|if|import|in|is|lambda|match|nonlocal|not|or|pass|print|raise|return|try|while|with|yield)\b/,builtin:/\b(?:__import__|abs|all|any|apply|ascii|basestring|bin|bool|buffer|bytearray|bytes|callable|chr|classmethod|cmp|coerce|compile|complex|delattr|dict|dir|divmod|enumerate|eval|execfile|file|filter|float|format|frozenset|getattr|globals|hasattr|hash|help|hex|id|input|int|intern|isinstance|issubclass|iter|len|list|locals|long|map|max|memoryview|min|next|object|oct|open|ord|pow|property|range|raw_input|reduce|reload|repr|reversed|round|set|setattr|slice|sorted|staticmethod|str|sum|super|tuple|type|unichr|unicode|vars|xrange|zip)\b/,boolean:/\b(?:False|None|True)\b/,number:/\b0(?:b(?:_?[01])+|o(?:_?[0-7])+|x(?:_?[a-f0-9])+)\b|(?:\b\d+(?:_\d+)*(?:\.(?:\d+(?:_\d+)*)?)?|\B\.\d+(?:_\d+)*)(?:e[+-]?\d+(?:_\d+)*)?j?(?!\w)/i,operator:/[-+%=]=?|!=|:=|\*\*?=?|\/\/?=?|<[<=>]?|>[=>]?|[&|^~]/,punctuation:/[{}[\];(),.:]/},Prism.languages.python["string-interpolation"].inside.interpolation.inside.rest=Prism.languages.python,Prism.languages.py=Prism.languages.python;</script>
+</body>
+</html>
