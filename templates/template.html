@@ -8,11 +8,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
-    <style>{% include "assets/pico.min.css" %}</style>
-    <style id="prism-dark">{% include "assets/prism-night.css" %}</style>
-    <style id="prism-light" media="max-width: 1px">{% include "assets/prism-default.css" %}</style>
-    <style>{% include "assets/report.css" %}</style>
-    <script>{% include "assets/report-themes.js" %}</script>
+    <link rel="stylesheet" href="assets/pico.min.css">
+    <link rel="stylesheet" href="assets/prism-night.css" id="prism-dark">
+    <link rel="stylesheet" href="assets/prism-default.css" id="prism-light">
+    <link rel="stylesheet" href="assets/report.css">
+    <script src='assets/report-themes.js'></script>
 </head>
 <body>
     <nav class="container report-container report-head">
@@ -48,6 +48,7 @@
                             {% endif %}
                             </a></li>
                         {% endfor %}
+                            <li><a href="logs.html">Logs live query (experimental)</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -82,6 +83,7 @@
             <p>Généré le {{ timestamp }}</p>
         </small>
     </footer>
-    <script>{% include "assets/prism.js" %}</script>
+    <script src='assets/prism.js'></script>
+
 </body>
 </html>

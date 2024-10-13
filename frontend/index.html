@@ -1,0 +1,2638 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapport de run Jungle-Bus Group IRVE OpenData</title>
+    <link rel="stylesheet" href="assets/pico.min.css">
+    <link rel="stylesheet" href="assets/prism-night.css" id="prism-dark">
+    <link rel="stylesheet" href="assets/prism-default.css" id="prism-light">
+    <link rel="stylesheet" href="assets/report.css">
+    <script src='assets/report-themes.js'></script>
+</head>
+<body>
+    <nav class="container report-container report-head">
+        <ul>
+            <li>
+                <hgroup>
+                    <h1>Rapport de run Jungle-Bus Group IRVE OpenData</h1>
+                    <p>2024-10-14 00:04:09 CEST</p>
+                </hgroup>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-moon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg>
+                <input type="checkbox" id="dark-light-mode" name="dark-light-mode" role="switch" onchange="change_theme()">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>
+            </li>
+        </ul>
+    </nav>
+    <main class="container report-container">
+        
+            <aside class="report-toc">
+                <nav>
+                    <h2>Contents</h2>
+                    <div>
+                        <ul>
+                        
+                            <li><a href="#report-chunk-0">
+                            
+                                Présentation
+                            
+                            </a></li>
+                        
+                            <li><a href="#report-chunk-1">
+                            
+                                Fichiers
+                            
+                            </a></li>
+                        
+                            <li><a href="#report-chunk-2">
+                            
+                                Récap
+                            
+                            </a></li>
+                        
+                            <li><a href="#report-chunk-3">
+                            
+                                Sévérité par organisation
+                            
+                            </a></li>
+                        
+                            <li><a href="#report-chunk-4">
+                            
+                                Problèmes par organisation
+                            
+                            </a></li>
+                        
+                            <li><a href="#report-chunk-5">
+                            
+                                Statistiques puissance par station
+                            
+                            </a></li>
+                        
+                            <li><a href="logs.html">Logs live query (experimental)</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </aside>
+        
+        <div role="document">
+        
+            <div class="report-code-block" id="report-chunk-0">
+            
+                <h2>Présentation</h2>
+            
+                
+                    
+                        
+    <div><p>Ceci est la page de résultats générée automatiquement. Pour plus d'informations sur le process, voir <a href="https://github.com/guiohm/ref-EU-EVSE">https://github.com/guiohm/ref-EU-EVSE</a></p></div>
+
+                    
+                
+            </div>
+        
+            <div class="report-code-block" id="report-chunk-1">
+            
+                <h2>Fichiers</h2>
+            
+                
+                    
+                        
+    <div><ul>
+<li><a href="opendata_stations.csv">opendata_stations.csv</a> : Liste des stations</li>
+<li><a href="opendata_networks.csv">opendata_networks.csv</a> : Liste des couples opérateurs / réseau (à des fins de corrections de typo, ajout de tag wikidata, etc)</li>
+<li><a href="opendata_errors.csv">opendata_errors.csv</a> : Liste des erreurs rencontrées durant le traitement (avec détail au cas par cas)</li>
+</ul></div>
+
+                    
+                
+            </div>
+        
+            <div class="report-code-block" id="report-chunk-2">
+            
+                <h2>Récap</h2>
+            
+                
+                <details open>
+                    <summary>Expand/Collapse</summary>
+                
+                    
+                        <pre><code class="language-python">103544 lignes (PDCs) en entrée | 6243 PDCs en double
+27023 stations reconnues sur 37453 station_id distincts en entrée
+42050 problèmes trouvés pour 97301 PDCs distincts en entrée (il peut exister plusieurs problèmes par PDC/station):
+ &gt; [blocking] 25003 x le format de l&#39;identifiant ref:EU:EVSE (id_station_itinerance) n&#39;est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l&#39;analyse Osmose
+ &gt;    [error]    10 x aucun type de prise précisé sur l&#39;ensemble des points de charge
+ &gt;    [error]  9426 x le nombre de point de charge de la station n&#39;est pas cohérent avec la liste des points de charge fournie
+ &gt;    [error]  1399 x plusieurs sources pour un même id
+ &gt;  [warning]     5 x le champ station_deux_roues n&#39;est pas valide
+ &gt;  [warning]   981 x le numéro de téléphone de l&#39;opérateur (telephone_operateur) est dans un format invalide
+ &gt;  [warning]     8 x plusieurs horaires pour une même station
+ &gt;  [warning]  1636 x plusieurs infos d&#39;accessibilité PMR (accessibilite_pmr) pour une même station
+ &gt;  [warning]    15 x plusieurs infos de gratuité (gratuit) pour une même station
+ &gt;  [warning]    54 x plusieurs infos de paiement (paiement_acte) pour une même station
+ &gt;  [warning]  1607 x plusieurs infos de paiement (paiement_cb) pour une même station
+ &gt;  [warning]   293 x plusieurs infos de réservation pour une même station
+ &gt;  [warning]   279 x puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)
+ &gt;  [warning]   809 x puissance nominale déclarée pour prise EF supérieure à la norme (4)
+ &gt;  [warning]   525 x puissance nominale déclarée pour prise T2 supérieure à la norme (43)
+
+Severité
+blocking    25003
+error       10835
+warning      6212
+
+Top 25 Organisations les plus problematiques:
+
+Sévérité                                           blocking  error warning  TOTAL
+Organisation                                                                     
+TOTAL                                                 25003  10835    6212  42050
+alize-charge                                          15573      -       -  15573
+izivia                                                    -   5764     602   6366
+lidl                                                   4111      -       -   4111
+gireve-2                                                198    624    1285   2107
+spbr1                                                     -    804     921   1725
+multiples                                                 -   1399       -   1399
+engie-mobilites-electriques                               -    502     502   1004
+rossini-energy                                          846      -       -    846
+morbihan-energies                                         -    188     614    802
+allego-1                                                616      -       -    616
+syndicat-departemental-denergie-du-tarn                 604      -       -    604
+totalenergies-marketing-france                          210     22     308    540
+bump                                                    529      -       -    529
+driveco                                                   -    325     173    498
+soregies                                                478      -       -    478
+syndicat-intercommunal-delectricite-et-de-gaz-d...        -     90     369    459
+syndicat-departemental-denergie-de-la-haute-gar...        -     95     297    392
+ev-cars                                                   -     64     318    382
+zeborne                                                 367      -       -    367
+sowatt-solutions                                        275      -       -    275
+evzen-smeg-developpement                                  -      4     263    267
+ubitricity                                              257      -       -    257
+sieml                                                     -    209       -    209
+sydela                                                    -    192       -    192
+plus-de-bornes                                            -    168       7    175</code></pre>
+                    
+                
+                </details>
+                
+            </div>
+        
+            <div class="report-code-block" id="report-chunk-3">
+            
+                <h2>Sévérité par organisation</h2>
+            
+                
+                <details open>
+                    <summary>Expand/Collapse</summary>
+                
+                    
+                        <object><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Sévérité</th>
+      <th>blocking</th>
+      <th>error</th>
+      <th>warning</th>
+      <th>TOTAL</th>
+    </tr>
+    <tr>
+      <th>Organisation</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>TOTAL</th>
+      <td>25003</td>
+      <td>10835</td>
+      <td>6212</td>
+      <td>42050</td>
+    </tr>
+    <tr>
+      <th>alize-charge</th>
+      <td>15573</td>
+      <td>-</td>
+      <td>-</td>
+      <td>15573</td>
+    </tr>
+    <tr>
+      <th>izivia</th>
+      <td>-</td>
+      <td>5764</td>
+      <td>602</td>
+      <td>6366</td>
+    </tr>
+    <tr>
+      <th>lidl</th>
+      <td>4111</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4111</td>
+    </tr>
+    <tr>
+      <th>gireve-2</th>
+      <td>198</td>
+      <td>624</td>
+      <td>1285</td>
+      <td>2107</td>
+    </tr>
+    <tr>
+      <th>spbr1</th>
+      <td>-</td>
+      <td>804</td>
+      <td>921</td>
+      <td>1725</td>
+    </tr>
+    <tr>
+      <th>multiples</th>
+      <td>-</td>
+      <td>1399</td>
+      <td>-</td>
+      <td>1399</td>
+    </tr>
+    <tr>
+      <th>engie-mobilites-electriques</th>
+      <td>-</td>
+      <td>502</td>
+      <td>502</td>
+      <td>1004</td>
+    </tr>
+    <tr>
+      <th>rossini-energy</th>
+      <td>846</td>
+      <td>-</td>
+      <td>-</td>
+      <td>846</td>
+    </tr>
+    <tr>
+      <th>morbihan-energies</th>
+      <td>-</td>
+      <td>188</td>
+      <td>614</td>
+      <td>802</td>
+    </tr>
+    <tr>
+      <th>allego-1</th>
+      <td>616</td>
+      <td>-</td>
+      <td>-</td>
+      <td>616</td>
+    </tr>
+    <tr>
+      <th>syndicat-departemental-denergie-du-tarn</th>
+      <td>604</td>
+      <td>-</td>
+      <td>-</td>
+      <td>604</td>
+    </tr>
+    <tr>
+      <th>totalenergies-marketing-france</th>
+      <td>210</td>
+      <td>22</td>
+      <td>308</td>
+      <td>540</td>
+    </tr>
+    <tr>
+      <th>bump</th>
+      <td>529</td>
+      <td>-</td>
+      <td>-</td>
+      <td>529</td>
+    </tr>
+    <tr>
+      <th>driveco</th>
+      <td>-</td>
+      <td>325</td>
+      <td>173</td>
+      <td>498</td>
+    </tr>
+    <tr>
+      <th>soregies</th>
+      <td>478</td>
+      <td>-</td>
+      <td>-</td>
+      <td>478</td>
+    </tr>
+    <tr>
+      <th>syndicat-intercommunal-delectricite-et-de-gaz-du-puy-de-dome-irve</th>
+      <td>-</td>
+      <td>90</td>
+      <td>369</td>
+      <td>459</td>
+    </tr>
+    <tr>
+      <th>syndicat-departemental-denergie-de-la-haute-garonne</th>
+      <td>-</td>
+      <td>95</td>
+      <td>297</td>
+      <td>392</td>
+    </tr>
+    <tr>
+      <th>ev-cars</th>
+      <td>-</td>
+      <td>64</td>
+      <td>318</td>
+      <td>382</td>
+    </tr>
+    <tr>
+      <th>zeborne</th>
+      <td>367</td>
+      <td>-</td>
+      <td>-</td>
+      <td>367</td>
+    </tr>
+    <tr>
+      <th>sowatt-solutions</th>
+      <td>275</td>
+      <td>-</td>
+      <td>-</td>
+      <td>275</td>
+    </tr>
+    <tr>
+      <th>evzen-smeg-developpement</th>
+      <td>-</td>
+      <td>4</td>
+      <td>263</td>
+      <td>267</td>
+    </tr>
+    <tr>
+      <th>ubitricity</th>
+      <td>257</td>
+      <td>-</td>
+      <td>-</td>
+      <td>257</td>
+    </tr>
+    <tr>
+      <th>sieml</th>
+      <td>-</td>
+      <td>209</td>
+      <td>-</td>
+      <td>209</td>
+    </tr>
+    <tr>
+      <th>sydela</th>
+      <td>-</td>
+      <td>192</td>
+      <td>-</td>
+      <td>192</td>
+    </tr>
+    <tr>
+      <th>plus-de-bornes</th>
+      <td>-</td>
+      <td>168</td>
+      <td>7</td>
+      <td>175</td>
+    </tr>
+    <tr>
+      <th>easycharge-services</th>
+      <td>-</td>
+      <td>-</td>
+      <td>145</td>
+      <td>145</td>
+    </tr>
+    <tr>
+      <th>car2plug</th>
+      <td>140</td>
+      <td>-</td>
+      <td>-</td>
+      <td>140</td>
+    </tr>
+    <tr>
+      <th>greenspot-enersoft</th>
+      <td>-</td>
+      <td>126</td>
+      <td>14</td>
+      <td>140</td>
+    </tr>
+    <tr>
+      <th>ionity-gmbh</th>
+      <td>121</td>
+      <td>-</td>
+      <td>-</td>
+      <td>121</td>
+    </tr>
+    <tr>
+      <th>e-totem</th>
+      <td>-</td>
+      <td>59</td>
+      <td>54</td>
+      <td>113</td>
+    </tr>
+    <tr>
+      <th>zeenco</th>
+      <td>104</td>
+      <td>-</td>
+      <td>-</td>
+      <td>104</td>
+    </tr>
+    <tr>
+      <th>lumiin</th>
+      <td>98</td>
+      <td>-</td>
+      <td>-</td>
+      <td>98</td>
+    </tr>
+    <tr>
+      <th>e-charge50</th>
+      <td>-</td>
+      <td>6</td>
+      <td>78</td>
+      <td>84</td>
+    </tr>
+    <tr>
+      <th>mobilize-power-solutions</th>
+      <td>74</td>
+      <td>-</td>
+      <td>-</td>
+      <td>74</td>
+    </tr>
+    <tr>
+      <th>e-vadea</th>
+      <td>-</td>
+      <td>16</td>
+      <td>49</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <th>syndicat-departemental-des-energies-de-seine-et-marne-3</th>
+      <td>-</td>
+      <td>2</td>
+      <td>63</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <th>tem53</th>
+      <td>-</td>
+      <td>60</td>
+      <td>1</td>
+      <td>61</td>
+    </tr>
+    <tr>
+      <th>reseau-alterbase-79</th>
+      <td>-</td>
+      <td>16</td>
+      <td>41</td>
+      <td>57</td>
+    </tr>
+    <tr>
+      <th>securecharge</th>
+      <td>44</td>
+      <td>1</td>
+      <td>-</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>allego</th>
+      <td>-</td>
+      <td>18</td>
+      <td>27</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>qwello</th>
+      <td>44</td>
+      <td>-</td>
+      <td>-</td>
+      <td>44</td>
+    </tr>
+    <tr>
+      <th>nvh</th>
+      <td>35</td>
+      <td>-</td>
+      <td>-</td>
+      <td>35</td>
+    </tr>
+    <tr>
+      <th>borneco</th>
+      <td>34</td>
+      <td>-</td>
+      <td>-</td>
+      <td>34</td>
+    </tr>
+    <tr>
+      <th>properphi</th>
+      <td>30</td>
+      <td>-</td>
+      <td>-</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th>eoliberty</th>
+      <td>1</td>
+      <td>7</td>
+      <td>16</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>maneo</th>
+      <td>18</td>
+      <td>-</td>
+      <td>1</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>qowatt</th>
+      <td>18</td>
+      <td>-</td>
+      <td>-</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>energie-eure-et-loir</th>
+      <td>17</td>
+      <td>-</td>
+      <td>-</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>syndicat-departemental-denergie-dille-et-vilaine</th>
+      <td>-</td>
+      <td>2</td>
+      <td>13</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>sodel</th>
+      <td>13</td>
+      <td>-</td>
+      <td>-</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>bornevo</th>
+      <td>13</td>
+      <td>-</td>
+      <td>-</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>autorecharge</th>
+      <td>13</td>
+      <td>-</td>
+      <td>-</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>sas-satcoms</th>
+      <td>12</td>
+      <td>-</td>
+      <td>-</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>voltania</th>
+      <td>-</td>
+      <td>9</td>
+      <td>3</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>ev-map</th>
+      <td>-</td>
+      <td>11</td>
+      <td>-</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <th>jerecharge-com</th>
+      <td>-</td>
+      <td>2</td>
+      <td>8</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>regie-municipale-delectricite-de-loos</th>
+      <td>9</td>
+      <td>-</td>
+      <td>-</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>herve-thermique</th>
+      <td>7</td>
+      <td>-</td>
+      <td>2</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>i-bornes</th>
+      <td>1</td>
+      <td>4</td>
+      <td>3</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>tesla-motors</th>
+      <td>-</td>
+      <td>8</td>
+      <td>-</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>installation-dune-borne-22kwa-hostellerie-des-ducs</th>
+      <td>-</td>
+      <td>1</td>
+      <td>6</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>charge-in</th>
+      <td>6</td>
+      <td>-</td>
+      <td>1</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>see-you-sun</th>
+      <td>7</td>
+      <td>-</td>
+      <td>-</td>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>citeos-boulogne-sur-mer</th>
+      <td>-</td>
+      <td>-</td>
+      <td>6</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>territoire-denergie-orne</th>
+      <td>-</td>
+      <td>3</td>
+      <td>3</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>syndicat-intercommunal-de-lelectricite-et-du-gaz-de-leure</th>
+      <td>2</td>
+      <td>4</td>
+      <td>-</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>power-dot-france</th>
+      <td>-</td>
+      <td>1</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>2ems</th>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>inouid-smart-mobility</th>
+      <td>3</td>
+      <td>2</td>
+      <td>-</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>conectys</th>
+      <td>4</td>
+      <td>1</td>
+      <td>-</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>allcoms-technologies</th>
+      <td>5</td>
+      <td>-</td>
+      <td>-</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>kap-enerj</th>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>nm-securelec</th>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>eranovum-e-mobility-france</th>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>indelec-mobility</th>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>virta-global-gifi-caudebec-1</th>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>area-tech</th>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>imac2</th>
+      <td>-</td>
+      <td>3</td>
+      <td>-</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>hagenum</th>
+      <td>1</td>
+      <td>2</td>
+      <td>-</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>france-solar-sas</th>
+      <td>-</td>
+      <td>3</td>
+      <td>-</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>kallista-bdr</th>
+      <td>-</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>enerjump</th>
+      <td>3</td>
+      <td>-</td>
+      <td>-</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>acelec-charge</th>
+      <td>-</td>
+      <td>2</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>citeos-poitiers</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>citeos-bordeaux</th>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>normatech</th>
+      <td>1</td>
+      <td>1</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>peretti-groupe</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>sb-energy</th>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>idex-solar-charging-stations</th>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>ecarmobility</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>guillaume</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>la-borne-electrique</th>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>spie-citynetworks</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>startn-move-1</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>suraya</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>swish</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>wellborne</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>snmg2e</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>lg-electricite</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>sas-road54</th>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>philippi</th>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>r3</th>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>abe-electricite</th>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>chargepoly</th>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>borne-de-recharge-ad-bauducel</th>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>agglomeration-montargoise-et-rives-du-loing</th>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>dupuis-electricite</th>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>e-leclerc-millau</th>
+      <td>-</td>
+      <td>1</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>l2b-lorette-beaucamp-bonnet</th>
+      <td>-</td>
+      <td>1</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>irve-territoire-denergie-90</th>
+      <td>-</td>
+      <td>1</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>inforomu</th>
+      <td>-</td>
+      <td>1</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>garage-chene-total-energie-citroen</th>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>chariag</th>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>dubois-1</th>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>pf-automobiles-bourg-de-peage</th>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>neogroup-consulting</th>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>sebalyo-solar</th>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>rsb-zni-non-parking-camping-supervision-non</th>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>nexteneo</th>
+      <td>-</td>
+      <td>1</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>lamia-jp</th>
+      <td>-</td>
+      <td>1</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>mdg-fibre-sas</th>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>sorel-energies</th>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>stations-e</th>
+      <td>-</td>
+      <td>1</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>territoire-denergie-alsace</th>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table></object>
+                    
+                
+                </details>
+                
+            </div>
+        
+            <div class="report-code-block" id="report-chunk-4">
+            
+                <h2>Problèmes par organisation</h2>
+            
+                
+                <details open>
+                    <summary>Expand/Collapse</summary>
+                
+                    
+                        <object><table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr>
+      <th>Organisation</th>
+      <th>Occurences</th>
+      <th>Sévérité</th>
+      <th>Problème</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="3" valign="top">2ems</th>
+      <th rowspan="2" valign="top">1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th>3</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>abe-electricite</th>
+      <th>1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>acelec-charge</th>
+      <th>2</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>agglomeration-montargoise-et-rives-du-loing</th>
+      <th>1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>alize-charge</th>
+      <th>15573</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>allcoms-technologies</th>
+      <th>5</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">allego</th>
+      <th>7</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
+    </tr>
+    <tr>
+      <th>18</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>20</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>allego-1</th>
+      <th>616</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>area-tech</th>
+      <th>4</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>autorecharge</th>
+      <th>13</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>borne-de-recharge-ad-bauducel</th>
+      <th>1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>borneco</th>
+      <th>34</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>bornevo</th>
+      <th>13</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>bump</th>
+      <th>529</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>car2plug</th>
+      <th>140</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">charge-in</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>6</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>chargepoly</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>plusieurs infos de réservation pour une même station</th>
+    </tr>
+    <tr>
+      <th>chariag</th>
+      <th>1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">citeos-bordeaux</th>
+      <th rowspan="2" valign="top">1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th>citeos-boulogne-sur-mer</th>
+      <th>6</th>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th>citeos-poitiers</th>
+      <th>2</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">conectys</th>
+      <th>1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>4</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">driveco</th>
+      <th>8</th>
+      <th>warning</th>
+      <th>plusieurs infos de gratuité (gratuit) pour une même station</th>
+    </tr>
+    <tr>
+      <th>165</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>325</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>dubois-1</th>
+      <th>1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>dupuis-electricite</th>
+      <th>1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">e-charge50</th>
+      <th>4</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
+    </tr>
+    <tr>
+      <th>6</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>74</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
+    </tr>
+    <tr>
+      <th>e-leclerc-millau</th>
+      <th>1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">e-totem</th>
+      <th rowspan="2" valign="top">1</th>
+      <th rowspan="2" valign="top">warning</th>
+      <th>plusieurs infos de gratuité (gratuit) pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
+    </tr>
+    <tr>
+      <th>52</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
+    </tr>
+    <tr>
+      <th>59</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">e-vadea</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">16</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>32</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
+      <th>easycharge-services</th>
+      <th>145</th>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th>ecarmobility</th>
+      <th>2</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>energie-eure-et-loir</th>
+      <th>17</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>enerjump</th>
+      <th>3</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">engie-mobilites-electriques</th>
+      <th rowspan="2" valign="top">502</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">eoliberty</th>
+      <th>1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>7</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>16</th>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th>eranovum-e-mobility-france</th>
+      <th>4</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">ev-cars</th>
+      <th>64</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>318</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
+      <th>ev-map</th>
+      <th>11</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">evzen-smeg-developpement</th>
+      <th>4</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>263</th>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th>france-solar-sas</th>
+      <th>3</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>garage-chene-total-energie-citroen</th>
+      <th>1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="10" valign="top">gireve-2</th>
+      <th>4</th>
+      <th>error</th>
+      <th>aucun type de prise précisé sur l'ensemble des points de charge</th>
+    </tr>
+    <tr>
+      <th>10</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
+    </tr>
+    <tr>
+      <th>44</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
+    </tr>
+    <tr>
+      <th>58</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">179</th>
+      <th rowspan="2" valign="top">warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de réservation pour une même station</th>
+    </tr>
+    <tr>
+      <th>198</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>358</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
+      <th>457</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
+    </tr>
+    <tr>
+      <th>620</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">greenspot-enersoft</th>
+      <th>2</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">6</th>
+      <th rowspan="2" valign="top">warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
+    </tr>
+    <tr>
+      <th>126</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>guillaume</th>
+      <th>2</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">hagenum</th>
+      <th rowspan="3" valign="top">1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">error</th>
+      <th>aucun type de prise précisé sur l'ensemble des points de charge</th>
+    </tr>
+    <tr>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">herve-thermique</th>
+      <th rowspan="2" valign="top">1</th>
+      <th rowspan="2" valign="top">warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th>plusieurs horaires pour une même station</th>
+    </tr>
+    <tr>
+      <th>7</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">i-bornes</th>
+      <th rowspan="2" valign="top">1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>le champ station_deux_roues n'est pas valide</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">2</th>
+      <th rowspan="2" valign="top">error</th>
+      <th>aucun type de prise précisé sur l'ensemble des points de charge</th>
+    </tr>
+    <tr>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th>idex-solar-charging-stations</th>
+      <th>2</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
+      <th>imac2</th>
+      <th>3</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>indelec-mobility</th>
+      <th>4</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>inforomu</th>
+      <th>1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">inouid-smart-mobility</th>
+      <th>2</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>3</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="6" valign="top">installation-dune-borne-22kwa-hostellerie-des-ducs</th>
+      <th rowspan="5" valign="top">1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">warning</th>
+      <th>plusieurs horaires pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de réservation pour une même station</th>
+    </tr>
+    <tr>
+      <th>2</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
+      <th>ionity-gmbh</th>
+      <th>121</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>irve-territoire-denergie-90</th>
+      <th>1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">izivia</th>
+      <th>20</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
+    </tr>
+    <tr>
+      <th>93</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
+    </tr>
+    <tr>
+      <th>489</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
+    </tr>
+    <tr>
+      <th>5764</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">jerecharge-com</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>plusieurs horaires pour une même station</th>
+    </tr>
+    <tr>
+      <th>2</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>7</th>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">kallista-bdr</th>
+      <th rowspan="3" valign="top">1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">warning</th>
+      <th>le champ station_deux_roues n'est pas valide</th>
+    </tr>
+    <tr>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th>kap-enerj</th>
+      <th>4</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>l2b-lorette-beaucamp-bonnet</th>
+      <th>1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">la-borne-electrique</th>
+      <th rowspan="2" valign="top">1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th>lamia-jp</th>
+      <th>1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>lg-electricite</th>
+      <th>2</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>lidl</th>
+      <th>4111</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>lumiin</th>
+      <th>98</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">maneo</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th>18</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>mdg-fibre-sas</th>
+      <th>1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>mobilize-power-solutions</th>
+      <th>74</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="7" valign="top">morbihan-energies</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
+    </tr>
+    <tr>
+      <th>3</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
+    </tr>
+    <tr>
+      <th>5</th>
+      <th>warning</th>
+      <th>plusieurs infos de réservation pour une même station</th>
+    </tr>
+    <tr>
+      <th>8</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
+    </tr>
+    <tr>
+      <th>188</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>199</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>398</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
+      <th>multiples</th>
+      <th>1399</th>
+      <th>error</th>
+      <th>plusieurs sources pour un même id</th>
+    </tr>
+    <tr>
+      <th>neogroup-consulting</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th>nexteneo</th>
+      <th>1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>nm-securelec</th>
+      <th>4</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">normatech</th>
+      <th rowspan="2" valign="top">1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>nvh</th>
+      <th>35</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>peretti-groupe</th>
+      <th>2</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>pf-automobiles-bourg-de-peage</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">philippi</th>
+      <th rowspan="2" valign="top">1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">plus-de-bornes</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
+    </tr>
+    <tr>
+      <th>6</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
+      <th>168</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">power-dot-france</th>
+      <th>1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>5</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
+    </tr>
+    <tr>
+      <th>properphi</th>
+      <th>30</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>qowatt</th>
+      <th>18</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>qwello</th>
+      <th>44</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">r3</th>
+      <th rowspan="2" valign="top">1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>plusieurs horaires pour une même station</th>
+    </tr>
+    <tr>
+      <th>regie-municipale-delectricite-de-loos</th>
+      <th>9</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">reseau-alterbase-79</th>
+      <th>16</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>41</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
+    </tr>
+    <tr>
+      <th>rossini-energy</th>
+      <th>846</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>rsb-zni-non-parking-camping-supervision-non</th>
+      <th>1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">sas-road54</th>
+      <th rowspan="2" valign="top">1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th>sas-satcoms</th>
+      <th>12</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">sb-energy</th>
+      <th rowspan="2" valign="top">1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th>sebalyo-solar</th>
+      <th>1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">securecharge</th>
+      <th>1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>44</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>see-you-sun</th>
+      <th>7</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>sieml</th>
+      <th>209</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>snmg2e</th>
+      <th>2</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>sodel</th>
+      <th>13</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>soregies</th>
+      <th>478</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>sorel-energies</th>
+      <th>1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>sowatt-solutions</th>
+      <th>275</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="7" valign="top">spbr1</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>plusieurs horaires pour une même station</th>
+    </tr>
+    <tr>
+      <th>6</th>
+      <th>warning</th>
+      <th>plusieurs infos de gratuité (gratuit) pour une même station</th>
+    </tr>
+    <tr>
+      <th>9</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
+    </tr>
+    <tr>
+      <th>16</th>
+      <th>warning</th>
+      <th>plusieurs infos de réservation pour une même station</th>
+    </tr>
+    <tr>
+      <th>76</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
+    </tr>
+    <tr>
+      <th>804</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>813</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>spie-citynetworks</th>
+      <th>2</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>startn-move-1</th>
+      <th>2</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>stations-e</th>
+      <th>1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>suraya</th>
+      <th>2</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>swish</th>
+      <th>2</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>sydela</th>
+      <th>192</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">syndicat-departemental-denergie-de-la-haute-garonne</th>
+      <th>95</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>99</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>198</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">syndicat-departemental-denergie-dille-et-vilaine</th>
+      <th>2</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>13</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
+    </tr>
+    <tr>
+      <th>syndicat-departemental-denergie-du-tarn</th>
+      <th>604</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">syndicat-departemental-des-energies-de-seine-et-marne-3</th>
+      <th>2</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>21</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>42</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">syndicat-intercommunal-de-lelectricite-et-du-gaz-de-leure</th>
+      <th>2</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>4</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">syndicat-intercommunal-delectricite-et-de-gaz-du-puy-de-dome-irve</th>
+      <th>5</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
+    </tr>
+    <tr>
+      <th>90</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">91</th>
+      <th rowspan="2" valign="top">warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de réservation pour une même station</th>
+    </tr>
+    <tr>
+      <th>182</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">tem53</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>60</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>territoire-denergie-alsace</th>
+      <th>1</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">territoire-denergie-orne</th>
+      <th rowspan="2" valign="top">3</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
+    </tr>
+    <tr>
+      <th>tesla-motors</th>
+      <th>8</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="8" valign="top">totalenergies-marketing-france</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>2</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
+    </tr>
+    <tr>
+      <th>3</th>
+      <th>warning</th>
+      <th>plusieurs horaires pour une même station</th>
+    </tr>
+    <tr>
+      <th>22</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>29</th>
+      <th>warning</th>
+      <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th>92</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
+      <th>181</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
+    </tr>
+    <tr>
+      <th>210</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>ubitricity</th>
+      <th>257</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>virta-global-gifi-caudebec-1</th>
+      <th>4</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">voltania</th>
+      <th rowspan="2" valign="top">3</th>
+      <th>error</th>
+      <th>aucun type de prise précisé sur l'ensemble des points de charge</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>le champ station_deux_roues n'est pas valide</th>
+    </tr>
+    <tr>
+      <th>6</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>wellborne</th>
+      <th>2</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>zeborne</th>
+      <th>367</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>zeenco</th>
+      <th>104</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+  </tbody>
+</table></object>
+                    
+                
+                </details>
+                
+            </div>
+        
+            <div class="report-code-block" id="report-chunk-5">
+            
+                <h2>Statistiques puissance par station</h2>
+            
+                
+                <details open>
+                    <summary>Expand/Collapse</summary>
+                
+                    
+                        <pre><code class="language-python"> EF  |   T2  | Chademo |  CCS  |
+0.00   22.00     0.00     0.00 | 11107 stations
+0.00    7.36     0.00     0.00 | 3098 stations
+0.00    3.68     0.00     0.00 | 1608 stations
+0.00   18.00     0.00     0.00 | 1081 stations
+0.00    0.00     0.00     0.00 | 743 stations
+0.00    0.00     0.00   150.00 | 721 stations
+0.00   22.00     0.00    24.00 | 677 stations
+0.00    7.00     0.00     0.00 | 643 stations
+0.00   22.08     0.00     0.00 | 610 stations
+0.00    7.40     0.00     0.00 | 411 stations
+0.00   22.08     0.00    50.00 | 404 stations
+0.00   22.00     0.00   150.00 | 378 stations
+0.00    0.00     0.00    24.00 | 328 stations
+0.00   24.00     0.00     0.00 | 303 stations
+0.00    0.00     0.00    50.00 | 263 stations
+0.00   22.00     0.00    25.00 | 248 stations
+0.00   22.00     0.00    50.00 | 235 stations
+0.00    0.00    22.00     0.00 | 212 stations
+0.00   22.00    50.00   100.00 | 183 stations
+0.00   22.00    50.00   200.00 | 183 stations
+0.00   22.00     0.00   300.00 | 175 stations
+0.00    0.00     0.00   300.00 | 169 stations
+0.00   44.00     0.00    50.00 | 150 stations
+0.00   22.00     0.00   120.00 | 146 stations
+0.00    0.00     0.00   250.00 | 144 stations
+0.00   22.00    50.00    50.00 | 138 stations
+0.00   11.00     0.00     0.00 | 129 stations
+0.00   22.00     0.00    60.00 | 119 stations
+0.00   22.00    25.00    25.00 | 111 stations
+0.00    0.00     0.00   180.00 | 105 stations
+2.30   22.00     0.00     0.00 | 92 stations
+4.00    0.00     0.00    22.00 | 86 stations
+0.00    0.00     0.00   200.00 | 75 stations
+0.00    0.00    50.00     0.00 | 72 stations
+0.00   22.08     0.00    24.00 | 66 stations
+0.00   43.00     0.00    50.00 | 65 stations
+0.00   22.00    63.00   300.00 | 63 stations
+0.00   22.08     0.00   200.00 | 59 stations
+0.00    0.00    54.00   175.00 | 57 stations
+0.00   22.00    50.00   120.00 | 56 stations
+0.00   22.00    50.00   150.00 | 55 stations
+0.00   22.00     0.00   100.00 | 55 stations
+0.00    0.00     0.00    25.00 | 54 stations
+0.00   22.00     0.00   180.00 | 50 stations
+0.00   22.00    50.00   187.50 | 50 stations
+3.00    0.00     0.00     0.00 | 46 stations
+0.00   22.00    50.00    60.00 | 45 stations
+0.00   43.00    50.00    50.00 | 44 stations
+0.00    0.00     0.00   100.00 | 38 stations
+0.00   22.00    62.50   300.00 | 31 stations
+0.00    0.00     0.00    60.00 | 30 stations
+0.00   22.00    50.00   300.00 | 30 stations
+0.00   22.00     0.00    90.00 | 29 stations
+0.00   12.00     0.00   120.00 | 29 stations
+0.00    0.00     0.00    44.00 | 24 stations
+0.00   44.00    44.00    50.00 | 24 stations
+0.00    0.00     0.00   400.00 | 23 stations
+0.00    0.00     7.40     0.00 | 23 stations
+0.00    0.00    54.00   300.00 | 23 stations
+0.00   36.00     0.00    36.00 | 23 stations
+0.00   43.00     0.00   100.00 | 22 stations
+0.00    0.00    54.00     0.00 | 22 stations
+0.00    0.00    54.00   150.00 | 22 stations
+0.00   22.00    50.00   160.00 | 19 stations
+0.00    0.00     0.00    63.00 | 18 stations
+0.00    0.00     0.00   225.00 | 18 stations
+0.00    0.00    11.00     0.00 | 18 stations
+0.00   43.00    50.00   300.00 | 17 stations
+0.00   22.00    50.00   188.00 | 17 stations
+0.00   22.00     0.00   200.00 | 14 stations
+0.00    0.00    50.00    50.00 | 14 stations
+0.00   22.00     0.00   160.00 | 14 stations
+3.68    0.00     0.00     0.00 | 14 stations
+0.00   36.00     0.00     0.00 | 14 stations
+0.00    0.00    63.00     0.00 | 13 stations
+0.00   44.00    50.00    50.00 | 13 stations
+0.00   22.00     0.00    22.00 | 12 stations
+0.00    0.00     0.00    54.00 | 12 stations
+0.00    6.90     0.00     0.00 | 11 stations
+0.00    3.70     0.00     0.00 | 10 stations
+0.00   22.17    50.00   200.00 | 10 stations
+1.70   22.00     0.00     0.00 | 10 stations
+3.70    0.00     0.00     0.00 | 9 stations
+0.00    0.00    24.00     0.00 | 9 stations
+0.00   22.00    50.00   180.00 | 9 stations
+0.00    0.00     0.00    22.00 | 8 stations
+0.00    0.00     0.00    30.00 | 8 stations
+0.00    0.00     0.00   320.00 | 8 stations
+0.00   11.04     0.00     0.00 | 7 stations
+0.00    0.00     0.00   120.00 | 7 stations
+0.00    0.00     0.00   175.00 | 7 stations
+0.00    0.00     0.00   125.00 | 7 stations
+0.00   22.00     0.00    75.00 | 6 stations
+0.00   22.00     0.00    80.00 | 6 stations
+0.00   22.00     0.00    36.00 | 6 stations
+0.00    3.00     0.00     0.00 | 6 stations
+0.00   43.00     0.00     0.00 | 6 stations
+0.00   22.00    24.00    24.00 | 6 stations
+4.00   22.00     0.00     0.00 | 6 stations
+3.70   43.00    50.00    50.00 | 6 stations
+0.00   42.00     0.00    50.00 | 6 stations
+0.00   22.08     0.00   100.00 | 6 stations
+0.00   43.00    50.00   350.00 | 5 stations
+0.00    0.00     0.00   350.00 | 5 stations
+0.00   22.00     0.00   400.00 | 5 stations
+0.00   22.00     0.00   240.00 | 5 stations
+3.00    0.00    50.00    50.00 | 5 stations
+0.00    0.00     0.00    47.00 | 5 stations
+0.00   14.00     0.00     0.00 | 5 stations
+0.00   22.00    50.00   400.00 | 4 stations
+0.00    0.00     0.00    75.00 | 4 stations
+2.30   22.08     0.00     0.00 | 4 stations
+0.00   43.00    50.00   150.00 | 4 stations
+0.00    9.00     0.00     0.00 | 4 stations
+0.00   22.00    63.00   150.00 | 4 stations
+0.00   22.00     0.00    40.00 | 4 stations
+0.00   43.00     0.00   150.00 | 4 stations
+0.00   43.00    50.00   100.00 | 4 stations
+0.00    0.00    22.00   150.00 | 4 stations
+0.00   22.00     0.00   188.00 | 4 stations
+0.00    0.00    50.00   100.00 | 4 stations
+0.00    0.00    50.00   200.00 | 4 stations
+0.00   22.00     0.00   187.50 | 4 stations
+0.00   22.00     0.00    54.00 | 4 stations
+0.00   22.00    47.00     0.00 | 4 stations
+0.00   43.00    50.00   160.00 | 3 stations
+0.00    0.00     0.00    90.00 | 3 stations
+0.00    0.00     0.00    70.00 | 3 stations
+0.00    0.00     0.00    20.00 | 3 stations
+0.00   12.00     0.00   240.00 | 3 stations
+0.00    0.00     0.00    40.00 | 3 stations
+0.00   22.00    60.00   160.00 | 3 stations
+0.00    0.00     0.00   124.00 | 3 stations
+0.00   44.00     0.00   100.00 | 3 stations
+3.70   22.00     0.00     0.00 | 3 stations
+0.00   42.00     0.00    42.00 | 3 stations
+0.00    0.00     0.00   160.00 | 3 stations
+0.00   44.00    50.00   400.00 | 2 stations
+2.30    7.36     0.00     0.00 | 2 stations
+0.00   22.00    43.00    50.00 | 2 stations
+0.00   24.00     0.00    24.00 | 2 stations
+0.00   22.00    60.00    60.00 | 2 stations
+0.00    0.00     0.00   240.00 | 2 stations
+0.00   22.00    40.00    40.00 | 2 stations
+0.00   12.00     0.00   180.00 | 2 stations
+0.00   12.00    63.00   180.00 | 2 stations
+3.00    3.00     0.00     0.00 | 2 stations
+0.00   22.00     0.00   175.00 | 2 stations
+0.00   44.00    50.00   100.00 | 2 stations
+0.00   22.00    62.00   100.00 | 2 stations
+0.00   43.00     0.00    60.00 | 2 stations
+0.00    0.00     0.00     7.40 | 2 stations
+0.00    7.40     0.00    24.00 | 2 stations
+0.00    0.00    43.00    50.00 | 2 stations
+0.00   12.00     0.00     0.00 | 2 stations
+0.00    0.00    50.00   175.00 | 2 stations
+0.00   22.00    50.00   210.00 | 2 stations
+0.00    0.00    50.00   150.00 | 2 stations
+0.00    0.00     0.00    65.00 | 2 stations
+0.00   22.00     0.00   110.00 | 2 stations
+0.00   22.00    50.00    80.00 | 2 stations
+0.00   22.00    50.00   125.00 | 2 stations
+0.00   22.17    50.00   100.00 | 2 stations
+0.00    0.00     0.00   206.00 | 2 stations
+0.00   36.00     0.00     7.40 | 2 stations
+0.00    7.00     0.00    50.00 | 2 stations
+0.00    0.00     0.00   130.00 | 2 stations
+0.00   22.00    62.00   300.00 | 2 stations
+0.00   22.00     0.00    48.00 | 2 stations
+0.00    7.60     0.00     0.00 | 2 stations
+0.00    7.00     0.00   100.00 | 1 stations
+2.30   11.04     0.00     0.00 | 1 stations
+0.00   15.00     0.00   300.00 | 1 stations
+0.00    0.00     0.00    29.00 | 1 stations
+0.00   22.00     0.00   360.00 | 1 stations
+0.00    0.00     0.00   184.00 | 1 stations
+0.00   27.00     0.00     0.00 | 1 stations
+0.00    7.40     0.00    22.00 | 1 stations
+0.00   22.00     0.00   130.00 | 1 stations
+0.00   43.00    50.00   240.00 | 1 stations
+0.00   28.00     0.00     0.00 | 1 stations
+0.00   43.00    50.00   360.00 | 1 stations
+0.00   44.00     0.00   396.00 | 1 stations
+0.00    0.00     0.00    13.00 | 1 stations
+0.00   22.00     0.00   105.00 | 1 stations
+0.00   44.00     0.00   176.00 | 1 stations
+0.00   22.00    63.00   360.00 | 1 stations
+0.00   22.00     0.00   176.00 | 1 stations
+0.00    1.40     0.00     0.00 | 1 stations
+0.00   11.00     0.00   150.00 | 1 stations
+0.00   11.00     0.00   300.00 | 1 stations
+0.00   11.00     0.00   120.00 | 1 stations
+0.00   22.00     0.00   225.00 | 1 stations
+0.00   22.00    50.00    22.00 | 1 stations
+0.00    0.00    25.00    25.00 | 1 stations
+0.00    3.00     0.00    30.00 | 1 stations
+0.00   22.00     0.00    44.00 | 1 stations
+0.00    0.00    22.00    50.00 | 1 stations
+0.00   22.00     0.00    47.00 | 1 stations
+0.00   22.00    63.00   100.00 | 1 stations
+0.00   11.00     0.00    60.00 | 1 stations
+0.00   11.00     0.00    20.00 | 1 stations
+3.00    0.00     0.00    50.00 | 1 stations
+0.00    7.40     0.00    25.00 | 1 stations
+0.00    0.00    60.00    60.00 | 1 stations
+0.00    0.00    30.00    30.00 | 1 stations
+0.00    0.00    22.00   100.00 | 1 stations
+0.00    0.00    22.00    22.00 | 1 stations
+3.00   44.00    50.00    50.00 | 1 stations
+0.00    0.00    22.00   160.00 | 1 stations
+0.00   22.00    22.00    22.00 | 1 stations
+0.00    0.00    22.00    25.00 | 1 stations
+0.00   22.00    50.00    75.00 | 1 stations
+0.00   22.00    50.00     0.00 | 1 stations
+0.00    0.00    60.00   160.00 | 1 stations
+3.00   22.00     0.00     0.00 | 1 stations
+4.00    7.00     0.00     0.00 | 1 stations
+0.00    0.00    23.00     0.00 | 1 stations
+0.00   43.00     0.00   175.00 | 1 stations
+0.00    0.00    50.00   300.00 | 1 stations
+0.00   43.00     0.00   300.00 | 1 stations
+0.00   22.00    63.00   210.00 | 1 stations
+0.00   22.00    60.00   300.00 | 1 stations
+0.00    7.00     7.00     7.00 | 1 stations
+0.00    0.00     0.00   360.00 | 1 stations
+0.00    0.00     0.00   252.00 | 1 stations
+0.00   22.00    50.00   178.00 | 1 stations
+0.00    0.00    50.00   188.00 | 1 stations
+0.00   10.00    50.00   120.00 | 1 stations
+0.00   22.00    50.00   175.00 | 1 stations
+0.00   10.00     0.00   120.00 | 1 stations
+0.00   22.17    50.00    50.00 | 1 stations
+0.00    7.40    50.00   100.00 | 1 stations
+0.00   22.17     0.00   188.00 | 1 stations
+0.00   22.17     0.00   200.00 | 1 stations
+0.00   24.00    50.00   187.50 | 1 stations
+0.00   22.00    30.00    30.00 | 1 stations
+0.00    0.00     0.00   187.50 | 1 stations
+0.00   22.17    50.00   188.00 | 1 stations
+0.00   22.00    38.00    38.00 | 1 stations
+0.00   22.00    50.00   114.00 | 1 stations
+0.00    0.00    50.00    80.00 | 1 stations
+0.00    0.00    50.00   187.50 | 1 stations
+0.00    0.00    50.00   120.00 | 1 stations
+0.00    7.36     0.00   100.00 | 1 stations
+0.00   22.08     0.00   300.00 | 1 stations
+0.00    0.00    36.00     0.00 | 1 stations
+0.00    0.00     0.00    36.00 | 1 stations
+0.00   18.00     0.00    50.00 | 1 stations
+0.00   42.00     0.00    44.00 | 1 stations
+0.00   36.00    22.00    36.00 | 1 stations
+0.00   22.00     0.00   108.00 | 1 stations
+0.00   18.00     0.00    22.00 | 1 stations
+0.00   36.00    36.00    36.00 | 1 stations
+0.00   15.00     0.00     0.00 | 1 stations
+0.00   43.00     0.00   160.00 | 1 stations
+3.00   43.00    36.00    36.00 | 1 stations
+3.00   43.00    36.00   160.00 | 1 stations
+0.00   25.00    25.00    25.00 | 1 stations
+0.00    0.00     0.00    43.00 | 1 stations
+0.00    0.00     0.00    66.00 | 1 stations
+0.00    0.00     0.00    72.00 | 1 stations
+0.00    3.22     0.00     0.00 | 1 stations
+0.00    7.36     0.00   200.00 | 1 stations
+0.00    7.36     0.00    24.00 | 1 stations
+3.68   22.08     0.00     0.00 | 1 stations
+0.00   22.08     0.00    20.00 | 1 stations
+0.00   22.08     0.00   150.00 | 1 stations
+0.00   43.00    44.00     0.00 | 1 stations
+0.00   22.00    62.50   210.00 | 1 stations
+0.00   22.00    62.50   150.00 | 1 stations
+0.00   22.00    61.00   300.00 | 1 stations
+0.00    0.00     0.00   480.00 | 1 stations
+0.00    0.00    62.50   300.00 | 1 stations
+0.00    0.00     0.00   210.00 | 1 stations
+0.00    0.00     0.00    19.00 | 1 stations
+3.70    7.40     0.00     0.00 | 1 stations
+0.00    6.00     0.00     0.00 | 1 stations
+0.00   17.00     0.00     0.00 | 1 stations
+0.00    0.00    43.00     0.00 | 1 stations</code></pre>
+                    
+                
+                </details>
+                
+            </div>
+        
+        </div>
+    </main>
+    <footer class="container report-container report-foot">
+        <small>
+            <p>Généré le 2024-10-14 00:04:09 CEST</p>
+        </small>
+    </footer>
+    <script src='assets/prism.js'></script>
+
+</body>
+</html>
