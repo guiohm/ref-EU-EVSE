@@ -7,7 +7,6 @@ on:
     branches-ignore:
       - 'gh-pages'
 
-
 jobs:
   build:
     runs-on: self-hosted
@@ -30,6 +29,7 @@ jobs:
     - name: Generate data for Osmose
       run: |
         export PATH=$PATH:$PWD/
+        python -m unittest group_opendata_by_station.py -v
         xsv --version
         mkdir output
         git fetch origin && git show origin/gh-pages:history.csv > output/history.csv

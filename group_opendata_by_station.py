@@ -39,11 +39,6 @@ parser.add_argument('--html-report', required=False, default=False, action='stor
                     help='Generate a report at output/index.html')
 args = parser.parse_args()
 
-with open('fixes_networks.csv', 'r') as csv_file:
-    csv_reader = csv.DictReader(csv_file, delimiter=',')
-    for row in csv_reader:
-        wrong_ortho[row["opendata_name"]] = row["better_name"]
-
 def validate_coord(lat_or_lon_text):
     try:
         float(lat_or_lon_text)
@@ -85,12 +80,7 @@ def cleanPhoneNumber(phone):
 def compute_max_power_per_socket_type(station, raw_station_id):
     """
     Computes the aggregated max power per socket type accross all PDCs (PDLs) associated with the given station.
-    Sockets are limited to the max power rating for their type. This is a safe guess needed when a given PDC
-    has multiple sockets for a given nominal power rating:
-        - E/F: max 4 kw
-        - Type 2: max 43 kw
-        - Chademo: max 63 kw (in France -> Version 1 only)
-        - Combo CCS: currently unlimited
+    Only consider the most powerful socket per PDC.
     """
     power_ef = power_t2 = power_chademo = power_ccs = 0
     for pdc in station['pdc_list']:
@@ -101,42 +91,57 @@ def compute_max_power_per_socket_type(station, raw_station_id):
             log.error(station_id=raw_station_id,
                 pdc_id=pdc["id_pdc_itinerance"],
                 source=station['attributes']['source_grouped'],
-                msg="puissance nominale déclarée suspecte",
+                msg="puissance nominale déclarée suspecte (possible erreur W/kW)",
                 detail="puissance: {}, prises: {}".format(pdc['puissance_nominale'], socket_mask.name))
             # Convert from W to kW (>2MW should not exist)
             # FIXME: Probably not usefull anymore. Data looks fine.
-            if power_ccs >= 2000:
-                power_ccs /= 1000
+            if power >= 2000:
+                power /= 1000
 
         err_socket = report_socket_power_out_of_specs(power, socket_mask)
         if err_socket is not None:
             log.warning(station_id=raw_station_id,
                 pdc_id=pdc["id_pdc_itinerance"],
                 source=station['attributes']['source_grouped'],
-                msg="puissance nominale déclarée pour prise {} supérieure à la norme (valeur retenue: {})".format(err_socket.name, MAX_POWER_KW[err_socket]),
+                msg="puissance nominale déclarée pour prise {} supérieure à la norme ({})".format(err_socket.name, MAX_POWER_KW[err_socket]),
                 detail="puissance: {}, prises: {}".format(pdc['puissance_nominale'], socket_mask.name))
 
-        power_ef = max(power_ef, min(MAX_POWER_KW[Socket.EF], power if Socket.EF in socket_mask else 0))
-        power_t2 = max(power_t2, min(MAX_POWER_KW[Socket.T2], power if Socket.T2 in socket_mask else 0))
-        power_chademo = max(power_chademo, min(MAX_POWER_KW[Socket.CHADEMO], power if Socket.CHADEMO in socket_mask else 0))
-        power_ccs = max(power_ccs, power if Socket.CCS in socket_mask else 0)
+        max_socket = get_most_powerful_socket(socket_mask)
+        power_ef = max(power_ef, power if Socket.EF == max_socket and err_socket != max_socket else 0)
+        power_t2 = max(power_t2, power if Socket.T2 == max_socket and err_socket != max_socket else 0)
+        power_chademo = max(power_chademo, power if Socket.CHADEMO == max_socket and err_socket != max_socket else 0)
+        power_ccs = max(power_ccs, power if Socket.CCS == max_socket else 0)
 
     return (power_ef, power_t2, power_chademo, power_ccs)
 
+def get_most_powerful_socket(socket_mask):
+    """ EF < T2 < CHADEMO < CCS
+    """
+    if Socket.CCS in socket_mask:
+        return Socket.CCS
+    if Socket.CHADEMO in socket_mask and Socket.CCS in ~socket_mask:
+        return Socket.CHADEMO
+    elif Socket.T2 in socket_mask and Socket.CCS | Socket.CHADEMO in ~socket_mask:
+        return Socket.T2
+    elif Socket.EF in socket_mask and Socket.CCS | Socket.CHADEMO | Socket.T2 in ~socket_mask:
+        return Socket.EF
+    return None
+
 def report_socket_power_out_of_specs(power, socket_mask):
     """
-    This check can only be done on the most powerfull socket of the PDC:
-    EF < T2 < CHADEMO < CCS
+    This check can only be done on the most powerful socket of the PDC.
     Allow rounding errors (max +1 kw). No limits known for CCS.
     """
+    s = get_most_powerful_socket(socket_mask)
+    if s is None: return
     err_socket = None
-    if Socket.CHADEMO in socket_mask and Socket.CCS in ~socket_mask:
+    if s == Socket.CHADEMO:
         if power > MAX_POWER_KW[Socket.CHADEMO] + 1:
             err_socket = Socket.CHADEMO
-    elif Socket.T2 in socket_mask and Socket.CCS | Socket.CHADEMO in ~socket_mask:
+    elif s == Socket.T2:
         if power > MAX_POWER_KW[Socket.T2] + 1:
             err_socket = Socket.T2
-    elif Socket.EF in socket_mask and Socket.CCS | Socket.CHADEMO | Socket.T2 in ~socket_mask:
+    elif s == Socket.EF:
         if power > MAX_POWER_KW[Socket.EF] + 1:
             err_socket = Socket.EF
     return err_socket
@@ -157,199 +162,245 @@ def transformRef(refIti, refLoc):
     else:
         return None
 
-with open(args.input) as csvfile:
-    reader = csv.DictReader(csvfile, delimiter=',')
-    for row in reader:
-        if not row['id_station_itinerance']:
-            log.blocking(station_id=None,
-                source=row['datagouv_organization_or_owner'],
-                msg="pas d'identifiant ref:EU:EVSE (id_station_itinerance). Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose",
-                detail=None)
-            continue
-        if row['id_station_itinerance']=="Non concerné":
-            # Station non concernée par l'identifiant ref:EU:EVSE (id_station_itinerance). Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose
-            continue
+if __name__ == "__main__":
+    args = parser.parse_args()
 
-        station_id = row['id_station_itinerance'] # usefull to join logs with source data
-        cleanRef = transformRef(station_id, row['id_station_local'])
+    with open('fixes_networks.csv', 'r') as csv_file:
+        csv_reader = csv.DictReader(csv_file, delimiter=',')
+        for row in csv_reader:
+            wrong_ortho[row["opendata_name"]] = row["better_name"]
 
-        # Overkill given that this data should have passed through this code:
-        # https://github.com/datagouv/datagouvfr_data_pipelines/blob/75db0b1db3fd79407a1526b0950133114fefaa0f/schema/utils/geo.py#L33
-        if not validate_coord(row["consolidated_longitude"]) or not validate_coord(row["consolidated_latitude"]):
-            log.blocking(station_id= station_id,
-                source=row['datagouv_organization_or_owner'],
-                msg="coordonnées non valides. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose",
-                detail="consolidated_longitude: {}, consolidated_latitude: {}".format(row['consolidated_longitude'], row["consolidated_latitude"]))
-            continue
+    with open(args.input) as csvfile:
+        reader = csv.DictReader(csvfile, delimiter=',')
+        for row in reader:
+            if not row['id_station_itinerance']:
+                log.blocking(station_id=None,
+                    source=row['datagouv_organization_or_owner'],
+                    msg="pas d'identifiant ref:EU:EVSE (id_station_itinerance). Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose",
+                    detail=None)
+                continue
+            if row['id_station_itinerance']=="Non concerné":
+                # Station non concernée par l'identifiant ref:EU:EVSE (id_station_itinerance). Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose
+                continue
 
-        if not is_correct_id(cleanRef):
-            log.blocking(station_id=station_id,
-                source=row['datagouv_organization_or_owner'],
-                msg="le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose",
-                detail="iti: %s, local: %s" % (row['id_station_itinerance'], row['id_station_local']))
-            continue
+            cleanRef = transformRef(row['id_station_itinerance'], row['id_station_local'])
+            station_id = row['id_station_itinerance'] # usefull to join logs with source data
+            cleanRef = transformRef(station_id, row['id_station_local'])
 
-        if not station_id in station_list:
-            station_prop = {}
-            for key in station_attributes :
-                station_prop[key] = row[key]
-                if row[key] == "null":
-                    station_prop[key] = ""
-                elif row[key] in wrong_ortho.keys():
-                    station_prop[key] = wrong_ortho[row[key]]
+            # Overkill given that this data should have passed through this code:
+            # https://github.com/datagouv/datagouvfr_data_pipelines/blob/75db0b1db3fd79407a1526b0950133114fefaa0f/schema/utils/geo.py#L33
+            if not validate_coord(row["consolidated_longitude"]) or not validate_coord(row["consolidated_latitude"]):
+                log.blocking(station_id= station_id,
+                    source=row['datagouv_organization_or_owner'],
+                    msg="coordonnées non valides. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose",
+                    detail="consolidated_longitude: {}, consolidated_latitude: {}".format(row['consolidated_longitude'], row["consolidated_latitude"]))
+                continue
 
-            station_prop['Xlongitude'] = float(row['consolidated_longitude'])
-            station_prop['Ylatitude'] = float(row['consolidated_latitude'])
-            phone = cleanPhoneNumber(row['telephone_operateur'])
-            station_list[station_id] = {'attributes' : station_prop, 'pdc_list': []}
-            station_list[station_id]['attributes']['id_station_itinerance'] = cleanRef
+            if not is_correct_id(cleanRef):
+                log.blocking(station_id=station_id,
+                    source=row['datagouv_organization_or_owner'],
+                    msg="le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose",
+                    detail="iti: %s, local: %s" % (row['id_station_itinerance'], row['id_station_local']))
+                continue
 
-            # Non-blocking issues
-            if phone is None and row['telephone_operateur']!= "":
-                station_prop['telephone_operateur'] = None
-                log.warning(station_id=station_id,
-                   source=row['datagouv_organization_or_owner'],
-                   msg="le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide",
-                   detail=row['telephone_operateur'])
-            elif phone is not None:
-                station_prop['telephone_operateur'] = phone
-            else:
-                station_prop['telephone_operateur'] = None
+            if not station_id in station_list:
+                station_prop = {}
+                for key in station_attributes :
+                    station_prop[key] = row[key]
+                    if row[key] == "null":
+                        station_prop[key] = ""
+                    elif row[key] in wrong_ortho.keys():
+                        station_prop[key] = wrong_ortho[row[key]]
 
-            if row['station_deux_roues'].lower() not in ['true', 'false', '']:
-                station_prop['station_deux_roues'] = None
-                log.warning(station_id=station_id,
-                   source=row['datagouv_organization_or_owner'],
-                   msg="le champ station_deux_roues n'est pas valide",
-                   detail=row['station_deux_roues'])
-            else:
-                station_prop['station_deux_roues'] = row['station_deux_roues'].lower()
+                station_prop['Xlongitude'] = float(row['consolidated_longitude'])
+                station_prop['Ylatitude'] = float(row['consolidated_latitude'])
+                phone = cleanPhoneNumber(row['telephone_operateur'])
+                station_list[station_id] = {'attributes' : station_prop, 'pdc_list': []}
+                station_list[station_id]['attributes']['id_station_itinerance'] = cleanRef
 
-        pdc_prop = {key: row[key] for key in pdc_attributes}
-        station_list[station_id]['pdc_list'].append(pdc_prop)
+                # Non-blocking issues
+                if phone is None and row['telephone_operateur']!= "":
+                    station_prop['telephone_operateur'] = None
+                    log.warning(station_id=station_id,
+                        source=row['datagouv_organization_or_owner'],
+                        msg="le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide",
+                        detail=row['telephone_operateur'])
+                elif phone is not None:
+                    station_prop['telephone_operateur'] = phone
+                else:
+                    station_prop['telephone_operateur'] = None
 
-for station_id, station in station_list.items() :
-    sources = set([elem['datagouv_organization_or_owner'] for elem in station['pdc_list']])
-    if len(sources) !=1 :
-        log.error(station_id=station_id,
-                  source="multiples",
-                  msg="plusieurs sources pour un même id",
-                  detail=sources)
-    station['attributes']['source_grouped'] = list(sources)[0]
+                if row['station_deux_roues'].lower() not in ['true', 'false', '']:
+                    station_prop['station_deux_roues'] = None
+                    log.warning(station_id=station_id,
+                        source=row['datagouv_organization_or_owner'],
+                        msg="le champ station_deux_roues n'est pas valide",
+                        detail=row['station_deux_roues'])
+                else:
+                    station_prop['station_deux_roues'] = row['station_deux_roues'].lower()
 
-    horaires = set([elem['horaires'].strip() for elem in station['pdc_list']])
-    if len(horaires) !=1 :
-        station['attributes']['horaires_grouped'] = None
-        log.warning(station_id=station_id,
+            pdc_prop = {key: row[key] for key in pdc_attributes}
+            station_list[station_id]['pdc_list'].append(pdc_prop)
+
+    # ~ all_prises_types = set()
+
+    for station_id, station in station_list.items() :
+        sources = set([elem['datagouv_organization_or_owner'] for elem in station['pdc_list']])
+        if len(sources) !=1 :
+            log.error(station_id=station_id,
+                      source="multiples",
+                      msg="plusieurs sources pour un même id",
+                      detail=sources)
+        station['attributes']['source_grouped'] = list(sources)[0]
+
+        horaires = set([elem['horaires'].strip() for elem in station['pdc_list']])
+        if len(horaires) !=1 :
+            station['attributes']['horaires_grouped'] = None
+            log.warning(station_id=station_id,
+                        source=station['attributes']['source_grouped'],
+                        msg="plusieurs horaires pour une même station",
+                        detail=horaires)
+        else :
+            station['attributes']['horaires_grouped'] = list(horaires)[0]
+
+        gratuit = set([elem['gratuit'].strip().lower() for elem in station['pdc_list']])
+        if len(gratuit) !=1 :
+            station['attributes']['gratuit_grouped'] = None
+            log.warning(station_id=station_id,
+                        source=station['attributes']['source_grouped'],
+                        msg="plusieurs infos de gratuité (gratuit) pour une même station",
+                        detail=gratuit)
+        else :
+            station['attributes']['gratuit_grouped'] = list(gratuit)[0]
+
+        paiement_acte = set([elem['paiement_acte'].strip().lower() for elem in station['pdc_list']])
+        if len(paiement_acte) !=1 :
+            station['attributes']['paiement_acte_grouped'] = None
+            log.warning(station_id=station_id,
+                        source=station['attributes']['source_grouped'],
+                        msg="plusieurs infos de paiement (paiement_acte) pour une même station",
+                        detail=paiement_acte)
+        else :
+            station['attributes']['paiement_acte_grouped'] = list(paiement_acte)[0]
+
+        paiement_cb = set([elem['paiement_cb'].strip().lower() for elem in station['pdc_list']])
+        if len(paiement_cb) !=1 :
+            station['attributes']['paiement_cb_grouped'] = None
+            log.warning(station_id=station_id,
+                        source=station['attributes']['source_grouped'],
+                        msg="plusieurs infos de paiement (paiement_cb) pour une même station",
+                        detail=paiement_cb)
+        else :
+            station['attributes']['paiement_cb_grouped'] = list(paiement_cb)[0]
+
+        reservation = set([elem['reservation'].strip().lower() for elem in station['pdc_list']])
+        if len(reservation) !=1 :
+            station['attributes']['reservation_grouped'] = None
+            log.warning(station_id=station_id,
+                        source=station['attributes']['source_grouped'],
+                        msg="plusieurs infos de réservation pour une même station",
+                        detail=reservation)
+        else :
+            station['attributes']['reservation_grouped'] = list(reservation)[0]
+
+        accessibilite_pmr = set([elem['accessibilite_pmr'].strip() for elem in station['pdc_list']])
+        if len(accessibilite_pmr) !=1 :
+            station['attributes']['accessibilite_pmr_grouped'] = None
+            log.warning(station_id=station_id,
+                        source=station['attributes']['source_grouped'],
+                        msg="plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station",
+                        detail=accessibilite_pmr)
+        else :
+            station['attributes']['accessibilite_pmr_grouped'] = list(accessibilite_pmr)[0]
+
+        accessibilite_pmr = set([elem['accessibilite_pmr'].strip() for elem in station['pdc_list']])
+        if len(accessibilite_pmr) !=1 :
+            station['attributes']['accessibilite_pmr_grouped'] = None
+            log.warning(station_id=station_id,
+                        source=station['attributes']['source_grouped'],
+                        msg="plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station",
+                        detail=accessibilite_pmr)
+        else :
+            station['attributes']['accessibilite_pmr_grouped'] = list(accessibilite_pmr)[0]
+
+        if len(station['pdc_list']) != int(station['attributes']['nbre_pdc']):
+            log.error(station_id=station_id,
+                source=station['attributes']['source_grouped'],
+                msg="le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie",
+                detail="{} points de charge indiqués pour la station (nbre_pdc) mais {} points de charge listés".format(station['attributes']['nbre_pdc'], len(station['pdc_list'])))
+            station['attributes']['nbre_pdc'] = min(len(station['pdc_list']), int(station['attributes']['nbre_pdc']))
+
+        station['attributes']['nb_prises_grouped'] = len(station['pdc_list'])
+
+        EF_count = sum([ stringBoolToInt(elem['prise_type_ef']) for elem in station['pdc_list'] ])
+        station['attributes']['nb_EF_grouped'] = EF_count
+
+        T2_count = sum([ stringBoolToInt(elem['prise_type_2']) for elem in station['pdc_list'] ])
+        station['attributes']['nb_T2_grouped'] = T2_count
+
+        combo_count = sum([ stringBoolToInt(elem['prise_type_combo_ccs']) for elem in station['pdc_list'] ])
+        station['attributes']['nb_combo_ccs_grouped'] = combo_count
+
+        chademo_count = sum([ stringBoolToInt(elem['prise_type_chademo']) for elem in station['pdc_list'] ])
+        station['attributes']['nb_chademo_grouped'] = chademo_count
+
+        autre_count = sum([ stringBoolToInt(elem['prise_type_autre']) for elem in station['pdc_list'] ])
+        station['attributes']['nb_autre_grouped'] = autre_count
+
+        if (EF_count + T2_count + combo_count + chademo_count + autre_count) == 0:
+            log.error(station_id=station_id,
                     source=station['attributes']['source_grouped'],
-                    msg="plusieurs horaires pour une même station",
-                    detail=horaires)
-    else :
-        station['attributes']['horaires_grouped'] = list(horaires)[0]
+                    msg="aucun type de prise précisé sur l'ensemble des points de charge",
+                    detail="nb pdc: %s" % (len(station['pdc_list'])))
 
-    gratuit = set([elem['gratuit'].strip().lower() for elem in station['pdc_list']])
-    if len(gratuit) !=1 :
-        station['attributes']['gratuit_grouped'] = None
-        log.warning(station_id=station_id,
-                    source=station['attributes']['source_grouped'],
-                    msg="plusieurs infos de gratuité (gratuit) pour une même station",
-                    detail=gratuit)
-    else :
-        station['attributes']['gratuit_grouped'] = list(gratuit)[0]
-
-    paiement_acte = set([elem['paiement_acte'].strip().lower() for elem in station['pdc_list']])
-    if len(paiement_acte) !=1 :
-        station['attributes']['paiement_acte_grouped'] = None
-        log.warning(station_id=station_id,
-                    source=station['attributes']['source_grouped'],
-                    msg="plusieurs infos de paiement (paiement_acte) pour une même station",
-                    detail=paiement_acte)
-    else :
-        station['attributes']['paiement_acte_grouped'] = list(paiement_acte)[0]
-
-    paiement_cb = set([elem['paiement_cb'].strip().lower() for elem in station['pdc_list']])
-    if len(paiement_cb) !=1 :
-        station['attributes']['paiement_cb_grouped'] = None
-        log.warning(station_id=station_id,
-                    source=station['attributes']['source_grouped'],
-                    msg="plusieurs infos de paiement (paiement_cb) pour une même station",
-                    detail=paiement_cb)
-    else :
-        station['attributes']['paiement_cb_grouped'] = list(paiement_cb)[0]
-
-    reservation = set([elem['reservation'].strip().lower() for elem in station['pdc_list']])
-    if len(reservation) !=1 :
-        station['attributes']['reservation_grouped'] = None
-        log.warning(station_id=station_id,
-                    source=station['attributes']['source_grouped'],
-                    msg="plusieurs infos de réservation pour une même station",
-                    detail=reservation)
-    else :
-        station['attributes']['reservation_grouped'] = list(reservation)[0]
-
-    accessibilite_pmr = set([elem['accessibilite_pmr'].strip() for elem in station['pdc_list']])
-    if len(accessibilite_pmr) !=1 :
-        station['attributes']['accessibilite_pmr_grouped'] = None
-        log.warning(station_id=station_id,
-                    source=station['attributes']['source_grouped'],
-                    msg="plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station",
-                    detail=accessibilite_pmr)
-    else :
-        station['attributes']['accessibilite_pmr_grouped'] = list(accessibilite_pmr)[0]
-
-    if len(station['pdc_list']) != int(station['attributes']['nbre_pdc']):
-        log.error(station_id=station_id,
-                  source=station['attributes']['source_grouped'],
-                  msg="le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie",
-                  detail="{} points de charge indiqués pour la station (nbre_pdc) mais {} points de charge listés".format(station['attributes']['nbre_pdc'], len(station['pdc_list'])))
-        station['attributes']['nbre_pdc'] = min(len(station['pdc_list']), int(station['attributes']['nbre_pdc']))
-
-    station['attributes']['nb_prises_grouped'] = len(station['pdc_list'])
-
-    EF_count = sum([ stringBoolToInt(elem['prise_type_ef']) for elem in station['pdc_list'] ])
-    station['attributes']['nb_EF_grouped'] = EF_count
-
-    T2_count = sum([ stringBoolToInt(elem['prise_type_2']) for elem in station['pdc_list'] ])
-    station['attributes']['nb_T2_grouped'] = T2_count
-
-    combo_count = sum([ stringBoolToInt(elem['prise_type_combo_ccs']) for elem in station['pdc_list'] ])
-    station['attributes']['nb_combo_ccs_grouped'] = combo_count
-
-    chademo_count = sum([ stringBoolToInt(elem['prise_type_chademo']) for elem in station['pdc_list'] ])
-    station['attributes']['nb_chademo_grouped'] = chademo_count
-
-    autre_count = sum([ stringBoolToInt(elem['prise_type_autre']) for elem in station['pdc_list'] ])
-    station['attributes']['nb_autre_grouped'] = autre_count
-
-    if (EF_count + T2_count + combo_count + chademo_count + autre_count) == 0:
-        log.error(station_id=station_id,
-                  source=station['attributes']['source_grouped'],
-                  msg="aucun type de prise précisé sur l'ensemble des points de charge",
-                  detail="nb pdc: %s" % (len(station['pdc_list'])))
-
-    power_grouped_values = compute_max_power_per_socket_type(station, station_id)
-    power_stats.append(power_grouped_values)
-    power_props = ['power_ef_grouped', 'power_t2_grouped', 'power_chademo_grouped', 'power_ccs_grouped']
-    station['attributes'].update(zip(power_props, power_grouped_values))
+        power_grouped_values = compute_max_power_per_socket_type(station, station_id)
+        power_stats.append(power_grouped_values)
+        power_props = ['power_ef_grouped', 'power_t2_grouped', 'power_chademo_grouped', 'power_ccs_grouped']
+        station['attributes'].update(zip(power_props, power_grouped_values))
 
 
-logs = log._import_logged_data
-with open("output/opendata_errors.csv", 'w') as ofile:
-    tt = csv.DictWriter(ofile, fieldnames=logs[0].keys())
-    tt.writeheader()
-    for elem in logs:
-        tt.writerow(elem)
+    logs = log._import_logged_data
 
-with open("output/opendata_stations.csv", 'w') as ofile:
-    tt = csv.DictWriter(ofile, fieldnames=station_list[list(station_list)[0]]["attributes"].keys())
-    tt.writeheader()
-    for station_id, station in station_list.items():
-        tt.writerow(station['attributes'])
+    with open("output/opendata_errors.csv", 'w') as ofile:
+        tt = csv.DictWriter(ofile, fieldnames=logs[0].keys())
+        tt.writeheader()
+        for elem in logs:
+            tt.writerow(elem)
 
-r = Report(args.input, logs, station_list, power_stats)
-r.generate_report()
-r.render_stdout()
-if args.html_report:
-    r.render_html()
-if args.create_sqlite:
-    utils.create_sqlite(args.input)
+    with open("output/opendata_stations.csv", 'w') as ofile:
+        tt = csv.DictWriter(ofile, fieldnames=station_list[list(station_list)[0]]["attributes"].keys())
+        tt.writeheader()
+        for station_id, station in station_list.items():
+            tt.writerow(station['attributes'])
+
+    r = Report(args.input, logs, station_list, power_stats)
+    r.generate_report()
+    r.render_stdout()
+    if args.html_report:
+        r.render_html()
+    if args.create_sqlite:
+        utils.create_sqlite(args.input)
+
+###########################################################################
+import unittest
+
+class Test(unittest.TestCase):
+    import tests.power_test_data as data
+
+    def test_get_most_powerfull_socket(self):
+        self.assertEqual(Socket.CCS, get_most_powerful_socket(Socket.CCS))
+        self.assertEqual(Socket.CCS, get_most_powerful_socket(Socket.CHADEMO|Socket.CCS))
+        self.assertEqual(Socket.CCS, get_most_powerful_socket(Socket.T2|Socket.CHADEMO|Socket.CCS))
+        self.assertEqual(Socket.CCS, get_most_powerful_socket(Socket.EF|Socket.T2|Socket.CHADEMO|Socket.CCS))
+        self.assertEqual(Socket.CHADEMO, get_most_powerful_socket(Socket.CHADEMO))
+        self.assertEqual(Socket.CHADEMO, get_most_powerful_socket(Socket.T2|Socket.CHADEMO))
+        self.assertEqual(Socket.CHADEMO, get_most_powerful_socket(Socket.EF|Socket.T2|Socket.CHADEMO))
+        self.assertEqual(Socket.T2, get_most_powerful_socket(Socket.T2))
+        self.assertEqual(Socket.T2, get_most_powerful_socket(Socket.EF|Socket.T2))
+        self.assertEqual(Socket.EF, get_most_powerful_socket(Socket.EF))
+
+    def test_compute_max_power_per_socket_type(self):
+        for test in self.data.stations:
+            log._import_logged_data = []
+            self.assertEqual(test["result"], compute_max_power_per_socket_type(test["station"], "station_id"))
+            self.assertEqual(test["errors"], log._import_logged_data)
