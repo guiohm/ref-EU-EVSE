@@ -91,7 +91,9 @@ class Report:
 
         if self.are_packages_installed:
             import pandas as pd
-            pd.options.display.max_colwidth = 100
+            pd.options.display.max_colwidth = 50
+            pd.options.display.max_columns = 10
+            pd.options.display.width = 200
             print("\n"+self.severity_stats.to_string())
 
             print("\nTop 25 Organisations les plus problematiques:\n")
