@@ -37,7 +37,6 @@ parser.add_argument('--create-sqlite', required=False, default=False, action='st
                     help='Generate an sqlite database at output/irve.db')
 parser.add_argument('--html-report', required=False, default=False, action='store_true',
                     help='Generate a report at output/index.html')
-args = parser.parse_args()
 
 def validate_coord(lat_or_lon_text):
     try:
