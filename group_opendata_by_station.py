@@ -8,6 +8,7 @@ import argparse
 from enum import IntFlag, auto
 import modules.import_logger as log
 from modules.report import Report
+from modules import utils
 
 class Socket(IntFlag):
     EF = auto()
@@ -32,8 +33,10 @@ wrong_ortho = {}
 parser = argparse.ArgumentParser(description='This will group, validate and sanitize a previously "consolidated" export of IRVE data from data.gouv.fr')
 parser.add_argument('-i', '--input', required=False, default='opendata_irve.csv', nargs='?',
                     help='CSV input filename. Default is opendata_irve.csv')
+parser.add_argument('--create-sqlite', required=False, default=False, action='store_true',
+                    help='Generate an sqlite database at output/irve.db')
 parser.add_argument('--html-report', required=False, default=False, action='store_true',
-                    help='Generate a report at output/report.html')
+                    help='Generate a report at output/index.html')
 args = parser.parse_args()
 
 with open('fixes_networks.csv', 'r') as csv_file:
@@ -57,8 +60,6 @@ def is_correct_id(station_id):
     station_id_parts = station_id.split(' ')
     station_id = "".join(station_id_parts)
 
-    if not station_id.startswith('FR'):
-        return False
     if not station_id.startswith('P', 5):
         return False
     return True
@@ -81,7 +82,7 @@ def cleanPhoneNumber(phone):
     else:
         return None
 
-def compute_max_power_per_socket_type(station):
+def compute_max_power_per_socket_type(station, raw_station_id):
     """
     Computes the aggregated max power per socket type accross all PDCs (PDLs) associated with the given station.
     Sockets are limited to the max power rating for their type. This is a safe guess needed when a given PDC
@@ -97,7 +98,7 @@ def compute_max_power_per_socket_type(station):
         socket_mask = Socket(socket_mask)
         power = float(pdc['puissance_nominale'])
         if power >= 1000:
-            log.error(station_id=station['attributes']['id_station_itinerance'],
+            log.error(station_id=raw_station_id,
                 pdc_id=pdc["id_pdc_itinerance"],
                 source=station['attributes']['source_grouped'],
                 msg="puissance nominale déclarée suspecte",
@@ -109,7 +110,7 @@ def compute_max_power_per_socket_type(station):
 
         err_socket = report_socket_power_out_of_specs(power, socket_mask)
         if err_socket is not None:
-            log.warning(station_id=station['attributes']['id_station_itinerance'],
+            log.warning(station_id=raw_station_id,
                 pdc_id=pdc["id_pdc_itinerance"],
                 source=station['attributes']['source_grouped'],
                 msg="puissance nominale déclarée pour prise {} supérieure à la norme (valeur retenue: {})".format(err_socket.name, MAX_POWER_KW[err_socket]),
@@ -144,15 +145,15 @@ def stringBoolToInt(strbool):
     return 1 if strbool.lower() == 'true' else 0
 
 def transformRef(refIti, refLoc):
-    rgx = r"FR\*[A-Za-z0-9]{3}\*P[A-Za-z0-9]+\*[A-Za-z0-9]+"
+    rgx = r"^[A-Z]{2}\*[A-Za-z0-9]{3}\*P[A-Za-z0-9]+\*[A-Za-z0-9]+"
     areRefNoSepEqual = refIti.replace("*", "") == refLoc.replace("*", "")
 
     if re.match(rgx, refIti):
         return refIti
     elif areRefNoSepEqual and re.match(rgx, refLoc):
         return refLoc
-    elif re.match("FR[A-Za-z0-9]{3}P[A-Za-z0-9]+", refIti):
-        return "FR*"+refIti[2:5]+"*P"+refIti[6:]
+    elif re.match("^[A-Z]{2}[A-Za-z0-9]{3}P[A-Za-z0-9]+", refIti):
+        return refIti[:2]+"*"+refIti[2:5]+"*P"+refIti[6:]
     else:
         return None
 
@@ -169,25 +170,26 @@ with open(args.input) as csvfile:
             # Station non concernée par l'identifiant ref:EU:EVSE (id_station_itinerance). Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose
             continue
 
-        cleanRef = transformRef(row['id_station_itinerance'], row['id_station_local'])
+        station_id = row['id_station_itinerance'] # usefull to join logs with source data
+        cleanRef = transformRef(station_id, row['id_station_local'])
 
         # Overkill given that this data should have passed through this code:
         # https://github.com/datagouv/datagouvfr_data_pipelines/blob/75db0b1db3fd79407a1526b0950133114fefaa0f/schema/utils/geo.py#L33
         if not validate_coord(row["consolidated_longitude"]) or not validate_coord(row["consolidated_latitude"]):
-            log.blocking(station_id= cleanRef or row['id_station_itinerance'],
+            log.blocking(station_id= station_id,
                 source=row['datagouv_organization_or_owner'],
                 msg="coordonnées non valides. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose",
                 detail="consolidated_longitude: {}, consolidated_latitude: {}".format(row['consolidated_longitude'], row["consolidated_latitude"]))
             continue
 
         if not is_correct_id(cleanRef):
-            log.blocking(station_id=cleanRef or row['id_station_itinerance'],
+            log.blocking(station_id=station_id,
                 source=row['datagouv_organization_or_owner'],
                 msg="le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose",
                 detail="iti: %s, local: %s" % (row['id_station_itinerance'], row['id_station_local']))
             continue
 
-        if not cleanRef in station_list:
+        if not station_id in station_list:
             station_prop = {}
             for key in station_attributes :
                 station_prop[key] = row[key]
@@ -199,12 +201,13 @@ with open(args.input) as csvfile:
             station_prop['Xlongitude'] = float(row['consolidated_longitude'])
             station_prop['Ylatitude'] = float(row['consolidated_latitude'])
             phone = cleanPhoneNumber(row['telephone_operateur'])
-            station_list[cleanRef] = {'attributes' : station_prop, 'pdc_list': []}
+            station_list[station_id] = {'attributes' : station_prop, 'pdc_list': []}
+            station_list[station_id]['attributes']['id_station_itinerance'] = cleanRef
 
             # Non-blocking issues
             if phone is None and row['telephone_operateur']!= "":
                 station_prop['telephone_operateur'] = None
-                log.warning(station_id=cleanRef,
+                log.warning(station_id=station_id,
                    source=row['datagouv_organization_or_owner'],
                    msg="le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide",
                    detail=row['telephone_operateur'])
@@ -215,7 +218,7 @@ with open(args.input) as csvfile:
 
             if row['station_deux_roues'].lower() not in ['true', 'false', '']:
                 station_prop['station_deux_roues'] = None
-                log.warning(station_id=cleanRef,
+                log.warning(station_id=station_id,
                    source=row['datagouv_organization_or_owner'],
                    msg="le champ station_deux_roues n'est pas valide",
                    detail=row['station_deux_roues'])
@@ -223,10 +226,9 @@ with open(args.input) as csvfile:
                 station_prop['station_deux_roues'] = row['station_deux_roues'].lower()
 
         pdc_prop = {key: row[key] for key in pdc_attributes}
-        station_list[cleanRef]['pdc_list'].append(pdc_prop)
+        station_list[station_id]['pdc_list'].append(pdc_prop)
 
 for station_id, station in station_list.items() :
-    station['attributes']['id_station_itinerance'] = station_id
     sources = set([elem['datagouv_organization_or_owner'] for elem in station['pdc_list']])
     if len(sources) !=1 :
         log.error(station_id=station_id,
@@ -325,20 +327,13 @@ for station_id, station in station_list.items() :
                   msg="aucun type de prise précisé sur l'ensemble des points de charge",
                   detail="nb pdc: %s" % (len(station['pdc_list'])))
 
-    power_grouped_values = compute_max_power_per_socket_type(station)
+    power_grouped_values = compute_max_power_per_socket_type(station, station_id)
     power_stats.append(power_grouped_values)
     power_props = ['power_ef_grouped', 'power_t2_grouped', 'power_chademo_grouped', 'power_ccs_grouped']
     station['attributes'].update(zip(power_props, power_grouped_values))
 
 
 logs = log._import_logged_data
-
-r = Report(args.input, logs, station_list, power_stats)
-r.generate_report()
-r.render_stdout()
-if args.html_report:
-    r.render_html()
-
 with open("output/opendata_errors.csv", 'w') as ofile:
     tt = csv.DictWriter(ofile, fieldnames=logs[0].keys())
     tt.writeheader()
@@ -350,3 +345,11 @@ with open("output/opendata_stations.csv", 'w') as ofile:
     tt.writeheader()
     for station_id, station in station_list.items():
         tt.writerow(station['attributes'])
+
+r = Report(args.input, logs, station_list, power_stats)
+r.generate_report()
+r.render_stdout()
+if args.html_report:
+    r.render_html()
+if args.create_sqlite:
+    utils.create_sqlite(args.input)
