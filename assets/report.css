@@ -1,0 +1,60 @@
+:root {
+  --pico-font-size: 66%;
+  --pico-spacing: .8rem;
+  --pico-typography-spacing-vertical: .8rem;
+}
+.report-code-block {
+  margin-bottom: 2em;
+}
+.report-foot {
+  text-align: center;
+  padding-top: 0 !important;
+}
+.report-head {
+  padding-top: 1em;
+}
+#dark-light-mode {
+  margin: 0;
+}
+.container {
+  max-width: none;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: none;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+{% if toc %}
+@media (min-width:992px) {
+  .report-toc {
+    position: sticky;
+    align-self: start;
+    top: 0;
+    max-height: calc(100vh - 5em);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  main {
+    display: grid;
+    align-items: start;
+    grid-template-columns: 8% auto;
+    column-gap: 1em;
+  }
+}
+{% endif %}
+
+:where(table) {
+  width: auto;
+}
+table.dataframe th,
+table.dataframe td {
+  padding: 0 4px;
+  background-color: transparent;
+}
+tr:hover {
+  background-color: #7171602b;
+}
