@@ -31,13 +31,17 @@ jobs:
         export PATH=$PATH:$PWD/
         python -m unittest group_opendata_by_station.py -v
         xsv --version
-        mkdir output
+        mkdir -p output/assets
         git fetch origin && git show origin/gh-pages:history.csv > output/history.csv
         wget https://www.data.gouv.fr/fr/datasets/r/2729b192-40ab-4454-904d-735084dca3a3 --no-verbose --output-document=opendata_irve.csv 2>&1
-        python group_opendata_by_station.py --html-report
+        python group_opendata_by_station.py --html-report --create-sqlite
         #fail if less than 2 lines
         test `cat output/opendata_stations.csv | xsv count` -ge 2
         cat output/opendata_stations.csv |xsv select nom_operateur,nom_enseigne |xsv sort |uniq > output/opendata_networks.csv
+
+        # copy frontend to output
+        cp frontend/logs.html output/
+        cp -r frontend/assets output/
     - name: Deploy
       if: ${{ github.ref == 'refs/heads/main' }}
       uses: peaceiris/actions-gh-pages@v3

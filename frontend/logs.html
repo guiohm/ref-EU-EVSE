@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jungle-Bus Group IRVE OpenData</title>
     <link rel="stylesheet" href="assets/pico.min.css">
-    <link rel="stylesheet" href="assets/prism-night.css" id="prism-dark">
-    <link rel="stylesheet" href="assets/prism-default.css" id="prism-light">
     <link rel="stylesheet" href="assets/gridjs.css" id="gridjs-light">
     <link rel="stylesheet" href="assets/gridjs-dark.css" id="gridjs-dark">
+    <link rel="stylesheet" href="assets/codemirror.css">
+    <link rel="stylesheet" href="assets/codemirror-dark.css">
+    <link rel="stylesheet" href="assets/codemirror.show.hint.css">
     <link rel="stylesheet" href="assets/report.css">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css" rel="stylesheet" /> -->
-    <script src='assets/sql-wasm-debug.js'></script>
 <style>
+::selection {
+    background-color: #7a0f51;
+    color: #fff;
+}
 td.gridjs-td, th.gridjs-th {
     padding: 2px 4px;
 }
@@ -23,9 +26,51 @@ td.gridjs-td, th.gridjs-th {
 #input {
     font-family: monospace;
 }
+
+.actions  {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: 44px;
+    gap: 15px;
+    height: auto;
+    padding: 12px;
+}
+
+.item {
+    background-color: var(--pico-secondary-background);
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+    transition: transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    color: #fff;
+    cursor: pointer;
+}
+.item:hover {
+    background-color: var(--pico-primary-hover-background);
+}
+.CodeMirror {
+  height: auto;
+  min-height: 50px;
+  margin: 0 12px 6px;
+}
+.buttons {
+    margin: 0 12px;
+}
+.buttons > span {
+    margin: 0 6px;
+}
+#error {
+color: #f98ba1;
+  background-color: #2d2562;
+  padding: 0 12px;
+  margin: 8px 12px;
+}
 </style>
-<script>
-</script>
 </head>
 <body>
     <nav class="container report-container report-head">
@@ -44,76 +89,33 @@ td.gridjs-td, th.gridjs-th {
             </li>
         </ul>
     </nav>
-    <textarea id="input">select * from view_logs where pdc_id is not null limit 3</textarea>
-	<button id='submit'>Execute</button>
-	<pre id='error'></pre>
+    <div class="actions">
+        <div class="item" data-sql="select datagouv_organization_or_owner, count(1) as problèmes from logs group by datagouv_organization_or_owner order by count(1) desc">
+            Problèmes par organisation</div>
+        <div class="item" data-sql="select level, msg, count(1) as occurrences from logs group by level, msg">
+            Liste des problèmes</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+        <div class="item">Item 7</div>
+    </div>
+    <textarea id="input">select * from logs where pdc_id is not null limit 300</textarea>
+	<div class="buttons">
+        <button id='submit'>Executer <kbd>Ctrl+↵</kbd></button>
+        <span id="resultCount"></span>
+    </div>
+    <div class="code">
+        <pre id='error'></pre>
+    </div>
     <div id="wrapper"></div>
 
-	<script>
-let SQL, buf, db;
-(async function(){
-    const sqlPromise = initSqlJs({
-        locateFile: file => `assets/${file}`
-    });
-    const dataPromise = fetch("/assets/irve.db").then(res => res.arrayBuffer());
-    [SQL, buf] = await Promise.all([sqlPromise, dataPromise])
-    db = new SQL.Database(new Uint8Array(buf));
-})()
-
-let result, grid, lineCount = null
-const gridWrapper = document.getElementById("wrapper")
-const inputEl = document.getElementById('input')
-const submitBtn = document.getElementById('submit')
-
-function runQuery() {
-    submitBtn.disabled = true
-    gridWrapper.style.opacity = 0.4
-    var sql = inputEl.value;
-    result = '', error = '';
-    try { result = db.exec(sql); }
-    catch (e) { error = e; }
-    document.getElementById('error').innerHTML = error;
-    if (!grid) {
-        console.log("new grid")
-        grid = new gridjs.Grid({
-            columns: result[0].columns,
-            data: result[0].values,
-            fixedHeader: true,
-            // resizable: true,
-            search: true,
-            sort: true,
-            style:{
-                container:{
-                'width':'100%',
-                'height':'100%'
-                },
-            },
-            width: '100%',
-            height: '92%',
-        });
-    } else {
-        grid.destroy()
-    }
-    lineCount = result[0].values.length
-
-    grid.updateConfig({
-        columns: result[0].columns,
-        data: result[0].values,
-        // height: `${Math.min(900, lineCount * 190)}px`,
-    }).render(gridWrapper);
-
-    submitBtn.disabled = false
-    gridWrapper.style.opacity = 1
-}
-
-document.addEventListener('keydown', (event) => {
-    if(event.ctrlKey && event.key == "Enter") {
-        runQuery()
-    }
-});
-submitBtn.onclick = runQuery;
-	</script>
     <script src="assets/report-themes.js"></script>
+    <script src="assets/codemirror.js"></script>
+    <script src="assets/codemirror.sql.js"></script>
+    <script src="assets/codemirror.show.hint.js"></script>
+    <script src="assets/codemirror.sql.hint.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.umd.js"></script>
+    <script src="assets/logs.js"></script>
 </body>
 </html>

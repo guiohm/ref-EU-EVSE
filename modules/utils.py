@@ -14,11 +14,14 @@ def create_sqlite(input_file):
     df = df.drop_duplicates()
     df.to_sql('log', con=conn, if_exists='replace', index=True)
 
-    conn.execute("DROP VIEW IF EXISTS view_logs;")
+    conn.execute("DROP TABLE IF EXISTS logs;")
     conn.execute("""
-    CREATE VIEW view_logs as
+    CREATE TABLE logs AS
     SELECT * FROM log l LEFT JOIN irve i ON l.station_id = i.id_station_itinerance UNION
-    SELECT * FROM log l LEFT JOIN irve i ON l.station_id = i.id_station_itinerance AND l.pdc_id = i.id_pdc_itinerance WHERE l.pdc_id IS NOT null; """)
+    SELECT * FROM log l LEFT JOIN irve i ON l.station_id = i.id_station_itinerance AND l.pdc_id = i.id_pdc_itinerance WHERE l.pdc_id IS NOT null;""")
+    conn.execute("DROP TABLE log;")
+    conn.execute("DROP TABLE irve;")
+    conn.execute("VACUUM;")
     conn.close()
 
 def get_github_repo_url():

@@ -3,8 +3,8 @@
 import http.server
 import os
 
-# We need to host from the root because we are going to be requesting files inside of dist
-# os.chdir("../")
+# We need to host from the root because we are going to be requesting files inside of output
+os.chdir("../")
 port = 8081
 print("Listening on http://localhost:%d" % port)
 
