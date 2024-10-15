@@ -90,7 +90,7 @@ color: #f98ba1;
         </ul>
     </nav>
     <div class="actions">
-        <div class="item" data-sql="select datagouv_organization_or_owner, count(1) as problèmes from logs group by datagouv_organization_or_owner order by count(1) desc">
+        <div class="item" data-sql="SELECT l.datagouv_organization_or_owner, problemes, level, count(1) as occurrences, msg FROM logs l&#010;  LEFT JOIN (&#010;    SELECT datagouv_organization_or_owner, count(1) as problemes FROM logs GROUP BY datagouv_organization_or_owner&#010;    ) AS b ON b.datagouv_organization_or_owner = l.datagouv_organization_or_owner&#010;GROUP BY l.datagouv_organization_or_owner, level, msg ORDER BY problemes DESC, level;">
             Problèmes par organisation</div>
         <div class="item" data-sql="select level, msg, count(1) as occurrences from logs group by level, msg">
             Liste des problèmes</div>
