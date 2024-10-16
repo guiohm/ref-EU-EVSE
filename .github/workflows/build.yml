@@ -42,6 +42,7 @@ jobs:
         # copy frontend to output
         cp frontend/logs.html output/
         cp -r frontend/assets output/
+        cp -r frontend/js output/
     - name: Deploy
       if: ${{ github.ref == 'refs/heads/main' }}
       uses: peaceiris/actions-gh-pages@v3
