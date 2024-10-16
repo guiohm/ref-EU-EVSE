@@ -26,9 +26,9 @@ ActionsEl.addEventListener('click', onActionsClick, true);
 ///////// Result count
 
 function getResultCountHtml() {
-    let {resultCount} = state;
-    return resultCount > 0 ? `${resultCount} résultats`
-        : (resultCount < 0 ? 'Requête en cours...' : 'Pas de résultat')
+    let {loading, resultCount} = state;
+    return loading ? 'Requête en cours...'
+        : (resultCount > 0 ? `${resultCount} résultats` : 'Pas de résultat')
 }
 component(document.getElementById('resultCount'), getResultCountHtml);
 
@@ -72,12 +72,15 @@ function cleanErrors() {
     errorEl.style.height = '0';
 }
 
-function execEditorContents() {
+function execEditorContents(options) {
+    if (state.loading) return;
     cleanErrors()
-    executeSqlAndShowResults(editor.getValue() + ';');
+    executeSqlAndShowResults(editor.getValue(), options);
 }
 
-function executeSqlAndShowResults(sql) {
+function executeSqlAndShowResults(sql, options) {
+    if (options?.pushHistory !== false)
+        history.pushState({}, "", location.pathname+'?q='+encodeURI(sql));
     tic();
     worker.onmessage = function (event) {
         var results = event.data.results;
@@ -99,13 +102,15 @@ function executeSqlAndShowResults(sql) {
         loadingStop();
         toc('Results to HTML');
     }
-    worker.postMessage({ action: 'exec', sql: sql });
+    worker.postMessage({ action: 'exec', sql: sql + ';' });
     loadingStart();
 }
 
 const pageDiv = document.getElementsByClassName('page')[0];
+
 function loadingStart() {
-    state.resultCount = -1;
+    state.loading = true;
+    state.resultCount = 0;
     submitBtn.ariaDisabled = true;
     pageDiv.style.opacity = 0.4;
     if (grid) grid.destroy();
@@ -113,6 +118,7 @@ function loadingStart() {
 }
 
 function loadingStop() {
+    state.loading = false;
     pageDiv.style.opacity = 1;
     submitBtn.ariaDisabled = false;
 }
@@ -166,8 +172,23 @@ function createGrid(results) {
 
 loadLocalStorage(state);
 document.addEventListener(events.execUserSql, execEditorContents);
-document.addEventListener(events.dbLoaded, execEditorContents);
+document.addEventListener(events.dbLoaded, () => {
+    state.loading = false;
+    execEditorContents();
+});
 submitBtn.addEventListener('click', execEditorContents, true);
+
+// history
+function loadFromUrl(url) {
+    const sql = url.split('?q=')
+    if (sql.length > 1 && sql[1].toLowerCase().startsWith('select')) {
+        editor.setValue(decodeURI(sql[1]));
+        execEditorContents({pushHistory: false});
+    }
+}
+window.addEventListener('popstate', (e) => loadFromUrl(e.target.location.href));
+// initial load
+loadFromUrl(window.location.href);
 
 // select cell content on click
 resultsDiv.addEventListener('click', e => {
