@@ -125,3 +125,7 @@ tr:hover > td{
 #helpDialog {
   font-size: 1.6rem;
 }
+
+dialog > article {
+  padding-left: 24px;
+}
