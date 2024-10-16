@@ -1,21 +1,25 @@
 import { init } from './init.js'
 import { events, queries } from './constants.js'
 import { tic, toc } from './utils.js';
+import { component, signal } from '../lib/reef.es.js';
 
 const {worker, editor} = init(execEditorContents, showError);
 
+const state = signal({
+    loading: true,
+    resultCount: 0,
+})
+
 let result, grid, lineCount = null
-const ActionsEl = document.querySelector('.actions')
 const gridWrapper = document.getElementById('wrapper')
 const submitBtn = document.getElementById('submit')
 const errorEl = document.getElementById('error')
-const resultCountEl = document.getElementById('resultCount')
 
 function showError(e) {
 	console.log(e);
 	errorEl.style.height = 'auto';
 	errorEl.textContent = e.message;
-    resultCountEl.innerText = '';
+    state.resultCount = 0;
 }
 function cleanErrors() {
 	errorEl.style.height = '0';
@@ -40,7 +44,7 @@ function executeSqlAndShowResults(sql) {
 		for (var i = 0; i < results.length; i++) {
 			gridWrapper.appendChild(createTable(results[i].columns, results[i].values));
 		}
-        resultCountEl.innerText = results[0].values.length + ' résultats'
+        state.resultCount = results[0].values.length
         submitBtn.ariaDisabled = false
 		toc('Results to HTML');
 	}
@@ -48,8 +52,8 @@ function executeSqlAndShowResults(sql) {
     loadingStart();
 }
 function loadingStart() {
-    submitBtn.ariaDisabled = true
-	resultCountEl.innerText = 'Requête en cours...';
+    state.resultCount = -1;
+    submitBtn.ariaDisabled = true;
     gridWrapper.innerHTML = '';
 }
 
@@ -100,21 +104,15 @@ function createGrid(results) {
     }).render(gridWrapper);
 }
 
-
-
-function onActionsClick(ev) {
-    if (!ev.target.dataset?.sql) return;
-    editor.setValue(ev.target.dataset.sql);
-    execEditorContents()
-}
-
 document.addEventListener(events.execUserSql, execEditorContents);
 document.addEventListener(events.dbLoaded, execEditorContents);
 submitBtn.addEventListener('click', execEditorContents, true);
-ActionsEl.addEventListener('click', onActionsClick, true);
 
 
-//////// html gen
+
+//////// Actions
+
+const ActionsEl = document.querySelector('.actions')
 
 function renderActions() {
     ActionsEl.innerHTML = queries.map((query, index) => {
@@ -123,24 +121,19 @@ function renderActions() {
 }
 renderActions();
 
-//////// Alpine.js stuff
+function onActionsClick(ev) {
+    if (!ev.target.dataset?.idx) return;
+    editor.setValue(queries[ev.target.dataset.idx].sql);
+    execEditorContents()
+}
+ActionsEl.addEventListener('click', onActionsClick, true);
 
-// document.addEventListener('alpine:init', () => {
-// Alpine.data('actions', () => ({
-//     queries: queries,
-//     current: '',
+///////// result count
 
-//     click(e) {
-//         console.log(e)
-//     }
-// }))
+function getResultCountHtml() {
+    let {resultCount} = state;
+    return resultCount > 0 ? resultCount + ' résultats' : 'Requête en cours...'
+}
+component(document.getElementById('resultCount'), getResultCountHtml);
 
-// Alpine.store('actions', {
-//     queries: queries,
-//     current: '',
-
-//     click(e, v) {
-//         console.log(e, v, this)
-//     }
-// })
-// });
+////////

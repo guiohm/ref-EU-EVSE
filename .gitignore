@@ -2,6 +2,7 @@
 opendata_irve.csv
 *.db
 frontend/index.html
+frontend/lib
 output/
 
 # Byte-compiled / optimized / DLL files
