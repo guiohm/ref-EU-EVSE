@@ -28,7 +28,9 @@ jobs:
         echo "Running ./install.sh"
         ./install.sh
         echo "Running ./frontend/install.sh"
-        ./frontend/install.sh
+        pushd frontend
+        ./install.sh
+        popd
     - name: Generate data for Osmose
       run: |
         export PATH=$PATH:$PWD/
