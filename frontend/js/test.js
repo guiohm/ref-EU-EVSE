@@ -1,0 +1,1 @@
+export function Test(tt) { return tt*2 }

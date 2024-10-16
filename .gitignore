@@ -1,5 +1,7 @@
 # project local builds
 opendata_irve.csv
+*.db
+frontend/index.html
 output/
 
 # Byte-compiled / optimized / DLL files
