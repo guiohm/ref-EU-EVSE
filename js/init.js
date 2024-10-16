@@ -3,7 +3,7 @@ import { tic, toc } from "./utils.js";
 
 export function init(showError) {
 
-    const worker = new Worker("assets/worker.sql-wasm.js");
+    const worker = new Worker("lib/worker.sql-wasm.js");
     worker.onerror = showError;
 
     (async function(){

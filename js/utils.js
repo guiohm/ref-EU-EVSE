@@ -1,3 +1,4 @@
+import { storedKeys } from "./constants.js";
 
 // Performance measurement functions
 let tictime;
@@ -8,3 +9,17 @@ export function toc(msg) {
 	console.log((msg || 'toc') + ": " + dt + "ms");
 }
 
+export function loadLocalStorage(state) {
+	const storage = JSON.parse(localStorage.getItem('v1')) || {};
+	for (let key of storedKeys) {
+		if (key in storage) state[key] = storage[key];
+	}
+}
+
+export function save2LocalStorage(state) {
+	const storage = {};
+	for (let key of storedKeys) {
+		storage[key] = state[key];
+	}
+	localStorage.setItem('v1', JSON.stringify(storage));
+}

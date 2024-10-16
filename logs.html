@@ -1,118 +1,90 @@
-
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jungle-Bus Group IRVE OpenData</title>
-    <link rel="stylesheet" href="assets/pico.min.css">
-    <link rel="stylesheet" href="assets/gridjs.css" id="gridjs-light">
-    <link rel="stylesheet" href="assets/gridjs-dark.css" id="gridjs-dark">
-    <link rel="stylesheet" href="assets/codemirror.css">
-    <link rel="stylesheet" href="assets/codemirror-dark.css">
-    <link rel="stylesheet" href="assets/codemirror.show.hint.css">
-    <link rel="stylesheet" href="assets/report.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jungle-Bus Group IRVE OpenData log querying tool</title>
+  <link rel="stylesheet" href="assets/pico.min.css">
+  <link rel="stylesheet" href="assets/gridjs.css" id="gridjs-light">
+  <link rel="stylesheet" href="assets/gridjs-dark.css" id="gridjs-dark">
+  <link rel="stylesheet" href="assets/codemirror.css">
+  <link rel="stylesheet" href="assets/codemirror-dark.css">
+  <link rel="stylesheet" href="assets/codemirror.show.hint.css">
+  <link rel="stylesheet" href="assets/logs.css">
 
-    <script src="assets/report-themes.js"></script>
-    <script src="assets/codemirror.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.umd.js"></script>
-    <script src="assets/codemirror.sql.js"></script>
-    <script src="assets/codemirror.show.hint.js"></script>
-    <script src="assets/codemirror.sql.hint.js"></script>
-    <script defer type="module" src="js/main.js"></script>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-<style>
-::selection {
-    background-color: #7a0f51;
-    color: #fff;
-}
-td.gridjs-td, th.gridjs-th {
-    padding: 2px 4px;
-}
-#wrapper{
-    height: 80vh;
-}
-#input {
-    font-family: monospace;
-}
-
-.actions  {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-auto-rows: 44px;
-    gap: 15px;
-    height: auto;
-    padding: 12px;
-}
-
-.item {
-    background-color: var(--pico-secondary-background);
-    padding: 20px;
-    box-sizing: border-box;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 25px;
-    transition: transform 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2em;
-    color: #fff;
-    cursor: pointer;
-}
-.item:hover {
-    background-color: var(--pico-primary-hover-background);
-}
-.CodeMirror {
-  height: auto;
-  min-height: 50px;
-  margin: 0 12px 6px;
-}
-.buttons {
-    margin: 0 12px;
-}
-.buttons > span {
-    margin: 0 6px;
-}
-#error {
-color: #f98ba1;
-  background-color: #2d2562;
-  padding: 0 12px;
-  margin: 8px 12px;
-}
-</style>
+  <script src="assets/report-themes.js"></script>
+  <script src="assets/codemirror.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.umd.js"></script>
+  <script src="assets/codemirror.sql.js"></script>
+  <script src="assets/codemirror.show.hint.js"></script>
+  <script src="assets/codemirror.sql.hint.js"></script>
+  <script defer type="module" src="js/main.js"></script>
 </head>
-<body>
-    <nav class="container report-container report-head">
-        <ul>
-            <li>
-                <hgroup>
-                    <h1>Jungle-Bus Group IRVE OpenData</h1>
-                </hgroup>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-moon"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" /></svg>
-                <!-- <input type="checkbox" id="dark-light-mode" name="dark-light-mode" role="switch" onchange="change_theme()"> -->
-                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-sun"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" /><path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" /></svg>
-            </li>
-        </ul>
-    </nav>
 
-    <!-- <div class="actions" x-data="actions">
-        <template x-for="q in queries" :key="q.title">
-            <div class="item" x-text="q.title" @click="$store.actions.click(q)"></div>
-        </template>
-    </div> -->
-    <div class="actions"></div>
-    <textarea id="input">select * from logs where pdc_id is not null limit 300</textarea>
-	<div class="buttons">
+<body>
+  <div class="page">
+    <div class="pagerow pageheader">
+      <nav class="container header">
+        <ul>
+          <li>
+            <hgroup>
+              <h1>Jungle-Bus Group IRVE OpenData log querying tool</h1>
+              <p>Expérimental ⚠ la BDD est chargée dans le navigateur. Les performances dépendent de votre machine</p>
+            </hgroup>
+          </li>
+        </ul>
+        <ul>
+          <li><a id="helpShow" href="#" class="secondary">Aide</a></li>
+          <li><label><input type="checkbox" id="result-toggle" role="switch">Fast / Slow grid</label></li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-moon">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+            </svg>
+            <input type="checkbox" id="dark-light-mode" name="dark-light-mode" role="switch" onchange="change_theme()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-sun">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+              <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+            </svg>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="actions"></div>
+      <textarea id="input">select * from logs where pdc_id is not null limit 300</textarea>
+      <div class="buttons">
         <button id='submit' aria-disabled="true">Executer <kbd>Ctrl+↵</kbd></button>
         <span id="resultCount"></span>
-    </div>
-    <div class="code">
+      </div>
+      <div class="code">
         <pre id='error'></pre>
+      </div>
     </div>
-    <div id="wrapper">Chargement base de donnée en cours...</div>
+    <div class="pagerow content" id="results">Chargement base de donnée en cours...</div>
+  </div>
+  <dialog id="helpDialog">
+    <article>
+      <header>
+        <button id="helpClose" aria-label="Close" rel="prev"></button>
+        <p>
+          <strong>Aide</strong>
+        </p>
+      </header>
+      <p>Raccourcis clavier
+      </p>
+      <ul>
+        <li><code>Executer</code> : <kbd>Ctrl+↵</kbd></li>
+        <li><code>Autocomplete</code> : <kbd>Ctrl+espace</kbd>, <kbd>Alt+espace</kbd>, <kbd>Alt+↵</kbd>, <kbd>Ctrl+/</kbd></li>
+      </ul>
+      <p></p>
+    </article>
+  </dialog>
 </body>
+
 </html>

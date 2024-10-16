@@ -1,80 +1,150 @@
 import { init } from './init.js'
-import { events, queries } from './constants.js'
-import { tic, toc } from './utils.js';
+import { events, queries, state } from './constants.js'
+import { loadLocalStorage, save2LocalStorage, tic, toc } from './utils.js';
+import { component } from '../lib/reef.es.js';
 
 const {worker, editor} = init(execEditorContents, showError);
 
-let result, grid, lineCount = null
+//////// Actions
+
 const ActionsEl = document.querySelector('.actions')
-const gridWrapper = document.getElementById('wrapper')
+
+function renderActions() {
+    ActionsEl.innerHTML = queries.map((query, index) => {
+        return `<div class="item" data-idx="${index}">${query.title}</div>`
+    }).join('')
+}
+renderActions();
+
+function onActionsClick(ev) {
+    if (!ev.target.dataset?.idx) return;
+    editor.setValue(queries[ev.target.dataset.idx].sql);
+    execEditorContents()
+}
+ActionsEl.addEventListener('click', onActionsClick, true);
+
+///////// Result count
+
+function getResultCountHtml() {
+    let {loading, resultCount} = state;
+    return loading ? 'Requête en cours...'
+        : (resultCount > 0 ? `${resultCount} résultats` : 'Pas de résultat')
+}
+component(document.getElementById('resultCount'), getResultCountHtml);
+
+//////// Toggle Result raw table / grid.js aka gridSwitch
+
+document.getElementById('result-toggle').addEventListener('click', e => {
+    setTimeout(() => {
+        state.resultUseBasicRenderer = !e.target.checked;
+        if (grid) grid.destroy()
+        save2LocalStorage(state);
+        document.dispatchEvent(new Event(events.execUserSql))
+    }, 300);
+})
+
+///////// Help modal
+
+const showHelpBtn = document.getElementById("helpShow");
+const closeBtn = document.getElementById("helpClose");
+const dialog = document.getElementById("helpDialog");
+
+showHelpBtn.addEventListener('click', () => dialog.showModal());
+closeBtn.addEventListener('click', () => {
+  dialog.close();
+});
+
+/////////
+
+let grid
+const resultsDiv = document.getElementById('results')
 const submitBtn = document.getElementById('submit')
 const errorEl = document.getElementById('error')
-const resultCountEl = document.getElementById('resultCount')
 
 function showError(e) {
-	console.log(e);
-	errorEl.style.height = 'auto';
-	errorEl.textContent = e.message;
-    resultCountEl.innerText = '';
+    loadingStop();
+    console.log(e);
+    errorEl.style.height = 'auto';
+    errorEl.textContent = e.message;
+    state.resultCount = 0;
 }
 function cleanErrors() {
-	errorEl.style.height = '0';
+    errorEl.style.height = '0';
 }
 
-function execEditorContents() {
-	cleanErrors()
-	executeSqlAndShowResults(editor.getValue() + ';');
+function execEditorContents(options) {
+    if (state.loading) return;
+    cleanErrors()
+    executeSqlAndShowResults(editor.getValue(), options);
 }
 
-function executeSqlAndShowResults(sql) {
-	tic();
-	worker.onmessage = function (event) {
-		var results = event.data.results;
-		toc('Executing SQL');
-		if (!results) {
-			showError({message: event.data.error});
-			return;
-		}
+function executeSqlAndShowResults(sql, options) {
+    if (options?.pushHistory !== false)
+        history.pushState({}, "", location.pathname+'?q='+encodeURI(sql));
+    tic();
+    worker.onmessage = function (event) {
+        var results = event.data.results;
+        toc('Executing SQL');
+        if (!results) {
+            showError({message: event.data.error});
+            return;
+        }
 
-		tic();
-		for (var i = 0; i < results.length; i++) {
-			gridWrapper.appendChild(createTable(results[i].columns, results[i].values));
-		}
-        resultCountEl.innerText = results[0].values.length + ' résultats'
-        submitBtn.ariaDisabled = false
-		toc('Results to HTML');
-	}
-	worker.postMessage({ action: 'exec', sql: sql });
+        tic();
+        for (var i = 0; i < results.length; i++) {
+            if (state.resultUseBasicRenderer) {
+                resultsDiv.appendChild(createTable(results[i].columns, results[i].values));
+            } else {
+                createGrid(results[i]);
+            }
+        }
+        state.resultCount = results[0]?.values.length ?? 0
+        loadingStop();
+        toc('Results to HTML');
+    }
+    worker.postMessage({ action: 'exec', sql: sql + ';' });
     loadingStart();
 }
+
+const pageDiv = document.getElementsByClassName('page')[0];
+
 function loadingStart() {
-    submitBtn.ariaDisabled = true
-	resultCountEl.innerText = 'Requête en cours...';
-    gridWrapper.innerHTML = '';
+    state.loading = true;
+    state.resultCount = 0;
+    submitBtn.ariaDisabled = true;
+    pageDiv.style.opacity = 0.4;
+    if (grid) grid.destroy();
+    resultsDiv.innerHTML = '';
+}
+
+function loadingStop() {
+    state.loading = false;
+    pageDiv.style.opacity = 1;
+    submitBtn.ariaDisabled = false;
 }
 
 let createTable = function () {
-	function valconcat(vals, tagName) {
-		if (vals.length === 0) return '';
-		const open = '<' + tagName + '>', close = '</' + tagName + '>';
-		return open + vals.join(close + open) + close;
-	}
-	return function (columns, values) {
-		const div = document.createElement('div');
-        div.classList.add('overflow-auto');
-		let html = '<table><thead>' + valconcat(columns, 'th') + '</thead>';
-		const rows = values.map(function (v) { return valconcat(v, 'td'); });
-		html += '<tbody>' + valconcat(rows, 'tr') + '</tbody></table>';
-		div.innerHTML = html;
-		return div;
-	}
+    function valconcat(vals, tagName) {
+        if (vals.length === 0) return '';
+        const open = '<' + tagName + '>', close = '</' + tagName + '>';
+        return open + vals.join(close + open) + close;
+    }
+    return function (columns, values) {
+        const div = document.createElement('div');
+        div.classList.add('results-table');
+        let html = '<table><thead>' + valconcat(columns, 'th') + '</thead>';
+        const rows = values.map(function (v) { return valconcat(v, 'td'); });
+        html += '<tbody>' + valconcat(rows, 'tr') + '</tbody></table>';
+        div.innerHTML = html;
+        return div;
+    }
 }();
 
 function createGrid(results) {
     if (!grid) {
         grid = new gridjs.Grid({
-            columns: result[0].columns,
-            data: result[0].values,
+            columns: results.columns,
+            data: results.values,
             fixedHeader: true,
             // resizable: true,
             search: true,
@@ -91,56 +161,46 @@ function createGrid(results) {
     } else {
         grid.destroy()
     }
-    lineCount = result[0].values.length
+    state.resultCount = results.values.length
 
     grid.updateConfig({
-        columns: result[0].columns,
-        data: result[0].values,
+        columns: results.columns,
+        data: results.values,
         // height: `${Math.min(900, lineCount * 190)}px`,
-    }).render(gridWrapper);
+    }).render(resultsDiv);
 }
 
-
-
-function onActionsClick(ev) {
-    if (!ev.target.dataset?.sql) return;
-    editor.setValue(ev.target.dataset.sql);
-    execEditorContents()
-}
-
+loadLocalStorage(state);
 document.addEventListener(events.execUserSql, execEditorContents);
-document.addEventListener(events.dbLoaded, execEditorContents);
+document.addEventListener(events.dbLoaded, () => {
+    state.loading = false;
+    execEditorContents();
+});
 submitBtn.addEventListener('click', execEditorContents, true);
-ActionsEl.addEventListener('click', onActionsClick, true);
 
-
-//////// html gen
-
-function renderActions() {
-    ActionsEl.innerHTML = queries.map((query, index) => {
-        return `<div class="item" data-idx="${index}">${query.title}</div>`
-    }).join('')
+// history
+function loadFromUrl(url) {
+    const sql = url.split('?q=')
+    if (sql.length > 1 && sql[1].toLowerCase().startsWith('select')) {
+        editor.setValue(decodeURI(sql[1]));
+        execEditorContents({pushHistory: false});
+    }
 }
-renderActions();
+window.addEventListener('popstate', (e) => loadFromUrl(e.target.location.href));
+// initial load
+loadFromUrl(window.location.href);
 
-//////// Alpine.js stuff
+// select cell content on click
+resultsDiv.addEventListener('click', e => {
+    if (e.target.nodeName == 'TD') {
+        const selection = window.getSelection();
+        selection.removeAllRanges();
+        const range = document.createRange();
+        range.selectNodeContents(e.target);
+        selection.addRange(range);
+    }
+})
 
-// document.addEventListener('alpine:init', () => {
-// Alpine.data('actions', () => ({
-//     queries: queries,
-//     current: '',
-
-//     click(e) {
-//         console.log(e)
-//     }
-// }))
-
-// Alpine.store('actions', {
-//     queries: queries,
-//     current: '',
-
-//     click(e, v) {
-//         console.log(e, v, this)
-//     }
-// })
-// });
+// debug
+// for (let e of ['signal', 'start', 'stop', 'before-render', 'render'])
+//     document.addEventListener('reef:' + e, ev => console.log(ev.type, ev.target));
