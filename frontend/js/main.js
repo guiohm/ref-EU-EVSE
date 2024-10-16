@@ -81,6 +81,7 @@ function execEditorContents(options) {
 function executeSqlAndShowResults(sql, options) {
     if (options?.pushHistory !== false)
         history.pushState({}, "", location.pathname+'?q='+encodeURI(sql));
+
     tic();
     worker.onmessage = function (event) {
         var results = event.data.results;
@@ -178,17 +179,23 @@ document.addEventListener(events.dbLoaded, () => {
 });
 submitBtn.addEventListener('click', execEditorContents, true);
 
-// history
+//////// history
+
 function loadFromUrl(url) {
-    const sql = url.split('?q=')
+    let sql = url.split('#')[0];
+    sql = sql.split('?q=');
     if (sql.length > 1 && sql[1].toLowerCase().startsWith('select')) {
         editor.setValue(decodeURI(sql[1]));
         execEditorContents({pushHistory: false});
     }
 }
+
 window.addEventListener('popstate', (e) => loadFromUrl(e.target.location.href));
+
 // initial load
 loadFromUrl(window.location.href);
+
+////////
 
 // select cell content on click
 resultsDiv.addEventListener('click', e => {
