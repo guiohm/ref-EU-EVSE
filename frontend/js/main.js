@@ -1,7 +1,7 @@
 import { init } from './init.js'
-import { events, state } from './constants.js'
+import { events, signalNameSpaces, state, transient } from './constants.js'
 import { tic, toc } from './utils.js';
-import { createGrid, createTable, editor, grid } from './components.js';
+import { createGrid, createTable, editor, grid, help } from './components.js';
 
 const {worker} = init(showError);
 
@@ -15,7 +15,7 @@ function showError(e) {
     console.log(e);
     errorEl.style.height = 'auto';
     errorEl.textContent = e.message;
-    state.resultCount = 0;
+    transient.resultCount = 0;
 }
 
 function cleanErrors() {
@@ -23,8 +23,8 @@ function cleanErrors() {
 }
 
 function loadingStart() {
-    state.loading = true;
-    state.resultCount = 0;
+    transient.loading = true;
+    transient.resultCount = 0;
     submitBtn.ariaDisabled = true;
     pageDiv.style.opacity = 0.4;
     if (grid) grid.destroy();
@@ -32,13 +32,13 @@ function loadingStart() {
 }
 
 function loadingStop() {
-    state.loading = false;
+    transient.loading = false;
     pageDiv.style.opacity = 1;
     submitBtn.ariaDisabled = false;
 }
 
 function execEditorContents(options) {
-    if (state.loading) return;
+    if (transient.loading) return;
     cleanErrors()
     executeSqlAndShowResults(editor.getValue(), options);
 }
@@ -64,7 +64,7 @@ function executeSqlAndShowResults(sql, options) {
                 createGrid(results[i], resultsDiv);
             }
         }
-        state.resultCount = results[0]?.values.length ?? 0
+        transient.resultCount = results[0]?.values.length ?? 0
         loadingStop();
         toc('Results to HTML');
     }
@@ -75,18 +75,54 @@ function executeSqlAndShowResults(sql, options) {
 submitBtn.addEventListener('click', execEditorContents, true);
 document.addEventListener(events.execUserSql, e => execEditorContents(e.detail));
 document.addEventListener(events.dbLoaded, () => {
-    state.loading = false;
+    transient.loading = false;
     execEditorContents();
 });
 
+document.addEventListener('keydown', e => {
+    if (e.key == '?' && !editor.hasFocus()) {
+        if (help.open) help.close(); else help.showModal();
+    }
+    else if (e.ctrlKey && e.key == 'Enter') {
+        document.dispatchEvent(new Event(events.execUserSql));
+    }
+    else if (e.ctrlKey && e.key == 'z') {
+        editor.execCommand('undo');
+        editor.focus();
+    }
+    else if (e.ctrlKey && e.key == 'v') {
+        paste(e);
+    }
+});
 
-////////
+function paste(event) {
+    const selection = window.getSelection();
+    // if nothing selected -> isCollapsed == true -> the user clipboard will be pasted
+    // if something selected -> we paste the selection but NOT the user clipboard
+    if (!selection.isCollapsed) {
+        // check for template placeholders and fill the first one
+        let sql = editor.getValue();
+        const regex = /(_value_)/;
+        let found = false;
+        sql = sql.replace(regex, match => {
+            found = match != null;
+            return selection.toString();
+        });
+        if (found) {
+            editor.setValue(sql);
+        } else {
+            editor.replaceSelection(selection.toString());
+        }
+        event.preventDefault();
+    }
+    editor.focus();
+}
 
 // select cell content on click
 resultsDiv.addEventListener('click', e => {
     if (e.target.nodeName == 'TD') {
         const selection = window.getSelection();
-        selection.removeAllRanges();
+        selection.empty();
         const range = document.createRange();
         range.selectNodeContents(e.target);
         selection.addRange(range);
@@ -94,5 +130,7 @@ resultsDiv.addEventListener('click', e => {
 })
 
 // debug
-// for (let e of ['signal', 'start', 'stop', 'before-render', 'render'])
+// for (let e of ['start', 'stop', 'before-render', 'render'])
 //     document.addEventListener('reef:' + e, ev => console.log(ev.type, ev.target));
+// for (let n of Object.keys(signalNameSpaces))
+//     document.addEventListener('reef:signal-' + n, ev => console.log('signal-'+n, ev.detail));
