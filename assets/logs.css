@@ -9,6 +9,14 @@
   color: #fff;
 }
 
+html[data-theme='dark'] {
+  --log-color: #391c2c;
+}
+
+html[data-theme='light'] {
+  --log-color: #eaaecf;
+}
+
 html,
 body {
   height: 100%;
@@ -17,8 +25,7 @@ body {
 
 .container {
   max-width: none;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding: 2px 12px;
 }
 
 .page {
@@ -42,14 +49,10 @@ body {
   flex: 0 1 40px;
 }
 
-.header {
-  padding: 2px 12px;
-}
-
 .actions {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-auto-rows: 40px;
+  grid-auto-rows: 25px;
   gap: 15px;
   height: auto;
   padding: 12px;
@@ -57,8 +60,8 @@ body {
 }
 
 .item {
-  background-color: var(--pico-secondary-background);
-  padding: 20px;
+  background-color: #2d2562;
+  padding: 12px;
   box-sizing: border-box;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 25px;
@@ -71,8 +74,16 @@ body {
   cursor: pointer;
 }
 
+.item[data-type="template"] {
+  background-color: var(--pico-secondary-background);
+}
+
+.item[data-type="save"] {
+  background-color: #246224;
+}
+
 .item:hover {
-  background-color: var(--pico-primary-hover-background);
+  border: 1px solid var(--pico-contrast-border);
 }
 
 #input {
@@ -85,16 +96,32 @@ body {
   margin: 0 12px 6px;
 }
 
-.buttons {
-  margin: 0 12px;
+.columns > code {
+  cursor: pointer;
+  margin: 2px 4px;
+  padding: 1px 2px;
+  font-size: xx-small;
+  font-family: 'iosevka', 'roboto', mono;
 }
 
-.buttons>span {
-  margin: 0 6px;
+.columns > code:hover, .columns > code.log:hover {
+  background: var(--pico-secondary-focus);
+}
+
+code.log, th.log {
+  background-color: var(--log-color);
+}
+
+.buttons > ul > li {
+  padding: 0 6px;
 }
 
 button {
   padding: 3px;
+}
+
+fieldset, [role="group"] {
+  margin: 0;
 }
 
 #error {
@@ -113,6 +140,10 @@ td {
   white-space: nowrap;
 }
 
+td, th {
+  border-right: var(--pico-border-width) solid var(--pico-table-border-color);
+}
+
 td.gridjs-td,
 th.gridjs-th {
   padding: 2px 4px;
@@ -127,5 +158,5 @@ tr:hover > td{
 }
 
 dialog > article {
-  padding-left: 24px;
+  padding: 12px 24px;
 }
