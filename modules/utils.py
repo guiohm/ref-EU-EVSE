@@ -12,12 +12,12 @@ def create_sqlite(input_file):
 
     df = pd.read_csv('output/opendata_errors.csv', low_memory=False)
     df = df.drop_duplicates()
-    df.to_sql('log', con=conn, if_exists='replace', index=True)
+    df.to_sql('log', con=conn, if_exists='replace', index=True, index_label="log_id")
 
     conn.execute("DROP TABLE IF EXISTS logs;")
     conn.execute("""
     CREATE TABLE logs AS
-    SELECT * FROM log l LEFT JOIN irve i ON l.station_id = i.id_station_itinerance UNION
+    SELECT * FROM log l LEFT JOIN irve i ON l.station_id = i.id_station_itinerance WHERE l.pdc_id IS NULL UNION
     SELECT * FROM log l LEFT JOIN irve i ON l.station_id = i.id_station_itinerance AND l.pdc_id = i.id_pdc_itinerance WHERE l.pdc_id IS NOT null;""")
     conn.execute("DROP TABLE log;")
     conn.execute("DROP TABLE irve;")
