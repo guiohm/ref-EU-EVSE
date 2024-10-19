@@ -172,6 +172,8 @@ E.Leclerc | FR*LE2,Leclerc
 ELECTRIC 55 CHARGING,ELECTRIC 55 CHARGING
 EV MAP,CAMPING LE PALACE
 EV MAP,Camping la Boutinardière
+EV MAP SAS,BOREAL LABEGE
+EV MAP SAS,CAP NORD LORMONT
 EV MAP SAS,CENTRAL MOTOR FRANCHEVILLE
 EV MAP SAS,CENTRAL MOTOR LYON NORD
 EV MAP SAS,CENTRAL MOTOR ST FONS
@@ -188,7 +190,7 @@ Ekoplug,aucun
 Electra,Electra
 Electromaps,Ameublement Rognon
 Electromaps,Aubade - Comptoir des Fers
-Electromaps,Domaine de Fompeyre
+Electromaps,Carrefour Contact
 Electromaps,ECOPARK 5
 Electromaps,Electromaps
 Electromaps,I-Bornes
@@ -665,6 +667,7 @@ TotalEnergies,SAMSE - ERP COMBOIRE
 TotalEnergies,SAMSE - ERP EDB ANNEMASSE
 TotalEnergies,SCI DUBOIS SIMONNEAU BEAUNE
 TotalEnergies,SCI GADMP
+TotalEnergies,TotalEnergies - Compiègne
 TotalEnergies,TotalEnergies Charge Rapide
 TotalEnergies,VIKING CASINOS
 TotalEnergies,VIKINGS CASINO FREJUS
