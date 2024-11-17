@@ -18,7 +18,7 @@
             <li>
                 <hgroup>
                     <h1>Rapport de run Jungle-Bus Group IRVE OpenData</h1>
-                    <p>2024-11-16 06:54:54 UTC</p>
+                    <p>2024-11-17 06:54:43 UTC</p>
                 </hgroup>
             </li>
         </ul>
@@ -121,61 +121,61 @@
                     <summary>Expand/Collapse</summary>
                 
                     
-                        <pre><code class="language-python">90092 lignes (PDCs) en entrée | 4188 PDCs en double
-21237 stations reconnues sur 40748 station_id distincts en entrée
-45978 problèmes trouvés pour 85904 PDCs distincts en entrée (il peut exister plusieurs problèmes par PDC/station):
- &gt; [blocking] 35686 x le format de l&#39;identifiant ref:EU:EVSE (id_station_itinerance) n&#39;est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l&#39;analyse Osmose
- &gt;    [error]     6 x aucun type de prise précisé sur l&#39;ensemble des points de charge
- &gt;    [error]  7530 x le nombre de point de charge de la station n&#39;est pas cohérent avec la liste des points de charge fournie
- &gt;    [error]    26 x plusieurs sources pour un même id
+                        <pre><code class="language-python">116078 lignes (PDCs) en entrée | 10822 PDCs en double
+28732 stations reconnues sur 48342 station_id distincts en entrée
+53289 problèmes trouvés pour 105256 PDCs distincts en entrée (il peut exister plusieurs problèmes par PDC/station):
+ &gt; [blocking] 35890 x le format de l&#39;identifiant ref:EU:EVSE (id_station_itinerance) n&#39;est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l&#39;analyse Osmose
+ &gt;    [error]    10 x aucun type de prise précisé sur l&#39;ensemble des points de charge
+ &gt;    [error]  9598 x le nombre de point de charge de la station n&#39;est pas cohérent avec la liste des points de charge fournie
+ &gt;    [error]  1424 x plusieurs sources pour un même id
  &gt;    [error]     2 x puissance nominale déclarée suspecte (possible erreur W/kW)
  &gt;  [warning]     5 x le champ station_deux_roues n&#39;est pas valide
- &gt;  [warning]   983 x le numéro de téléphone de l&#39;opérateur (telephone_operateur) est dans un format invalide
- &gt;  [warning]     7 x plusieurs horaires pour une même station
- &gt;  [warning]   476 x plusieurs infos d&#39;accessibilité PMR (accessibilite_pmr) pour une même station
+ &gt;  [warning]   984 x le numéro de téléphone de l&#39;opérateur (telephone_operateur) est dans un format invalide
+ &gt;  [warning]     8 x plusieurs horaires pour une même station
+ &gt;  [warning]  1644 x plusieurs infos d&#39;accessibilité PMR (accessibilite_pmr) pour une même station
  &gt;  [warning]    16 x plusieurs infos de gratuité (gratuit) pour une même station
- &gt;  [warning]     6 x plusieurs infos de paiement (paiement_acte) pour une même station
- &gt;  [warning]   251 x plusieurs infos de paiement (paiement_cb) pour une même station
- &gt;  [warning]     2 x plusieurs infos de réservation pour une même station
- &gt;  [warning]   216 x puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)
- &gt;  [warning]   259 x puissance nominale déclarée pour prise EF supérieure à la norme (4)
- &gt;  [warning]   507 x puissance nominale déclarée pour prise T2 supérieure à la norme (43)
+ &gt;  [warning]    54 x plusieurs infos de paiement (paiement_acte) pour une même station
+ &gt;  [warning]  1622 x plusieurs infos de paiement (paiement_cb) pour une même station
+ &gt;  [warning]   293 x plusieurs infos de réservation pour une même station
+ &gt;  [warning]   306 x puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)
+ &gt;  [warning]   834 x puissance nominale déclarée pour prise EF supérieure à la norme (4)
+ &gt;  [warning]   599 x puissance nominale déclarée pour prise T2 supérieure à la norme (43)
 
 Severité
-blocking    35686
-error        7564
-warning      2728
+blocking    35890
+error       11034
+warning      6365
 
 Top 25 Organisations les plus problematiques:
 
-Sévérité                                blocking error warning  TOTAL
-Organisation                                                         
-TOTAL                                      35686  7564    2728  45978
-alize-charge                               15665     -       -  15665
-eco-movement                               10643     -       -  10643
-izivia                                         -  5574     565   6139
-lidl                                        4111     -       -   4111
-engie-mobilites-electriques                    -   502     502   1004
-rossini-energy                               846     -       -    846
-allego-1                                     616     -       -    616
-syndicat-departemental-denergie-du-tarn      604     -       -    604
-totalenergies-marketing-france               232    24     309    565
-bump                                         529     -       -    529
-driveco                                        -   323     186    509
-soregies                                     478     -       -    478
-ev-cars                                        -    64     322    386
-zeborne                                      369     -       -    369
-sowatt-solutions                             303     -       -    303
-evzen-smeg-developpement                       -     4     263    267
-ubitricity                                   257     -       -    257
-sieml                                          -   209       -    209
-sydela                                         -   192       -    192
-plus-de-bornes                                 -   174       7    181
-easycharge-services                            -     -     146    146
-greenspot-enersoft                             -   126      14    140
-car2plug                                     140     -       -    140
-ionity-gmbh                                  121     -       -    121
-zeenco                                       106     -       -    106</code></pre>
+Sévérité                                           blocking  error warning  TOTAL
+Organisation                                                                     
+TOTAL                                                 35890  11034    6365  53289
+alize-charge                                          15665      -       -  15665
+eco-movement                                          10637     24      35  10696
+izivia                                                    -   5949     692   6641
+lidl                                                   4111      -       -   4111
+gireve-2                                                198    892    2206   3296
+spbr1                                                     -    805     922   1727
+multiples                                                 -   1424       -   1424
+engie-mobilites-electriques                               -    502     502   1004
+rossini-energy                                          846      -       -    846
+allego-1                                                616      -       -    616
+syndicat-departemental-denergie-du-tarn                 604      -       -    604
+totalenergies-marketing-france                          232     23     307    562
+bump                                                    529      -       -    529
+driveco                                                   -    323     186    509
+soregies                                                478      -       -    478
+syndicat-intercommunal-delectricite-et-de-gaz-d...        -     90     369    459
+ev-cars                                                   -     64     322    386
+zeborne                                                 369      -       -    369
+sowatt-solutions                                        303      -       -    303
+evzen-smeg-developpement                                  -      4     263    267
+ubitricity                                              257      -       -    257
+sieml                                                     -    209       -    209
+sydela                                                    -    192       -    192
+plus-de-bornes                                            -    174       7    181
+easycharge-services                                       -      -     146    146</code></pre>
                     
                 
                 </details>
@@ -211,10 +211,10 @@ zeenco                                       106     -       -    106</code></pr
   <tbody>
     <tr>
       <th>TOTAL</th>
-      <td>35686</td>
-      <td>7564</td>
-      <td>2728</td>
-      <td>45978</td>
+      <td>35890</td>
+      <td>11034</td>
+      <td>6365</td>
+      <td>53289</td>
     </tr>
     <tr>
       <th>alize-charge</th>
@@ -225,17 +225,17 @@ zeenco                                       106     -       -    106</code></pr
     </tr>
     <tr>
       <th>eco-movement</th>
-      <td>10643</td>
-      <td>-</td>
-      <td>-</td>
-      <td>10643</td>
+      <td>10637</td>
+      <td>24</td>
+      <td>35</td>
+      <td>10696</td>
     </tr>
     <tr>
       <th>izivia</th>
       <td>-</td>
-      <td>5574</td>
-      <td>565</td>
-      <td>6139</td>
+      <td>5949</td>
+      <td>692</td>
+      <td>6641</td>
     </tr>
     <tr>
       <th>lidl</th>
@@ -243,6 +243,27 @@ zeenco                                       106     -       -    106</code></pr
       <td>-</td>
       <td>-</td>
       <td>4111</td>
+    </tr>
+    <tr>
+      <th>gireve-2</th>
+      <td>198</td>
+      <td>892</td>
+      <td>2206</td>
+      <td>3296</td>
+    </tr>
+    <tr>
+      <th>spbr1</th>
+      <td>-</td>
+      <td>805</td>
+      <td>922</td>
+      <td>1727</td>
+    </tr>
+    <tr>
+      <th>multiples</th>
+      <td>-</td>
+      <td>1424</td>
+      <td>-</td>
+      <td>1424</td>
     </tr>
     <tr>
       <th>engie-mobilites-electriques</th>
@@ -275,9 +296,9 @@ zeenco                                       106     -       -    106</code></pr
     <tr>
       <th>totalenergies-marketing-france</th>
       <td>232</td>
-      <td>24</td>
-      <td>309</td>
-      <td>565</td>
+      <td>23</td>
+      <td>307</td>
+      <td>562</td>
     </tr>
     <tr>
       <th>bump</th>
@@ -299,6 +320,13 @@ zeenco                                       106     -       -    106</code></pr
       <td>-</td>
       <td>-</td>
       <td>478</td>
+    </tr>
+    <tr>
+      <th>syndicat-intercommunal-delectricite-et-de-gaz-du-puy-de-dome-irve</th>
+      <td>-</td>
+      <td>90</td>
+      <td>369</td>
+      <td>459</td>
     </tr>
     <tr>
       <th>ev-cars</th>
@@ -366,9 +394,9 @@ zeenco                                       106     -       -    106</code></pr
     <tr>
       <th>greenspot-enersoft</th>
       <td>-</td>
-      <td>126</td>
+      <td>128</td>
       <td>14</td>
-      <td>140</td>
+      <td>142</td>
     </tr>
     <tr>
       <th>car2plug</th>
@@ -392,25 +420,18 @@ zeenco                                       106     -       -    106</code></pr
       <td>106</td>
     </tr>
     <tr>
+      <th>mobilize-power-solutions</th>
+      <td>101</td>
+      <td>-</td>
+      <td>-</td>
+      <td>101</td>
+    </tr>
+    <tr>
       <th>lumiin</th>
       <td>99</td>
       <td>-</td>
       <td>-</td>
       <td>99</td>
-    </tr>
-    <tr>
-      <th>syndicat-intercommunal-delectricite-et-de-gaz-du-puy-de-dome-irve</th>
-      <td>-</td>
-      <td>91</td>
-      <td>-</td>
-      <td>91</td>
-    </tr>
-    <tr>
-      <th>mobilize-power-solutions</th>
-      <td>89</td>
-      <td>-</td>
-      <td>-</td>
-      <td>89</td>
     </tr>
     <tr>
       <th>e-charge50</th>
@@ -427,6 +448,13 @@ zeenco                                       106     -       -    106</code></pr
       <td>78</td>
     </tr>
     <tr>
+      <th>e-vadea</th>
+      <td>-</td>
+      <td>16</td>
+      <td>49</td>
+      <td>65</td>
+    </tr>
+    <tr>
       <th>syndicat-departemental-des-energies-de-seine-et-marne-3</th>
       <td>-</td>
       <td>2</td>
@@ -438,13 +466,6 @@ zeenco                                       106     -       -    106</code></pr
       <td>-</td>
       <td>60</td>
       <td>1</td>
-      <td>61</td>
-    </tr>
-    <tr>
-      <th>allego</th>
-      <td>-</td>
-      <td>25</td>
-      <td>36</td>
       <td>61</td>
     </tr>
     <tr>
@@ -497,25 +518,11 @@ zeenco                                       106     -       -    106</code></pr
       <td>34</td>
     </tr>
     <tr>
-      <th>le-reseau-de-recharge-pour-vehicules-electriques-de-la-metropole-du-grand-paris</th>
-      <td>-</td>
-      <td>2</td>
-      <td>31</td>
-      <td>33</td>
-    </tr>
-    <tr>
       <th>properphi</th>
       <td>30</td>
       <td>-</td>
       <td>-</td>
       <td>30</td>
-    </tr>
-    <tr>
-      <th>multiples</th>
-      <td>-</td>
-      <td>26</td>
-      <td>-</td>
-      <td>26</td>
     </tr>
     <tr>
       <th>eoliberty</th>
@@ -525,17 +532,17 @@ zeenco                                       106     -       -    106</code></pr
       <td>24</td>
     </tr>
     <tr>
-      <th>maneo</th>
-      <td>18</td>
-      <td>-</td>
-      <td>1</td>
-      <td>19</td>
-    </tr>
-    <tr>
       <th>bp-france</th>
       <td>14</td>
       <td>-</td>
       <td>5</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>maneo</th>
+      <td>18</td>
+      <td>-</td>
+      <td>1</td>
       <td>19</td>
     </tr>
     <tr>
@@ -553,13 +560,6 @@ zeenco                                       106     -       -    106</code></pr
       <td>17</td>
     </tr>
     <tr>
-      <th>e-vadea</th>
-      <td>-</td>
-      <td>16</td>
-      <td>-</td>
-      <td>16</td>
-    </tr>
-    <tr>
       <th>syndicat-departemental-denergie-dille-et-vilaine</th>
       <td>-</td>
       <td>2</td>
@@ -568,13 +568,6 @@ zeenco                                       106     -       -    106</code></pr
     </tr>
     <tr>
       <th>sodel</th>
-      <td>13</td>
-      <td>-</td>
-      <td>-</td>
-      <td>13</td>
-    </tr>
-    <tr>
-      <th>bornevo</th>
       <td>13</td>
       <td>-</td>
       <td>-</td>
@@ -595,17 +588,24 @@ zeenco                                       106     -       -    106</code></pr
       <td>13</td>
     </tr>
     <tr>
-      <th>voltania</th>
+      <th>bornevo</th>
+      <td>13</td>
       <td>-</td>
-      <td>9</td>
-      <td>3</td>
-      <td>12</td>
+      <td>-</td>
+      <td>13</td>
     </tr>
     <tr>
       <th>sas-satcoms</th>
       <td>12</td>
       <td>-</td>
       <td>-</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>voltania</th>
+      <td>-</td>
+      <td>9</td>
+      <td>3</td>
       <td>12</td>
     </tr>
     <tr>
@@ -616,6 +616,13 @@ zeenco                                       106     -       -    106</code></pr
       <td>9</td>
     </tr>
     <tr>
+      <th>citeos-boulogne-sur-mer</th>
+      <td>-</td>
+      <td>2</td>
+      <td>7</td>
+      <td>9</td>
+    </tr>
+    <tr>
       <th>regie-municipale-delectricite-de-loos</th>
       <td>9</td>
       <td>-</td>
@@ -623,11 +630,11 @@ zeenco                                       106     -       -    106</code></pr
       <td>9</td>
     </tr>
     <tr>
-      <th>i-bornes</th>
-      <td>1</td>
+      <th>territoire-denergie-orne</th>
+      <td>-</td>
       <td>4</td>
-      <td>3</td>
-      <td>8</td>
+      <td>5</td>
+      <td>9</td>
     </tr>
     <tr>
       <th>tesla-motors</th>
@@ -644,7 +651,14 @@ zeenco                                       106     -       -    106</code></pr
       <td>8</td>
     </tr>
     <tr>
-      <th>ekoplug</th>
+      <th>i-bornes</th>
+      <td>1</td>
+      <td>4</td>
+      <td>3</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>equipe-transport-data-gouv-fr</th>
       <td>-</td>
       <td>1</td>
       <td>6</td>
@@ -665,17 +679,10 @@ zeenco                                       106     -       -    106</code></pr
       <td>7</td>
     </tr>
     <tr>
-      <th>citeos-boulogne-sur-mer</th>
+      <th>syndicat-intercommunal-de-lelectricite-et-du-gaz-de-leure</th>
+      <td>2</td>
+      <td>4</td>
       <td>-</td>
-      <td>-</td>
-      <td>6</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>territoire-denergie-orne</th>
-      <td>-</td>
-      <td>3</td>
-      <td>3</td>
       <td>6</td>
     </tr>
     <tr>
@@ -686,30 +693,9 @@ zeenco                                       106     -       -    106</code></pr
       <td>6</td>
     </tr>
     <tr>
-      <th>spbr1</th>
-      <td>-</td>
-      <td>-</td>
-      <td>6</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>syndicat-intercommunal-de-lelectricite-et-du-gaz-de-leure</th>
-      <td>2</td>
-      <td>4</td>
-      <td>-</td>
-      <td>6</td>
-    </tr>
-    <tr>
       <th>conectys</th>
       <td>4</td>
       <td>1</td>
-      <td>-</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>allcoms-technologies</th>
-      <td>5</td>
-      <td>-</td>
       <td>-</td>
       <td>5</td>
     </tr>
@@ -721,11 +707,39 @@ zeenco                                       106     -       -    106</code></pr
       <td>5</td>
     </tr>
     <tr>
+      <th>allcoms-technologies</th>
+      <td>5</td>
+      <td>-</td>
+      <td>-</td>
+      <td>5</td>
+    </tr>
+    <tr>
       <th>inouid-smart-mobility</th>
       <td>3</td>
       <td>2</td>
       <td>-</td>
       <td>5</td>
+    </tr>
+    <tr>
+      <th>kap-enerj</th>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>eranovum-e-mobility-france</th>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>area-tech</th>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>nm-securelec</th>
@@ -742,27 +756,6 @@ zeenco                                       106     -       -    106</code></pr
       <td>4</td>
     </tr>
     <tr>
-      <th>area-tech</th>
-      <td>4</td>
-      <td>-</td>
-      <td>-</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>eranovum-e-mobility-france</th>
-      <td>4</td>
-      <td>-</td>
-      <td>-</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>kap-enerj</th>
-      <td>4</td>
-      <td>-</td>
-      <td>-</td>
-      <td>4</td>
-    </tr>
-    <tr>
       <th>virta-global-gifi-caudebec-1</th>
       <td>4</td>
       <td>-</td>
@@ -770,21 +763,28 @@ zeenco                                       106     -       -    106</code></pr
       <td>4</td>
     </tr>
     <tr>
-      <th>imac2</th>
+      <th>kallista-bdr</th>
       <td>-</td>
-      <td>3</td>
-      <td>-</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>morbihan-energies</th>
-      <td>-</td>
-      <td>3</td>
-      <td>-</td>
+      <td>1</td>
+      <td>2</td>
       <td>3</td>
     </tr>
     <tr>
       <th>france-solar-sas</th>
+      <td>-</td>
+      <td>3</td>
+      <td>-</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>hagenum</th>
+      <td>1</td>
+      <td>2</td>
+      <td>-</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>imac2</th>
       <td>-</td>
       <td>3</td>
       <td>-</td>
@@ -798,37 +798,9 @@ zeenco                                       106     -       -    106</code></pr
       <td>3</td>
     </tr>
     <tr>
-      <th>kallista-bdr</th>
-      <td>-</td>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>hagenum</th>
-      <td>1</td>
-      <td>2</td>
-      <td>-</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>citeos-poitiers</th>
-      <td>2</td>
-      <td>-</td>
-      <td>-</td>
-      <td>2</td>
-    </tr>
-    <tr>
       <th>acelec-charge</th>
       <td>-</td>
       <td>2</td>
-      <td>-</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>ecarmobility</th>
-      <td>2</td>
-      <td>-</td>
       <td>-</td>
       <td>2</td>
     </tr>
@@ -840,10 +812,17 @@ zeenco                                       106     -       -    106</code></pr
       <td>2</td>
     </tr>
     <tr>
-      <th>peretti-groupe</th>
+      <th>citeos-poitiers</th>
       <td>2</td>
       <td>-</td>
       <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>allego</th>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
       <td>2</td>
     </tr>
     <tr>
@@ -854,10 +833,24 @@ zeenco                                       106     -       -    106</code></pr
       <td>2</td>
     </tr>
     <tr>
-      <th>sb-energy</th>
+      <th>nexteneo</th>
       <td>-</td>
-      <td>1</td>
-      <td>1</td>
+      <td>2</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>lg-electricite</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>morbihan-energies</th>
+      <td>-</td>
+      <td>2</td>
+      <td>-</td>
       <td>2</td>
     </tr>
     <tr>
@@ -865,6 +858,13 @@ zeenco                                       106     -       -    106</code></pr
       <td>-</td>
       <td>-</td>
       <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>ecarmobility</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
       <td>2</td>
     </tr>
     <tr>
@@ -917,10 +917,10 @@ zeenco                                       106     -       -    106</code></pr
       <td>2</td>
     </tr>
     <tr>
-      <th>philippi</th>
+      <th>snmg2e</th>
+      <td>2</td>
       <td>-</td>
-      <td>1</td>
-      <td>1</td>
+      <td>-</td>
       <td>2</td>
     </tr>
     <tr>
@@ -938,24 +938,24 @@ zeenco                                       106     -       -    106</code></pr
       <td>2</td>
     </tr>
     <tr>
-      <th>snmg2e</th>
+      <th>peretti-groupe</th>
       <td>2</td>
       <td>-</td>
       <td>-</td>
       <td>2</td>
     </tr>
     <tr>
-      <th>nexteneo</th>
+      <th>philippi</th>
       <td>-</td>
-      <td>2</td>
-      <td>-</td>
+      <td>1</td>
+      <td>1</td>
       <td>2</td>
     </tr>
     <tr>
-      <th>lg-electricite</th>
-      <td>2</td>
+      <th>sb-energy</th>
       <td>-</td>
-      <td>-</td>
+      <td>1</td>
+      <td>1</td>
       <td>2</td>
     </tr>
     <tr>
@@ -966,10 +966,10 @@ zeenco                                       106     -       -    106</code></pr
       <td>2</td>
     </tr>
     <tr>
-      <th>chargepoly</th>
-      <td>-</td>
-      <td>-</td>
+      <th>borne-de-recharge-ad-bauducel</th>
       <td>1</td>
+      <td>-</td>
+      <td>-</td>
       <td>1</td>
     </tr>
     <tr>
@@ -990,13 +990,6 @@ zeenco                                       106     -       -    106</code></pr
       <th>chariag</th>
       <td>1</td>
       <td>-</td>
-      <td>-</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>lamia-jp</th>
-      <td>-</td>
-      <td>1</td>
       <td>-</td>
       <td>1</td>
     </tr>
@@ -1029,6 +1022,13 @@ zeenco                                       106     -       -    106</code></pr
       <td>1</td>
     </tr>
     <tr>
+      <th>chargepoly</th>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
       <th>dubois-1</th>
       <td>1</td>
       <td>-</td>
@@ -1050,14 +1050,14 @@ zeenco                                       106     -       -    106</code></pr
       <td>1</td>
     </tr>
     <tr>
-      <th>borne-de-recharge-ad-bauducel</th>
+      <th>sebalyo-solar</th>
       <td>1</td>
       <td>-</td>
       <td>-</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>sebalyo-solar</th>
+      <th>rsb-zni-non-parking-camping-supervision-non</th>
       <td>1</td>
       <td>-</td>
       <td>-</td>
@@ -1085,9 +1085,9 @@ zeenco                                       106     -       -    106</code></pr
       <td>1</td>
     </tr>
     <tr>
-      <th>rsb-zni-non-parking-camping-supervision-non</th>
-      <td>1</td>
+      <th>lamia-jp</th>
       <td>-</td>
+      <td>1</td>
       <td>-</td>
       <td>1</td>
     </tr>
@@ -1184,20 +1184,14 @@ zeenco                                       106     -       -    106</code></pr
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th rowspan="3" valign="top">allego</th>
-      <th>14</th>
-      <th>warning</th>
-      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
-    </tr>
-    <tr>
-      <th>22</th>
-      <th>warning</th>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
-      <th>25</th>
+      <th rowspan="2" valign="top">allego</th>
+      <th rowspan="2" valign="top">1</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
     </tr>
     <tr>
       <th>allego-1</th>
@@ -1297,8 +1291,13 @@ zeenco                                       106     -       -    106</code></pr
       <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
     </tr>
     <tr>
-      <th>citeos-boulogne-sur-mer</th>
-      <th>6</th>
+      <th rowspan="2" valign="top">citeos-boulogne-sur-mer</th>
+      <th>2</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>7</th>
       <th>warning</th>
       <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
     </tr>
@@ -1415,10 +1414,24 @@ zeenco                                       106     -       -    106</code></pr
       <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
     </tr>
     <tr>
-      <th>e-vadea</th>
-      <th>16</th>
+      <th rowspan="4" valign="top">e-vadea</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">16</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>32</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
     <tr>
       <th>easycharge-services</th>
@@ -1433,34 +1446,25 @@ zeenco                                       106     -       -    106</code></pr
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th>eco-movement</th>
-      <th>10643</th>
-      <th>blocking</th>
-      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+      <th rowspan="4" valign="top">eco-movement</th>
+      <th>14</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
     </tr>
     <tr>
-      <th rowspan="6" valign="top">ekoplug</th>
-      <th rowspan="5" valign="top">1</th>
+      <th>21</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>24</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
-      <th rowspan="4" valign="top">warning</th>
-      <th>plusieurs horaires pour une même station</th>
-    </tr>
-    <tr>
-      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
-    </tr>
-    <tr>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
-      <th>plusieurs infos de réservation pour une même station</th>
-    </tr>
-    <tr>
-      <th>2</th>
-      <th>warning</th>
-      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+      <th>10637</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
       <th>energie-eure-et-loir</th>
@@ -1499,6 +1503,30 @@ zeenco                                       106     -       -    106</code></pr
       <th>16</th>
       <th>warning</th>
       <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
+    </tr>
+    <tr>
+      <th rowspan="6" valign="top">equipe-transport-data-gouv-fr</th>
+      <th rowspan="5" valign="top">1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">warning</th>
+      <th>plusieurs horaires pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de réservation pour une même station</th>
+    </tr>
+    <tr>
+      <th>2</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
     <tr>
       <th>eranovum-e-mobility-france</th>
@@ -1547,6 +1575,57 @@ zeenco                                       106     -       -    106</code></pr
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
+      <th rowspan="10" valign="top">gireve-2</th>
+      <th>4</th>
+      <th>error</th>
+      <th>aucun type de prise précisé sur l'ensemble des points de charge</th>
+    </tr>
+    <tr>
+      <th>10</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
+    </tr>
+    <tr>
+      <th>52</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
+    </tr>
+    <tr>
+      <th>77</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
+    </tr>
+    <tr>
+      <th>184</th>
+      <th>warning</th>
+      <th>plusieurs infos de réservation pour une même station</th>
+    </tr>
+    <tr>
+      <th>198</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>452</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
+    </tr>
+    <tr>
+      <th>477</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>888</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>954</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
       <th rowspan="4" valign="top">greenspot-enersoft</th>
       <th>2</th>
       <th>warning</th>
@@ -1561,7 +1640,7 @@ zeenco                                       106     -       -    106</code></pr
       <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
     </tr>
     <tr>
-      <th>126</th>
+      <th>128</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -1674,22 +1753,22 @@ zeenco                                       106     -       -    106</code></pr
       <th>puissance nominale déclarée suspecte (possible erreur W/kW)</th>
     </tr>
     <tr>
-      <th>8</th>
+      <th>20</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
     </tr>
     <tr>
-      <th>91</th>
+      <th>133</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
     </tr>
     <tr>
-      <th>466</th>
+      <th>539</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
     </tr>
     <tr>
-      <th>5572</th>
+      <th>5947</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -1750,22 +1829,6 @@ zeenco                                       106     -       -    106</code></pr
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
-      <th rowspan="3" valign="top">le-reseau-de-recharge-pour-vehicules-electriques-de-la-metropole-du-grand-paris</th>
-      <th>2</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th>4</th>
-      <th>warning</th>
-      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
-    </tr>
-    <tr>
-      <th>27</th>
-      <th>warning</th>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
       <th>lg-electricite</th>
       <th>2</th>
       <th>blocking</th>
@@ -1812,19 +1875,19 @@ zeenco                                       106     -       -    106</code></pr
     </tr>
     <tr>
       <th>mobilize-power-solutions</th>
-      <th>89</th>
+      <th>101</th>
       <th>blocking</th>
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
       <th>morbihan-energies</th>
-      <th>3</th>
+      <th>2</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
       <th>multiples</th>
-      <th>26</th>
+      <th>1424</th>
       <th>error</th>
       <th>plusieurs sources pour un même id</th>
     </tr>
@@ -2054,10 +2117,40 @@ zeenco                                       106     -       -    106</code></pr
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th>spbr1</th>
+      <th rowspan="7" valign="top">spbr1</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>plusieurs horaires pour une même station</th>
+    </tr>
+    <tr>
       <th>6</th>
       <th>warning</th>
       <th>plusieurs infos de gratuité (gratuit) pour une même station</th>
+    </tr>
+    <tr>
+      <th>9</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
+    </tr>
+    <tr>
+      <th>16</th>
+      <th>warning</th>
+      <th>plusieurs infos de réservation pour une même station</th>
+    </tr>
+    <tr>
+      <th>76</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
+    </tr>
+    <tr>
+      <th>805</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>814</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
     </tr>
     <tr>
       <th>spie-citynetworks</th>
@@ -2140,10 +2233,28 @@ zeenco                                       106     -       -    106</code></pr
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
-      <th>syndicat-intercommunal-delectricite-et-de-gaz-du-puy-de-dome-irve</th>
-      <th>91</th>
+      <th rowspan="5" valign="top">syndicat-intercommunal-delectricite-et-de-gaz-du-puy-de-dome-irve</th>
+      <th>5</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
+    </tr>
+    <tr>
+      <th>90</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">91</th>
+      <th rowspan="2" valign="top">warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de réservation pour une même station</th>
+    </tr>
+    <tr>
+      <th>182</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
     <tr>
       <th rowspan="2" valign="top">tem53</th>
@@ -2163,8 +2274,13 @@ zeenco                                       106     -       -    106</code></pr
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">territoire-denergie-orne</th>
-      <th rowspan="2" valign="top">3</th>
+      <th rowspan="3" valign="top">territoire-denergie-orne</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">4</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -2179,12 +2295,7 @@ zeenco                                       106     -       -    106</code></pr
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
-      <th rowspan="8" valign="top">totalenergies-marketing-france</th>
-      <th>1</th>
-      <th>warning</th>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
+      <th rowspan="7" valign="top">totalenergies-marketing-france</th>
       <th>2</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
@@ -2195,7 +2306,7 @@ zeenco                                       106     -       -    106</code></pr
       <th>plusieurs horaires pour une même station</th>
     </tr>
     <tr>
-      <th>24</th>
+      <th>23</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -2210,7 +2321,7 @@ zeenco                                       106     -       -    106</code></pr
       <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
     <tr>
-      <th>181</th>
+      <th>180</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
     </tr>
@@ -2282,156 +2393,240 @@ zeenco                                       106     -       -    106</code></pr
                 
                     
                         <pre><code class="language-python"> EF  |   T2  | Chademo |  CCS  |
-0.00   22.00     0.00     0.00 | 7694 stations
-0.00    7.36     0.00     0.00 | 3055 stations
-0.00    3.68     0.00     0.00 | 1606 stations
-0.00   18.00     0.00     0.00 | 741 stations
-0.00    0.00     0.00   150.00 | 682 stations
-0.00    7.00     0.00     0.00 | 629 stations
+0.00   22.00     0.00     0.00 | 11954 stations
+0.00    7.36     0.00     0.00 | 3098 stations
+0.00    3.68     0.00     0.00 | 1609 stations
+0.00   18.00     0.00     0.00 | 1058 stations
+0.00    0.00     0.00     0.00 | 833 stations
+0.00    0.00     0.00   150.00 | 810 stations
+0.00   22.00     0.00    24.00 | 714 stations
+0.00    7.00     0.00     0.00 | 632 stations
 0.00   22.08     0.00     0.00 | 617 stations
-0.00    0.00     0.00     0.00 | 607 stations
-0.00   22.00     0.00    24.00 | 424 stations
+0.00    7.40     0.00     0.00 | 441 stations
+0.00   22.00     0.00   150.00 | 429 stations
 0.00   22.08     0.00    50.00 | 417 stations
-0.00   24.00     0.00     0.00 | 301 stations
-0.00   22.00     0.00   150.00 | 295 stations
-0.00    0.00     0.00    24.00 | 290 stations
-0.00    0.00    22.00     0.00 | 211 stations
+0.00    0.00     0.00    24.00 | 334 stations
+0.00   24.00     0.00     0.00 | 317 stations
+0.00    0.00     0.00    50.00 | 286 stations
+0.00   22.00     0.00    50.00 | 265 stations
+0.00   22.00     0.00    25.00 | 256 stations
+0.00    0.00    22.00     0.00 | 210 stations
+0.00   22.00     0.00   300.00 | 201 stations
 0.00   22.00    50.00   200.00 | 192 stations
-0.00   22.00    50.00   100.00 | 182 stations
-0.00    0.00     0.00   300.00 | 167 stations
-0.00    0.00     0.00    50.00 | 161 stations
-0.00   22.00     0.00   300.00 | 156 stations
-0.00   22.00     0.00    25.00 | 152 stations
+0.00    0.00     0.00   300.00 | 188 stations
+0.00   22.00    50.00   100.00 | 186 stations
+0.00   22.00     0.00   120.00 | 158 stations
+0.00   22.00    50.00    50.00 | 154 stations
+0.00   44.00     0.00    50.00 | 149 stations
+0.00   11.00     0.00     0.00 | 147 stations
 0.00    0.00     0.00   250.00 | 144 stations
-0.00   22.00    50.00    50.00 | 132 stations
-0.00   44.00     0.00    50.00 | 108 stations
-0.00   22.00    25.00    25.00 | 105 stations
-0.00   36.00    36.00    36.00 | 95 stations
-0.00    0.00     0.00   180.00 | 90 stations
+2.30   22.00     0.00     0.00 | 135 stations
+0.00    0.00     0.00   180.00 | 115 stations
+0.00   22.00    25.00    25.00 | 108 stations
+0.00   22.00     0.00    60.00 | 108 stations
+0.00   36.00    36.00    36.00 | 96 stations
 4.00    0.00     0.00    22.00 | 86 stations
-2.30   22.00     0.00     0.00 | 80 stations
-0.00    0.00    50.00     0.00 | 69 stations
-0.00   22.00     0.00   120.00 | 66 stations
+0.00    0.00     0.00   200.00 | 82 stations
+0.00   43.00     0.00    50.00 | 74 stations
+0.00    0.00    50.00     0.00 | 72 stations
+0.00   22.00     0.00   180.00 | 70 stations
+0.00   43.00    50.00    50.00 | 69 stations
 0.00   22.08     0.00    24.00 | 66 stations
 0.00   22.00    63.00   300.00 | 63 stations
-0.00   43.00    50.00    50.00 | 62 stations
 0.00   22.00    50.00   120.00 | 60 stations
 0.00   22.08     0.00   200.00 | 59 stations
+0.00   22.00     0.00   100.00 | 58 stations
 0.00    0.00    54.00   175.00 | 57 stations
-0.00    0.00     0.00   200.00 | 55 stations
-0.00   36.00     0.00    36.00 | 55 stations
+0.00   22.00    50.00   150.00 | 55 stations
+0.00    0.00     0.00    25.00 | 53 stations
+0.00   36.00     0.00    36.00 | 53 stations
 0.00   22.00    50.00   187.50 | 53 stations
-0.00   22.00    50.00   150.00 | 52 stations
-0.00   22.00     0.00    60.00 | 51 stations
-0.00   22.00     0.00   100.00 | 47 stations
-3.00    0.00     0.00     0.00 | 44 stations
-0.00   22.00    50.00    60.00 | 43 stations
-0.00   22.00     0.00    50.00 | 41 stations
-0.00   11.00     0.00     0.00 | 34 stations
-0.00   43.00     0.00    50.00 | 32 stations
+3.00    0.00     0.00     0.00 | 45 stations
+0.00   22.00    50.00    60.00 | 44 stations
+0.00    0.00     0.00   100.00 | 36 stations
+0.00   12.00     0.00   120.00 | 32 stations
 0.00   22.00    62.50   300.00 | 31 stations
-0.00    7.40     0.00     0.00 | 30 stations
+0.00   22.00     0.00    90.00 | 30 stations
 0.00   22.00    50.00   300.00 | 30 stations
+0.00    0.00     0.00   225.00 | 25 stations
+0.00    0.00     0.00    44.00 | 25 stations
+0.00   44.00    44.00    50.00 | 24 stations
+0.00    0.00     7.40     0.00 | 24 stations
+0.00    0.00     0.00   400.00 | 23 stations
 0.00    0.00    54.00   300.00 | 23 stations
 0.00   24.00    22.00    24.00 | 23 stations
-0.00    0.00     7.40     0.00 | 23 stations
-0.00    0.00     0.00   400.00 | 22 stations
+2.30   11.00     0.00     0.00 | 22 stations
 0.00    0.00    54.00     0.00 | 22 stations
 0.00    0.00    54.00   150.00 | 22 stations
-0.00   36.00     0.00     0.00 | 22 stations
-0.00    0.00     0.00   100.00 | 21 stations
-0.00    0.00     0.00   225.00 | 18 stations
-0.00   22.00    50.00   160.00 | 18 stations
-0.00    0.00    11.00     0.00 | 18 stations
+0.00   43.00     0.00   100.00 | 21 stations
+0.00   22.00     0.00    22.00 | 20 stations
+0.00   36.00     0.00     0.00 | 20 stations
+0.00   22.00    50.00   160.00 | 19 stations
+0.00    0.00    11.00     0.00 | 19 stations
+0.00    0.00     0.00    63.00 | 18 stations
 0.00   43.00    50.00   300.00 | 17 stations
+0.00    0.00     0.00    60.00 | 17 stations
 0.00   22.00    50.00   188.00 | 17 stations
-0.00   22.00     0.00   180.00 | 16 stations
-0.00   22.00     0.00    90.00 | 15 stations
+0.00    3.70     0.00     0.00 | 16 stations
+0.00   22.00     0.00   160.00 | 15 stations
+0.00    0.00    50.00    50.00 | 14 stations
 0.00   24.00     0.00    22.00 | 14 stations
-0.00   22.00     0.00   160.00 | 14 stations
-3.68    0.00     0.00     0.00 | 13 stations
+3.68    0.00     0.00     0.00 | 14 stations
+0.00    0.00    63.00     0.00 | 13 stations
+0.00   44.00    50.00    50.00 | 13 stations
+0.00   22.00    43.00    50.00 | 13 stations
+0.00   43.00     0.00     0.00 | 12 stations
 0.00    0.00     0.00    54.00 | 12 stations
-0.00   22.00     0.00    22.00 | 11 stations
-0.00    0.00     0.00    63.00 | 11 stations
-0.00   22.00    43.00    50.00 | 11 stations
-0.00   42.00     0.00    42.00 | 11 stations
-0.00   43.00     0.00     0.00 | 10 stations
+0.00    0.00     0.00   320.00 | 11 stations
+0.00    6.90     0.00     0.00 | 11 stations
+0.00   22.00     0.00   200.00 | 10 stations
+0.00    0.00     0.00    30.00 | 10 stations
+0.00    0.00     0.00    22.00 | 10 stations
 0.00   22.17    50.00   200.00 | 10 stations
 1.70   22.00     0.00     0.00 | 10 stations
+0.00   22.00     0.00   225.00 | 9 stations
+3.70    0.00     0.00     0.00 | 9 stations
+0.00    0.00    24.00     0.00 | 9 stations
 0.00   22.00    50.00   180.00 | 9 stations
-0.00    0.00     0.00    30.00 | 8 stations
-3.70    0.00     0.00     0.00 | 8 stations
-0.00    0.00    63.00     0.00 | 8 stations
+0.00   22.00    47.00     0.00 | 8 stations
 0.00   11.04     0.00     0.00 | 7 stations
-0.00    0.00     0.00    60.00 | 7 stations
-0.00    3.70     0.00     0.00 | 7 stations
+0.00    0.00     0.00   120.00 | 7 stations
+0.00   22.00     0.00   240.00 | 7 stations
+0.00   43.00    50.00   150.00 | 7 stations
+0.00   22.00    24.00    24.00 | 7 stations
+0.00    0.00     0.00   175.00 | 7 stations
 0.00   22.00     0.00   400.00 | 6 stations
-0.00    0.00     0.00   175.00 | 6 stations
+0.00   22.00     0.00    75.00 | 6 stations
+0.00   22.00     0.00    36.00 | 6 stations
+0.00    0.00     0.00    47.00 | 6 stations
 4.00   22.00     0.00     0.00 | 6 stations
 0.00    0.00    50.00   200.00 | 6 stations
 3.70   43.00    50.00    50.00 | 6 stations
+0.00   42.00     0.00    50.00 | 6 stations
 0.00   22.08     0.00   100.00 | 6 stations
-0.00    0.00     0.00   120.00 | 5 stations
 0.00   43.00    50.00   350.00 | 5 stations
+0.00    0.00     0.00   350.00 | 5 stations
+0.00   22.00     0.00    80.00 | 5 stations
+3.00    0.00    50.00    50.00 | 5 stations
+0.00    0.00    22.00   150.00 | 5 stations
+0.00    0.00     0.00   160.00 | 5 stations
 0.00   24.00    24.00    22.00 | 5 stations
-0.00    0.00     0.00    22.00 | 5 stations
-0.00   22.00    24.00    24.00 | 5 stations
 0.00    0.00     0.00   125.00 | 5 stations
+0.00   14.00     0.00     0.00 | 5 stations
+0.00   22.00    50.00   400.00 | 4 stations
+0.00    0.00     0.00    75.00 | 4 stations
 2.30   22.08     0.00     0.00 | 4 stations
-0.00    0.00     0.00   350.00 | 4 stations
+0.00    0.00     0.00    90.00 | 4 stations
+0.00    0.00     0.00    40.00 | 4 stations
+0.00    9.00     0.00     0.00 | 4 stations
+0.00   22.00    63.00   150.00 | 4 stations
+0.00   22.00     0.00    40.00 | 4 stations
+0.00   43.00     0.00   150.00 | 4 stations
 0.00   22.00     0.00   188.00 | 4 stations
 0.00   22.00     0.00   187.50 | 4 stations
-0.00    0.00     0.00    47.00 | 4 stations
+0.00   22.00     0.00    54.00 | 4 stations
+0.00    7.40    47.00     0.00 | 4 stations
+0.00    0.00    47.00     0.00 | 4 stations
 2.30    7.36     0.00     0.00 | 3 stations
 0.00   43.00    50.00   160.00 | 3 stations
+3.70    7.40     0.00     0.00 | 3 stations
 0.00   24.00     0.00    24.00 | 3 stations
+0.00    0.00     0.00    70.00 | 3 stations
+0.00    0.00     0.00    36.00 | 3 stations
+0.00    0.00     0.00    20.00 | 3 stations
+0.00   12.00     0.00   240.00 | 3 stations
+0.00   12.00     0.00   180.00 | 3 stations
+0.00    3.00     0.00     0.00 | 3 stations
+0.00    0.00     0.00   124.00 | 3 stations
+0.00   44.00     0.00   100.00 | 3 stations
 0.00    3.70    36.00    36.00 | 3 stations
 0.00   22.00    22.00    24.00 | 3 stations
+3.70   22.00     0.00     0.00 | 3 stations
 0.00    0.00    50.00   100.00 | 3 stations
-0.00   43.00     0.00   100.00 | 3 stations
-0.00   22.00     0.00    75.00 | 2 stations
+0.00   43.00    50.00   100.00 | 3 stations
+0.00   42.00     0.00    42.00 | 3 stations
+0.00   44.00    50.00   400.00 | 2 stations
+0.00   22.00    22.00    22.00 | 2 stations
+0.00   11.00     0.00   150.00 | 2 stations
 0.00   22.00    60.00    60.00 | 2 stations
-0.00   22.00     0.00   200.00 | 2 stations
-0.00   43.00    50.00   150.00 | 2 stations
-0.00    0.00     0.00    20.00 | 2 stations
-0.00    0.00     0.00    25.00 | 2 stations
+0.00   22.00    40.00    40.00 | 2 stations
+0.00   12.00    63.00   180.00 | 2 stations
+3.00    3.00     0.00     0.00 | 2 stations
+0.00   22.00     0.00   175.00 | 2 stations
+0.00   44.00    50.00   100.00 | 2 stations
+0.00   22.00     0.00    47.00 | 2 stations
+0.00   22.00    62.00   100.00 | 2 stations
+0.00    0.00     0.00     7.40 | 2 stations
+0.00    7.40     0.00    24.00 | 2 stations
+0.00    0.00    22.00    22.00 | 2 stations
+0.00    0.00    43.00    50.00 | 2 stations
 0.00    0.00    50.00   175.00 | 2 stations
-0.00    0.00    24.00     0.00 | 2 stations
 0.00   22.00    50.00   210.00 | 2 stations
 0.00   24.00    24.00    24.00 | 2 stations
-0.00    0.00     0.00    36.00 | 2 stations
 0.00    0.00    50.00   150.00 | 2 stations
 0.00    2.20     0.00     0.00 | 2 stations
 0.00    0.00     0.00    65.00 | 2 stations
 0.00   22.00     0.00   110.00 | 2 stations
-0.00   22.00     0.00    80.00 | 2 stations
 0.00   22.00    50.00    80.00 | 2 stations
 0.00   22.00    50.00   125.00 | 2 stations
 0.00   22.17    50.00   100.00 | 2 stations
 0.00    0.00    50.00   187.50 | 2 stations
 0.00    0.00     0.00   206.00 | 2 stations
+0.00   36.00     0.00     7.40 | 2 stations
 0.00    7.00     0.00    50.00 | 2 stations
 0.00   22.00     0.00   125.00 | 2 stations
 0.00    0.00     0.00   130.00 | 2 stations
 0.00   22.00    62.00   300.00 | 2 stations
+0.00   22.00     0.00    48.00 | 2 stations
+0.00    7.60     0.00     0.00 | 2 stations
 0.00    7.00     0.00   100.00 | 1 stations
-0.00    0.00     0.00    75.00 | 1 stations
 2.30   11.04     0.00     0.00 | 1 stations
+0.00   15.00     0.00   300.00 | 1 stations
+0.00    7.40     0.00   300.00 | 1 stations
 0.00    7.40     0.00   100.00 | 1 stations
 0.00   22.00     0.00   360.00 | 1 stations
 0.00   22.08    50.00    50.00 | 1 stations
+0.00    0.00     0.00   184.00 | 1 stations
 0.00   27.00     0.00     0.00 | 1 stations
-0.00    0.00     0.00    90.00 | 1 stations
-0.00    0.00     0.00    70.00 | 1 stations
-0.00   11.00     0.00   150.00 | 1 stations
+0.00    7.40     0.00    22.00 | 1 stations
+0.00   22.00     0.00   130.00 | 1 stations
+0.00   43.00    50.00   240.00 | 1 stations
+0.00   28.00     0.00     0.00 | 1 stations
+0.00   43.00    50.00   360.00 | 1 stations
+0.00   22.00     0.00   210.00 | 1 stations
+0.00   44.00     0.00   396.00 | 1 stations
+0.00   22.00     0.00   105.00 | 1 stations
+0.00   44.00     0.00   176.00 | 1 stations
+0.00   22.00    63.00   360.00 | 1 stations
+0.00   22.00     0.00   176.00 | 1 stations
+0.00    1.40     0.00     0.00 | 1 stations
 0.00   11.00     0.00   300.00 | 1 stations
+0.00   11.00     0.00   120.00 | 1 stations
+0.00   22.00    50.00    22.00 | 1 stations
+0.00    0.00    25.00    25.00 | 1 stations
+0.00    3.00     0.00    30.00 | 1 stations
+0.00   22.00     0.00    44.00 | 1 stations
+0.00    0.00    22.00    50.00 | 1 stations
+0.00   22.00    63.00   100.00 | 1 stations
+0.00    0.00     0.00   240.00 | 1 stations
+3.00    0.00     0.00    50.00 | 1 stations
+0.00    7.40     0.00    25.00 | 1 stations
+0.00    0.00    30.00    30.00 | 1 stations
+0.00   22.00    60.00   160.00 | 1 stations
+0.00    0.00    22.00   100.00 | 1 stations
+3.00    3.00    50.00    50.00 | 1 stations
+0.00    0.00    22.00    25.00 | 1 stations
+0.00   22.00    50.00    75.00 | 1 stations
+0.00   22.00    50.00     0.00 | 1 stations
+0.00    0.00    60.00   160.00 | 1 stations
+3.00   22.00     0.00     0.00 | 1 stations
 4.00    7.00     0.00     0.00 | 1 stations
 0.00    0.00    23.00     0.00 | 1 stations
+0.00    7.40     0.00   150.00 | 1 stations
 0.00   43.00     0.00   175.00 | 1 stations
 0.00    0.00    50.00   300.00 | 1 stations
-0.00    0.00     0.00   160.00 | 1 stations
+0.00   43.00     0.00   300.00 | 1 stations
 0.00   22.00    63.00   210.00 | 1 stations
-0.00   22.00    63.00   150.00 | 1 stations
 0.00   22.00    60.00   300.00 | 1 stations
 0.00   43.00    36.00    36.00 | 1 stations
 0.00   22.00    22.00    50.00 | 1 stations
@@ -2440,7 +2635,6 @@ zeenco                                       106     -       -    106</code></pr
 0.00   24.00     0.00    43.00 | 1 stations
 0.00   36.00     0.00    22.00 | 1 stations
 0.00    0.00    43.00     3.70 | 1 stations
-0.00   22.00    22.00    22.00 | 1 stations
 0.00   22.00     3.70    22.00 | 1 stations
 0.00    3.30     0.00     0.00 | 1 stations
 0.00    0.00    43.00    22.00 | 1 stations
@@ -2453,10 +2647,9 @@ zeenco                                       106     -       -    106</code></pr
 0.00    0.00    22.00    24.00 | 1 stations
 0.00   24.00    50.00    43.00 | 1 stations
 0.00   24.00    22.00    22.00 | 1 stations
-0.00    0.00    22.00   150.00 | 1 stations
-0.00    0.00    22.00    22.00 | 1 stations
 0.00    0.00    50.00    43.00 | 1 stations
-0.00    3.00     0.00     0.00 | 1 stations
+0.00    7.00     7.00     7.00 | 1 stations
+0.00    0.00     0.00   360.00 | 1 stations
 0.00   22.00     0.00   114.00 | 1 stations
 0.00   22.00    50.00   178.00 | 1 stations
 0.00    0.00    50.00   188.00 | 1 stations
@@ -2467,7 +2660,6 @@ zeenco                                       106     -       -    106</code></pr
 0.00    7.40    50.00   100.00 | 1 stations
 0.00   22.17     0.00   188.00 | 1 stations
 0.00   22.17     0.00   200.00 | 1 stations
-0.00   22.00    40.00    40.00 | 1 stations
 0.00   24.00    50.00   187.50 | 1 stations
 0.00   22.00    30.00    30.00 | 1 stations
 0.00    0.00     0.00   187.50 | 1 stations
@@ -2476,15 +2668,23 @@ zeenco                                       106     -       -    106</code></pr
 0.00    7.36     0.00   100.00 | 1 stations
 0.00   22.08     0.00   300.00 | 1 stations
 0.00    0.00    36.00     0.00 | 1 stations
-3.00    3.00     0.00     0.00 | 1 stations
+0.00   18.00     0.00    50.00 | 1 stations
+0.00   42.00     0.00    44.00 | 1 stations
+0.00   36.00    22.00    36.00 | 1 stations
+0.00   22.00     0.00   108.00 | 1 stations
+0.00   22.00     0.00   124.00 | 1 stations
+0.00   18.00     0.00    22.00 | 1 stations
 0.00   15.00     0.00     0.00 | 1 stations
 0.00   12.00     0.00     0.00 | 1 stations
 0.00   43.00     0.00   160.00 | 1 stations
 3.00   43.00    36.00    36.00 | 1 stations
 3.00   43.00    36.00   160.00 | 1 stations
 0.00   25.00    25.00    25.00 | 1 stations
-0.00    0.00     0.00   122.00 | 1 stations
+0.00    0.00     0.00    43.00 | 1 stations
+0.00    0.00     0.00    66.00 | 1 stations
+0.00    0.00     0.00    72.00 | 1 stations
 0.00    3.22     0.00     0.00 | 1 stations
+1.70    0.00     0.00     0.00 | 1 stations
 0.00    7.36     0.00   200.00 | 1 stations
 0.00    7.36     0.00    24.00 | 1 stations
 3.68   22.08     0.00     0.00 | 1 stations
@@ -2496,6 +2696,9 @@ zeenco                                       106     -       -    106</code></pr
 0.00    0.00     0.00   480.00 | 1 stations
 0.00    0.00    62.50   300.00 | 1 stations
 0.00    0.00     0.00   210.00 | 1 stations
+0.00    0.00     0.00    19.00 | 1 stations
+0.00    6.00     0.00     0.00 | 1 stations
+0.00   17.00     0.00     0.00 | 1 stations
 0.00    0.00    43.00     0.00 | 1 stations</code></pre>
                     
                 
@@ -2507,7 +2710,7 @@ zeenco                                       106     -       -    106</code></pr
     </main>
     <footer class="container report-container report-foot">
         <small>
-            <p>Généré le 2024-11-16 06:54:54 UTC</p>
+            <p>Généré le 2024-11-17 06:54:43 UTC</p>
         </small>
     </footer>
     <script src='assets/prism.js'></script>
