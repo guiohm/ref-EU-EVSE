@@ -18,7 +18,7 @@
             <li>
                 <hgroup>
                     <h1>Rapport de run Jungle-Bus Group IRVE OpenData</h1>
-                    <p>2024-12-07 06:54:45 UTC</p>
+                    <p>2024-12-08 06:54:35 UTC</p>
                 </hgroup>
             </li>
         </ul>
@@ -121,15 +121,15 @@
                     <summary>Expand/Collapse</summary>
                 
                     
-                        <pre><code class="language-python">116670 lignes (PDCs) en entrée | 9346 PDCs en double
-28743 stations reconnues sur 48410 station_id distincts en entrée
-54524 problèmes trouvés pour 107324 PDCs distincts en entrée (il peut exister plusieurs problèmes par PDC/station):
- &gt; [blocking] 36882 x le format de l&#39;identifiant ref:EU:EVSE (id_station_itinerance) n&#39;est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l&#39;analyse Osmose
+                        <pre><code class="language-python">118302 lignes (PDCs) en entrée | 10842 PDCs en double
+29034 stations reconnues sur 48710 station_id distincts en entrée
+54580 problèmes trouvés pour 107460 PDCs distincts en entrée (il peut exister plusieurs problèmes par PDC/station):
+ &gt; [blocking] 36891 x le format de l&#39;identifiant ref:EU:EVSE (id_station_itinerance) n&#39;est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l&#39;analyse Osmose
  &gt;    [error]    10 x aucun type de prise précisé sur l&#39;ensemble des points de charge
- &gt;    [error]  9761 x le nombre de point de charge de la station n&#39;est pas cohérent avec la liste des points de charge fournie
+ &gt;    [error]  9775 x le nombre de point de charge de la station n&#39;est pas cohérent avec la liste des points de charge fournie
  &gt;    [error]  1442 x plusieurs sources pour un même id
  &gt;  [warning]     5 x le champ station_deux_roues n&#39;est pas valide
- &gt;  [warning]   987 x le numéro de téléphone de l&#39;opérateur (telephone_operateur) est dans un format invalide
+ &gt;  [warning]   988 x le numéro de téléphone de l&#39;opérateur (telephone_operateur) est dans un format invalide
  &gt;  [warning]     8 x plusieurs horaires pour une même station
  &gt;  [warning]  1690 x plusieurs infos d&#39;accessibilité PMR (accessibilite_pmr) pour une même station
  &gt;  [warning]    16 x plusieurs infos de gratuité (gratuit) pour une même station
@@ -137,44 +137,44 @@
  &gt;  [warning]  1644 x plusieurs infos de paiement (paiement_cb) pour une même station
  &gt;  [warning]   311 x plusieurs infos de réservation pour une même station
  &gt;  [warning]   316 x puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)
- &gt;  [warning]   790 x puissance nominale déclarée pour prise EF supérieure à la norme (4)
- &gt;  [warning]   608 x puissance nominale déclarée pour prise T2 supérieure à la norme (43)
+ &gt;  [warning]   820 x puissance nominale déclarée pour prise EF supérieure à la norme (4)
+ &gt;  [warning]   610 x puissance nominale déclarée pour prise T2 supérieure à la norme (43)
 
 Severité
-blocking    36882
-error       11213
-warning      6429
+blocking    36891
+error       11227
+warning      6462
 
 Top 25 Organisations les plus problematiques:
 
 Sévérité                                           blocking  error warning  TOTAL
 Organisation                                                                     
-TOTAL                                                 36882  11213    6429  54524
+TOTAL                                                 36891  11227    6462  54580
 alize-charge                                          16157      -       -  16157
-eco-movement                                          10750      -       -  10750
-izivia                                                    -   6071     682   6753
+eco-movement                                          10760     24      35  10819
+izivia                                                    -   6080     714   6794
 lidl                                                   4111      -       -   4111
+gireve-2                                                198    755    1649   2602
 spbr1                                                     -    805     922   1727
 multiples                                                 -   1442       -   1442
-gireve-2                                                198    445     536   1179
 engie-mobilites-electriques                               -    502     502   1004
 le-reseau-de-recharge-pour-vehicules-electrique...        -    177     760    937
 rossini-energy                                          846      -       -    846
-morbihan-energies                                         -    188     614    802
 allego-1                                                638      -       -    638
 syndicat-departemental-denergie-du-tarn                 604      -       -    604
 totalenergies-marketing-france                          232     23     307    562
 bump                                                    529      -       -    529
 driveco                                                   -    323     186    509
 soregies                                                478      -       -    478
-syndicat-intercommunal-delectricite-et-de-gaz-d...        -     90     369    459
 syndicat-departemental-denergie-de-la-haute-gar...        -     95     297    392
 ev-cars                                                   -     64     322    386
 virta                                                   376      2       -    378
 zeborne                                                 371      -       -    371
 sowatt-solutions                                        335      -       -    335
 evzen-smeg-developpement                                  -      4     263    267
-ubitricity                                              257      -       -    257</code></pre>
+ubitricity                                              257      -       -    257
+sieml                                                     -    209       -    209
+sydela                                                    -    192       -    192</code></pre>
                     
                 
                 </details>
@@ -210,10 +210,10 @@ ubitricity                                              257      -       -    25
   <tbody>
     <tr>
       <th>TOTAL</th>
-      <td>36882</td>
-      <td>11213</td>
-      <td>6429</td>
-      <td>54524</td>
+      <td>36891</td>
+      <td>11227</td>
+      <td>6462</td>
+      <td>54580</td>
     </tr>
     <tr>
       <th>alize-charge</th>
@@ -224,17 +224,17 @@ ubitricity                                              257      -       -    25
     </tr>
     <tr>
       <th>eco-movement</th>
-      <td>10750</td>
-      <td>-</td>
-      <td>-</td>
-      <td>10750</td>
+      <td>10760</td>
+      <td>24</td>
+      <td>35</td>
+      <td>10819</td>
     </tr>
     <tr>
       <th>izivia</th>
       <td>-</td>
-      <td>6071</td>
-      <td>682</td>
-      <td>6753</td>
+      <td>6080</td>
+      <td>714</td>
+      <td>6794</td>
     </tr>
     <tr>
       <th>lidl</th>
@@ -242,6 +242,13 @@ ubitricity                                              257      -       -    25
       <td>-</td>
       <td>-</td>
       <td>4111</td>
+    </tr>
+    <tr>
+      <th>gireve-2</th>
+      <td>198</td>
+      <td>755</td>
+      <td>1649</td>
+      <td>2602</td>
     </tr>
     <tr>
       <th>spbr1</th>
@@ -256,13 +263,6 @@ ubitricity                                              257      -       -    25
       <td>1442</td>
       <td>-</td>
       <td>1442</td>
-    </tr>
-    <tr>
-      <th>gireve-2</th>
-      <td>198</td>
-      <td>445</td>
-      <td>536</td>
-      <td>1179</td>
     </tr>
     <tr>
       <th>engie-mobilites-electriques</th>
@@ -284,13 +284,6 @@ ubitricity                                              257      -       -    25
       <td>-</td>
       <td>-</td>
       <td>846</td>
-    </tr>
-    <tr>
-      <th>morbihan-energies</th>
-      <td>-</td>
-      <td>188</td>
-      <td>614</td>
-      <td>802</td>
     </tr>
     <tr>
       <th>allego-1</th>
@@ -333,13 +326,6 @@ ubitricity                                              257      -       -    25
       <td>-</td>
       <td>-</td>
       <td>478</td>
-    </tr>
-    <tr>
-      <th>syndicat-intercommunal-delectricite-et-de-gaz-du-puy-de-dome-irve</th>
-      <td>-</td>
-      <td>90</td>
-      <td>369</td>
-      <td>459</td>
     </tr>
     <tr>
       <th>syndicat-departemental-denergie-de-la-haute-garonne</th>
@@ -407,9 +393,9 @@ ubitricity                                              257      -       -    25
     <tr>
       <th>plus-de-bornes</th>
       <td>-</td>
-      <td>178</td>
+      <td>180</td>
       <td>7</td>
-      <td>185</td>
+      <td>187</td>
     </tr>
     <tr>
       <th>easycharge-services</th>
@@ -461,13 +447,6 @@ ubitricity                                              257      -       -    25
       <td>99</td>
     </tr>
     <tr>
-      <th>regie-services-energie-irve</th>
-      <td>-</td>
-      <td>19</td>
-      <td>72</td>
-      <td>91</td>
-    </tr>
-    <tr>
       <th>e-charge50</th>
       <td>-</td>
       <td>6</td>
@@ -489,25 +468,11 @@ ubitricity                                              257      -       -    25
       <td>78</td>
     </tr>
     <tr>
-      <th>e-vadea</th>
-      <td>-</td>
-      <td>16</td>
-      <td>58</td>
-      <td>74</td>
-    </tr>
-    <tr>
-      <th>allego</th>
-      <td>-</td>
-      <td>25</td>
-      <td>36</td>
-      <td>61</td>
-    </tr>
-    <tr>
       <th>reseau-alterbase-79</th>
       <td>-</td>
-      <td>16</td>
+      <td>18</td>
       <td>41</td>
-      <td>57</td>
+      <td>59</td>
     </tr>
     <tr>
       <th>sorel-energies</th>
@@ -538,16 +503,16 @@ ubitricity                                              257      -       -    25
       <td>34</td>
     </tr>
     <tr>
-      <th>properphi</th>
-      <td>30</td>
+      <th>e-motum-sas-1</th>
       <td>-</td>
+      <td>30</td>
       <td>-</td>
       <td>30</td>
     </tr>
     <tr>
-      <th>e-motum-sas-1</th>
-      <td>-</td>
+      <th>properphi</th>
       <td>30</td>
+      <td>-</td>
       <td>-</td>
       <td>30</td>
     </tr>
@@ -566,17 +531,17 @@ ubitricity                                              257      -       -    25
       <td>24</td>
     </tr>
     <tr>
-      <th>maneo</th>
-      <td>18</td>
-      <td>-</td>
-      <td>1</td>
-      <td>19</td>
-    </tr>
-    <tr>
       <th>bp-france</th>
       <td>14</td>
       <td>-</td>
       <td>5</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>maneo</th>
+      <td>18</td>
+      <td>-</td>
+      <td>1</td>
       <td>19</td>
     </tr>
     <tr>
@@ -629,7 +594,7 @@ ubitricity                                              257      -       -    25
       <td>13</td>
     </tr>
     <tr>
-      <th>sas-satcoms</th>
+      <th>autorecharge</th>
       <td>12</td>
       <td>-</td>
       <td>-</td>
@@ -643,11 +608,18 @@ ubitricity                                              257      -       -    25
       <td>12</td>
     </tr>
     <tr>
-      <th>autorecharge</th>
+      <th>sas-satcoms</th>
       <td>12</td>
       <td>-</td>
       <td>-</td>
       <td>12</td>
+    </tr>
+    <tr>
+      <th>jerecharge-com</th>
+      <td>-</td>
+      <td>2</td>
+      <td>8</td>
+      <td>10</td>
     </tr>
     <tr>
       <th>tesla-motors</th>
@@ -657,17 +629,17 @@ ubitricity                                              257      -       -    25
       <td>10</td>
     </tr>
     <tr>
-      <th>regie-municipale-delectricite-de-loos</th>
-      <td>9</td>
-      <td>-</td>
-      <td>-</td>
-      <td>9</td>
-    </tr>
-    <tr>
       <th>territoire-denergie-orne</th>
       <td>-</td>
       <td>4</td>
       <td>5</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>regie-municipale-delectricite-de-loos</th>
+      <td>9</td>
+      <td>-</td>
+      <td>-</td>
       <td>9</td>
     </tr>
     <tr>
@@ -685,31 +657,24 @@ ubitricity                                              257      -       -    25
       <td>8</td>
     </tr>
     <tr>
-      <th>inforomu</th>
-      <td>-</td>
-      <td>2</td>
+      <th>charge-in</th>
       <td>6</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <th>jerecharge-com</th>
       <td>-</td>
       <td>1</td>
       <td>7</td>
-      <td>8</td>
+    </tr>
+    <tr>
+      <th>installation-dune-borne-22kwa-hostellerie-des-ducs</th>
+      <td>-</td>
+      <td>1</td>
+      <td>6</td>
+      <td>7</td>
     </tr>
     <tr>
       <th>see-you-sun</th>
       <td>7</td>
       <td>-</td>
       <td>-</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <th>charge-in</th>
-      <td>6</td>
-      <td>-</td>
-      <td>1</td>
       <td>7</td>
     </tr>
     <tr>
@@ -727,24 +692,10 @@ ubitricity                                              257      -       -    25
       <td>6</td>
     </tr>
     <tr>
-      <th>power-dot-france</th>
-      <td>-</td>
-      <td>1</td>
-      <td>4</td>
-      <td>5</td>
-    </tr>
-    <tr>
       <th>2ems</th>
       <td>3</td>
       <td>1</td>
       <td>1</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>conectys</th>
-      <td>4</td>
-      <td>1</td>
-      <td>-</td>
       <td>5</td>
     </tr>
     <tr>
@@ -755,6 +706,13 @@ ubitricity                                              257      -       -    25
       <td>5</td>
     </tr>
     <tr>
+      <th>power-dot-france</th>
+      <td>-</td>
+      <td>1</td>
+      <td>4</td>
+      <td>5</td>
+    </tr>
+    <tr>
       <th>allcoms-technologies</th>
       <td>5</td>
       <td>-</td>
@@ -762,21 +720,14 @@ ubitricity                                              257      -       -    25
       <td>5</td>
     </tr>
     <tr>
-      <th>kap-enerj</th>
+      <th>conectys</th>
       <td>4</td>
+      <td>1</td>
       <td>-</td>
-      <td>-</td>
-      <td>4</td>
+      <td>5</td>
     </tr>
     <tr>
-      <th>eranovum-e-mobility-france</th>
-      <td>4</td>
-      <td>-</td>
-      <td>-</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>indelec-mobility</th>
+      <th>area-tech</th>
       <td>4</td>
       <td>-</td>
       <td>-</td>
@@ -790,6 +741,20 @@ ubitricity                                              257      -       -    25
       <td>4</td>
     </tr>
     <tr>
+      <th>indelec-mobility</th>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>kap-enerj</th>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4</td>
+    </tr>
+    <tr>
       <th>nm-securelec</th>
       <td>4</td>
       <td>-</td>
@@ -797,7 +762,7 @@ ubitricity                                              257      -       -    25
       <td>4</td>
     </tr>
     <tr>
-      <th>area-tech</th>
+      <th>eranovum-e-mobility-france</th>
       <td>4</td>
       <td>-</td>
       <td>-</td>
@@ -811,9 +776,16 @@ ubitricity                                              257      -       -    25
       <td>4</td>
     </tr>
     <tr>
-      <th>enerjump</th>
-      <td>3</td>
+      <th>kallista-bdr</th>
       <td>-</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>imac2</th>
+      <td>-</td>
+      <td>3</td>
       <td>-</td>
       <td>3</td>
     </tr>
@@ -832,44 +804,23 @@ ubitricity                                              257      -       -    25
       <td>3</td>
     </tr>
     <tr>
-      <th>kallista-bdr</th>
+      <th>enerjump</th>
+      <td>3</td>
       <td>-</td>
-      <td>1</td>
-      <td>2</td>
+      <td>-</td>
       <td>3</td>
     </tr>
     <tr>
-      <th>imac2</th>
+      <th>peretti-groupe</th>
+      <td>2</td>
       <td>-</td>
-      <td>3</td>
       <td>-</td>
-      <td>3</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>acelec-charge</th>
       <td>-</td>
       <td>2</td>
-      <td>-</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>philippi</th>
-      <td>-</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>suraya</th>
-      <td>2</td>
-      <td>-</td>
-      <td>-</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>ecarmobility</th>
-      <td>2</td>
-      <td>-</td>
       <td>-</td>
       <td>2</td>
     </tr>
@@ -881,9 +832,23 @@ ubitricity                                              257      -       -    25
       <td>2</td>
     </tr>
     <tr>
-      <th>guillaume</th>
+      <th>allego</th>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>ecarmobility</th>
       <td>2</td>
       <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>morbihan-energies</th>
+      <td>-</td>
+      <td>2</td>
       <td>-</td>
       <td>2</td>
     </tr>
@@ -895,10 +860,24 @@ ubitricity                                              257      -       -    25
       <td>2</td>
     </tr>
     <tr>
-      <th>idex-solar-charging-stations</th>
+      <th>nexteneo</th>
+      <td>-</td>
+      <td>2</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>guillaume</th>
+      <td>2</td>
       <td>-</td>
       <td>-</td>
       <td>2</td>
+    </tr>
+    <tr>
+      <th>citeos-poitiers</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
       <td>2</td>
     </tr>
     <tr>
@@ -909,14 +888,14 @@ ubitricity                                              257      -       -    25
       <td>2</td>
     </tr>
     <tr>
-      <th>wellborne</th>
+      <th>idex-solar-charging-stations</th>
+      <td>-</td>
+      <td>-</td>
       <td>2</td>
-      <td>-</td>
-      <td>-</td>
       <td>2</td>
     </tr>
     <tr>
-      <th>startn-move-1</th>
+      <th>wellborne</th>
       <td>2</td>
       <td>-</td>
       <td>-</td>
@@ -930,7 +909,14 @@ ubitricity                                              257      -       -    25
       <td>2</td>
     </tr>
     <tr>
-      <th>spie-citynetworks</th>
+      <th>startn-move-1</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>suraya</th>
       <td>2</td>
       <td>-</td>
       <td>-</td>
@@ -938,6 +924,13 @@ ubitricity                                              257      -       -    25
     </tr>
     <tr>
       <th>snmg2e</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>spie-citynetworks</th>
       <td>2</td>
       <td>-</td>
       <td>-</td>
@@ -958,17 +951,24 @@ ubitricity                                              257      -       -    25
       <td>2</td>
     </tr>
     <tr>
-      <th>sb-energy</th>
+      <th>normatech</th>
+      <td>1</td>
+      <td>1</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>philippi</th>
       <td>-</td>
       <td>1</td>
       <td>1</td>
       <td>2</td>
     </tr>
     <tr>
-      <th>peretti-groupe</th>
-      <td>2</td>
+      <th>sb-energy</th>
       <td>-</td>
-      <td>-</td>
+      <td>1</td>
+      <td>1</td>
       <td>2</td>
     </tr>
     <tr>
@@ -979,27 +979,6 @@ ubitricity                                              257      -       -    25
       <td>2</td>
     </tr>
     <tr>
-      <th>normatech</th>
-      <td>1</td>
-      <td>1</td>
-      <td>-</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>citeos-poitiers</th>
-      <td>2</td>
-      <td>-</td>
-      <td>-</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>nexteneo</th>
-      <td>-</td>
-      <td>2</td>
-      <td>-</td>
-      <td>2</td>
-    </tr>
-    <tr>
       <th>abe-electricite</th>
       <td>1</td>
       <td>-</td>
@@ -1007,7 +986,7 @@ ubitricity                                              257      -       -    25
       <td>1</td>
     </tr>
     <tr>
-      <th>agglomeration-montargoise-et-rives-du-loing</th>
+      <th>dubois-1</th>
       <td>1</td>
       <td>-</td>
       <td>-</td>
@@ -1018,6 +997,13 @@ ubitricity                                              257      -       -    25
       <td>1</td>
       <td>-</td>
       <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>chargepoly</th>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
       <td>1</td>
     </tr>
     <tr>
@@ -1035,16 +1021,16 @@ ubitricity                                              257      -       -    25
       <td>1</td>
     </tr>
     <tr>
-      <th>irve-territoire-denergie-90</th>
+      <th>inforomu</th>
       <td>-</td>
       <td>1</td>
       <td>-</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>garage-chene-total-energie-citroen</th>
-      <td>1</td>
+      <th>irve-territoire-denergie-90</th>
       <td>-</td>
+      <td>1</td>
       <td>-</td>
       <td>1</td>
     </tr>
@@ -1056,7 +1042,7 @@ ubitricity                                              257      -       -    25
       <td>1</td>
     </tr>
     <tr>
-      <th>dubois-1</th>
+      <th>garage-chene-total-energie-citroen</th>
       <td>1</td>
       <td>-</td>
       <td>-</td>
@@ -1084,10 +1070,10 @@ ubitricity                                              257      -       -    25
       <td>1</td>
     </tr>
     <tr>
-      <th>chargepoly</th>
-      <td>-</td>
-      <td>-</td>
+      <th>rsb-zni-non-parking-camping-supervision-non</th>
       <td>1</td>
+      <td>-</td>
+      <td>-</td>
       <td>1</td>
     </tr>
     <tr>
@@ -1105,6 +1091,13 @@ ubitricity                                              257      -       -    25
       <td>1</td>
     </tr>
     <tr>
+      <th>neogroup-consulting</th>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
       <th>mdg-fibre-sas</th>
       <td>1</td>
       <td>-</td>
@@ -1112,17 +1105,10 @@ ubitricity                                              257      -       -    25
       <td>1</td>
     </tr>
     <tr>
-      <th>rsb-zni-non-parking-camping-supervision-non</th>
-      <td>1</td>
-      <td>-</td>
+      <th>regie-services-energie-irve</th>
       <td>-</td>
       <td>1</td>
-    </tr>
-    <tr>
-      <th>neogroup-consulting</th>
       <td>-</td>
-      <td>-</td>
-      <td>1</td>
       <td>1</td>
     </tr>
     <tr>
@@ -1193,12 +1179,6 @@ ubitricity                                              257      -       -    25
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
-      <th>agglomeration-montargoise-et-rives-du-loing</th>
-      <th>1</th>
-      <th>blocking</th>
-      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
-    </tr>
-    <tr>
       <th>alize-charge</th>
       <th>16157</th>
       <th>blocking</th>
@@ -1211,20 +1191,14 @@ ubitricity                                              257      -       -    25
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th rowspan="3" valign="top">allego</th>
-      <th>14</th>
-      <th>warning</th>
-      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
-    </tr>
-    <tr>
-      <th>22</th>
-      <th>warning</th>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
-      <th>25</th>
+      <th rowspan="2" valign="top">allego</th>
+      <th rowspan="2" valign="top">1</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
     </tr>
     <tr>
       <th>allego-1</th>
@@ -1443,26 +1417,6 @@ ubitricity                                              257      -       -    25
       <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
     </tr>
     <tr>
-      <th rowspan="4" valign="top">e-vadea</th>
-      <th>10</th>
-      <th>warning</th>
-      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">16</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th>warning</th>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
-      <th>32</th>
-      <th>warning</th>
-      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
-    </tr>
-    <tr>
       <th>easycharge-services</th>
       <th>150</th>
       <th>warning</th>
@@ -1475,8 +1429,23 @@ ubitricity                                              257      -       -    25
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th>eco-movement</th>
-      <th>10750</th>
+      <th rowspan="4" valign="top">eco-movement</th>
+      <th>14</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
+    </tr>
+    <tr>
+      <th>21</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>24</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>10760</th>
       <th>blocking</th>
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
@@ -1571,20 +1540,30 @@ ubitricity                                              257      -       -    25
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th rowspan="6" valign="top">gireve-2</th>
+      <th rowspan="10" valign="top">gireve-2</th>
       <th>4</th>
       <th>error</th>
       <th>aucun type de prise précisé sur l'ensemble des points de charge</th>
     </tr>
     <tr>
-      <th>9</th>
+      <th>8</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
+    </tr>
+    <tr>
+      <th>10</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
     </tr>
     <tr>
-      <th>78</th>
+      <th>88</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
+    </tr>
+    <tr>
+      <th>114</th>
+      <th>warning</th>
+      <th>plusieurs infos de réservation pour une même station</th>
     </tr>
     <tr>
       <th>198</th>
@@ -1592,14 +1571,24 @@ ubitricity                                              257      -       -    25
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th>441</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+      <th>324</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
     </tr>
     <tr>
-      <th>449</th>
+      <th>457</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
+    </tr>
+    <tr>
+      <th>648</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
+      <th>751</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
       <th rowspan="4" valign="top">greenspot-enersoft</th>
@@ -1694,8 +1683,29 @@ ubitricity                                              257      -       -    25
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th rowspan="6" valign="top">inforomu</th>
-      <th rowspan="4" valign="top">1</th>
+      <th>inforomu</th>
+      <th>1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">inouid-smart-mobility</th>
+      <th>2</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>3</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="6" valign="top">installation-dune-borne-22kwa-hostellerie-des-ducs</th>
+      <th rowspan="5" valign="top">1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
       <th rowspan="4" valign="top">warning</th>
       <th>plusieurs horaires pour une même station</th>
     </tr>
@@ -1709,24 +1719,9 @@ ubitricity                                              257      -       -    25
       <th>plusieurs infos de réservation pour une même station</th>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">2</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
+      <th>2</th>
       <th>warning</th>
       <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">inouid-smart-mobility</th>
-      <th>2</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th>3</th>
-      <th>blocking</th>
-      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
       <th>ionity-gmbh</th>
@@ -1747,32 +1742,33 @@ ubitricity                                              257      -       -    25
       <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
     </tr>
     <tr>
-      <th>89</th>
+      <th>119</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
     </tr>
     <tr>
-      <th>573</th>
+      <th>575</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
     </tr>
     <tr>
-      <th>6071</th>
+      <th>6080</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
       <th rowspan="3" valign="top">jerecharge-com</th>
-      <th rowspan="2" valign="top">1</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
+      <th>1</th>
       <th>warning</th>
       <th>plusieurs horaires pour une même station</th>
     </tr>
     <tr>
-      <th>6</th>
+      <th>2</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>7</th>
       <th>warning</th>
       <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
     </tr>
@@ -1893,40 +1889,10 @@ ubitricity                                              257      -       -    25
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th rowspan="7" valign="top">morbihan-energies</th>
-      <th>1</th>
-      <th>warning</th>
-      <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
-    </tr>
-    <tr>
-      <th>3</th>
-      <th>warning</th>
-      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
-    </tr>
-    <tr>
-      <th>5</th>
-      <th>warning</th>
-      <th>plusieurs infos de réservation pour une même station</th>
-    </tr>
-    <tr>
-      <th>8</th>
-      <th>warning</th>
-      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
-    </tr>
-    <tr>
-      <th>188</th>
+      <th>morbihan-energies</th>
+      <th>2</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th>199</th>
-      <th>warning</th>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
-      <th>398</th>
-      <th>warning</th>
-      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
     <tr>
       <th>multiples</th>
@@ -2002,7 +1968,7 @@ ubitricity                                              257      -       -    25
       <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
     <tr>
-      <th>178</th>
+      <th>180</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -2046,27 +2012,14 @@ ubitricity                                              257      -       -    25
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th rowspan="4" valign="top">regie-services-energie-irve</th>
-      <th rowspan="2" valign="top">18</th>
-      <th rowspan="2" valign="top">warning</th>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
-      <th>plusieurs infos de réservation pour une même station</th>
-    </tr>
-    <tr>
-      <th>19</th>
+      <th>regie-services-energie-irve</th>
+      <th>1</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
-      <th>36</th>
-      <th>warning</th>
-      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
-    </tr>
-    <tr>
       <th rowspan="2" valign="top">reseau-alterbase-79</th>
-      <th>16</th>
+      <th>18</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -2305,30 +2258,6 @@ ubitricity                                              257      -       -    25
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
-      <th rowspan="5" valign="top">syndicat-intercommunal-delectricite-et-de-gaz-du-puy-de-dome-irve</th>
-      <th>5</th>
-      <th>warning</th>
-      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
-    </tr>
-    <tr>
-      <th>90</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">91</th>
-      <th rowspan="2" valign="top">warning</th>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
-      <th>plusieurs infos de réservation pour une même station</th>
-    </tr>
-    <tr>
-      <th>182</th>
-      <th>warning</th>
-      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
-    </tr>
-    <tr>
       <th>tenao60</th>
       <th>4</th>
       <th>error</th>
@@ -2471,28 +2400,29 @@ ubitricity                                              257      -       -    25
                 
                     
                         <pre><code class="language-python"> EF  |   T2  | Chademo |  CCS  |
-0.00   22.00     0.00     0.00 | 12040 stations
-0.00    7.36     0.00     0.00 | 3080 stations
+0.00   22.00     0.00     0.00 | 12014 stations
+0.00    7.36     0.00     0.00 | 3084 stations
 0.00    3.68     0.00     0.00 | 1596 stations
-0.00   18.00     0.00     0.00 | 1058 stations
-0.00    0.00     0.00     0.00 | 822 stations
+0.00   18.00     0.00     0.00 | 1059 stations
+0.00    0.00     0.00     0.00 | 854 stations
+0.00    0.00     0.00   150.00 | 825 stations
 0.00   22.00     0.00    24.00 | 776 stations
-0.00    0.00     0.00   150.00 | 754 stations
-0.00    7.00     0.00     0.00 | 664 stations
-0.00   22.08     0.00     0.00 | 621 stations
-0.00    7.40     0.00     0.00 | 438 stations
-0.00   22.00     0.00   150.00 | 421 stations
+0.00    7.00     0.00     0.00 | 665 stations
+0.00   22.08     0.00     0.00 | 623 stations
+0.00    7.40     0.00     0.00 | 437 stations
+0.00   22.00     0.00   150.00 | 434 stations
 0.00   22.08     0.00    50.00 | 417 stations
-0.00    0.00     0.00    24.00 | 334 stations
-0.00   24.00     0.00     0.00 | 312 stations
-0.00    0.00     0.00    50.00 | 281 stations
-0.00   22.00     0.00    50.00 | 260 stations
+0.00    0.00     0.00    24.00 | 337 stations
+0.00   24.00     0.00     0.00 | 313 stations
+0.00    0.00     0.00    50.00 | 283 stations
+0.00   22.00     0.00    50.00 | 264 stations
 0.00   22.00     0.00    25.00 | 258 stations
 0.00    0.00    22.00     0.00 | 211 stations
 0.00    0.00     0.00   250.00 | 209 stations
+0.00   22.00     0.00   300.00 | 203 stations
 0.00   22.00    50.00   200.00 | 198 stations
 0.00   22.00    50.00   100.00 | 196 stations
-0.00   22.00     0.00   300.00 | 186 stations
+0.00    0.00     0.00   300.00 | 193 stations
 0.00   22.00     0.00   120.00 | 167 stations
 0.00   22.00    50.00    50.00 | 154 stations
 0.00   44.00     0.00    50.00 | 149 stations
@@ -2502,9 +2432,8 @@ ubitricity                                              257      -       -    25
 0.00   22.00     0.00    60.00 | 118 stations
 0.00   22.00    25.00    25.00 | 107 stations
 0.00   36.00    36.00    36.00 | 103 stations
-0.00    0.00     0.00   300.00 | 88 stations
+0.00    0.00     0.00   200.00 | 102 stations
 4.00    0.00     0.00    22.00 | 86 stations
-0.00    0.00     0.00   200.00 | 85 stations
 0.00   22.00     0.00   180.00 | 80 stations
 0.00   43.00     0.00    50.00 | 77 stations
 0.00   43.00    50.00    50.00 | 75 stations
@@ -2522,14 +2451,16 @@ ubitricity                                              257      -       -    25
 3.00    0.00     0.00     0.00 | 45 stations
 0.00   22.00    50.00    60.00 | 44 stations
 0.00   22.00    24.00    24.00 | 43 stations
-0.00    0.00     0.00   100.00 | 37 stations
+0.00    0.00     0.00   100.00 | 39 stations
 0.00   12.00     0.00   120.00 | 32 stations
 0.00   22.00    62.50   300.00 | 31 stations
 0.00   22.00     0.00    90.00 | 30 stations
 0.00   22.00    50.00   300.00 | 30 stations
+0.00    0.00     0.00   225.00 | 25 stations
 0.00    0.00     0.00    44.00 | 25 stations
 0.00   44.00    44.00    50.00 | 24 stations
 0.00    0.00     7.40     0.00 | 24 stations
+0.00    0.00     0.00   400.00 | 23 stations
 0.00    0.00    54.00   300.00 | 23 stations
 2.30   11.00     0.00     0.00 | 22 stations
 0.00   22.00    50.00   160.00 | 22 stations
@@ -2552,14 +2483,13 @@ ubitricity                                              257      -       -    25
 0.00   22.00    43.00    50.00 | 12 stations
 0.00   22.00     0.00    22.00 | 12 stations
 0.00    0.00     0.00    54.00 | 12 stations
+0.00   22.00     0.00   200.00 | 11 stations
 0.00    0.00     0.00   320.00 | 11 stations
 0.00    6.90     0.00     0.00 | 11 stations
-0.00   22.00     0.00   200.00 | 10 stations
 0.00    0.00     0.00    30.00 | 10 stations
 0.00   22.17    50.00   200.00 | 10 stations
 0.00   22.00    50.00   180.00 | 10 stations
 1.70   22.00     0.00     0.00 | 10 stations
-0.00    0.00     0.00   225.00 | 9 stations
 0.00   22.00     0.00   225.00 | 9 stations
 3.70    0.00     0.00     0.00 | 9 stations
 0.00    0.00    24.00     0.00 | 9 stations
@@ -2570,6 +2500,7 @@ ubitricity                                              257      -       -    25
 0.00    0.00     0.00    47.00 | 7 stations
 0.00    0.00     0.00   175.00 | 7 stations
 0.00    0.00     0.00   120.00 | 6 stations
+0.00   22.00     0.00   400.00 | 6 stations
 0.00   22.00     0.00    75.00 | 6 stations
 0.00   22.00     0.00    36.00 | 6 stations
 0.00   43.00     0.00     0.00 | 6 stations
@@ -2583,7 +2514,6 @@ ubitricity                                              257      -       -    25
 0.00   22.00     0.00    80.00 | 5 stations
 0.00    0.00     0.00    40.00 | 5 stations
 3.00    0.00    50.00    50.00 | 5 stations
-0.00    0.00     0.00   400.00 | 5 stations
 0.00    0.00    50.00   187.50 | 5 stations
 0.00   22.00     0.00   187.50 | 5 stations
 0.00   14.00     0.00     0.00 | 5 stations
@@ -2617,11 +2547,12 @@ ubitricity                                              257      -       -    25
 0.00   42.00     0.00    42.00 | 3 stations
 0.00   44.00    50.00   400.00 | 2 stations
 0.00   15.00     0.00   300.00 | 2 stations
-0.00   22.00     0.00   400.00 | 2 stations
 3.70    7.40     0.00     0.00 | 2 stations
+0.00   11.00     0.00   150.00 | 2 stations
 0.00   22.00    60.00    60.00 | 2 stations
 0.00    0.00     0.00    36.00 | 2 stations
 0.00   22.00    40.00    40.00 | 2 stations
+0.00    0.00     0.00   210.00 | 2 stations
 0.00   12.00    63.00   180.00 | 2 stations
 3.00    3.00     0.00     0.00 | 2 stations
 0.00   22.00     0.00   175.00 | 2 stations
@@ -2653,7 +2584,6 @@ ubitricity                                              257      -       -    25
 0.00    7.40     0.00   300.00 | 1 stations
 0.00    7.40     0.00   100.00 | 1 stations
 0.00   22.00    22.00    22.00 | 1 stations
-0.00   11.00     0.00   150.00 | 1 stations
 0.00   22.00     0.00   360.00 | 1 stations
 0.00   22.08    50.00    50.00 | 1 stations
 0.00    0.00     0.00   184.00 | 1 stations
@@ -2670,6 +2600,7 @@ ubitricity                                              257      -       -    25
 0.00   22.00    63.00   360.00 | 1 stations
 0.00   22.00     0.00   176.00 | 1 stations
 0.00    1.40     0.00     0.00 | 1 stations
+0.00   11.00     0.00   300.00 | 1 stations
 0.00   11.00     0.00   120.00 | 1 stations
 0.00   22.00    50.00    22.00 | 1 stations
 0.00    0.00    25.00    25.00 | 1 stations
@@ -2736,8 +2667,9 @@ ubitricity                                              257      -       -    25
 3.00   43.00    36.00   160.00 | 1 stations
 0.00   25.00    25.00    25.00 | 1 stations
 0.00    0.00     0.00    43.00 | 1 stations
-0.00    0.00     0.00    72.00 | 1 stations
+0.00    0.00     0.00   122.00 | 1 stations
 0.00    3.22     0.00     0.00 | 1 stations
+1.70    0.00     0.00     0.00 | 1 stations
 0.00    7.36     0.00   200.00 | 1 stations
 0.00    7.36     0.00    24.00 | 1 stations
 3.68   22.08     0.00     0.00 | 1 stations
@@ -2748,7 +2680,6 @@ ubitricity                                              257      -       -    25
 0.00   22.00    61.00   300.00 | 1 stations
 0.00    0.00     0.00   480.00 | 1 stations
 0.00    0.00    62.50   300.00 | 1 stations
-0.00    0.00     0.00   210.00 | 1 stations
 0.00    0.00     0.00    19.00 | 1 stations
 0.00    6.00     0.00     0.00 | 1 stations
 0.00   17.00     0.00     0.00 | 1 stations
@@ -2763,7 +2694,7 @@ ubitricity                                              257      -       -    25
     </main>
     <footer class="container report-container report-foot">
         <small>
-            <p>Généré le 2024-12-07 06:54:45 UTC</p>
+            <p>Généré le 2024-12-08 06:54:35 UTC</p>
         </small>
     </footer>
     <script src='assets/prism.js'></script>
