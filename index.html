@@ -18,7 +18,7 @@
             <li>
                 <hgroup>
                     <h1>Rapport de run Jungle-Bus Group IRVE OpenData</h1>
-                    <p>2024-12-16 06:56:22 UTC</p>
+                    <p>2024-12-17 06:55:46 UTC</p>
                 </hgroup>
             </li>
         </ul>
@@ -121,44 +121,45 @@
                     <summary>Expand/Collapse</summary>
                 
                     
-                        <pre><code class="language-python">117284 lignes (PDCs) en entrée | 9361 PDCs en double
-28961 stations reconnues sur 48724 station_id distincts en entrée
-54831 problèmes trouvés pour 107923 PDCs distincts en entrée (il peut exister plusieurs problèmes par PDC/station):
- &gt; [blocking] 37031 x le format de l&#39;identifiant ref:EU:EVSE (id_station_itinerance) n&#39;est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l&#39;analyse Osmose
+                        <pre><code class="language-python">116921 lignes (PDCs) en entrée | 9361 PDCs en double
+28584 stations reconnues sur 48361 station_id distincts en entrée
+54370 problèmes trouvés pour 107560 PDCs distincts en entrée (il peut exister plusieurs problèmes par PDC/station):
+ &gt; [blocking] 37045 x le format de l&#39;identifiant ref:EU:EVSE (id_station_itinerance) n&#39;est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l&#39;analyse Osmose
  &gt;    [error]    10 x aucun type de prise précisé sur l&#39;ensemble des points de charge
- &gt;    [error]  9841 x le nombre de point de charge de la station n&#39;est pas cohérent avec la liste des points de charge fournie
+ &gt;    [error]  9472 x le nombre de point de charge de la station n&#39;est pas cohérent avec la liste des points de charge fournie
  &gt;    [error]  1447 x plusieurs sources pour un même id
  &gt;  [warning]     5 x le champ station_deux_roues n&#39;est pas valide
- &gt;  [warning]   987 x le numéro de téléphone de l&#39;opérateur (telephone_operateur) est dans un format invalide
+ &gt;  [warning]   988 x le numéro de téléphone de l&#39;opérateur (telephone_operateur) est dans un format invalide
  &gt;  [warning]     9 x plusieurs horaires pour une même station
  &gt;  [warning]  1690 x plusieurs infos d&#39;accessibilité PMR (accessibilite_pmr) pour une même station
  &gt;  [warning]    16 x plusieurs infos de gratuité (gratuit) pour une même station
  &gt;  [warning]    59 x plusieurs infos de paiement (paiement_acte) pour une même station
  &gt;  [warning]  1662 x plusieurs infos de paiement (paiement_cb) pour une même station
  &gt;  [warning]   311 x plusieurs infos de réservation pour une même station
- &gt;  [warning]   316 x puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)
- &gt;  [warning]   827 x puissance nominale déclarée pour prise EF supérieure à la norme (4)
- &gt;  [warning]   620 x puissance nominale déclarée pour prise T2 supérieure à la norme (43)
+ &gt;  [warning]   304 x puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)
+ &gt;  [warning]   806 x puissance nominale déclarée pour prise EF supérieure à la norme (4)
+ &gt;  [warning]   546 x puissance nominale déclarée pour prise T2 supérieure à la norme (43)
 
 Severité
-blocking    37031
-error       11298
-warning      6502
+blocking    37045
+error       10929
+warning      6396
 
 Top 25 Organisations les plus problematiques:
 
 Sévérité                                           blocking  error warning  TOTAL
 Organisation                                                                     
-TOTAL                                                 37031  11298    6502  54831
+TOTAL                                                 37045  10929    6396  54370
 alize-charge                                          16157      -       -  16157
-eco-movement                                          10818      -       -  10818
-izivia                                                    -   6145     730   6875
+eco-movement                                          10833      -       -  10833
+izivia                                                    -   5774     623   6397
 lidl                                                   4111      -       -   4111
-gireve-2                                                198    832    1994   3024
+gireve-2                                                198    642    1358   2198
 spbr1                                                     -    805     922   1727
 multiples                                                 -   1447       -   1447
 engie-mobilites-electriques                               -    502     502   1004
 rossini-energy                                          846      -       -    846
+morbihan-energies                                         -    188     614    802
 allego-1                                                638      -       -    638
 syndicat-departemental-denergie-du-tarn                 608      -       -    608
 totalenergies-marketing-france                          232     23     307    562
@@ -169,12 +170,11 @@ syndicat-intercommunal-delectricite-et-de-gaz-d...        -     90     369    45
 syndicat-departemental-denergie-de-la-haute-gar...        -     95     297    392
 ev-cars                                                   -     64     322    386
 virta                                                   376      2       -    378
-zeborne                                                 375      -       -    375
+zeborne                                                 371      -       -    371
 sowatt-solutions                                        335      -       -    335
 evzen-smeg-developpement                                  -      4     263    267
 ubitricity                                              257      -       -    257
-sieml                                                     -    209       -    209
-sydela                                                    -    192       -    192</code></pre>
+sieml                                                     -    209       -    209</code></pre>
                     
                 
                 </details>
@@ -210,10 +210,10 @@ sydela                                                    -    192       -    19
   <tbody>
     <tr>
       <th>TOTAL</th>
-      <td>37031</td>
-      <td>11298</td>
-      <td>6502</td>
-      <td>54831</td>
+      <td>37045</td>
+      <td>10929</td>
+      <td>6396</td>
+      <td>54370</td>
     </tr>
     <tr>
       <th>alize-charge</th>
@@ -224,17 +224,17 @@ sydela                                                    -    192       -    19
     </tr>
     <tr>
       <th>eco-movement</th>
-      <td>10818</td>
+      <td>10833</td>
       <td>-</td>
       <td>-</td>
-      <td>10818</td>
+      <td>10833</td>
     </tr>
     <tr>
       <th>izivia</th>
       <td>-</td>
-      <td>6145</td>
-      <td>730</td>
-      <td>6875</td>
+      <td>5774</td>
+      <td>623</td>
+      <td>6397</td>
     </tr>
     <tr>
       <th>lidl</th>
@@ -246,9 +246,9 @@ sydela                                                    -    192       -    19
     <tr>
       <th>gireve-2</th>
       <td>198</td>
-      <td>832</td>
-      <td>1994</td>
-      <td>3024</td>
+      <td>642</td>
+      <td>1358</td>
+      <td>2198</td>
     </tr>
     <tr>
       <th>spbr1</th>
@@ -277,6 +277,13 @@ sydela                                                    -    192       -    19
       <td>-</td>
       <td>-</td>
       <td>846</td>
+    </tr>
+    <tr>
+      <th>morbihan-energies</th>
+      <td>-</td>
+      <td>188</td>
+      <td>614</td>
+      <td>802</td>
     </tr>
     <tr>
       <th>allego-1</th>
@@ -350,10 +357,10 @@ sydela                                                    -    192       -    19
     </tr>
     <tr>
       <th>zeborne</th>
-      <td>375</td>
+      <td>371</td>
       <td>-</td>
       <td>-</td>
-      <td>375</td>
+      <td>371</td>
     </tr>
     <tr>
       <th>sowatt-solutions</th>
@@ -405,17 +412,17 @@ sydela                                                    -    192       -    19
       <td>150</td>
     </tr>
     <tr>
-      <th>greenspot-enersoft</th>
-      <td>-</td>
-      <td>126</td>
-      <td>14</td>
-      <td>140</td>
-    </tr>
-    <tr>
       <th>car2plug</th>
       <td>140</td>
       <td>-</td>
       <td>-</td>
+      <td>140</td>
+    </tr>
+    <tr>
+      <th>greenspot-enersoft</th>
+      <td>-</td>
+      <td>126</td>
+      <td>14</td>
       <td>140</td>
     </tr>
     <tr>
@@ -447,6 +454,13 @@ sydela                                                    -    192       -    19
       <td>99</td>
     </tr>
     <tr>
+      <th>regie-services-energie-irve</th>
+      <td>-</td>
+      <td>19</td>
+      <td>72</td>
+      <td>91</td>
+    </tr>
+    <tr>
       <th>e-charge50</th>
       <td>-</td>
       <td>6</td>
@@ -473,13 +487,6 @@ sydela                                                    -    192       -    19
       <td>-</td>
       <td>-</td>
       <td>76</td>
-    </tr>
-    <tr>
-      <th>e-vadea</th>
-      <td>-</td>
-      <td>16</td>
-      <td>58</td>
-      <td>74</td>
     </tr>
     <tr>
       <th>allego</th>
@@ -552,17 +559,17 @@ sydela                                                    -    192       -    19
       <td>24</td>
     </tr>
     <tr>
-      <th>bp-france</th>
-      <td>14</td>
-      <td>-</td>
-      <td>5</td>
-      <td>19</td>
-    </tr>
-    <tr>
       <th>maneo</th>
       <td>18</td>
       <td>-</td>
       <td>1</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>bp-france</th>
+      <td>14</td>
+      <td>-</td>
+      <td>5</td>
       <td>19</td>
     </tr>
     <tr>
@@ -580,17 +587,17 @@ sydela                                                    -    192       -    19
       <td>17</td>
     </tr>
     <tr>
+      <th>ev-map</th>
+      <td>-</td>
+      <td>17</td>
+      <td>-</td>
+      <td>17</td>
+    </tr>
+    <tr>
       <th>citeos-ingenierie-idf-est-cogelum-idf</th>
       <td>2</td>
       <td>13</td>
       <td>1</td>
-      <td>16</td>
-    </tr>
-    <tr>
-      <th>ev-map</th>
-      <td>-</td>
-      <td>16</td>
-      <td>-</td>
       <td>16</td>
     </tr>
     <tr>
@@ -615,6 +622,13 @@ sydela                                                    -    192       -    19
       <td>13</td>
     </tr>
     <tr>
+      <th>autorecharge</th>
+      <td>12</td>
+      <td>-</td>
+      <td>-</td>
+      <td>12</td>
+    </tr>
+    <tr>
       <th>voltania</th>
       <td>-</td>
       <td>9</td>
@@ -629,11 +643,11 @@ sydela                                                    -    192       -    19
       <td>12</td>
     </tr>
     <tr>
-      <th>autorecharge</th>
-      <td>12</td>
+      <th>jerecharge-com</th>
       <td>-</td>
-      <td>-</td>
-      <td>12</td>
+      <td>2</td>
+      <td>8</td>
+      <td>10</td>
     </tr>
     <tr>
       <th>tesla-motors</th>
@@ -643,17 +657,24 @@ sydela                                                    -    192       -    19
       <td>10</td>
     </tr>
     <tr>
-      <th>herve-thermique</th>
-      <td>7</td>
+      <th>e-vadea</th>
       <td>-</td>
       <td>2</td>
-      <td>9</td>
+      <td>8</td>
+      <td>10</td>
     </tr>
     <tr>
       <th>territoire-denergie-orne</th>
       <td>-</td>
       <td>4</td>
       <td>5</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>herve-thermique</th>
+      <td>7</td>
+      <td>-</td>
+      <td>2</td>
       <td>9</td>
     </tr>
     <tr>
@@ -671,24 +692,10 @@ sydela                                                    -    192       -    19
       <td>8</td>
     </tr>
     <tr>
-      <th>jerecharge-com</th>
-      <td>-</td>
-      <td>1</td>
-      <td>7</td>
-      <td>8</td>
-    </tr>
-    <tr>
       <th>charge-in</th>
       <td>6</td>
       <td>-</td>
       <td>1</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <th>see-you-sun</th>
-      <td>7</td>
-      <td>-</td>
-      <td>-</td>
       <td>7</td>
     </tr>
     <tr>
@@ -699,11 +706,11 @@ sydela                                                    -    192       -    19
       <td>7</td>
     </tr>
     <tr>
-      <th>syndicat-intercommunal-de-lelectricite-et-du-gaz-de-leure</th>
-      <td>2</td>
-      <td>4</td>
+      <th>see-you-sun</th>
+      <td>7</td>
       <td>-</td>
-      <td>6</td>
+      <td>-</td>
+      <td>7</td>
     </tr>
     <tr>
       <th>citeos-boulogne-sur-mer</th>
@@ -713,10 +720,31 @@ sydela                                                    -    192       -    19
       <td>6</td>
     </tr>
     <tr>
+      <th>syndicat-intercommunal-de-lelectricite-et-du-gaz-de-leure</th>
+      <td>2</td>
+      <td>4</td>
+      <td>-</td>
+      <td>6</td>
+    </tr>
+    <tr>
       <th>2ems</th>
       <td>3</td>
       <td>1</td>
       <td>1</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>conectys</th>
+      <td>4</td>
+      <td>1</td>
+      <td>-</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>power-dot-france</th>
+      <td>-</td>
+      <td>1</td>
+      <td>4</td>
       <td>5</td>
     </tr>
     <tr>
@@ -734,27 +762,6 @@ sydela                                                    -    192       -    19
       <td>5</td>
     </tr>
     <tr>
-      <th>power-dot-france</th>
-      <td>-</td>
-      <td>1</td>
-      <td>4</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>eranovum-e-mobility-france</th>
-      <td>4</td>
-      <td>-</td>
-      <td>-</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>area-tech</th>
-      <td>4</td>
-      <td>-</td>
-      <td>-</td>
-      <td>4</td>
-    </tr>
-    <tr>
       <th>kap-enerj</th>
       <td>4</td>
       <td>-</td>
@@ -762,14 +769,7 @@ sydela                                                    -    192       -    19
       <td>4</td>
     </tr>
     <tr>
-      <th>nm-securelec</th>
-      <td>4</td>
-      <td>-</td>
-      <td>-</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>indelec-mobility</th>
+      <th>eranovum-e-mobility-france</th>
       <td>4</td>
       <td>-</td>
       <td>-</td>
@@ -783,6 +783,13 @@ sydela                                                    -    192       -    19
       <td>4</td>
     </tr>
     <tr>
+      <th>nm-securelec</th>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4</td>
+    </tr>
+    <tr>
       <th>virta-global-gifi-caudebec-1</th>
       <td>4</td>
       <td>-</td>
@@ -790,16 +797,30 @@ sydela                                                    -    192       -    19
       <td>4</td>
     </tr>
     <tr>
-      <th>kallista-bdr</th>
+      <th>indelec-mobility</th>
+      <td>4</td>
       <td>-</td>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
+      <td>-</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>area-tech</th>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>proviridis-sas</th>
       <td>3</td>
       <td>-</td>
+      <td>-</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>france-solar-sas</th>
+      <td>-</td>
+      <td>3</td>
       <td>-</td>
       <td>3</td>
     </tr>
@@ -818,10 +839,10 @@ sydela                                                    -    192       -    19
       <td>3</td>
     </tr>
     <tr>
-      <th>france-solar-sas</th>
+      <th>kallista-bdr</th>
       <td>-</td>
-      <td>3</td>
-      <td>-</td>
+      <td>1</td>
+      <td>2</td>
       <td>3</td>
     </tr>
     <tr>
@@ -839,7 +860,7 @@ sydela                                                    -    192       -    19
       <td>2</td>
     </tr>
     <tr>
-      <th>suraya</th>
+      <th>citeos-poitiers</th>
       <td>2</td>
       <td>-</td>
       <td>-</td>
@@ -864,34 +885,6 @@ sydela                                                    -    192       -    19
       <td>2</td>
       <td>-</td>
       <td>-</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>citeos-poitiers</th>
-      <td>2</td>
-      <td>-</td>
-      <td>-</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>morbihan-energies</th>
-      <td>-</td>
-      <td>2</td>
-      <td>-</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>normatech</th>
-      <td>1</td>
-      <td>1</td>
-      <td>-</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>philippi</th>
-      <td>-</td>
-      <td>1</td>
-      <td>1</td>
       <td>2</td>
     </tr>
     <tr>
@@ -923,10 +916,10 @@ sydela                                                    -    192       -    19
       <td>2</td>
     </tr>
     <tr>
-      <th>sb-energy</th>
+      <th>suraya</th>
+      <td>2</td>
       <td>-</td>
-      <td>1</td>
-      <td>1</td>
+      <td>-</td>
       <td>2</td>
     </tr>
     <tr>
@@ -951,13 +944,6 @@ sydela                                                    -    192       -    19
       <td>2</td>
     </tr>
     <tr>
-      <th>startn-move-1</th>
-      <td>2</td>
-      <td>-</td>
-      <td>-</td>
-      <td>2</td>
-    </tr>
-    <tr>
       <th>r3</th>
       <td>-</td>
       <td>1</td>
@@ -969,6 +955,27 @@ sydela                                                    -    192       -    19
       <td>-</td>
       <td>1</td>
       <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>sb-energy</th>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>philippi</th>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>startn-move-1</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
       <td>2</td>
     </tr>
     <tr>
@@ -986,28 +993,14 @@ sydela                                                    -    192       -    19
       <td>2</td>
     </tr>
     <tr>
-      <th>agglomeration-montargoise-et-rives-du-loing</th>
+      <th>normatech</th>
+      <td>1</td>
       <td>1</td>
       <td>-</td>
-      <td>-</td>
-      <td>1</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>abe-electricite</th>
-      <td>1</td>
-      <td>-</td>
-      <td>-</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>e-leclerc-millau</th>
-      <td>-</td>
-      <td>1</td>
-      <td>-</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>chariag</th>
       <td>1</td>
       <td>-</td>
       <td>-</td>
@@ -1021,9 +1014,9 @@ sydela                                                    -    192       -    19
       <td>1</td>
     </tr>
     <tr>
-      <th>conectys</th>
-      <td>-</td>
+      <th>chariag</th>
       <td>1</td>
+      <td>-</td>
       <td>-</td>
       <td>1</td>
     </tr>
@@ -1084,17 +1077,17 @@ sydela                                                    -    192       -    19
       <td>1</td>
     </tr>
     <tr>
+      <th>e-leclerc-millau</th>
+      <td>-</td>
+      <td>1</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
       <th>chargepoly</th>
       <td>-</td>
       <td>-</td>
       <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>rsb-zni-non-parking-camping-supervision-non</th>
-      <td>1</td>
-      <td>-</td>
-      <td>-</td>
       <td>1</td>
     </tr>
     <tr>
@@ -1112,13 +1105,6 @@ sydela                                                    -    192       -    19
       <td>1</td>
     </tr>
     <tr>
-      <th>neogroup-consulting</th>
-      <td>-</td>
-      <td>-</td>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
       <th>mdg-fibre-sas</th>
       <td>1</td>
       <td>-</td>
@@ -1126,10 +1112,17 @@ sydela                                                    -    192       -    19
       <td>1</td>
     </tr>
     <tr>
-      <th>regie-services-energie-irve</th>
-      <td>-</td>
+      <th>rsb-zni-non-parking-camping-supervision-non</th>
       <td>1</td>
       <td>-</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>neogroup-consulting</th>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
       <td>1</td>
     </tr>
     <tr>
@@ -1198,12 +1191,6 @@ sydela                                                    -    192       -    19
       <th>2</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th>agglomeration-montargoise-et-rives-du-loing</th>
-      <th>1</th>
-      <th>blocking</th>
-      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
       <th>alize-charge</th>
@@ -1359,10 +1346,15 @@ sydela                                                    -    192       -    19
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th>conectys</th>
+      <th rowspan="2" valign="top">conectys</th>
       <th>1</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>4</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
       <th rowspan="3" valign="top">driveco</th>
@@ -1446,21 +1438,19 @@ sydela                                                    -    192       -    19
     </tr>
     <tr>
       <th rowspan="4" valign="top">e-vadea</th>
-      <th>10</th>
-      <th>warning</th>
-      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">16</th>
+      <th rowspan="3" valign="top">2</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
-      <th>warning</th>
+      <th rowspan="2" valign="top">warning</th>
       <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
     </tr>
     <tr>
-      <th>32</th>
+      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
+    </tr>
+    <tr>
+      <th>4</th>
       <th>warning</th>
       <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
@@ -1478,7 +1468,7 @@ sydela                                                    -    192       -    19
     </tr>
     <tr>
       <th>eco-movement</th>
-      <th>10818</th>
+      <th>10833</th>
       <th>blocking</th>
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
@@ -1563,7 +1553,7 @@ sydela                                                    -    192       -    19
     </tr>
     <tr>
       <th>ev-map</th>
-      <th>16</th>
+      <th>17</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -1602,47 +1592,46 @@ sydela                                                    -    192       -    19
       <th>aucun type de prise précisé sur l'ensemble des points de charge</th>
     </tr>
     <tr>
-      <th>10</th>
+      <th>9</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
     </tr>
     <tr>
-      <th>57</th>
+      <th>49</th>
       <th>warning</th>
       <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
     </tr>
     <tr>
-      <th>78</th>
+      <th>86</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
     </tr>
     <tr>
-      <th>198</th>
-      <th>blocking</th>
-      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
-    </tr>
-    <tr>
-      <th>202</th>
+      <th>179</th>
       <th>warning</th>
       <th>plusieurs infos de réservation pour une même station</th>
     </tr>
     <tr>
-      <th>401</th>
+      <th rowspan="2" valign="top">198</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
       <th>warning</th>
       <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
     </tr>
     <tr>
-      <th>453</th>
-      <th>warning</th>
-      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
-    </tr>
-    <tr>
-      <th>792</th>
+      <th>386</th>
       <th>warning</th>
       <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
     <tr>
-      <th>828</th>
+      <th>450</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
+    </tr>
+    <tr>
+      <th>638</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -1769,37 +1758,38 @@ sydela                                                    -    192       -    19
     </tr>
     <tr>
       <th rowspan="4" valign="top">izivia</th>
-      <th>20</th>
+      <th>8</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
     </tr>
     <tr>
-      <th>125</th>
+      <th>104</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
     </tr>
     <tr>
-      <th>585</th>
+      <th>511</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
     </tr>
     <tr>
-      <th>6145</th>
+      <th>5774</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
       <th rowspan="3" valign="top">jerecharge-com</th>
-      <th rowspan="2" valign="top">1</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
+      <th>1</th>
       <th>warning</th>
       <th>plusieurs horaires pour une même station</th>
     </tr>
     <tr>
-      <th>6</th>
+      <th>2</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>7</th>
       <th>warning</th>
       <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
     </tr>
@@ -1896,10 +1886,40 @@ sydela                                                    -    192       -    19
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th>morbihan-energies</th>
-      <th>2</th>
+      <th rowspan="7" valign="top">morbihan-energies</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
+    </tr>
+    <tr>
+      <th>3</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
+    </tr>
+    <tr>
+      <th>5</th>
+      <th>warning</th>
+      <th>plusieurs infos de réservation pour une même station</th>
+    </tr>
+    <tr>
+      <th>8</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
+    </tr>
+    <tr>
+      <th>188</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>199</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>398</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
     <tr>
       <th>multiples</th>
@@ -2031,10 +2051,23 @@ sydela                                                    -    192       -    19
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th>regie-services-energie-irve</th>
-      <th>1</th>
+      <th rowspan="4" valign="top">regie-services-energie-irve</th>
+      <th rowspan="2" valign="top">18</th>
+      <th rowspan="2" valign="top">warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de réservation pour une même station</th>
+    </tr>
+    <tr>
+      <th>19</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>36</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
     <tr>
       <th rowspan="2" valign="top">reseau-alterbase-79</th>
@@ -2415,7 +2448,7 @@ sydela                                                    -    192       -    19
     </tr>
     <tr>
       <th>zeborne</th>
-      <th>375</th>
+      <th>371</th>
       <th>blocking</th>
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
@@ -2443,24 +2476,24 @@ sydela                                                    -    192       -    19
                 
                     
                         <pre><code class="language-python"> EF  |   T2  | Chademo |  CCS  |
-0.00   22.00     0.00     0.00 | 12117 stations
-0.00    7.36     0.00     0.00 | 3088 stations
-0.00    3.68     0.00     0.00 | 1598 stations
+0.00   22.00     0.00     0.00 | 12101 stations
+0.00    7.36     0.00     0.00 | 3041 stations
+0.00    3.68     0.00     0.00 | 1594 stations
 0.00   18.00     0.00     0.00 | 1058 stations
-0.00    0.00     0.00     0.00 | 870 stations
 0.00   22.00     0.00    24.00 | 786 stations
-0.00    0.00     0.00   150.00 | 779 stations
-0.00    7.00     0.00     0.00 | 671 stations
+0.00    0.00     0.00     0.00 | 763 stations
+0.00    0.00     0.00   150.00 | 677 stations
+0.00    7.00     0.00     0.00 | 670 stations
 0.00   22.08     0.00     0.00 | 624 stations
 0.00   22.08     0.00    50.00 | 440 stations
 0.00    7.40     0.00     0.00 | 427 stations
 0.00   22.00     0.00   150.00 | 421 stations
-0.00    0.00     0.00    24.00 | 336 stations
-0.00   24.00     0.00     0.00 | 314 stations
-0.00    0.00     0.00    50.00 | 281 stations
+0.00    0.00     0.00    24.00 | 324 stations
+0.00   24.00     0.00     0.00 | 302 stations
+0.00    0.00     0.00    50.00 | 271 stations
 0.00   22.00     0.00    50.00 | 263 stations
 0.00   22.00     0.00    25.00 | 262 stations
-0.00    0.00    22.00     0.00 | 212 stations
+0.00    0.00    22.00     0.00 | 211 stations
 0.00    0.00     0.00   250.00 | 209 stations
 0.00   22.00    50.00   200.00 | 198 stations
 0.00   22.00    50.00   100.00 | 196 stations
@@ -2470,20 +2503,20 @@ sydela                                                    -    192       -    19
 0.00   44.00     0.00    50.00 | 149 stations
 0.00   11.00     0.00     0.00 | 148 stations
 2.30   22.00     0.00     0.00 | 134 stations
-0.00    0.00     0.00   180.00 | 133 stations
 0.00   22.00     0.00    60.00 | 118 stations
+0.00    0.00     0.00   180.00 | 110 stations
 0.00   22.00    25.00    25.00 | 107 stations
 0.00   36.00    36.00    36.00 | 103 stations
 0.00    0.00     0.00   300.00 | 88 stations
-0.00    0.00     0.00   200.00 | 86 stations
 4.00    0.00     0.00    22.00 | 86 stations
 0.00   22.00     0.00   180.00 | 83 stations
 0.00   43.00     0.00    50.00 | 77 stations
 0.00   43.00    50.00    50.00 | 75 stations
-0.00    0.00    50.00     0.00 | 72 stations
+0.00    0.00    50.00     0.00 | 70 stations
 0.00   22.08     0.00    24.00 | 66 stations
 0.00   22.00    50.00   120.00 | 65 stations
 0.00   22.00    63.00   300.00 | 63 stations
+0.00    0.00     0.00   200.00 | 61 stations
 0.00   22.08     0.00   200.00 | 60 stations
 0.00   22.00     0.00   100.00 | 59 stations
 0.00    0.00    54.00   175.00 | 57 stations
@@ -2494,21 +2527,20 @@ sydela                                                    -    192       -    19
 0.00   22.00    50.00    60.00 | 44 stations
 3.00    0.00     0.00     0.00 | 44 stations
 0.00   22.00    24.00    24.00 | 43 stations
-0.00    0.00     0.00   100.00 | 37 stations
 0.00   12.00     0.00   120.00 | 33 stations
+0.00    0.00     0.00   100.00 | 32 stations
 0.00   22.00    62.50   300.00 | 31 stations
 0.00   22.00     0.00    90.00 | 30 stations
 0.00   22.00    50.00   300.00 | 30 stations
 0.00    0.00     0.00    44.00 | 25 stations
 0.00   44.00    44.00    50.00 | 24 stations
+0.00    0.00     7.40     0.00 | 24 stations
 2.30   11.00     0.00     0.00 | 23 stations
-0.00    0.00     7.40     0.00 | 23 stations
 0.00    0.00    54.00   300.00 | 23 stations
 0.00   22.00    50.00   160.00 | 22 stations
 0.00    0.00    54.00     0.00 | 22 stations
 0.00    0.00    54.00   150.00 | 22 stations
 0.00   43.00     0.00   100.00 | 21 stations
-0.00    0.00     0.00    63.00 | 18 stations
 0.00   36.00     0.00     0.00 | 18 stations
 0.00    0.00    11.00     0.00 | 18 stations
 0.00   43.00    50.00   300.00 | 17 stations
@@ -2519,8 +2551,8 @@ sydela                                                    -    192       -    19
 0.00    0.00     0.00   320.00 | 15 stations
 0.00    0.00    50.00    50.00 | 14 stations
 0.00    3.70     0.00     0.00 | 13 stations
-0.00    0.00    63.00     0.00 | 13 stations
 0.00   44.00    50.00    50.00 | 13 stations
+0.00    0.00     0.00    63.00 | 13 stations
 3.68    0.00     0.00     0.00 | 13 stations
 0.00   22.00    43.00    50.00 | 12 stations
 0.00   22.00     0.00    22.00 | 12 stations
@@ -2534,6 +2566,7 @@ sydela                                                    -    192       -    19
 0.00   22.00     0.00   225.00 | 9 stations
 0.00    0.00    24.00     0.00 | 9 stations
 3.70    0.00     0.00     0.00 | 8 stations
+0.00    0.00    63.00     0.00 | 8 stations
 0.00   22.00    47.00     0.00 | 8 stations
 0.00   11.04     0.00     0.00 | 7 stations
 0.00   22.00     0.00   240.00 | 7 stations
@@ -2543,6 +2576,7 @@ sydela                                                    -    192       -    19
 0.00    0.00     0.00   120.00 | 6 stations
 0.00   22.00     0.00    75.00 | 6 stations
 0.00   22.08     0.00   150.00 | 6 stations
+0.00    0.00     0.00    40.00 | 6 stations
 0.00   22.00     0.00    36.00 | 6 stations
 0.00   43.00     0.00     0.00 | 6 stations
 0.00    0.00     0.00    22.00 | 6 stations
@@ -2554,7 +2588,6 @@ sydela                                                    -    192       -    19
 0.00   43.00    50.00   350.00 | 5 stations
 0.00    0.00     0.00   350.00 | 5 stations
 0.00   22.00     0.00    80.00 | 5 stations
-0.00    0.00     0.00    40.00 | 5 stations
 3.00    0.00    50.00    50.00 | 5 stations
 0.00    0.00     0.00   400.00 | 5 stations
 0.00    0.00    50.00   187.50 | 5 stations
@@ -2628,7 +2661,6 @@ sydela                                                    -    192       -    19
 0.00   22.00    22.00    22.00 | 1 stations
 0.00   11.00     0.00   150.00 | 1 stations
 0.00   22.08    50.00    50.00 | 1 stations
-0.00    0.00     0.00   184.00 | 1 stations
 0.00   27.00     0.00     0.00 | 1 stations
 0.00    7.40     0.00    22.00 | 1 stations
 0.00   22.00     0.00   130.00 | 1 stations
@@ -2707,9 +2739,8 @@ sydela                                                    -    192       -    19
 3.00   43.00    36.00   160.00 | 1 stations
 0.00   25.00    25.00    25.00 | 1 stations
 0.00    0.00     0.00    43.00 | 1 stations
-0.00    0.00     0.00   122.00 | 1 stations
+0.00    0.00     0.00    72.00 | 1 stations
 0.00    3.22     0.00     0.00 | 1 stations
-1.70    0.00     0.00     0.00 | 1 stations
 0.00    7.36     0.00   200.00 | 1 stations
 0.00    7.36     0.00    24.00 | 1 stations
 3.68   22.08     0.00     0.00 | 1 stations
@@ -2736,7 +2767,7 @@ sydela                                                    -    192       -    19
     </main>
     <footer class="container report-container report-foot">
         <small>
-            <p>Généré le 2024-12-16 06:56:22 UTC</p>
+            <p>Généré le 2024-12-17 06:55:46 UTC</p>
         </small>
     </footer>
     <script src='assets/prism.js'></script>
