@@ -18,7 +18,7 @@
             <li>
                 <hgroup>
                     <h1>Rapport de run Jungle-Bus Group IRVE OpenData</h1>
-                    <p>2024-12-20 06:54:29 UTC</p>
+                    <p>2024-12-21 06:54:28 UTC</p>
                 </hgroup>
             </li>
         </ul>
@@ -121,38 +121,38 @@
                     <summary>Expand/Collapse</summary>
                 
                     
-                        <pre><code class="language-python">117421 lignes (PDCs) en entrée | 9363 PDCs en double
-29004 stations reconnues sur 48844 station_id distincts en entrée
-54996 problèmes trouvés pour 108058 PDCs distincts en entrée (il peut exister plusieurs problèmes par PDC/station):
- &gt; [blocking] 37123 x le format de l&#39;identifiant ref:EU:EVSE (id_station_itinerance) n&#39;est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l&#39;analyse Osmose
+                        <pre><code class="language-python">117532 lignes (PDCs) en entrée | 9363 PDCs en double
+29030 stations reconnues sur 48882 station_id distincts en entrée
+55009 problèmes trouvés pour 108169 PDCs distincts en entrée (il peut exister plusieurs problèmes par PDC/station):
+ &gt; [blocking] 37135 x le format de l&#39;identifiant ref:EU:EVSE (id_station_itinerance) n&#39;est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l&#39;analyse Osmose
  &gt;    [error]    10 x aucun type de prise précisé sur l&#39;ensemble des points de charge
- &gt;    [error]  9902 x le nombre de point de charge de la station n&#39;est pas cohérent avec la liste des points de charge fournie
+ &gt;    [error]  9909 x le nombre de point de charge de la station n&#39;est pas cohérent avec la liste des points de charge fournie
  &gt;    [error]  1447 x plusieurs sources pour un même id
  &gt;  [warning]     5 x le champ station_deux_roues n&#39;est pas valide
- &gt;  [warning]   988 x le numéro de téléphone de l&#39;opérateur (telephone_operateur) est dans un format invalide
- &gt;  [warning]     9 x plusieurs horaires pour une même station
+ &gt;  [warning]   987 x le numéro de téléphone de l&#39;opérateur (telephone_operateur) est dans un format invalide
+ &gt;  [warning]     8 x plusieurs horaires pour une même station
  &gt;  [warning]  1690 x plusieurs infos d&#39;accessibilité PMR (accessibilite_pmr) pour une même station
  &gt;  [warning]    16 x plusieurs infos de gratuité (gratuit) pour une même station
  &gt;  [warning]    59 x plusieurs infos de paiement (paiement_acte) pour une même station
- &gt;  [warning]  1662 x plusieurs infos de paiement (paiement_cb) pour une même station
+ &gt;  [warning]  1671 x plusieurs infos de paiement (paiement_cb) pour une même station
  &gt;  [warning]   311 x plusieurs infos de réservation pour une même station
  &gt;  [warning]   316 x puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)
- &gt;  [warning]   827 x puissance nominale déclarée pour prise EF supérieure à la norme (4)
- &gt;  [warning]   631 x puissance nominale déclarée pour prise T2 supérieure à la norme (43)
+ &gt;  [warning]   810 x puissance nominale déclarée pour prise EF supérieure à la norme (4)
+ &gt;  [warning]   635 x puissance nominale déclarée pour prise T2 supérieure à la norme (43)
 
 Severité
-blocking    37123
-error       11359
-warning      6514
+blocking    37135
+error       11366
+warning      6508
 
 Top 25 Organisations les plus problematiques:
 
 Sévérité                                blocking  error warning  TOTAL
 Organisation                                                          
-TOTAL                                      37123  11359    6514  54996
+TOTAL                                      37135  11366    6508  55009
 alize-charge                               16157      -       -  16157
-eco-movement                               10902      -       -  10902
-izivia                                         -   6201     741   6942
+eco-movement                               10914      -       -  10914
+izivia                                         -   6210     728   6938
 gireve-2                                     198   1838    3634   5670
 lidl                                        4111      -       -   4111
 multiples                                      -   1447       -   1447
@@ -210,10 +210,10 @@ car2plug                                     140      -       -    140</code></p
   <tbody>
     <tr>
       <th>TOTAL</th>
-      <td>37123</td>
-      <td>11359</td>
-      <td>6514</td>
-      <td>54996</td>
+      <td>37135</td>
+      <td>11366</td>
+      <td>6508</td>
+      <td>55009</td>
     </tr>
     <tr>
       <th>alize-charge</th>
@@ -224,17 +224,17 @@ car2plug                                     140      -       -    140</code></p
     </tr>
     <tr>
       <th>eco-movement</th>
-      <td>10902</td>
+      <td>10914</td>
       <td>-</td>
       <td>-</td>
-      <td>10902</td>
+      <td>10914</td>
     </tr>
     <tr>
       <th>izivia</th>
       <td>-</td>
-      <td>6201</td>
-      <td>741</td>
-      <td>6942</td>
+      <td>6210</td>
+      <td>728</td>
+      <td>6938</td>
     </tr>
     <tr>
       <th>gireve-2</th>
@@ -608,25 +608,11 @@ car2plug                                     140      -       -    140</code></p
       <td>12</td>
     </tr>
     <tr>
-      <th>jerecharge-com</th>
-      <td>-</td>
-      <td>2</td>
-      <td>8</td>
-      <td>10</td>
-    </tr>
-    <tr>
       <th>tesla-motors</th>
       <td>-</td>
       <td>10</td>
       <td>-</td>
       <td>10</td>
-    </tr>
-    <tr>
-      <th>regie-municipale-delectricite-de-loos</th>
-      <td>9</td>
-      <td>-</td>
-      <td>-</td>
-      <td>9</td>
     </tr>
     <tr>
       <th>herve-thermique</th>
@@ -636,11 +622,18 @@ car2plug                                     140      -       -    140</code></p
       <td>9</td>
     </tr>
     <tr>
-      <th>solveo-energies</th>
-      <td>8</td>
+      <th>regie-municipale-delectricite-de-loos</th>
+      <td>9</td>
       <td>-</td>
       <td>-</td>
-      <td>8</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>r3</th>
+      <td>-</td>
+      <td>-</td>
+      <td>9</td>
+      <td>9</td>
     </tr>
     <tr>
       <th>i-bornes</th>
@@ -648,6 +641,27 @@ car2plug                                     140      -       -    140</code></p
       <td>4</td>
       <td>3</td>
       <td>8</td>
+    </tr>
+    <tr>
+      <th>solveo-energies</th>
+      <td>8</td>
+      <td>-</td>
+      <td>-</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>jerecharge-com</th>
+      <td>-</td>
+      <td>1</td>
+      <td>7</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>charge-in</th>
+      <td>6</td>
+      <td>-</td>
+      <td>1</td>
+      <td>7</td>
     </tr>
     <tr>
       <th>see-you-sun</th>
@@ -664,14 +678,14 @@ car2plug                                     140      -       -    140</code></p
       <td>7</td>
     </tr>
     <tr>
-      <th>charge-in</th>
-      <td>6</td>
+      <th>syndicat-intercommunal-de-lelectricite-et-du-gaz-de-leure</th>
+      <td>2</td>
+      <td>4</td>
       <td>-</td>
-      <td>1</td>
-      <td>7</td>
+      <td>6</td>
     </tr>
     <tr>
-      <th>citeos-boulogne-sur-mer</th>
+      <th>spbr1</th>
       <td>-</td>
       <td>-</td>
       <td>6</td>
@@ -685,25 +699,11 @@ car2plug                                     140      -       -    140</code></p
       <td>6</td>
     </tr>
     <tr>
-      <th>spbr1</th>
+      <th>citeos-boulogne-sur-mer</th>
       <td>-</td>
       <td>-</td>
       <td>6</td>
       <td>6</td>
-    </tr>
-    <tr>
-      <th>syndicat-intercommunal-de-lelectricite-et-du-gaz-de-leure</th>
-      <td>2</td>
-      <td>4</td>
-      <td>-</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>2ems</th>
-      <td>3</td>
-      <td>1</td>
-      <td>1</td>
-      <td>5</td>
     </tr>
     <tr>
       <th>conectys</th>
@@ -717,6 +717,13 @@ car2plug                                     140      -       -    140</code></p
       <td>3</td>
       <td>2</td>
       <td>-</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>2ems</th>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
       <td>5</td>
     </tr>
     <tr>
@@ -741,7 +748,7 @@ car2plug                                     140      -       -    140</code></p
       <td>4</td>
     </tr>
     <tr>
-      <th>nm-securelec</th>
+      <th>kap-enerj</th>
       <td>4</td>
       <td>-</td>
       <td>-</td>
@@ -751,13 +758,6 @@ car2plug                                     140      -       -    140</code></p
       <th>tenao60</th>
       <td>-</td>
       <td>4</td>
-      <td>-</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>indelec-mobility</th>
-      <td>4</td>
-      <td>-</td>
       <td>-</td>
       <td>4</td>
     </tr>
@@ -776,18 +776,18 @@ car2plug                                     140      -       -    140</code></p
       <td>4</td>
     </tr>
     <tr>
-      <th>kap-enerj</th>
+      <th>nm-securelec</th>
       <td>4</td>
       <td>-</td>
       <td>-</td>
       <td>4</td>
     </tr>
     <tr>
-      <th>kallista-bdr</th>
+      <th>indelec-mobility</th>
+      <td>4</td>
       <td>-</td>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
+      <td>-</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>hagenum</th>
@@ -804,10 +804,10 @@ car2plug                                     140      -       -    140</code></p
       <td>3</td>
     </tr>
     <tr>
-      <th>imac2</th>
+      <th>kallista-bdr</th>
       <td>-</td>
-      <td>3</td>
-      <td>-</td>
+      <td>1</td>
+      <td>2</td>
       <td>3</td>
     </tr>
     <tr>
@@ -818,11 +818,11 @@ car2plug                                     140      -       -    140</code></p
       <td>3</td>
     </tr>
     <tr>
-      <th>philippi</th>
+      <th>imac2</th>
       <td>-</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
+      <td>3</td>
+      <td>-</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>acelec-charge</th>
@@ -832,7 +832,7 @@ car2plug                                     140      -       -    140</code></p
       <td>2</td>
     </tr>
     <tr>
-      <th>citeos-bordeaux</th>
+      <th>philippi</th>
       <td>-</td>
       <td>1</td>
       <td>1</td>
@@ -860,10 +860,10 @@ car2plug                                     140      -       -    140</code></p
       <td>2</td>
     </tr>
     <tr>
-      <th>normatech</th>
-      <td>1</td>
-      <td>1</td>
+      <th>citeos-bordeaux</th>
       <td>-</td>
+      <td>1</td>
+      <td>1</td>
       <td>2</td>
     </tr>
     <tr>
@@ -944,7 +944,7 @@ car2plug                                     140      -       -    140</code></p
       <td>2</td>
     </tr>
     <tr>
-      <th>r3</th>
+      <th>sb-energy</th>
       <td>-</td>
       <td>1</td>
       <td>1</td>
@@ -958,14 +958,14 @@ car2plug                                     140      -       -    140</code></p
       <td>2</td>
     </tr>
     <tr>
-      <th>ma-borne-auto-bordeaux</th>
+      <th>normatech</th>
+      <td>1</td>
+      <td>1</td>
       <td>-</td>
-      <td>1</td>
-      <td>1</td>
       <td>2</td>
     </tr>
     <tr>
-      <th>sb-energy</th>
+      <th>ma-borne-auto-bordeaux</th>
       <td>-</td>
       <td>1</td>
       <td>1</td>
@@ -1449,7 +1449,7 @@ car2plug                                     140      -       -    140</code></p
     </tr>
     <tr>
       <th>eco-movement</th>
-      <th>10902</th>
+      <th>10914</th>
       <th>blocking</th>
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
@@ -1751,33 +1751,32 @@ car2plug                                     140      -       -    140</code></p
       <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
     </tr>
     <tr>
-      <th>125</th>
+      <th>108</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
     </tr>
     <tr>
-      <th>596</th>
+      <th>600</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
     </tr>
     <tr>
-      <th>6201</th>
+      <th>6210</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
       <th rowspan="3" valign="top">jerecharge-com</th>
-      <th>1</th>
-      <th>warning</th>
-      <th>plusieurs horaires pour une même station</th>
-    </tr>
-    <tr>
-      <th>2</th>
+      <th rowspan="2" valign="top">1</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
-      <th>7</th>
+      <th>warning</th>
+      <th>plusieurs horaires pour une même station</th>
+    </tr>
+    <tr>
+      <th>6</th>
       <th>warning</th>
       <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
     </tr>
@@ -1987,14 +1986,10 @@ car2plug                                     140      -       -    140</code></p
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">r3</th>
-      <th rowspan="2" valign="top">1</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
+      <th>r3</th>
+      <th>9</th>
       <th>warning</th>
-      <th>plusieurs horaires pour une même station</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
     </tr>
     <tr>
       <th>regie-municipale-delectricite-de-loos</th>
@@ -2351,24 +2346,24 @@ car2plug                                     140      -       -    140</code></p
                 
                     
                         <pre><code class="language-python"> EF  |   T2  | Chademo |  CCS  |
-0.00   22.00     0.00     0.00 | 12117 stations
+0.00   22.00     0.00     0.00 | 12132 stations
 0.00    7.36     0.00     0.00 | 3090 stations
 0.00    3.68     0.00     0.00 | 1592 stations
 0.00   18.00     0.00     0.00 | 1059 stations
-0.00    0.00     0.00     0.00 | 884 stations
-0.00    0.00     0.00   150.00 | 801 stations
+0.00    0.00     0.00     0.00 | 871 stations
+0.00    0.00     0.00   150.00 | 805 stations
 0.00   22.00     0.00    24.00 | 786 stations
-0.00    7.00     0.00     0.00 | 673 stations
+0.00    7.00     0.00     0.00 | 674 stations
 0.00   22.08     0.00     0.00 | 627 stations
 0.00   22.08     0.00    50.00 | 440 stations
-0.00    7.40     0.00     0.00 | 430 stations
-0.00   22.00     0.00   150.00 | 421 stations
+0.00    7.40     0.00     0.00 | 431 stations
+0.00   22.00     0.00   150.00 | 430 stations
 0.00    0.00     0.00    24.00 | 336 stations
 0.00   24.00     0.00     0.00 | 314 stations
 0.00    0.00     0.00    50.00 | 280 stations
 0.00   22.00     0.00    50.00 | 263 stations
 0.00   22.00     0.00    25.00 | 262 stations
-0.00    0.00    22.00     0.00 | 210 stations
+0.00    0.00    22.00     0.00 | 211 stations
 0.00    0.00     0.00   250.00 | 209 stations
 0.00   22.00    50.00   200.00 | 198 stations
 0.00   22.00    50.00   100.00 | 196 stations
@@ -2377,15 +2372,15 @@ car2plug                                     140      -       -    140</code></p
 0.00   22.00    50.00    50.00 | 154 stations
 0.00   44.00     0.00    50.00 | 149 stations
 0.00   11.00     0.00     0.00 | 148 stations
-0.00    0.00     0.00   180.00 | 135 stations
+0.00    0.00     0.00   180.00 | 139 stations
 2.30   22.00     0.00     0.00 | 134 stations
 0.00   22.00     0.00    60.00 | 118 stations
 0.00   22.00    25.00    25.00 | 107 stations
 0.00   36.00    36.00    36.00 | 103 stations
+0.00   22.00     0.00   180.00 | 89 stations
 0.00    0.00     0.00   300.00 | 88 stations
 0.00    0.00     0.00   200.00 | 86 stations
 4.00    0.00     0.00    22.00 | 86 stations
-0.00   22.00     0.00   180.00 | 83 stations
 0.00   43.00     0.00    50.00 | 77 stations
 0.00   43.00    50.00    50.00 | 75 stations
 0.00    0.00    50.00     0.00 | 71 stations
@@ -2395,12 +2390,12 @@ car2plug                                     140      -       -    140</code></p
 0.00   22.08     0.00   200.00 | 60 stations
 0.00   22.00     0.00   100.00 | 59 stations
 0.00    0.00    54.00   175.00 | 57 stations
-0.00   22.00    50.00   150.00 | 55 stations
 0.00    0.00     0.00    25.00 | 55 stations
 0.00   36.00     0.00    36.00 | 54 stations
+0.00   22.00    50.00   150.00 | 53 stations
 0.00   22.00    50.00   187.50 | 53 stations
+3.00    0.00     0.00     0.00 | 45 stations
 0.00   22.00    50.00    60.00 | 44 stations
-3.00    0.00     0.00     0.00 | 44 stations
 0.00   22.00    24.00    24.00 | 43 stations
 0.00    0.00     0.00   100.00 | 37 stations
 0.00   12.00     0.00   120.00 | 33 stations
@@ -2409,8 +2404,8 @@ car2plug                                     140      -       -    140</code></p
 0.00   22.00    50.00   300.00 | 30 stations
 0.00    0.00     0.00    44.00 | 25 stations
 0.00   44.00    44.00    50.00 | 24 stations
-0.00    0.00     7.40     0.00 | 24 stations
 2.30   11.00     0.00     0.00 | 23 stations
+0.00    0.00     7.40     0.00 | 23 stations
 0.00    0.00    54.00   300.00 | 23 stations
 0.00   22.00    50.00   160.00 | 22 stations
 0.00    0.00    54.00     0.00 | 22 stations
@@ -2422,8 +2417,8 @@ car2plug                                     140      -       -    140</code></p
 0.00   43.00    50.00   300.00 | 17 stations
 0.00    0.00    47.00     0.00 | 17 stations
 0.00    0.00     0.00    60.00 | 16 stations
+0.00   22.00     0.00   160.00 | 16 stations
 0.00   22.00    50.00   188.00 | 16 stations
-0.00   22.00     0.00   160.00 | 15 stations
 0.00    0.00     0.00   320.00 | 15 stations
 0.00    0.00    50.00    50.00 | 14 stations
 3.68    0.00     0.00     0.00 | 14 stations
@@ -2464,7 +2459,6 @@ car2plug                                     140      -       -    140</code></p
 0.00    0.00     0.00   350.00 | 5 stations
 0.00   22.00     0.00    80.00 | 5 stations
 3.00    0.00    50.00    50.00 | 5 stations
-0.00    0.00     0.00   160.00 | 5 stations
 0.00    0.00     0.00   400.00 | 5 stations
 0.00    0.00    50.00   187.50 | 5 stations
 0.00   22.00     0.00   187.50 | 5 stations
@@ -2473,7 +2467,6 @@ car2plug                                     140      -       -    140</code></p
 0.00    0.00     0.00    75.00 | 4 stations
 2.30   22.08     0.00     0.00 | 4 stations
 0.00    0.00     0.00    90.00 | 4 stations
-0.00    3.00     0.00     0.00 | 4 stations
 0.00    9.00     0.00     0.00 | 4 stations
 0.00   22.00    63.00   150.00 | 4 stations
 0.00   22.00     0.00    40.00 | 4 stations
@@ -2481,6 +2474,7 @@ car2plug                                     140      -       -    140</code></p
 0.00    0.00    22.00   150.00 | 4 stations
 0.00    0.00    50.00   100.00 | 4 stations
 0.00   22.00     0.00    54.00 | 4 stations
+0.00    0.00     0.00   160.00 | 4 stations
 0.00    7.40    47.00     0.00 | 4 stations
 2.30    7.36     0.00     0.00 | 3 stations
 0.00   43.00    50.00   160.00 | 3 stations
@@ -2489,6 +2483,7 @@ car2plug                                     140      -       -    140</code></p
 0.00    0.00     0.00    20.00 | 3 stations
 0.00   12.00     0.00   240.00 | 3 stations
 0.00   12.00     0.00   180.00 | 3 stations
+0.00    3.00     0.00     0.00 | 3 stations
 0.00    0.00     0.00   124.00 | 3 stations
 0.00   44.00     0.00   100.00 | 3 stations
 3.70   22.00     0.00     0.00 | 3 stations
@@ -2497,6 +2492,7 @@ car2plug                                     140      -       -    140</code></p
 0.00   43.00    50.00   100.00 | 3 stations
 0.00   42.00     0.00    42.00 | 3 stations
 0.00   44.00    50.00   400.00 | 2 stations
+0.00    7.00     0.00   100.00 | 2 stations
 0.00   15.00     0.00   300.00 | 2 stations
 0.00   22.00     0.00   400.00 | 2 stations
 0.00   22.00     0.00   360.00 | 2 stations
@@ -2528,7 +2524,7 @@ car2plug                                     140      -       -    140</code></p
 0.00   22.00    62.00   300.00 | 2 stations
 0.00   22.00     0.00    48.00 | 2 stations
 0.00    7.60     0.00     0.00 | 2 stations
-0.00    7.00     0.00   100.00 | 1 stations
+0.00    7.00     0.00   150.00 | 1 stations
 2.30   11.04     0.00     0.00 | 1 stations
 0.00   15.00     0.00   150.00 | 1 stations
 0.00    7.40     0.00   300.00 | 1 stations
@@ -2615,9 +2611,8 @@ car2plug                                     140      -       -    140</code></p
 3.00   43.00    36.00   160.00 | 1 stations
 0.00   25.00    25.00    25.00 | 1 stations
 0.00    0.00     0.00    43.00 | 1 stations
-0.00    0.00     0.00   122.00 | 1 stations
+0.00    0.00     0.00    72.00 | 1 stations
 0.00    3.22     0.00     0.00 | 1 stations
-1.70    0.00     0.00     0.00 | 1 stations
 0.00    7.36     0.00   200.00 | 1 stations
 0.00    7.36     0.00    24.00 | 1 stations
 3.68   22.08     0.00     0.00 | 1 stations
@@ -2644,7 +2639,7 @@ car2plug                                     140      -       -    140</code></p
     </main>
     <footer class="container report-container report-foot">
         <small>
-            <p>Généré le 2024-12-20 06:54:29 UTC</p>
+            <p>Généré le 2024-12-21 06:54:28 UTC</p>
         </small>
     </footer>
     <script src='assets/prism.js'></script>
