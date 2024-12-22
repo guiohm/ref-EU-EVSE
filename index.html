@@ -18,7 +18,7 @@
             <li>
                 <hgroup>
                     <h1>Rapport de run Jungle-Bus Group IRVE OpenData</h1>
-                    <p>2024-12-21 06:54:28 UTC</p>
+                    <p>2024-12-22 06:54:34 UTC</p>
                 </hgroup>
             </li>
         </ul>
@@ -121,12 +121,12 @@
                     <summary>Expand/Collapse</summary>
                 
                     
-                        <pre><code class="language-python">117532 lignes (PDCs) en entrée | 9363 PDCs en double
-29030 stations reconnues sur 48882 station_id distincts en entrée
-55009 problèmes trouvés pour 108169 PDCs distincts en entrée (il peut exister plusieurs problèmes par PDC/station):
- &gt; [blocking] 37135 x le format de l&#39;identifiant ref:EU:EVSE (id_station_itinerance) n&#39;est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l&#39;analyse Osmose
+                        <pre><code class="language-python">117602 lignes (PDCs) en entrée | 9363 PDCs en double
+29070 stations reconnues sur 48933 station_id distincts en entrée
+55067 problèmes trouvés pour 108239 PDCs distincts en entrée (il peut exister plusieurs problèmes par PDC/station):
+ &gt; [blocking] 37167 x le format de l&#39;identifiant ref:EU:EVSE (id_station_itinerance) n&#39;est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l&#39;analyse Osmose
  &gt;    [error]    10 x aucun type de prise précisé sur l&#39;ensemble des points de charge
- &gt;    [error]  9909 x le nombre de point de charge de la station n&#39;est pas cohérent avec la liste des points de charge fournie
+ &gt;    [error]  9950 x le nombre de point de charge de la station n&#39;est pas cohérent avec la liste des points de charge fournie
  &gt;    [error]  1447 x plusieurs sources pour un même id
  &gt;  [warning]     5 x le champ station_deux_roues n&#39;est pas valide
  &gt;  [warning]   987 x le numéro de téléphone de l&#39;opérateur (telephone_operateur) est dans un format invalide
@@ -137,22 +137,22 @@
  &gt;  [warning]  1671 x plusieurs infos de paiement (paiement_cb) pour une même station
  &gt;  [warning]   311 x plusieurs infos de réservation pour une même station
  &gt;  [warning]   316 x puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)
- &gt;  [warning]   810 x puissance nominale déclarée pour prise EF supérieure à la norme (4)
- &gt;  [warning]   635 x puissance nominale déclarée pour prise T2 supérieure à la norme (43)
+ &gt;  [warning]   786 x puissance nominale déclarée pour prise EF supérieure à la norme (4)
+ &gt;  [warning]   644 x puissance nominale déclarée pour prise T2 supérieure à la norme (43)
 
 Severité
-blocking    37135
-error       11366
-warning      6508
+blocking    37167
+error       11407
+warning      6493
 
 Top 25 Organisations les plus problematiques:
 
 Sévérité                                blocking  error warning  TOTAL
 Organisation                                                          
-TOTAL                                      37135  11366    6508  55009
+TOTAL                                      37167  11407    6493  55067
 alize-charge                               16157      -       -  16157
-eco-movement                               10914      -       -  10914
-izivia                                         -   6210     728   6938
+eco-movement                               10947     24      35  11006
+izivia                                         -   6247     713   6960
 gireve-2                                     198   1838    3634   5670
 lidl                                        4111      -       -   4111
 multiples                                      -   1447       -   1447
@@ -160,7 +160,7 @@ engie-mobilites-electriques                    -    502     502   1004
 rossini-energy                               846      -       -    846
 allego-1                                     638      -       -    638
 syndicat-departemental-denergie-du-tarn      608      -       -    608
-totalenergies-marketing-france               232     24     309    565
+totalenergies-marketing-france               232     23     307    562
 bump                                         529      -       -    529
 driveco                                        -    322     199    521
 soregies                                     478      -       -    478
@@ -174,7 +174,7 @@ sieml                                          -    209       -    209
 sydela                                         -    192       -    192
 plus-de-bornes                                 -    183       7    190
 easycharge-services                            -      -     150    150
-car2plug                                     140      -       -    140</code></pre>
+greenspot-enersoft                             -    128      14    142</code></pre>
                     
                 
                 </details>
@@ -210,10 +210,10 @@ car2plug                                     140      -       -    140</code></p
   <tbody>
     <tr>
       <th>TOTAL</th>
-      <td>37135</td>
-      <td>11366</td>
-      <td>6508</td>
-      <td>55009</td>
+      <td>37167</td>
+      <td>11407</td>
+      <td>6493</td>
+      <td>55067</td>
     </tr>
     <tr>
       <th>alize-charge</th>
@@ -224,17 +224,17 @@ car2plug                                     140      -       -    140</code></p
     </tr>
     <tr>
       <th>eco-movement</th>
-      <td>10914</td>
-      <td>-</td>
-      <td>-</td>
-      <td>10914</td>
+      <td>10947</td>
+      <td>24</td>
+      <td>35</td>
+      <td>11006</td>
     </tr>
     <tr>
       <th>izivia</th>
       <td>-</td>
-      <td>6210</td>
-      <td>728</td>
-      <td>6938</td>
+      <td>6247</td>
+      <td>713</td>
+      <td>6960</td>
     </tr>
     <tr>
       <th>gireve-2</th>
@@ -288,9 +288,9 @@ car2plug                                     140      -       -    140</code></p
     <tr>
       <th>totalenergies-marketing-france</th>
       <td>232</td>
-      <td>24</td>
-      <td>309</td>
-      <td>565</td>
+      <td>23</td>
+      <td>307</td>
+      <td>562</td>
     </tr>
     <tr>
       <th>bump</th>
@@ -384,17 +384,17 @@ car2plug                                     140      -       -    140</code></p
       <td>150</td>
     </tr>
     <tr>
+      <th>greenspot-enersoft</th>
+      <td>-</td>
+      <td>128</td>
+      <td>14</td>
+      <td>142</td>
+    </tr>
+    <tr>
       <th>car2plug</th>
       <td>140</td>
       <td>-</td>
       <td>-</td>
-      <td>140</td>
-    </tr>
-    <tr>
-      <th>greenspot-enersoft</th>
-      <td>-</td>
-      <td>126</td>
-      <td>14</td>
       <td>140</td>
     </tr>
     <tr>
@@ -454,13 +454,6 @@ car2plug                                     140      -       -    140</code></p
       <td>76</td>
     </tr>
     <tr>
-      <th>allego</th>
-      <td>-</td>
-      <td>25</td>
-      <td>36</td>
-      <td>61</td>
-    </tr>
-    <tr>
       <th>reseau-alterbase-79</th>
       <td>-</td>
       <td>16</td>
@@ -496,16 +489,16 @@ car2plug                                     140      -       -    140</code></p
       <td>34</td>
     </tr>
     <tr>
-      <th>e-motum-sas-1</th>
-      <td>-</td>
+      <th>properphi</th>
       <td>30</td>
+      <td>-</td>
       <td>-</td>
       <td>30</td>
     </tr>
     <tr>
-      <th>properphi</th>
-      <td>30</td>
+      <th>e-motum-sas-1</th>
       <td>-</td>
+      <td>30</td>
       <td>-</td>
       <td>30</td>
     </tr>
@@ -545,16 +538,16 @@ car2plug                                     140      -       -    140</code></p
       <td>18</td>
     </tr>
     <tr>
-      <th>energie-eure-et-loir</th>
-      <td>17</td>
+      <th>ev-map</th>
       <td>-</td>
+      <td>17</td>
       <td>-</td>
       <td>17</td>
     </tr>
     <tr>
-      <th>ev-map</th>
-      <td>-</td>
+      <th>energie-eure-et-loir</th>
       <td>17</td>
+      <td>-</td>
       <td>-</td>
       <td>17</td>
     </tr>
@@ -615,6 +608,13 @@ car2plug                                     140      -       -    140</code></p
       <td>10</td>
     </tr>
     <tr>
+      <th>territoire-denergie-orne</th>
+      <td>-</td>
+      <td>4</td>
+      <td>5</td>
+      <td>9</td>
+    </tr>
+    <tr>
       <th>herve-thermique</th>
       <td>7</td>
       <td>-</td>
@@ -636,13 +636,6 @@ car2plug                                     140      -       -    140</code></p
       <td>9</td>
     </tr>
     <tr>
-      <th>i-bornes</th>
-      <td>1</td>
-      <td>4</td>
-      <td>3</td>
-      <td>8</td>
-    </tr>
-    <tr>
       <th>solveo-energies</th>
       <td>8</td>
       <td>-</td>
@@ -654,6 +647,27 @@ car2plug                                     140      -       -    140</code></p
       <td>-</td>
       <td>1</td>
       <td>7</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>inforomu</th>
+      <td>-</td>
+      <td>2</td>
+      <td>6</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>i-bornes</th>
+      <td>1</td>
+      <td>4</td>
+      <td>3</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>syndicat-intercommunal-de-lelectricite-et-du-gaz-de-leure</th>
+      <td>2</td>
+      <td>6</td>
+      <td>-</td>
       <td>8</td>
     </tr>
     <tr>
@@ -671,31 +685,10 @@ car2plug                                     140      -       -    140</code></p
       <td>7</td>
     </tr>
     <tr>
-      <th>ekoplug</th>
-      <td>-</td>
-      <td>1</td>
-      <td>6</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <th>syndicat-intercommunal-de-lelectricite-et-du-gaz-de-leure</th>
-      <td>2</td>
-      <td>4</td>
-      <td>-</td>
-      <td>6</td>
-    </tr>
-    <tr>
       <th>spbr1</th>
       <td>-</td>
       <td>-</td>
       <td>6</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>territoire-denergie-orne</th>
-      <td>-</td>
-      <td>3</td>
-      <td>3</td>
       <td>6</td>
     </tr>
     <tr>
@@ -706,24 +699,17 @@ car2plug                                     140      -       -    140</code></p
       <td>6</td>
     </tr>
     <tr>
-      <th>conectys</th>
-      <td>4</td>
-      <td>1</td>
-      <td>-</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>inouid-smart-mobility</th>
-      <td>3</td>
-      <td>2</td>
-      <td>-</td>
-      <td>5</td>
-    </tr>
-    <tr>
       <th>2ems</th>
       <td>3</td>
       <td>1</td>
       <td>1</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>conectys</th>
+      <td>4</td>
+      <td>1</td>
+      <td>-</td>
       <td>5</td>
     </tr>
     <tr>
@@ -741,30 +727,16 @@ car2plug                                     140      -       -    140</code></p
       <td>5</td>
     </tr>
     <tr>
-      <th>eranovum-e-mobility-france</th>
-      <td>4</td>
+      <th>inouid-smart-mobility</th>
+      <td>3</td>
+      <td>2</td>
       <td>-</td>
-      <td>-</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>kap-enerj</th>
-      <td>4</td>
-      <td>-</td>
-      <td>-</td>
-      <td>4</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>tenao60</th>
       <td>-</td>
       <td>4</td>
-      <td>-</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>area-tech</th>
-      <td>4</td>
-      <td>-</td>
       <td>-</td>
       <td>4</td>
     </tr>
@@ -776,7 +748,7 @@ car2plug                                     140      -       -    140</code></p
       <td>4</td>
     </tr>
     <tr>
-      <th>nm-securelec</th>
+      <th>eranovum-e-mobility-france</th>
       <td>4</td>
       <td>-</td>
       <td>-</td>
@@ -790,14 +762,28 @@ car2plug                                     140      -       -    140</code></p
       <td>4</td>
     </tr>
     <tr>
-      <th>hagenum</th>
-      <td>1</td>
-      <td>2</td>
+      <th>nm-securelec</th>
+      <td>4</td>
       <td>-</td>
-      <td>3</td>
+      <td>-</td>
+      <td>4</td>
     </tr>
     <tr>
-      <th>france-solar-sas</th>
+      <th>area-tech</th>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>kap-enerj</th>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>imac2</th>
       <td>-</td>
       <td>3</td>
       <td>-</td>
@@ -818,7 +804,14 @@ car2plug                                     140      -       -    140</code></p
       <td>3</td>
     </tr>
     <tr>
-      <th>imac2</th>
+      <th>hagenum</th>
+      <td>1</td>
+      <td>2</td>
+      <td>-</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>france-solar-sas</th>
       <td>-</td>
       <td>3</td>
       <td>-</td>
@@ -832,7 +825,7 @@ car2plug                                     140      -       -    140</code></p
       <td>2</td>
     </tr>
     <tr>
-      <th>philippi</th>
+      <th>allego</th>
       <td>-</td>
       <td>1</td>
       <td>1</td>
@@ -840,13 +833,6 @@ car2plug                                     140      -       -    140</code></p
     </tr>
     <tr>
       <th>citeos-poitiers</th>
-      <td>2</td>
-      <td>-</td>
-      <td>-</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>guillaume</th>
       <td>2</td>
       <td>-</td>
       <td>-</td>
@@ -874,14 +860,7 @@ car2plug                                     140      -       -    140</code></p
       <td>2</td>
     </tr>
     <tr>
-      <th>peretti-groupe</th>
-      <td>2</td>
-      <td>-</td>
-      <td>-</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>lg-electricite</th>
+      <th>guillaume</th>
       <td>2</td>
       <td>-</td>
       <td>-</td>
@@ -902,10 +881,17 @@ car2plug                                     140      -       -    140</code></p
       <td>2</td>
     </tr>
     <tr>
-      <th>wellborne</th>
+      <th>lg-electricite</th>
       <td>2</td>
       <td>-</td>
       <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>philippi</th>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
       <td>2</td>
     </tr>
     <tr>
@@ -958,9 +944,9 @@ car2plug                                     140      -       -    140</code></p
       <td>2</td>
     </tr>
     <tr>
-      <th>normatech</th>
-      <td>1</td>
-      <td>1</td>
+      <th>wellborne</th>
+      <td>2</td>
+      <td>-</td>
       <td>-</td>
       <td>2</td>
     </tr>
@@ -972,6 +958,13 @@ car2plug                                     140      -       -    140</code></p
       <td>2</td>
     </tr>
     <tr>
+      <th>normatech</th>
+      <td>1</td>
+      <td>1</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
       <th>nexteneo</th>
       <td>-</td>
       <td>2</td>
@@ -979,18 +972,11 @@ car2plug                                     140      -       -    140</code></p
       <td>2</td>
     </tr>
     <tr>
-      <th>abe-electricite</th>
-      <td>1</td>
+      <th>peretti-groupe</th>
+      <td>2</td>
       <td>-</td>
       <td>-</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>dupuis-electricite</th>
-      <td>1</td>
-      <td>-</td>
-      <td>-</td>
-      <td>1</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>chargepoly</th>
@@ -1000,7 +986,7 @@ car2plug                                     140      -       -    140</code></p
       <td>1</td>
     </tr>
     <tr>
-      <th>agglomeration-montargoise-et-rives-du-loing</th>
+      <th>abe-electricite</th>
       <td>1</td>
       <td>-</td>
       <td>-</td>
@@ -1028,13 +1014,6 @@ car2plug                                     140      -       -    140</code></p
       <td>1</td>
     </tr>
     <tr>
-      <th>inforomu</th>
-      <td>-</td>
-      <td>1</td>
-      <td>-</td>
-      <td>1</td>
-    </tr>
-    <tr>
       <th>irve-territoire-denergie-90</th>
       <td>-</td>
       <td>1</td>
@@ -1049,7 +1028,14 @@ car2plug                                     140      -       -    140</code></p
       <td>1</td>
     </tr>
     <tr>
-      <th>dubois-1</th>
+      <th>ekleo</th>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>chariag</th>
       <td>1</td>
       <td>-</td>
       <td>-</td>
@@ -1063,14 +1049,14 @@ car2plug                                     140      -       -    140</code></p
       <td>1</td>
     </tr>
     <tr>
-      <th>ekleo</th>
+      <th>dupuis-electricite</th>
       <td>1</td>
       <td>-</td>
       <td>-</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>chariag</th>
+      <th>dubois-1</th>
       <td>1</td>
       <td>-</td>
       <td>-</td>
@@ -1186,12 +1172,6 @@ car2plug                                     140      -       -    140</code></p
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
-      <th>agglomeration-montargoise-et-rives-du-loing</th>
-      <th>1</th>
-      <th>blocking</th>
-      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
-    </tr>
-    <tr>
       <th>alize-charge</th>
       <th>16157</th>
       <th>blocking</th>
@@ -1204,20 +1184,14 @@ car2plug                                     140      -       -    140</code></p
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th rowspan="3" valign="top">allego</th>
-      <th>14</th>
-      <th>warning</th>
-      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
-    </tr>
-    <tr>
-      <th>22</th>
-      <th>warning</th>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
-      <th>25</th>
+      <th rowspan="2" valign="top">allego</th>
+      <th rowspan="2" valign="top">1</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
     </tr>
     <tr>
       <th>allego-1</th>
@@ -1448,8 +1422,23 @@ car2plug                                     140      -       -    140</code></p
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th>eco-movement</th>
-      <th>10914</th>
+      <th rowspan="4" valign="top">eco-movement</th>
+      <th>14</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
+    </tr>
+    <tr>
+      <th>21</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>24</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>10947</th>
       <th>blocking</th>
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
@@ -1458,30 +1447,6 @@ car2plug                                     140      -       -    140</code></p
       <th>1</th>
       <th>blocking</th>
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
-    </tr>
-    <tr>
-      <th rowspan="6" valign="top">ekoplug</th>
-      <th rowspan="5" valign="top">1</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th rowspan="4" valign="top">warning</th>
-      <th>plusieurs horaires pour une même station</th>
-    </tr>
-    <tr>
-      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
-    </tr>
-    <tr>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
-      <th>plusieurs infos de réservation pour une même station</th>
-    </tr>
-    <tr>
-      <th>2</th>
-      <th>warning</th>
-      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
     <tr>
       <th>energie-eure-et-loir</th>
@@ -1638,7 +1603,7 @@ car2plug                                     140      -       -    140</code></p
       <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
     </tr>
     <tr>
-      <th>126</th>
+      <th>128</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -1716,10 +1681,28 @@ car2plug                                     140      -       -    140</code></p
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th>inforomu</th>
-      <th>1</th>
+      <th rowspan="6" valign="top">inforomu</th>
+      <th rowspan="4" valign="top">1</th>
+      <th rowspan="4" valign="top">warning</th>
+      <th>plusieurs horaires pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de réservation pour une même station</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">2</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
     <tr>
       <th rowspan="2" valign="top">inouid-smart-mobility</th>
@@ -1751,17 +1734,17 @@ car2plug                                     140      -       -    140</code></p
       <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
     </tr>
     <tr>
-      <th>108</th>
+      <th>84</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
     </tr>
     <tr>
-      <th>600</th>
+      <th>609</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
     </tr>
     <tr>
-      <th>6210</th>
+      <th>6247</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -2199,7 +2182,7 @@ car2plug                                     140      -       -    140</code></p
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th>4</th>
+      <th>6</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -2216,8 +2199,13 @@ car2plug                                     140      -       -    140</code></p
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">territoire-denergie-orne</th>
-      <th rowspan="2" valign="top">3</th>
+      <th rowspan="3" valign="top">territoire-denergie-orne</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">4</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -2232,12 +2220,7 @@ car2plug                                     140      -       -    140</code></p
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
-      <th rowspan="8" valign="top">totalenergies-marketing-france</th>
-      <th>1</th>
-      <th>warning</th>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
+      <th rowspan="7" valign="top">totalenergies-marketing-france</th>
       <th>2</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
@@ -2248,7 +2231,7 @@ car2plug                                     140      -       -    140</code></p
       <th>plusieurs horaires pour une même station</th>
     </tr>
     <tr>
-      <th>24</th>
+      <th>23</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -2263,7 +2246,7 @@ car2plug                                     140      -       -    140</code></p
       <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
     <tr>
-      <th>181</th>
+      <th>180</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
     </tr>
@@ -2346,18 +2329,18 @@ car2plug                                     140      -       -    140</code></p
                 
                     
                         <pre><code class="language-python"> EF  |   T2  | Chademo |  CCS  |
-0.00   22.00     0.00     0.00 | 12132 stations
-0.00    7.36     0.00     0.00 | 3090 stations
+0.00   22.00     0.00     0.00 | 12171 stations
+0.00    7.36     0.00     0.00 | 3089 stations
 0.00    3.68     0.00     0.00 | 1592 stations
 0.00   18.00     0.00     0.00 | 1059 stations
-0.00    0.00     0.00     0.00 | 871 stations
-0.00    0.00     0.00   150.00 | 805 stations
+0.00    0.00     0.00     0.00 | 856 stations
+0.00    0.00     0.00   150.00 | 827 stations
 0.00   22.00     0.00    24.00 | 786 stations
-0.00    7.00     0.00     0.00 | 674 stations
+0.00    7.00     0.00     0.00 | 673 stations
 0.00   22.08     0.00     0.00 | 627 stations
 0.00   22.08     0.00    50.00 | 440 stations
-0.00    7.40     0.00     0.00 | 431 stations
 0.00   22.00     0.00   150.00 | 430 stations
+0.00    7.40     0.00     0.00 | 430 stations
 0.00    0.00     0.00    24.00 | 336 stations
 0.00   24.00     0.00     0.00 | 314 stations
 0.00    0.00     0.00    50.00 | 280 stations
@@ -2379,8 +2362,8 @@ car2plug                                     140      -       -    140</code></p
 0.00   36.00    36.00    36.00 | 103 stations
 0.00   22.00     0.00   180.00 | 89 stations
 0.00    0.00     0.00   300.00 | 88 stations
-0.00    0.00     0.00   200.00 | 86 stations
 4.00    0.00     0.00    22.00 | 86 stations
+0.00    0.00     0.00   200.00 | 82 stations
 0.00   43.00     0.00    50.00 | 77 stations
 0.00   43.00    50.00    50.00 | 75 stations
 0.00    0.00    50.00     0.00 | 71 stations
@@ -2611,8 +2594,9 @@ car2plug                                     140      -       -    140</code></p
 3.00   43.00    36.00   160.00 | 1 stations
 0.00   25.00    25.00    25.00 | 1 stations
 0.00    0.00     0.00    43.00 | 1 stations
-0.00    0.00     0.00    72.00 | 1 stations
+0.00    0.00     0.00   122.00 | 1 stations
 0.00    3.22     0.00     0.00 | 1 stations
+1.70    0.00     0.00     0.00 | 1 stations
 0.00    7.36     0.00   200.00 | 1 stations
 0.00    7.36     0.00    24.00 | 1 stations
 3.68   22.08     0.00     0.00 | 1 stations
@@ -2639,7 +2623,7 @@ car2plug                                     140      -       -    140</code></p
     </main>
     <footer class="container report-container report-foot">
         <small>
-            <p>Généré le 2024-12-21 06:54:28 UTC</p>
+            <p>Généré le 2024-12-22 06:54:34 UTC</p>
         </small>
     </footer>
     <script src='assets/prism.js'></script>
