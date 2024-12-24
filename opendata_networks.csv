@@ -32,25 +32,10 @@ ChargePoint Austria GmbH | FR*CG0,ChargeGuru
 ChargePoint Austria GmbH | FR*CG0,RAIDEN SAS (ChargeGuru)
 DRIVECO,DRIVECO
 Dropnplug | FR*DNP,Dropnplug
-E-TOTEM,CARREFOUR SUPPLY CHAIN - Aulnay sous Bois
-E-TOTEM,CARREFOUR SUPPLY CHAIN - La Courneuve - PL
-E-TOTEM,Carrefour Contact Bazoche Les Gallerandes
-E-TOTEM,Carrefour Contact La Crèche
-E-TOTEM,Carrefour Contact Pernes
-E-TOTEM,Carrefour Contact Périgny
-E-TOTEM,Carrefour Contact Saint-Malo
-E-TOTEM,Carrefour Contact Saint-Martin-de-Bellevue
-E-TOTEM,Carrefour Supply Chain - Combs la Ville
-E-TOTEM,Carrefour Supply Chain - Crépy en valois
-E-TOTEM,Carrefour Supply Chain - La Courneuve VL
-E-TOTEM,Carrefour Supply Chaine - Saint Germain les Arpajon
-E-TOTEM,Carrefour express Villaz
 E-TOTEM,HYPER U AIZENAY
 E-TOTEM,HYPER U BLAIN
 E-TOTEM,HYPER U PONT DE BEAUVOISIN
 E-TOTEM,MJS DISTRIBUTION
-E-TOTEM,PROMOCASH - Site de Colmar
-E-TOTEM,PROMOCASH WASQUEHAL
 E-TOTEM,Réseau Saint Étienne Métropole
 E-TOTEM,Réseau e-Totem Infrastructures
 E-TOTEM,SAS ANGELINA
@@ -101,7 +86,7 @@ Easycharge services,Easycharge services
 Ekoplug,aucun
 Electromaps,Ameublement Rognon
 Electromaps,Aubade - Comptoir des Fers
-Electromaps,Carrefour Contact
+Electromaps,Domaine de Fompeyre
 Electromaps,ECOPARK 5
 Electromaps,Electromaps
 Electromaps,I-Bornes
@@ -343,6 +328,7 @@ Izivia,INTERMARCHE CLAUGINIE
 Izivia,IZIVIA FAST
 Izivia,IZIVIA IMPACT
 Izivia,Izivia
+Izivia,Izivia Express
 Izivia,JIVA HILL RESORT
 Izivia,JONATHAN EVENEMENTS
 Izivia,KAFREMBO
@@ -448,6 +434,7 @@ Mobilygreen | FR*VIS,ENRGETICA
 Morbihan énergies | FR*S56,Mobilité électrique 56
 Métropolis | FR*MGP,Métropolis
 NEXTENEO,ACTIPOLE
+NEXTENEO,Avoriaz - SERMA 1
 NEXTENEO,Boulangerie Ange
 NEXTENEO,CLUB MED
 NEXTENEO,GALILEO
@@ -460,6 +447,7 @@ NEXTENEO,Les Cimes Blanches - CGH
 NEXTENEO,MOBILIS
 NEXTENEO,MOULINS D'ASCQ
 NEXTENEO,Mairie de Champagny-en-Vanoise
+NEXTENEO,Mairie de Manigod
 NEXTENEO,Nexteneo - La Cordée
 NEXTENEO,PRINGY POIDS LOURDS VOLVO
 NEXTENEO,Reversade
@@ -475,6 +463,8 @@ Plageco Distribution,Leclerc Express Labouheyre
 Power Dot France,Power Dot France
 ProperPhi,PROPERPHI
 Proviridis | FR*PVD,Proviridis
+QOVOLTIS,LABODENT
+QOVOLTIS,QOVOLTIS
 QoWatt,QoWatt
 R3,R3
 Road | FR*EFL,Road
@@ -640,7 +630,6 @@ Zephyre SAS,GHO Sophia Antipolis
 Zephyre SAS,Garage Beaudouin
 Zephyre SAS,Garage Chambault SARL 
 Zephyre SAS,Garage Gois Automobiles
-Zephyre SAS,Garage MECANIQUE 2000
 Zephyre SAS,Hostellerie Moulin des Ruats
 Zephyre SAS,Hotel - Les Fermes de Marie
 Zephyre SAS,Hôtel & Restaurant ARGI-EDER
@@ -713,6 +702,7 @@ Zephyre SAS,UNICAP - Garage Croix St Ladre
 Zephyre SAS,UNICAP - Garage Gois Automobiles
 Zephyre SAS,UNICAP - Garage Horizon Automobiles
 Zephyre SAS,UNICAP - Garage Pochet
+Zephyre SAS,UNICAP - Garage des 2 Caps
 Zephyre SAS,UNICAP - LOUE AUTOMOBILES
 Zephyre SAS,UNICAP - SARL DU COLOMBIER
 Zephyre SAS, Logis Hôtel la Ferme des Mares
