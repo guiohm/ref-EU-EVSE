@@ -18,7 +18,7 @@
             <li>
                 <hgroup>
                     <h1>Rapport de run Jungle-Bus Group IRVE OpenData</h1>
-                    <p>2024-12-24 06:54:49 UTC</p>
+                    <p>2024-12-25 06:54:42 UTC</p>
                 </hgroup>
             </li>
         </ul>
@@ -121,46 +121,44 @@
                     <summary>Expand/Collapse</summary>
                 
                     
-                        <pre><code class="language-python">119004 lignes (PDCs) en entrée | 9373 PDCs en double
-29323 stations reconnues sur 49234 station_id distincts en entrée
-55612 problèmes trouvés pour 109631 PDCs distincts en entrée (il peut exister plusieurs problèmes par PDC/station):
- &gt; [blocking] 37221 x le format de l&#39;identifiant ref:EU:EVSE (id_station_itinerance) n&#39;est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l&#39;analyse Osmose
+                        <pre><code class="language-python">119048 lignes (PDCs) en entrée | 9373 PDCs en double
+29343 stations reconnues sur 49259 station_id distincts en entrée
+55634 problèmes trouvés pour 109675 PDCs distincts en entrée (il peut exister plusieurs problèmes par PDC/station):
+ &gt; [blocking] 37232 x le format de l&#39;identifiant ref:EU:EVSE (id_station_itinerance) n&#39;est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l&#39;analyse Osmose
  &gt;    [error]   241 x aucun type de prise précisé sur l&#39;ensemble des points de charge
- &gt;    [error]  9948 x le nombre de point de charge de la station n&#39;est pas cohérent avec la liste des points de charge fournie
+ &gt;    [error]  9956 x le nombre de point de charge de la station n&#39;est pas cohérent avec la liste des points de charge fournie
  &gt;    [error]  1447 x plusieurs sources pour un même id
  &gt;  [warning]   236 x le champ station_deux_roues n&#39;est pas valide
  &gt;  [warning]   988 x le numéro de téléphone de l&#39;opérateur (telephone_operateur) est dans un format invalide
  &gt;  [warning]     8 x plusieurs horaires pour une même station
- &gt;  [warning]  1690 x plusieurs infos d&#39;accessibilité PMR (accessibilite_pmr) pour une même station
+ &gt;  [warning]  1710 x plusieurs infos d&#39;accessibilité PMR (accessibilite_pmr) pour une même station
  &gt;  [warning]    16 x plusieurs infos de gratuité (gratuit) pour une même station
  &gt;  [warning]    59 x plusieurs infos de paiement (paiement_acte) pour une même station
- &gt;  [warning]  1671 x plusieurs infos de paiement (paiement_cb) pour une même station
+ &gt;  [warning]  1676 x plusieurs infos de paiement (paiement_cb) pour une même station
  &gt;  [warning]   311 x plusieurs infos de réservation pour une même station
  &gt;  [warning]   316 x puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)
- &gt;  [warning]   815 x puissance nominale déclarée pour prise EF supérieure à la norme (4)
- &gt;  [warning]   645 x puissance nominale déclarée pour prise T2 supérieure à la norme (43)
+ &gt;  [warning]   789 x puissance nominale déclarée pour prise EF supérieure à la norme (4)
+ &gt;  [warning]   649 x puissance nominale déclarée pour prise T2 supérieure à la norme (43)
 
 Severité
-blocking    37221
-error       11636
-warning      6755
+blocking    37232
+error       11644
+warning      6758
 
 Top 25 Organisations les plus problematiques:
 
 Sévérité                                           blocking  error warning  TOTAL
 Organisation                                                                     
-TOTAL                                                 37221  11636    6755  55612
+TOTAL                                                 37232  11644    6758  55634
 alize-charge                                          16157      -       -  16157
-eco-movement                                          10993     24      35  11052
-izivia                                                    -   6249     738   6987
+eco-movement                                          11004     24      35  11063
+izivia                                                    -   6255     714   6969
+gireve-2                                                198   1656    2863   4717
 lidl                                                   4111      -       -   4111
-spbr1                                                     -    805     922   1727
 multiples                                                 -   1447       -   1447
-gireve-2                                                198    446     537   1181
 engie-mobilites-electriques                               -    502     502   1004
 le-reseau-de-recharge-pour-vehicules-electrique...        -    177     760    937
 rossini-energy                                          846      -       -    846
-morbihan-energies                                         -    188     614    802
 allego-1                                                638      -       -    638
 syndicat-departemental-denergie-du-tarn                 608      -       -    608
 totalenergies-marketing-france                          232     24     309    565
@@ -168,13 +166,15 @@ bump                                                    529      -       -    52
 driveco                                                   -    322     199    521
 soregies                                                478      -       -    478
 qovoltis                                                  -    233     232    465
-syndicat-intercommunal-delectricite-et-de-gaz-d...        -     90     369    459
-syndicat-departemental-denergie-de-la-haute-gar...        -     95     297    392
 ev-cars                                                   -     64     322    386
 virta                                                   376      2       -    378
 zeborne                                                 371      -       -    371
 sowatt-solutions                                        335      -       -    335
-evzen-smeg-developpement                                  -      4     263    267</code></pre>
+evzen-smeg-developpement                                  -      4     263    267
+ubitricity                                              257      -       -    257
+sieml                                                     -    209       -    209
+sydela                                                    -    192       -    192
+plus-de-bornes                                            -    183       7    190</code></pre>
                     
                 
                 </details>
@@ -210,10 +210,10 @@ evzen-smeg-developpement                                  -      4     263    26
   <tbody>
     <tr>
       <th>TOTAL</th>
-      <td>37221</td>
-      <td>11636</td>
-      <td>6755</td>
-      <td>55612</td>
+      <td>37232</td>
+      <td>11644</td>
+      <td>6758</td>
+      <td>55634</td>
     </tr>
     <tr>
       <th>alize-charge</th>
@@ -224,17 +224,24 @@ evzen-smeg-developpement                                  -      4     263    26
     </tr>
     <tr>
       <th>eco-movement</th>
-      <td>10993</td>
+      <td>11004</td>
       <td>24</td>
       <td>35</td>
-      <td>11052</td>
+      <td>11063</td>
     </tr>
     <tr>
       <th>izivia</th>
       <td>-</td>
-      <td>6249</td>
-      <td>738</td>
-      <td>6987</td>
+      <td>6255</td>
+      <td>714</td>
+      <td>6969</td>
+    </tr>
+    <tr>
+      <th>gireve-2</th>
+      <td>198</td>
+      <td>1656</td>
+      <td>2863</td>
+      <td>4717</td>
     </tr>
     <tr>
       <th>lidl</th>
@@ -244,25 +251,11 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>4111</td>
     </tr>
     <tr>
-      <th>spbr1</th>
-      <td>-</td>
-      <td>805</td>
-      <td>922</td>
-      <td>1727</td>
-    </tr>
-    <tr>
       <th>multiples</th>
       <td>-</td>
       <td>1447</td>
       <td>-</td>
       <td>1447</td>
-    </tr>
-    <tr>
-      <th>gireve-2</th>
-      <td>198</td>
-      <td>446</td>
-      <td>537</td>
-      <td>1181</td>
     </tr>
     <tr>
       <th>engie-mobilites-electriques</th>
@@ -284,13 +277,6 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>-</td>
       <td>-</td>
       <td>846</td>
-    </tr>
-    <tr>
-      <th>morbihan-energies</th>
-      <td>-</td>
-      <td>188</td>
-      <td>614</td>
-      <td>802</td>
     </tr>
     <tr>
       <th>allego-1</th>
@@ -340,20 +326,6 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>233</td>
       <td>232</td>
       <td>465</td>
-    </tr>
-    <tr>
-      <th>syndicat-intercommunal-delectricite-et-de-gaz-du-puy-de-dome-irve</th>
-      <td>-</td>
-      <td>90</td>
-      <td>369</td>
-      <td>459</td>
-    </tr>
-    <tr>
-      <th>syndicat-departemental-denergie-de-la-haute-garonne</th>
-      <td>-</td>
-      <td>95</td>
-      <td>297</td>
-      <td>392</td>
     </tr>
     <tr>
       <th>ev-cars</th>
@@ -426,17 +398,17 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>150</td>
     </tr>
     <tr>
+      <th>greenspot-enersoft</th>
+      <td>-</td>
+      <td>128</td>
+      <td>14</td>
+      <td>142</td>
+    </tr>
+    <tr>
       <th>car2plug</th>
       <td>140</td>
       <td>-</td>
       <td>-</td>
-      <td>140</td>
-    </tr>
-    <tr>
-      <th>greenspot-enersoft</th>
-      <td>-</td>
-      <td>126</td>
-      <td>14</td>
       <td>140</td>
     </tr>
     <tr>
@@ -454,6 +426,13 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>106</td>
     </tr>
     <tr>
+      <th>syndicat-departemental-des-energies-de-seine-et-marne-3</th>
+      <td>-</td>
+      <td>2</td>
+      <td>103</td>
+      <td>105</td>
+    </tr>
+    <tr>
       <th>mobilize-power-solutions</th>
       <td>101</td>
       <td>-</td>
@@ -466,13 +445,6 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>-</td>
       <td>-</td>
       <td>99</td>
-    </tr>
-    <tr>
-      <th>regie-services-energie-irve</th>
-      <td>-</td>
-      <td>19</td>
-      <td>72</td>
-      <td>91</td>
     </tr>
     <tr>
       <th>qwello</th>
@@ -489,25 +461,11 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>84</td>
     </tr>
     <tr>
-      <th>syndicat-departemental-des-energies-de-seine-et-marne-3</th>
-      <td>-</td>
-      <td>2</td>
-      <td>78</td>
-      <td>80</td>
-    </tr>
-    <tr>
       <th>e-totem</th>
       <td>-</td>
       <td>24</td>
       <td>52</td>
       <td>76</td>
-    </tr>
-    <tr>
-      <th>e-vadea</th>
-      <td>-</td>
-      <td>16</td>
-      <td>58</td>
-      <td>74</td>
     </tr>
     <tr>
       <th>reseau-alterbase-79</th>
@@ -545,16 +503,16 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>34</td>
     </tr>
     <tr>
-      <th>properphi</th>
-      <td>30</td>
+      <th>e-motum-sas-1</th>
       <td>-</td>
+      <td>30</td>
       <td>-</td>
       <td>30</td>
     </tr>
     <tr>
-      <th>e-motum-sas-1</th>
-      <td>-</td>
+      <th>properphi</th>
       <td>30</td>
+      <td>-</td>
       <td>-</td>
       <td>30</td>
     </tr>
@@ -594,10 +552,10 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>18</td>
     </tr>
     <tr>
-      <th>energie-eure-et-loir</th>
-      <td>17</td>
+      <th>syndicat-departemental-denergie-dille-et-vilaine</th>
       <td>-</td>
-      <td>-</td>
+      <td>2</td>
+      <td>15</td>
       <td>17</td>
     </tr>
     <tr>
@@ -608,11 +566,11 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>17</td>
     </tr>
     <tr>
-      <th>fuzed</th>
+      <th>energie-eure-et-loir</th>
+      <td>17</td>
       <td>-</td>
-      <td>5</td>
-      <td>11</td>
-      <td>16</td>
+      <td>-</td>
+      <td>17</td>
     </tr>
     <tr>
       <th>citeos-ingenierie-idf-est-cogelum-idf</th>
@@ -622,18 +580,11 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>16</td>
     </tr>
     <tr>
-      <th>syndicat-departemental-denergie-dille-et-vilaine</th>
+      <th>fuzed</th>
       <td>-</td>
-      <td>2</td>
-      <td>13</td>
-      <td>15</td>
-    </tr>
-    <tr>
-      <th>bornevo</th>
-      <td>13</td>
-      <td>-</td>
-      <td>-</td>
-      <td>13</td>
+      <td>5</td>
+      <td>11</td>
+      <td>16</td>
     </tr>
     <tr>
       <th>sodel</th>
@@ -643,14 +594,21 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>13</td>
     </tr>
     <tr>
-      <th>sas-satcoms</th>
+      <th>bornevo</th>
+      <td>13</td>
+      <td>-</td>
+      <td>-</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>autorecharge</th>
       <td>12</td>
       <td>-</td>
       <td>-</td>
       <td>12</td>
     </tr>
     <tr>
-      <th>autorecharge</th>
+      <th>sas-satcoms</th>
       <td>12</td>
       <td>-</td>
       <td>-</td>
@@ -671,10 +629,10 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>10</td>
     </tr>
     <tr>
-      <th>r3</th>
-      <td>-</td>
-      <td>-</td>
+      <th>regie-municipale-delectricite-de-loos</th>
       <td>9</td>
+      <td>-</td>
+      <td>-</td>
       <td>9</td>
     </tr>
     <tr>
@@ -685,10 +643,10 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>9</td>
     </tr>
     <tr>
-      <th>regie-municipale-delectricite-de-loos</th>
+      <th>r3</th>
+      <td>-</td>
+      <td>-</td>
       <td>9</td>
-      <td>-</td>
-      <td>-</td>
       <td>9</td>
     </tr>
     <tr>
@@ -699,13 +657,6 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>8</td>
     </tr>
     <tr>
-      <th>i-bornes</th>
-      <td>1</td>
-      <td>4</td>
-      <td>3</td>
-      <td>8</td>
-    </tr>
-    <tr>
       <th>jerecharge-com</th>
       <td>-</td>
       <td>1</td>
@@ -713,7 +664,14 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>8</td>
     </tr>
     <tr>
-      <th>ekoplug</th>
+      <th>i-bornes</th>
+      <td>1</td>
+      <td>4</td>
+      <td>3</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>installation-dune-borne-22kwa-hostellerie-des-ducs</th>
       <td>-</td>
       <td>1</td>
       <td>6</td>
@@ -734,10 +692,10 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>7</td>
     </tr>
     <tr>
-      <th>citeos-boulogne-sur-mer</th>
+      <th>syndicat-intercommunal-de-lelectricite-et-du-gaz-de-leure</th>
+      <td>2</td>
+      <td>4</td>
       <td>-</td>
-      <td>-</td>
-      <td>6</td>
       <td>6</td>
     </tr>
     <tr>
@@ -748,10 +706,17 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>6</td>
     </tr>
     <tr>
-      <th>syndicat-intercommunal-de-lelectricite-et-du-gaz-de-leure</th>
-      <td>2</td>
-      <td>4</td>
+      <th>spbr1</th>
       <td>-</td>
+      <td>-</td>
+      <td>6</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>citeos-boulogne-sur-mer</th>
+      <td>-</td>
+      <td>-</td>
+      <td>6</td>
       <td>6</td>
     </tr>
     <tr>
@@ -769,9 +734,9 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>5</td>
     </tr>
     <tr>
-      <th>allcoms-technologies</th>
-      <td>5</td>
-      <td>-</td>
+      <th>inouid-smart-mobility</th>
+      <td>3</td>
+      <td>2</td>
       <td>-</td>
       <td>5</td>
     </tr>
@@ -783,28 +748,14 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>5</td>
     </tr>
     <tr>
-      <th>inouid-smart-mobility</th>
-      <td>3</td>
-      <td>2</td>
+      <th>allcoms-technologies</th>
+      <td>5</td>
+      <td>-</td>
       <td>-</td>
       <td>5</td>
     </tr>
     <tr>
-      <th>tenao60</th>
-      <td>-</td>
-      <td>4</td>
-      <td>-</td>
-      <td>4</td>
-    </tr>
-    <tr>
       <th>indelec-mobility</th>
-      <td>4</td>
-      <td>-</td>
-      <td>-</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>area-tech</th>
       <td>4</td>
       <td>-</td>
       <td>-</td>
@@ -818,14 +769,21 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>4</td>
     </tr>
     <tr>
-      <th>kap-enerj</th>
+      <th>nm-securelec</th>
       <td>4</td>
       <td>-</td>
       <td>-</td>
       <td>4</td>
     </tr>
     <tr>
-      <th>nm-securelec</th>
+      <th>tenao60</th>
+      <td>-</td>
+      <td>4</td>
+      <td>-</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>kap-enerj</th>
       <td>4</td>
       <td>-</td>
       <td>-</td>
@@ -837,6 +795,20 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>-</td>
       <td>-</td>
       <td>4</td>
+    </tr>
+    <tr>
+      <th>area-tech</th>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>kallista-bdr</th>
+      <td>-</td>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>enerjump</th>
@@ -853,13 +825,6 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>3</td>
     </tr>
     <tr>
-      <th>france-solar-sas</th>
-      <td>-</td>
-      <td>3</td>
-      <td>-</td>
-      <td>3</td>
-    </tr>
-    <tr>
       <th>imac2</th>
       <td>-</td>
       <td>3</td>
@@ -867,30 +832,16 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>3</td>
     </tr>
     <tr>
-      <th>kallista-bdr</th>
+      <th>france-solar-sas</th>
       <td>-</td>
-      <td>1</td>
-      <td>2</td>
+      <td>3</td>
+      <td>-</td>
       <td>3</td>
     </tr>
     <tr>
-      <th>allego</th>
-      <td>-</td>
+      <th>normatech</th>
       <td>1</td>
       <td>1</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>acelec-charge</th>
-      <td>-</td>
-      <td>2</td>
-      <td>-</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>nexteneo</th>
-      <td>-</td>
-      <td>2</td>
       <td>-</td>
       <td>2</td>
     </tr>
@@ -898,6 +849,13 @@ evzen-smeg-developpement                                  -      4     263    26
       <th>suraya</th>
       <td>2</td>
       <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>acelec-charge</th>
+      <td>-</td>
+      <td>2</td>
       <td>-</td>
       <td>2</td>
     </tr>
@@ -916,7 +874,21 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>2</td>
     </tr>
     <tr>
+      <th>allego</th>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
       <th>ecarmobility</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>peretti-groupe</th>
       <td>2</td>
       <td>-</td>
       <td>-</td>
@@ -930,10 +902,17 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>2</td>
     </tr>
     <tr>
-      <th>ma-borne-auto-bordeaux</th>
+      <th>la-borne-electrique</th>
       <td>-</td>
       <td>1</td>
       <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>idex-solar-charging-stations</th>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
       <td>2</td>
     </tr>
     <tr>
@@ -951,21 +930,21 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>2</td>
     </tr>
     <tr>
-      <th>startn-move-1</th>
-      <td>2</td>
-      <td>-</td>
+      <th>morbihan-energies</th>
       <td>-</td>
       <td>2</td>
-    </tr>
-    <tr>
-      <th>swish</th>
-      <td>2</td>
-      <td>-</td>
       <td>-</td>
       <td>2</td>
     </tr>
     <tr>
       <th>spie-citynetworks</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>startn-move-1</th>
       <td>2</td>
       <td>-</td>
       <td>-</td>
@@ -979,10 +958,10 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>2</td>
     </tr>
     <tr>
-      <th>philippi</th>
+      <th>swish</th>
+      <td>2</td>
       <td>-</td>
-      <td>1</td>
-      <td>1</td>
+      <td>-</td>
       <td>2</td>
     </tr>
     <tr>
@@ -1000,31 +979,24 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>2</td>
     </tr>
     <tr>
-      <th>idex-solar-charging-stations</th>
-      <td>-</td>
-      <td>-</td>
-      <td>2</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>la-borne-electrique</th>
+      <th>philippi</th>
       <td>-</td>
       <td>1</td>
       <td>1</td>
       <td>2</td>
     </tr>
     <tr>
-      <th>peretti-groupe</th>
-      <td>2</td>
+      <th>nexteneo</th>
       <td>-</td>
+      <td>2</td>
       <td>-</td>
       <td>2</td>
     </tr>
     <tr>
-      <th>normatech</th>
-      <td>1</td>
-      <td>1</td>
+      <th>ma-borne-auto-bordeaux</th>
       <td>-</td>
+      <td>1</td>
+      <td>1</td>
       <td>2</td>
     </tr>
     <tr>
@@ -1036,6 +1008,13 @@ evzen-smeg-developpement                                  -      4     263    26
     </tr>
     <tr>
       <th>agglomeration-montargoise-et-rives-du-loing</th>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>chariag</th>
       <td>1</td>
       <td>-</td>
       <td>-</td>
@@ -1056,13 +1035,6 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>1</td>
     </tr>
     <tr>
-      <th>l2b-lorette-beaucamp-bonnet</th>
-      <td>-</td>
-      <td>1</td>
-      <td>-</td>
-      <td>1</td>
-    </tr>
-    <tr>
       <th>lamia-jp</th>
       <td>-</td>
       <td>1</td>
@@ -1070,7 +1042,7 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>1</td>
     </tr>
     <tr>
-      <th>irve-territoire-denergie-90</th>
+      <th>l2b-lorette-beaucamp-bonnet</th>
       <td>-</td>
       <td>1</td>
       <td>-</td>
@@ -1084,28 +1056,14 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>1</td>
     </tr>
     <tr>
+      <th>irve-territoire-denergie-90</th>
+      <td>-</td>
+      <td>1</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
       <th>garage-chene-total-energie-citroen</th>
-      <td>1</td>
-      <td>-</td>
-      <td>-</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>dubois-1</th>
-      <td>1</td>
-      <td>-</td>
-      <td>-</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>e-leclerc-millau</th>
-      <td>-</td>
-      <td>1</td>
-      <td>-</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>ekleo</th>
       <td>1</td>
       <td>-</td>
       <td>-</td>
@@ -1119,7 +1077,28 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>1</td>
     </tr>
     <tr>
-      <th>chariag</th>
+      <th>dubois-1</th>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>ekleo</th>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>e-leclerc-millau</th>
+      <td>-</td>
+      <td>1</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>rsb-zni-non-parking-camping-supervision-non</th>
       <td>1</td>
       <td>-</td>
       <td>-</td>
@@ -1140,6 +1119,13 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>1</td>
     </tr>
     <tr>
+      <th>neogroup-consulting</th>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
       <th>mdg-fibre-sas</th>
       <td>1</td>
       <td>-</td>
@@ -1147,17 +1133,10 @@ evzen-smeg-developpement                                  -      4     263    26
       <td>1</td>
     </tr>
     <tr>
-      <th>rsb-zni-non-parking-camping-supervision-non</th>
-      <td>1</td>
-      <td>-</td>
+      <th>regie-services-energie-irve</th>
       <td>-</td>
       <td>1</td>
-    </tr>
-    <tr>
-      <th>neogroup-consulting</th>
       <td>-</td>
-      <td>-</td>
-      <td>1</td>
       <td>1</td>
     </tr>
     <tr>
@@ -1467,26 +1446,6 @@ evzen-smeg-developpement                                  -      4     263    26
       <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
     </tr>
     <tr>
-      <th rowspan="4" valign="top">e-vadea</th>
-      <th>10</th>
-      <th>warning</th>
-      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">16</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th>warning</th>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
-      <th>32</th>
-      <th>warning</th>
-      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
-    </tr>
-    <tr>
       <th>easycharge-services</th>
       <th>150</th>
       <th>warning</th>
@@ -1515,7 +1474,7 @@ evzen-smeg-developpement                                  -      4     263    26
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
-      <th>10993</th>
+      <th>11004</th>
       <th>blocking</th>
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
@@ -1524,30 +1483,6 @@ evzen-smeg-developpement                                  -      4     263    26
       <th>1</th>
       <th>blocking</th>
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
-    </tr>
-    <tr>
-      <th rowspan="6" valign="top">ekoplug</th>
-      <th rowspan="5" valign="top">1</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th rowspan="4" valign="top">warning</th>
-      <th>plusieurs horaires pour une même station</th>
-    </tr>
-    <tr>
-      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
-    </tr>
-    <tr>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
-      <th>plusieurs infos de réservation pour une même station</th>
-    </tr>
-    <tr>
-      <th>2</th>
-      <th>warning</th>
-      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
     <tr>
       <th>energie-eure-et-loir</th>
@@ -1652,20 +1587,35 @@ evzen-smeg-developpement                                  -      4     263    26
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th rowspan="6" valign="top">gireve-2</th>
+      <th rowspan="11" valign="top">gireve-2</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>plusieurs horaires pour une même station</th>
+    </tr>
+    <tr>
       <th>4</th>
       <th>error</th>
       <th>aucun type de prise précisé sur l'ensemble des points de charge</th>
     </tr>
     <tr>
-      <th>9</th>
+      <th>8</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
+    </tr>
+    <tr>
+      <th>19</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
     </tr>
     <tr>
-      <th>78</th>
+      <th>88</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
+    </tr>
+    <tr>
+      <th>130</th>
+      <th>warning</th>
+      <th>plusieurs infos de réservation pour une même station</th>
     </tr>
     <tr>
       <th>198</th>
@@ -1673,14 +1623,24 @@ evzen-smeg-developpement                                  -      4     263    26
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th>442</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th>450</th>
+      <th>534</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
+    </tr>
+    <tr>
+      <th>846</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
+      <th>1237</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>1652</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
       <th rowspan="4" valign="top">greenspot-enersoft</th>
@@ -1697,7 +1657,7 @@ evzen-smeg-developpement                                  -      4     263    26
       <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
     </tr>
     <tr>
-      <th>126</th>
+      <th>128</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -1792,6 +1752,30 @@ evzen-smeg-developpement                                  -      4     263    26
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
+      <th rowspan="6" valign="top">installation-dune-borne-22kwa-hostellerie-des-ducs</th>
+      <th rowspan="5" valign="top">1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">warning</th>
+      <th>plusieurs horaires pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de réservation pour une même station</th>
+    </tr>
+    <tr>
+      <th>2</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
       <th>ionity-gmbh</th>
       <th>121</th>
       <th>blocking</th>
@@ -1810,17 +1794,17 @@ evzen-smeg-developpement                                  -      4     263    26
       <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
     </tr>
     <tr>
-      <th>108</th>
+      <th>82</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
     </tr>
     <tr>
-      <th>610</th>
+      <th>612</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
     </tr>
     <tr>
-      <th>6249</th>
+      <th>6255</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -1956,40 +1940,10 @@ evzen-smeg-developpement                                  -      4     263    26
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th rowspan="7" valign="top">morbihan-energies</th>
-      <th>1</th>
-      <th>warning</th>
-      <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
-    </tr>
-    <tr>
-      <th>3</th>
-      <th>warning</th>
-      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
-    </tr>
-    <tr>
-      <th>5</th>
-      <th>warning</th>
-      <th>plusieurs infos de réservation pour une même station</th>
-    </tr>
-    <tr>
-      <th>8</th>
-      <th>warning</th>
-      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
-    </tr>
-    <tr>
-      <th>188</th>
+      <th>morbihan-energies</th>
+      <th>2</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th>199</th>
-      <th>warning</th>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
-      <th>398</th>
-      <th>warning</th>
-      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
     <tr>
       <th>multiples</th>
@@ -2131,23 +2085,10 @@ evzen-smeg-developpement                                  -      4     263    26
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th rowspan="4" valign="top">regie-services-energie-irve</th>
-      <th rowspan="2" valign="top">18</th>
-      <th rowspan="2" valign="top">warning</th>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
-      <th>plusieurs infos de réservation pour une même station</th>
-    </tr>
-    <tr>
-      <th>19</th>
+      <th>regie-services-energie-irve</th>
+      <th>1</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th>36</th>
-      <th>warning</th>
-      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
     <tr>
       <th rowspan="2" valign="top">reseau-alterbase-79</th>
@@ -2264,40 +2205,10 @@ evzen-smeg-developpement                                  -      4     263    26
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th rowspan="7" valign="top">spbr1</th>
-      <th>1</th>
-      <th>warning</th>
-      <th>plusieurs horaires pour une même station</th>
-    </tr>
-    <tr>
+      <th>spbr1</th>
       <th>6</th>
       <th>warning</th>
       <th>plusieurs infos de gratuité (gratuit) pour une même station</th>
-    </tr>
-    <tr>
-      <th>9</th>
-      <th>warning</th>
-      <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
-    </tr>
-    <tr>
-      <th>16</th>
-      <th>warning</th>
-      <th>plusieurs infos de réservation pour une même station</th>
-    </tr>
-    <tr>
-      <th>76</th>
-      <th>warning</th>
-      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
-    </tr>
-    <tr>
-      <th>805</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th>814</th>
-      <th>warning</th>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
     </tr>
     <tr>
       <th>spie-citynetworks</th>
@@ -2336,29 +2247,13 @@ evzen-smeg-developpement                                  -      4     263    26
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
-      <th rowspan="3" valign="top">syndicat-departemental-denergie-de-la-haute-garonne</th>
-      <th>95</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th>99</th>
-      <th>warning</th>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
-      <th>198</th>
-      <th>warning</th>
-      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
-    </tr>
-    <tr>
       <th rowspan="2" valign="top">syndicat-departemental-denergie-dille-et-vilaine</th>
       <th>2</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
-      <th>13</th>
+      <th>15</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
     </tr>
@@ -2375,12 +2270,12 @@ evzen-smeg-developpement                                  -      4     263    26
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
-      <th>26</th>
+      <th>31</th>
       <th>warning</th>
       <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
     </tr>
     <tr>
-      <th>52</th>
+      <th>72</th>
       <th>warning</th>
       <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
@@ -2394,30 +2289,6 @@ evzen-smeg-developpement                                  -      4     263    26
       <th>4</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th rowspan="5" valign="top">syndicat-intercommunal-delectricite-et-de-gaz-du-puy-de-dome-irve</th>
-      <th>5</th>
-      <th>warning</th>
-      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
-    </tr>
-    <tr>
-      <th>90</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">91</th>
-      <th rowspan="2" valign="top">warning</th>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
-      <th>plusieurs infos de réservation pour une même station</th>
-    </tr>
-    <tr>
-      <th>182</th>
-      <th>warning</th>
-      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
     <tr>
       <th>tenao60</th>
@@ -2562,24 +2433,24 @@ evzen-smeg-developpement                                  -      4     263    26
                 
                     
                         <pre><code class="language-python"> EF  |   T2  | Chademo |  CCS  |
-0.00   22.00     0.00     0.00 | 12149 stations
-0.00    7.36     0.00     0.00 | 3089 stations
+0.00   22.00     0.00     0.00 | 12179 stations
+0.00    7.36     0.00     0.00 | 3091 stations
 0.00    3.68     0.00     0.00 | 1591 stations
-0.00    0.00     0.00     0.00 | 1112 stations
-0.00   18.00     0.00     0.00 | 1059 stations
-0.00    0.00     0.00   150.00 | 829 stations
-0.00   22.00     0.00    24.00 | 786 stations
-0.00    7.00     0.00     0.00 | 673 stations
+0.00    0.00     0.00     0.00 | 1088 stations
+0.00   18.00     0.00     0.00 | 1058 stations
+0.00    0.00     0.00   150.00 | 833 stations
+0.00   22.00     0.00    24.00 | 791 stations
+0.00    7.00     0.00     0.00 | 674 stations
 0.00   22.08     0.00     0.00 | 627 stations
 0.00   22.08     0.00    50.00 | 440 stations
 0.00   22.00     0.00   150.00 | 438 stations
 0.00    7.40     0.00     0.00 | 428 stations
 0.00    0.00     0.00    24.00 | 336 stations
 0.00   24.00     0.00     0.00 | 314 stations
-0.00    0.00     0.00    50.00 | 280 stations
+0.00    0.00     0.00    50.00 | 279 stations
 0.00   22.00     0.00    50.00 | 265 stations
 0.00   22.00     0.00    25.00 | 264 stations
-0.00    0.00    22.00     0.00 | 211 stations
+0.00    0.00    22.00     0.00 | 210 stations
 0.00    0.00     0.00   250.00 | 209 stations
 0.00   22.00    50.00   200.00 | 198 stations
 0.00   22.00    50.00   100.00 | 196 stations
@@ -2588,7 +2459,7 @@ evzen-smeg-developpement                                  -      4     263    26
 0.00   22.00    50.00    50.00 | 154 stations
 0.00   44.00     0.00    50.00 | 149 stations
 0.00   11.00     0.00     0.00 | 148 stations
-0.00    0.00     0.00   180.00 | 139 stations
+0.00    0.00     0.00   180.00 | 141 stations
 2.30   22.00     0.00     0.00 | 134 stations
 0.00   22.00     0.00    60.00 | 118 stations
 0.00   22.00    25.00    25.00 | 106 stations
@@ -2613,15 +2484,15 @@ evzen-smeg-developpement                                  -      4     263    26
 3.00    0.00     0.00     0.00 | 45 stations
 0.00   22.00    50.00    60.00 | 44 stations
 0.00   22.00    24.00    24.00 | 43 stations
-0.00    0.00     0.00   100.00 | 37 stations
+0.00    0.00     0.00   100.00 | 38 stations
 0.00   12.00     0.00   120.00 | 33 stations
 0.00   22.00    62.50   300.00 | 31 stations
 0.00   22.00     0.00    90.00 | 30 stations
 0.00   22.00    50.00   300.00 | 30 stations
 0.00    0.00     0.00    44.00 | 25 stations
 0.00   44.00    44.00    50.00 | 24 stations
+0.00    0.00     7.40     0.00 | 24 stations
 2.30   11.00     0.00     0.00 | 23 stations
-0.00    0.00     7.40     0.00 | 23 stations
 0.00    0.00    54.00   300.00 | 23 stations
 0.00   22.00    50.00   160.00 | 22 stations
 0.00    0.00    54.00     0.00 | 22 stations
@@ -2633,11 +2504,11 @@ evzen-smeg-developpement                                  -      4     263    26
 0.00   43.00    50.00   300.00 | 17 stations
 0.00    0.00    47.00     0.00 | 17 stations
 0.00    0.00     0.00    60.00 | 16 stations
+0.00   22.00     0.00   160.00 | 16 stations
 0.00   22.00    50.00   188.00 | 16 stations
-0.00   22.00     0.00   160.00 | 15 stations
 0.00    0.00     0.00   320.00 | 15 stations
-3.68    0.00     0.00     0.00 | 15 stations
 0.00    0.00    50.00    50.00 | 14 stations
+3.68    0.00     0.00     0.00 | 14 stations
 0.00    3.70     0.00     0.00 | 13 stations
 0.00    0.00    63.00     0.00 | 13 stations
 0.00   44.00    50.00    50.00 | 13 stations
@@ -2675,7 +2546,6 @@ evzen-smeg-developpement                                  -      4     263    26
 0.00    0.00     0.00   350.00 | 5 stations
 0.00   22.00     0.00    80.00 | 5 stations
 3.00    0.00    50.00    50.00 | 5 stations
-0.00    0.00     0.00   160.00 | 5 stations
 0.00    0.00     0.00   400.00 | 5 stations
 0.00    0.00    50.00   187.50 | 5 stations
 0.00   22.00     0.00   187.50 | 5 stations
@@ -2691,6 +2561,7 @@ evzen-smeg-developpement                                  -      4     263    26
 0.00    0.00    22.00   150.00 | 4 stations
 0.00    0.00    50.00   100.00 | 4 stations
 0.00   22.00     0.00    54.00 | 4 stations
+0.00    0.00     0.00   160.00 | 4 stations
 0.00    7.40    47.00     0.00 | 4 stations
 2.30    7.36     0.00     0.00 | 3 stations
 0.00   43.00    50.00   160.00 | 3 stations
@@ -2732,6 +2603,7 @@ evzen-smeg-developpement                                  -      4     263    26
 0.00   22.00     0.00   110.00 | 2 stations
 0.00   22.00    50.00   175.00 | 2 stations
 0.00   22.17    50.00   100.00 | 2 stations
+0.00    0.00     0.00    48.00 | 2 stations
 0.00    0.00     0.00   206.00 | 2 stations
 0.00   36.00     0.00     7.40 | 2 stations
 0.00    0.00     0.00    66.00 | 2 stations
@@ -2826,7 +2698,7 @@ evzen-smeg-developpement                                  -      4     263    26
 3.00   43.00    36.00   160.00 | 1 stations
 0.00   25.00    25.00    25.00 | 1 stations
 0.00    0.00     0.00    43.00 | 1 stations
-0.00    0.00     0.00    72.00 | 1 stations
+0.00    0.00     0.00   122.00 | 1 stations
 0.00    3.22     0.00     0.00 | 1 stations
 0.00    7.36     0.00   200.00 | 1 stations
 0.00    7.36     0.00    24.00 | 1 stations
@@ -2854,7 +2726,7 @@ evzen-smeg-developpement                                  -      4     263    26
     </main>
     <footer class="container report-container report-foot">
         <small>
-            <p>Généré le 2024-12-24 06:54:49 UTC</p>
+            <p>Généré le 2024-12-25 06:54:42 UTC</p>
         </small>
     </footer>
     <script src='assets/prism.js'></script>
