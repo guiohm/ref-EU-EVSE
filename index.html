@@ -18,7 +18,7 @@
             <li>
                 <hgroup>
                     <h1>Rapport de run Jungle-Bus Group IRVE OpenData</h1>
-                    <p>2025-01-07 06:54:44 UTC</p>
+                    <p>2025-01-08 06:54:41 UTC</p>
                 </hgroup>
             </li>
         </ul>
@@ -121,48 +121,46 @@
                     <summary>Expand/Collapse</summary>
                 
                     
-                        <pre><code class="language-python">119501 lignes (PDCs) en entrée | 9439 PDCs en double
-29361 stations reconnues sur 49377 station_id distincts en entrée
-56010 problèmes trouvés pour 110062 PDCs distincts en entrée (il peut exister plusieurs problèmes par PDC/station):
- &gt; [blocking] 37585 x le format de l&#39;identifiant ref:EU:EVSE (id_station_itinerance) n&#39;est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l&#39;analyse Osmose
+                        <pre><code class="language-python">120217 lignes (PDCs) en entrée | 9439 PDCs en double
+29440 stations reconnues sur 49464 station_id distincts en entrée
+56082 problèmes trouvés pour 110778 PDCs distincts en entrée (il peut exister plusieurs problèmes par PDC/station):
+ &gt; [blocking] 37596 x le format de l&#39;identifiant ref:EU:EVSE (id_station_itinerance) n&#39;est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l&#39;analyse Osmose
  &gt;    [error]   241 x aucun type de prise précisé sur l&#39;ensemble des points de charge
- &gt;    [error]  9993 x le nombre de point de charge de la station n&#39;est pas cohérent avec la liste des points de charge fournie
+ &gt;    [error] 10000 x le nombre de point de charge de la station n&#39;est pas cohérent avec la liste des points de charge fournie
  &gt;    [error]  1447 x plusieurs sources pour un même id
  &gt;  [warning]   236 x le champ station_deux_roues n&#39;est pas valide
- &gt;  [warning]   976 x le numéro de téléphone de l&#39;opérateur (telephone_operateur) est dans un format invalide
- &gt;  [warning]     8 x plusieurs horaires pour une même station
- &gt;  [warning]  1710 x plusieurs infos d&#39;accessibilité PMR (accessibilite_pmr) pour une même station
+ &gt;  [warning]   975 x le numéro de téléphone de l&#39;opérateur (telephone_operateur) est dans un format invalide
+ &gt;  [warning]     9 x plusieurs horaires pour une même station
+ &gt;  [warning]  1712 x plusieurs infos d&#39;accessibilité PMR (accessibilite_pmr) pour une même station
  &gt;  [warning]    10 x plusieurs infos de gratuité (gratuit) pour une même station
  &gt;  [warning]    59 x plusieurs infos de paiement (paiement_acte) pour une même station
  &gt;  [warning]  1676 x plusieurs infos de paiement (paiement_cb) pour une même station
  &gt;  [warning]   311 x plusieurs infos de réservation pour une même station
- &gt;  [warning]   315 x puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)
- &gt;  [warning]   789 x puissance nominale déclarée pour prise EF supérieure à la norme (4)
- &gt;  [warning]   654 x puissance nominale déclarée pour prise T2 supérieure à la norme (43)
+ &gt;  [warning]   320 x puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)
+ &gt;  [warning]   835 x puissance nominale déclarée pour prise EF supérieure à la norme (4)
+ &gt;  [warning]   655 x puissance nominale déclarée pour prise T2 supérieure à la norme (43)
 
 Severité
-blocking    37585
-error       11681
-warning      6744
+blocking    37596
+error       11688
+warning      6798
 
 Top 25 Organisations les plus problematiques:
 
 Sévérité                                           blocking  error warning  TOTAL
 Organisation                                                                     
-TOTAL                                                 37585  11681    6744  56010
+TOTAL                                                 37596  11688    6798  56082
 alize-charge                                          16439      -       -  16439
-eco-movement                                          11065     24      35  11124
-izivia                                                    -   6283     719   7002
+eco-movement                                          11076     24      35  11135
+izivia                                                    -   6294     766   7060
+gireve-2                                                198   1721    3267   5186
 lidl                                                   4111      -       -   4111
-gireve-2                                                198    735    1748   2681
-spbr1                                                     -    805     916   1721
 multiples                                                 -   1447       -   1447
 engie-mobilites-electriques                               -    502     502   1004
 rossini-energy                                          846      -       -    846
-morbihan-energies                                         -    188     614    802
 allego-1                                                638      -       -    638
 syndicat-departemental-denergie-du-tarn                 608      -       -    608
-totalenergies-marketing-france                          232     23     307    562
+totalenergies-marketing-france                          232     24     309    565
 bump                                                    529      -       -    529
 driveco                                                   -    322     199    521
 soregies                                                478      -       -    478
@@ -174,7 +172,9 @@ zeborne                                                 373      -       -    37
 sowatt-solutions                                        339      -       -    339
 evzen-smeg-developpement                                  -      4     263    267
 ubitricity                                              257      -       -    257
-sieml                                                     -    209       -    209</code></pre>
+sieml                                                     -    209       -    209
+sydela                                                    -    192       -    192
+plus-de-bornes                                            -    184       7    191</code></pre>
                     
                 
                 </details>
@@ -210,10 +210,10 @@ sieml                                                     -    209       -    20
   <tbody>
     <tr>
       <th>TOTAL</th>
-      <td>37585</td>
-      <td>11681</td>
-      <td>6744</td>
-      <td>56010</td>
+      <td>37596</td>
+      <td>11688</td>
+      <td>6798</td>
+      <td>56082</td>
     </tr>
     <tr>
       <th>alize-charge</th>
@@ -224,17 +224,24 @@ sieml                                                     -    209       -    20
     </tr>
     <tr>
       <th>eco-movement</th>
-      <td>11065</td>
+      <td>11076</td>
       <td>24</td>
       <td>35</td>
-      <td>11124</td>
+      <td>11135</td>
     </tr>
     <tr>
       <th>izivia</th>
       <td>-</td>
-      <td>6283</td>
-      <td>719</td>
-      <td>7002</td>
+      <td>6294</td>
+      <td>766</td>
+      <td>7060</td>
+    </tr>
+    <tr>
+      <th>gireve-2</th>
+      <td>198</td>
+      <td>1721</td>
+      <td>3267</td>
+      <td>5186</td>
     </tr>
     <tr>
       <th>lidl</th>
@@ -242,20 +249,6 @@ sieml                                                     -    209       -    20
       <td>-</td>
       <td>-</td>
       <td>4111</td>
-    </tr>
-    <tr>
-      <th>gireve-2</th>
-      <td>198</td>
-      <td>735</td>
-      <td>1748</td>
-      <td>2681</td>
-    </tr>
-    <tr>
-      <th>spbr1</th>
-      <td>-</td>
-      <td>805</td>
-      <td>916</td>
-      <td>1721</td>
     </tr>
     <tr>
       <th>multiples</th>
@@ -279,13 +272,6 @@ sieml                                                     -    209       -    20
       <td>846</td>
     </tr>
     <tr>
-      <th>morbihan-energies</th>
-      <td>-</td>
-      <td>188</td>
-      <td>614</td>
-      <td>802</td>
-    </tr>
-    <tr>
       <th>allego-1</th>
       <td>638</td>
       <td>-</td>
@@ -302,9 +288,9 @@ sieml                                                     -    209       -    20
     <tr>
       <th>totalenergies-marketing-france</th>
       <td>232</td>
-      <td>23</td>
-      <td>307</td>
-      <td>562</td>
+      <td>24</td>
+      <td>309</td>
+      <td>565</td>
     </tr>
     <tr>
       <th>bump</th>
@@ -400,9 +386,9 @@ sieml                                                     -    209       -    20
     <tr>
       <th>plus-de-bornes</th>
       <td>-</td>
-      <td>183</td>
+      <td>184</td>
       <td>7</td>
-      <td>190</td>
+      <td>191</td>
     </tr>
     <tr>
       <th>easycharge-services</th>
@@ -491,9 +477,9 @@ sieml                                                     -    209       -    20
     <tr>
       <th>reseau-alterbase-79</th>
       <td>-</td>
-      <td>18</td>
+      <td>16</td>
       <td>41</td>
-      <td>59</td>
+      <td>57</td>
     </tr>
     <tr>
       <th>sorel-energies</th>
@@ -524,16 +510,16 @@ sieml                                                     -    209       -    20
       <td>34</td>
     </tr>
     <tr>
-      <th>properphi</th>
-      <td>30</td>
+      <th>e-motum-sas-1</th>
       <td>-</td>
+      <td>30</td>
       <td>-</td>
       <td>30</td>
     </tr>
     <tr>
-      <th>e-motum-sas-1</th>
-      <td>-</td>
+      <th>properphi</th>
       <td>30</td>
+      <td>-</td>
       <td>-</td>
       <td>30</td>
     </tr>
@@ -548,8 +534,8 @@ sieml                                                     -    209       -    20
       <th>bp-france</th>
       <td>14</td>
       <td>-</td>
-      <td>5</td>
-      <td>19</td>
+      <td>14</td>
+      <td>28</td>
     </tr>
     <tr>
       <th>maneo</th>
@@ -566,9 +552,9 @@ sieml                                                     -    209       -    20
       <td>18</td>
     </tr>
     <tr>
-      <th>ev-map</th>
-      <td>-</td>
+      <th>energie-eure-et-loir</th>
       <td>17</td>
+      <td>-</td>
       <td>-</td>
       <td>17</td>
     </tr>
@@ -580,9 +566,9 @@ sieml                                                     -    209       -    20
       <td>17</td>
     </tr>
     <tr>
-      <th>energie-eure-et-loir</th>
-      <td>17</td>
+      <th>ev-map</th>
       <td>-</td>
+      <td>17</td>
       <td>-</td>
       <td>17</td>
     </tr>
@@ -594,18 +580,18 @@ sieml                                                     -    209       -    20
       <td>16</td>
     </tr>
     <tr>
+      <th>fuzed</th>
+      <td>-</td>
+      <td>5</td>
+      <td>11</td>
+      <td>16</td>
+    </tr>
+    <tr>
       <th>eoliberty</th>
       <td>-</td>
       <td>14</td>
       <td>-</td>
       <td>14</td>
-    </tr>
-    <tr>
-      <th>bornevo</th>
-      <td>13</td>
-      <td>-</td>
-      <td>-</td>
-      <td>13</td>
     </tr>
     <tr>
       <th>sodel</th>
@@ -615,14 +601,21 @@ sieml                                                     -    209       -    20
       <td>13</td>
     </tr>
     <tr>
-      <th>autorecharge</th>
+      <th>bornevo</th>
+      <td>13</td>
+      <td>-</td>
+      <td>-</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>sas-satcoms</th>
       <td>12</td>
       <td>-</td>
       <td>-</td>
       <td>12</td>
     </tr>
     <tr>
-      <th>sas-satcoms</th>
+      <th>autorecharge</th>
       <td>12</td>
       <td>-</td>
       <td>-</td>
@@ -650,17 +643,10 @@ sieml                                                     -    209       -    20
       <td>10</td>
     </tr>
     <tr>
-      <th>territoire-denergie-orne</th>
-      <td>-</td>
-      <td>4</td>
-      <td>5</td>
+      <th>regie-municipale-delectricite-de-loos</th>
       <td>9</td>
-    </tr>
-    <tr>
-      <th>r3</th>
       <td>-</td>
       <td>-</td>
-      <td>9</td>
       <td>9</td>
     </tr>
     <tr>
@@ -671,31 +657,24 @@ sieml                                                     -    209       -    20
       <td>9</td>
     </tr>
     <tr>
-      <th>citeos-boulogne-sur-mer</th>
-      <td>-</td>
-      <td>2</td>
-      <td>7</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <th>regie-municipale-delectricite-de-loos</th>
-      <td>9</td>
+      <th>r3</th>
       <td>-</td>
       <td>-</td>
       <td>9</td>
-    </tr>
-    <tr>
-      <th>solveo-energies</th>
-      <td>8</td>
-      <td>-</td>
-      <td>-</td>
-      <td>8</td>
+      <td>9</td>
     </tr>
     <tr>
       <th>i-bornes</th>
       <td>1</td>
       <td>4</td>
       <td>3</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>solveo-energies</th>
+      <td>8</td>
+      <td>-</td>
+      <td>-</td>
       <td>8</td>
     </tr>
     <tr>
@@ -706,6 +685,13 @@ sieml                                                     -    209       -    20
       <td>7</td>
     </tr>
     <tr>
+      <th>installation-dune-borne-22kwa-hostellerie-des-ducs</th>
+      <td>-</td>
+      <td>1</td>
+      <td>6</td>
+      <td>7</td>
+    </tr>
+    <tr>
       <th>charge-in</th>
       <td>6</td>
       <td>-</td>
@@ -713,11 +699,11 @@ sieml                                                     -    209       -    20
       <td>7</td>
     </tr>
     <tr>
-      <th>equipe-transport-data-gouv-fr</th>
+      <th>territoire-denergie-orne</th>
       <td>-</td>
-      <td>1</td>
+      <td>3</td>
+      <td>3</td>
       <td>6</td>
-      <td>7</td>
     </tr>
     <tr>
       <th>syndicat-intercommunal-de-lelectricite-et-du-gaz-de-leure</th>
@@ -727,6 +713,20 @@ sieml                                                     -    209       -    20
       <td>6</td>
     </tr>
     <tr>
+      <th>citeos-boulogne-sur-mer</th>
+      <td>-</td>
+      <td>-</td>
+      <td>6</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>conectys</th>
+      <td>4</td>
+      <td>1</td>
+      <td>-</td>
+      <td>5</td>
+    </tr>
+    <tr>
       <th>2ems</th>
       <td>3</td>
       <td>1</td>
@@ -734,16 +734,9 @@ sieml                                                     -    209       -    20
       <td>5</td>
     </tr>
     <tr>
-      <th>power-dot-france</th>
-      <td>-</td>
-      <td>1</td>
-      <td>4</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>conectys</th>
-      <td>4</td>
-      <td>1</td>
+      <th>inouid-smart-mobility</th>
+      <td>3</td>
+      <td>2</td>
       <td>-</td>
       <td>5</td>
     </tr>
@@ -755,11 +748,25 @@ sieml                                                     -    209       -    20
       <td>5</td>
     </tr>
     <tr>
-      <th>inouid-smart-mobility</th>
-      <td>3</td>
-      <td>2</td>
+      <th>tenao60</th>
       <td>-</td>
-      <td>5</td>
+      <td>4</td>
+      <td>-</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>kap-enerj</th>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>nm-securelec</th>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>eranovum-e-mobility-france</th>
@@ -776,30 +783,9 @@ sieml                                                     -    209       -    20
       <td>4</td>
     </tr>
     <tr>
-      <th>kap-enerj</th>
-      <td>4</td>
-      <td>-</td>
-      <td>-</td>
-      <td>4</td>
-    </tr>
-    <tr>
       <th>indelec-mobility</th>
       <td>4</td>
       <td>-</td>
-      <td>-</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>nm-securelec</th>
-      <td>4</td>
-      <td>-</td>
-      <td>-</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>tenao60</th>
-      <td>-</td>
-      <td>4</td>
       <td>-</td>
       <td>4</td>
     </tr>
@@ -809,6 +795,20 @@ sieml                                                     -    209       -    20
       <td>-</td>
       <td>-</td>
       <td>4</td>
+    </tr>
+    <tr>
+      <th>power-dot-france</th>
+      <td>-</td>
+      <td>-</td>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>imac2</th>
+      <td>-</td>
+      <td>3</td>
+      <td>-</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>enerjump</th>
@@ -832,13 +832,6 @@ sieml                                                     -    209       -    20
       <td>3</td>
     </tr>
     <tr>
-      <th>imac2</th>
-      <td>-</td>
-      <td>3</td>
-      <td>-</td>
-      <td>3</td>
-    </tr>
-    <tr>
       <th>france-solar-sas</th>
       <td>-</td>
       <td>3</td>
@@ -846,7 +839,14 @@ sieml                                                     -    209       -    20
       <td>3</td>
     </tr>
     <tr>
-      <th>peretti-groupe</th>
+      <th>normatech</th>
+      <td>1</td>
+      <td>1</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>swish</th>
       <td>2</td>
       <td>-</td>
       <td>-</td>
@@ -860,10 +860,10 @@ sieml                                                     -    209       -    20
       <td>2</td>
     </tr>
     <tr>
-      <th>swish</th>
-      <td>2</td>
+      <th>citeos-bordeaux</th>
       <td>-</td>
-      <td>-</td>
+      <td>1</td>
+      <td>1</td>
       <td>2</td>
     </tr>
     <tr>
@@ -888,10 +888,10 @@ sieml                                                     -    209       -    20
       <td>2</td>
     </tr>
     <tr>
-      <th>citeos-bordeaux</th>
+      <th>peretti-groupe</th>
+      <td>2</td>
       <td>-</td>
-      <td>1</td>
-      <td>1</td>
+      <td>-</td>
       <td>2</td>
     </tr>
     <tr>
@@ -930,9 +930,9 @@ sieml                                                     -    209       -    20
       <td>2</td>
     </tr>
     <tr>
-      <th>normatech</th>
-      <td>1</td>
-      <td>1</td>
+      <th>morbihan-energies</th>
+      <td>-</td>
+      <td>2</td>
       <td>-</td>
       <td>2</td>
     </tr>
@@ -1084,7 +1084,7 @@ sieml                                                     -    209       -    20
       <td>1</td>
     </tr>
     <tr>
-      <th>ekleo</th>
+      <th>ekleo-1</th>
       <td>1</td>
       <td>-</td>
       <td>-</td>
@@ -1271,15 +1271,20 @@ sieml                                                     -    209       -    20
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th rowspan="3" valign="top">bp-france</th>
+      <th rowspan="4" valign="top">bp-france</th>
       <th>1</th>
       <th>warning</th>
-      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
+      <th>plusieurs horaires pour une même station</th>
     </tr>
     <tr>
-      <th>4</th>
+      <th>6</th>
       <th>warning</th>
       <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
+      <th>7</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
     </tr>
     <tr>
       <th>14</th>
@@ -1332,13 +1337,8 @@ sieml                                                     -    209       -    20
       <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">citeos-boulogne-sur-mer</th>
-      <th>2</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th>7</th>
+      <th>citeos-boulogne-sur-mer</th>
+      <th>6</th>
       <th>warning</th>
       <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
     </tr>
@@ -1499,12 +1499,12 @@ sieml                                                     -    209       -    20
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
-      <th>11065</th>
+      <th>11076</th>
       <th>blocking</th>
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th>ekleo</th>
+      <th>ekleo-1</th>
       <th>1</th>
       <th>blocking</th>
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
@@ -1536,30 +1536,6 @@ sieml                                                     -    209       -    20
       <th>14</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th rowspan="6" valign="top">equipe-transport-data-gouv-fr</th>
-      <th rowspan="5" valign="top">1</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th rowspan="4" valign="top">warning</th>
-      <th>plusieurs horaires pour une même station</th>
-    </tr>
-    <tr>
-      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
-    </tr>
-    <tr>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
-      <th>plusieurs infos de réservation pour une même station</th>
-    </tr>
-    <tr>
-      <th>2</th>
-      <th>warning</th>
-      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
     <tr>
       <th>eranovum-e-mobility-france</th>
@@ -1602,6 +1578,24 @@ sieml                                                     -    209       -    20
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
+      <th rowspan="4" valign="top">fuzed</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>plusieurs horaires pour une même station</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">5</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">warning</th>
+      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
       <th>garage-chene-total-energie-citroen</th>
       <th>1</th>
       <th>blocking</th>
@@ -1619,12 +1613,12 @@ sieml                                                     -    209       -    20
       <th>aucun type de prise précisé sur l'ensemble des points de charge</th>
     </tr>
     <tr>
-      <th>9</th>
+      <th>19</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
     </tr>
     <tr>
-      <th>49</th>
+      <th>52</th>
       <th>warning</th>
       <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
     </tr>
@@ -1639,27 +1633,27 @@ sieml                                                     -    209       -    20
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th>288</th>
+      <th>309</th>
       <th>warning</th>
       <th>plusieurs infos de réservation pour une même station</th>
     </tr>
     <tr>
-      <th>293</th>
-      <th>warning</th>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
-      <th>455</th>
+      <th>534</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
     </tr>
     <tr>
-      <th>576</th>
+      <th>974</th>
       <th>warning</th>
       <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
     <tr>
-      <th>731</th>
+      <th>1301</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>1717</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -1773,6 +1767,30 @@ sieml                                                     -    209       -    20
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
+      <th rowspan="6" valign="top">installation-dune-borne-22kwa-hostellerie-des-ducs</th>
+      <th rowspan="5" valign="top">1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">warning</th>
+      <th>plusieurs horaires pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de réservation pour une même station</th>
+    </tr>
+    <tr>
+      <th>2</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
       <th>ionity-gmbh</th>
       <th>121</th>
       <th>blocking</th>
@@ -1791,17 +1809,17 @@ sieml                                                     -    209       -    20
       <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
     </tr>
     <tr>
-      <th>82</th>
+      <th>128</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
     </tr>
     <tr>
-      <th>617</th>
+      <th>618</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
     </tr>
     <tr>
-      <th>6283</th>
+      <th>6294</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -1914,40 +1932,10 @@ sieml                                                     -    209       -    20
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th rowspan="7" valign="top">morbihan-energies</th>
-      <th>1</th>
-      <th>warning</th>
-      <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
-    </tr>
-    <tr>
-      <th>3</th>
-      <th>warning</th>
-      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
-    </tr>
-    <tr>
-      <th>5</th>
-      <th>warning</th>
-      <th>plusieurs infos de réservation pour une même station</th>
-    </tr>
-    <tr>
-      <th>8</th>
-      <th>warning</th>
-      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
-    </tr>
-    <tr>
-      <th>188</th>
+      <th>morbihan-energies</th>
+      <th>2</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th>199</th>
-      <th>warning</th>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
-      <th>398</th>
-      <th>warning</th>
-      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
     <tr>
       <th>multiples</th>
@@ -2023,18 +2011,13 @@ sieml                                                     -    209       -    20
       <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
     <tr>
-      <th>183</th>
+      <th>184</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">power-dot-france</th>
-      <th>1</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th>4</th>
+      <th>power-dot-france</th>
+      <th>3</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
     </tr>
@@ -2096,7 +2079,7 @@ sieml                                                     -    209       -    20
     </tr>
     <tr>
       <th rowspan="2" valign="top">reseau-alterbase-79</th>
-      <th>18</th>
+      <th>16</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -2209,37 +2192,6 @@ sieml                                                     -    209       -    20
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th rowspan="6" valign="top">spbr1</th>
-      <th>1</th>
-      <th>warning</th>
-      <th>plusieurs horaires pour une même station</th>
-    </tr>
-    <tr>
-      <th>9</th>
-      <th>warning</th>
-      <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
-    </tr>
-    <tr>
-      <th>16</th>
-      <th>warning</th>
-      <th>plusieurs infos de réservation pour une même station</th>
-    </tr>
-    <tr>
-      <th>76</th>
-      <th>warning</th>
-      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
-    </tr>
-    <tr>
-      <th>805</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th>814</th>
-      <th>warning</th>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
       <th>spie-citynetworks</th>
       <th>2</th>
       <th>blocking</th>
@@ -2348,13 +2300,8 @@ sieml                                                     -    209       -    20
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th rowspan="3" valign="top">territoire-denergie-orne</th>
-      <th>1</th>
-      <th>warning</th>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">4</th>
+      <th rowspan="2" valign="top">territoire-denergie-orne</th>
+      <th rowspan="2" valign="top">3</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -2369,7 +2316,12 @@ sieml                                                     -    209       -    20
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
-      <th rowspan="7" valign="top">totalenergies-marketing-france</th>
+      <th rowspan="8" valign="top">totalenergies-marketing-france</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
       <th>2</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
@@ -2380,7 +2332,7 @@ sieml                                                     -    209       -    20
       <th>plusieurs horaires pour une même station</th>
     </tr>
     <tr>
-      <th>23</th>
+      <th>24</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -2395,7 +2347,7 @@ sieml                                                     -    209       -    20
       <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
     <tr>
-      <th>180</th>
+      <th>181</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
     </tr>
@@ -2478,56 +2430,56 @@ sieml                                                     -    209       -    20
                 
                     
                         <pre><code class="language-python"> EF  |   T2  | Chademo |  CCS  |
-0.00   22.00     0.00     0.00 | 12196 stations
-0.00    7.36     0.00     0.00 | 3083 stations
-0.00    3.68     0.00     0.00 | 1591 stations
-0.00    0.00     0.00     0.00 | 1094 stations
-0.00   18.00     0.00     0.00 | 971 stations
-0.00    0.00     0.00   150.00 | 841 stations
+0.00   22.00     0.00     0.00 | 12149 stations
+0.00    7.36     0.00     0.00 | 3085 stations
+0.00    3.68     0.00     0.00 | 1590 stations
+0.00    0.00     0.00     0.00 | 1141 stations
+0.00   18.00     0.00     0.00 | 970 stations
+0.00    0.00     0.00   150.00 | 847 stations
 0.00   22.00     0.00    24.00 | 812 stations
 0.00    7.00     0.00     0.00 | 674 stations
-0.00   22.08     0.00     0.00 | 627 stations
-0.00   22.00     0.00   150.00 | 441 stations
-0.00    7.40     0.00     0.00 | 440 stations
+0.00   22.08     0.00     0.00 | 628 stations
+0.00   22.00     0.00   150.00 | 444 stations
+0.00    7.40     0.00     0.00 | 441 stations
 0.00   22.08     0.00    50.00 | 440 stations
 0.00    0.00     0.00    24.00 | 336 stations
 0.00   24.00     0.00     0.00 | 314 stations
 0.00    0.00     0.00    50.00 | 288 stations
-0.00   22.00     0.00    50.00 | 262 stations
+0.00   22.00     0.00    50.00 | 263 stations
 0.00   22.00     0.00    25.00 | 261 stations
 0.00    0.00    22.00     0.00 | 211 stations
+0.00   22.00    50.00   200.00 | 210 stations
 0.00    0.00     0.00   250.00 | 209 stations
-0.00   22.00    50.00   200.00 | 198 stations
-0.00   22.00    50.00   100.00 | 196 stations
-0.00   22.00     0.00   300.00 | 186 stations
-0.00   22.00     0.00   120.00 | 171 stations
-0.00   22.00    50.00    50.00 | 154 stations
+0.00   22.00    50.00   100.00 | 208 stations
+0.00   22.00     0.00   300.00 | 188 stations
+0.00   22.00     0.00   120.00 | 178 stations
+0.00   22.00    50.00    50.00 | 157 stations
 0.00   11.00     0.00     0.00 | 150 stations
 0.00   44.00     0.00    50.00 | 150 stations
 0.00    0.00     0.00   180.00 | 142 stations
-0.00   22.00     0.00    60.00 | 136 stations
+0.00   22.00     0.00    60.00 | 138 stations
 2.30   22.00     0.00     0.00 | 134 stations
 0.00   22.00    25.00    25.00 | 106 stations
 0.00   36.00    36.00    36.00 | 103 stations
 0.00   22.00     0.00   180.00 | 96 stations
 0.00    0.00     0.00   300.00 | 90 stations
 4.00    0.00     0.00    22.00 | 86 stations
-0.00    0.00     0.00   200.00 | 82 stations
+0.00    0.00     0.00   200.00 | 83 stations
 0.00   43.00     0.00    50.00 | 77 stations
 0.00   43.00    50.00    50.00 | 75 stations
 0.00    0.00    50.00     0.00 | 71 stations
+0.00   22.00    50.00   120.00 | 69 stations
+0.00   22.00    50.00   187.50 | 68 stations
 0.00   22.08     0.00    24.00 | 66 stations
 0.00   22.00     0.00   100.00 | 65 stations
-0.00   22.00    50.00   120.00 | 65 stations
 0.00   22.00    63.00   300.00 | 63 stations
 0.00   22.08     0.00   200.00 | 60 stations
+0.00   22.00    50.00   150.00 | 57 stations
 0.00    0.00    54.00   175.00 | 57 stations
 0.00    0.00     0.00    25.00 | 55 stations
-0.00   22.00    50.00   150.00 | 54 stations
 0.00   36.00     0.00    36.00 | 54 stations
-0.00   22.00    50.00   187.50 | 53 stations
+0.00   22.00    50.00    60.00 | 45 stations
 3.00    0.00     0.00     0.00 | 45 stations
-0.00   22.00    50.00    60.00 | 44 stations
 0.00   22.00    24.00    24.00 | 43 stations
 0.00    0.00     0.00   100.00 | 40 stations
 0.00   12.00     0.00   120.00 | 33 stations
@@ -2539,8 +2491,8 @@ sieml                                                     -    209       -    20
 0.00   44.00    44.00    50.00 | 24 stations
 0.00    0.00     7.40     0.00 | 24 stations
 2.30   11.00     0.00     0.00 | 23 stations
+0.00   22.00    50.00   160.00 | 23 stations
 0.00    0.00    54.00   300.00 | 23 stations
-0.00   22.00    50.00   160.00 | 22 stations
 0.00    0.00    54.00     0.00 | 22 stations
 0.00    0.00    54.00   150.00 | 22 stations
 0.00   43.00     0.00   100.00 | 21 stations
@@ -2548,15 +2500,15 @@ sieml                                                     -    209       -    20
 0.00   36.00     0.00     0.00 | 18 stations
 0.00    0.00    11.00     0.00 | 18 stations
 0.00   43.00    50.00   300.00 | 17 stations
+0.00   22.00     0.00   160.00 | 17 stations
 0.00    0.00     0.00    60.00 | 16 stations
-0.00   22.00     0.00   160.00 | 16 stations
 0.00    0.00     0.00   320.00 | 16 stations
-0.00   22.00    50.00   188.00 | 16 stations
+3.68    0.00     0.00     0.00 | 15 stations
 0.00   44.00    50.00    50.00 | 14 stations
 0.00    0.00    50.00    50.00 | 14 stations
-3.68    0.00     0.00     0.00 | 14 stations
 0.00    3.70     0.00     0.00 | 13 stations
 0.00    0.00    63.00     0.00 | 13 stations
+0.00   22.00    50.00   180.00 | 13 stations
 0.00   22.00    43.00    50.00 | 12 stations
 0.00   22.00     0.00    22.00 | 12 stations
 0.00    0.00     0.00    47.00 | 12 stations
@@ -2564,16 +2516,18 @@ sieml                                                     -    209       -    20
 0.00   22.00     0.00   200.00 | 10 stations
 0.00    0.00     0.00   120.00 | 10 stations
 0.00    0.00     0.00    30.00 | 10 stations
-0.00   22.17    50.00   200.00 | 10 stations
-0.00   22.00    50.00   180.00 | 10 stations
 1.70   22.00     0.00     0.00 | 10 stations
 0.00    0.00     0.00   225.00 | 9 stations
 0.00   22.00     0.00   225.00 | 9 stations
 0.00    0.00    24.00     0.00 | 9 stations
+0.00   22.17    50.00   200.00 | 9 stations
+0.00   22.00     0.00   240.00 | 8 stations
 3.70    0.00     0.00     0.00 | 8 stations
 0.00   11.04     0.00     0.00 | 7 stations
-0.00   22.00     0.00   240.00 | 7 stations
 0.00    0.00     0.00   175.00 | 7 stations
+0.00   22.00     0.00   187.50 | 7 stations
+0.00   22.00    50.00   188.00 | 7 stations
+0.00   22.00     0.00   400.00 | 6 stations
 0.00   22.00     0.00    75.00 | 6 stations
 0.00   22.08     0.00   150.00 | 6 stations
 0.00   43.00    50.00   150.00 | 6 stations
@@ -2591,8 +2545,6 @@ sieml                                                     -    209       -    20
 0.00   22.00     0.00    80.00 | 5 stations
 3.00    0.00    50.00    50.00 | 5 stations
 0.00    0.00     0.00   400.00 | 5 stations
-0.00    0.00    50.00   187.50 | 5 stations
-0.00   22.00     0.00   187.50 | 5 stations
 0.00   14.00     0.00     0.00 | 5 stations
 0.00   22.00    50.00   400.00 | 4 stations
 0.00    0.00     0.00    75.00 | 4 stations
@@ -2603,7 +2555,7 @@ sieml                                                     -    209       -    20
 0.00   22.00     0.00    40.00 | 4 stations
 0.00   43.00     0.00   150.00 | 4 stations
 0.00    0.00    22.00   150.00 | 4 stations
-0.00    0.00    50.00   100.00 | 4 stations
+0.00   22.00    50.00    80.00 | 4 stations
 0.00   22.00     0.00    54.00 | 4 stations
 0.00    0.00     0.00   160.00 | 4 stations
 2.30    7.36     0.00     0.00 | 3 stations
@@ -2615,14 +2567,16 @@ sieml                                                     -    209       -    20
 0.00    3.00     0.00     0.00 | 3 stations
 0.00    0.00     0.00   124.00 | 3 stations
 0.00   44.00     0.00   100.00 | 3 stations
+0.00    0.00    50.00   150.00 | 3 stations
 3.70   22.00     0.00     0.00 | 3 stations
-0.00   22.00    50.00    80.00 | 3 stations
-0.00   22.00     0.00   188.00 | 3 stations
+0.00    0.00    50.00   100.00 | 3 stations
+0.00   22.00    50.00   175.00 | 3 stations
+0.00    0.00     0.00   187.50 | 3 stations
 0.00   43.00    50.00   100.00 | 3 stations
 0.00   42.00     0.00    42.00 | 3 stations
 0.00   44.00    50.00   400.00 | 2 stations
 0.00    7.00     0.00   100.00 | 2 stations
-0.00   22.00     0.00   400.00 | 2 stations
+0.00   11.00     0.00   150.00 | 2 stations
 0.00   22.00     0.00   360.00 | 2 stations
 0.00    0.00     0.00    70.00 | 2 stations
 0.00   22.00    60.00    60.00 | 2 stations
@@ -2639,11 +2593,9 @@ sieml                                                     -    209       -    20
 0.00    0.00    43.00    50.00 | 2 stations
 0.00    0.00    50.00   175.00 | 2 stations
 0.00   22.00    50.00   210.00 | 2 stations
-0.00    0.00    50.00   150.00 | 2 stations
 0.00    0.00     0.00    65.00 | 2 stations
-0.00    0.00     0.00   187.50 | 2 stations
 0.00   22.00     0.00   110.00 | 2 stations
-0.00   22.00    50.00   175.00 | 2 stations
+0.00   22.00     0.00   188.00 | 2 stations
 0.00   22.17    50.00   100.00 | 2 stations
 0.00    0.00     0.00    48.00 | 2 stations
 0.00    0.00     0.00   206.00 | 2 stations
@@ -2659,7 +2611,6 @@ sieml                                                     -    209       -    20
 2.30   11.04     0.00     0.00 | 1 stations
 0.00   15.00     0.00   300.00 | 1 stations
 0.00   22.00    22.00    22.00 | 1 stations
-0.00   11.00     0.00   150.00 | 1 stations
 0.00   22.08    50.00    50.00 | 1 stations
 0.00    0.00     0.00   184.00 | 1 stations
 0.00   27.00     0.00     0.00 | 1 stations
@@ -2712,17 +2663,21 @@ sieml                                                     -    209       -    20
 0.00    0.00     0.00   360.00 | 1 stations
 0.00   22.00     0.00   114.00 | 1 stations
 0.00   22.00    50.00   178.00 | 1 stations
+0.00   11.00     0.00    25.00 | 1 stations
 0.00   10.00    50.00   120.00 | 1 stations
 0.00   10.00     0.00   120.00 | 1 stations
+0.00   22.17    60.00   100.00 | 1 stations
 0.00   22.17    50.00    50.00 | 1 stations
 0.00    7.40    50.00   100.00 | 1 stations
-0.00   22.17     0.00   188.00 | 1 stations
+0.00   22.17     0.00   187.50 | 1 stations
 0.00   22.17     0.00   200.00 | 1 stations
 0.00   22.00    50.00   125.00 | 1 stations
-0.00   24.00    50.00   187.50 | 1 stations
+0.00   24.00    24.00    24.00 | 1 stations
 0.00   22.00    30.00    30.00 | 1 stations
-0.00   22.17    50.00   188.00 | 1 stations
-0.00    0.00    50.00   120.00 | 1 stations
+0.00   22.17    50.00   187.50 | 1 stations
+0.00   22.00    50.00   149.50 | 1 stations
+0.00   22.00    50.00   169.00 | 1 stations
+0.00   22.00     0.00   151.00 | 1 stations
 0.00    7.36     0.00   100.00 | 1 stations
 0.00   22.08     0.00   300.00 | 1 stations
 0.00   22.00     0.00    30.00 | 1 stations
@@ -2741,7 +2696,7 @@ sieml                                                     -    209       -    20
 3.00   43.00    36.00   160.00 | 1 stations
 0.00   25.00    25.00    25.00 | 1 stations
 0.00    0.00     0.00    43.00 | 1 stations
-0.00    0.00     0.00    72.00 | 1 stations
+0.00    0.00     0.00   122.00 | 1 stations
 0.00    3.22     0.00     0.00 | 1 stations
 0.00    7.36     0.00   200.00 | 1 stations
 0.00    7.36     0.00    24.00 | 1 stations
@@ -2769,7 +2724,7 @@ sieml                                                     -    209       -    20
     </main>
     <footer class="container report-container report-foot">
         <small>
-            <p>Généré le 2025-01-07 06:54:44 UTC</p>
+            <p>Généré le 2025-01-08 06:54:41 UTC</p>
         </small>
     </footer>
     <script src='assets/prism.js'></script>
