@@ -18,7 +18,7 @@
             <li>
                 <hgroup>
                     <h1>Rapport de run Jungle-Bus Group IRVE OpenData</h1>
-                    <p>2025-01-10 06:54:35 UTC</p>
+                    <p>2025-01-11 06:54:41 UTC</p>
                 </hgroup>
             </li>
         </ul>
@@ -121,43 +121,45 @@
                     <summary>Expand/Collapse</summary>
                 
                     
-                        <pre><code class="language-python">120503 lignes (PDCs) en entrée | 9441 PDCs en double
-29526 stations reconnues sur 49611 station_id distincts en entrée
-56199 problèmes trouvés pour 111062 PDCs distincts en entrée (il peut exister plusieurs problèmes par PDC/station):
- &gt; [blocking] 37679 x le format de l&#39;identifiant ref:EU:EVSE (id_station_itinerance) n&#39;est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l&#39;analyse Osmose
+                        <pre><code class="language-python">120276 lignes (PDCs) en entrée | 9441 PDCs en double
+29165 stations reconnues sur 49272 station_id distincts en entrée
+55876 problèmes trouvés pour 110835 PDCs distincts en entrée (il peut exister plusieurs problèmes par PDC/station):
+ &gt; [blocking] 37810 x le format de l&#39;identifiant ref:EU:EVSE (id_station_itinerance) n&#39;est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l&#39;analyse Osmose
  &gt;    [error]   241 x aucun type de prise précisé sur l&#39;ensemble des points de charge
- &gt;    [error] 10012 x le nombre de point de charge de la station n&#39;est pas cohérent avec la liste des points de charge fournie
+ &gt;    [error]  9657 x le nombre de point de charge de la station n&#39;est pas cohérent avec la liste des points de charge fournie
  &gt;    [error]  1447 x plusieurs sources pour un même id
  &gt;  [warning]   236 x le champ station_deux_roues n&#39;est pas valide
- &gt;  [warning]   975 x le numéro de téléphone de l&#39;opérateur (telephone_operateur) est dans un format invalide
+ &gt;  [warning]   974 x le numéro de téléphone de l&#39;opérateur (telephone_operateur) est dans un format invalide
  &gt;  [warning]     9 x plusieurs horaires pour une même station
  &gt;  [warning]  1712 x plusieurs infos d&#39;accessibilité PMR (accessibilite_pmr) pour une même station
  &gt;  [warning]    10 x plusieurs infos de gratuité (gratuit) pour une même station
  &gt;  [warning]    59 x plusieurs infos de paiement (paiement_acte) pour une même station
  &gt;  [warning]  1676 x plusieurs infos de paiement (paiement_cb) pour une même station
  &gt;  [warning]   311 x plusieurs infos de réservation pour une même station
- &gt;  [warning]   323 x puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)
- &gt;  [warning]   854 x puissance nominale déclarée pour prise EF supérieure à la norme (4)
- &gt;  [warning]   655 x puissance nominale déclarée pour prise T2 supérieure à la norme (43)
+ &gt;  [warning]   311 x puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)
+ &gt;  [warning]   837 x puissance nominale déclarée pour prise EF supérieure à la norme (4)
+ &gt;  [warning]   586 x puissance nominale déclarée pour prise T2 supérieure à la norme (43)
 
 Severité
-blocking    37679
-error       11700
-warning      6820
+blocking    37810
+error       11345
+warning      6721
 
 Top 25 Organisations les plus problematiques:
 
 Sévérité                                           blocking  error warning  TOTAL
 Organisation                                                                     
-TOTAL                                                 37679  11700    6820  56199
-alize-charge                                          16439      -       -  16439
-eco-movement                                          11078     24      35  11137
-izivia                                                    -   6300     743   7043
-gireve-2                                                198   1737    3325   5260
+TOTAL                                                 37810  11345    6721  55876
+alize-charge                                          16550      -       -  16550
+eco-movement                                          11080     24      35  11139
+izivia                                                    -   5947     645   6592
 lidl                                                   4111      -       -   4111
+gireve-2                                                198   1474    2259   3931
 multiples                                                 -   1447       -   1447
 engie-mobilites-electriques                               -    502     502   1004
+le-reseau-de-recharge-pour-vehicules-electrique...        -    177     760    937
 rossini-energy                                          846      -       -    846
+morbihan-energies                                         -    188     614    802
 allego-1                                                638      -       -    638
 syndicat-departemental-denergie-du-tarn                 634      -       -    634
 bump                                                    577      -       -    577
@@ -165,16 +167,14 @@ totalenergies-marketing-france                          232     23     307    56
 driveco                                                   -    322     199    521
 soregies                                                478      -       -    478
 qovoltis                                                  -    233     232    465
-syndicat-departemental-denergie-de-la-haute-gar...        -     95     297    392
 ev-cars                                                   -     64     322    386
 virta                                                   376      2       -    378
-zeborne                                                 377      -       -    377
+zeborne                                                 373      -       -    373
 sowatt-solutions                                        339      -       -    339
 evzen-smeg-developpement                                  -      4     263    267
 ubitricity                                              257      -       -    257
 sieml                                                     -    209       -    209
-sydela                                                    -    192       -    192
-plus-de-bornes                                            -    184       7    191</code></pre>
+sydela                                                    -    192       -    192</code></pre>
                     
                 
                 </details>
@@ -210,38 +210,31 @@ plus-de-bornes                                            -    184       7    19
   <tbody>
     <tr>
       <th>TOTAL</th>
-      <td>37679</td>
-      <td>11700</td>
-      <td>6820</td>
-      <td>56199</td>
+      <td>37810</td>
+      <td>11345</td>
+      <td>6721</td>
+      <td>55876</td>
     </tr>
     <tr>
       <th>alize-charge</th>
-      <td>16439</td>
+      <td>16550</td>
       <td>-</td>
       <td>-</td>
-      <td>16439</td>
+      <td>16550</td>
     </tr>
     <tr>
       <th>eco-movement</th>
-      <td>11078</td>
+      <td>11080</td>
       <td>24</td>
       <td>35</td>
-      <td>11137</td>
+      <td>11139</td>
     </tr>
     <tr>
       <th>izivia</th>
       <td>-</td>
-      <td>6300</td>
-      <td>743</td>
-      <td>7043</td>
-    </tr>
-    <tr>
-      <th>gireve-2</th>
-      <td>198</td>
-      <td>1737</td>
-      <td>3325</td>
-      <td>5260</td>
+      <td>5947</td>
+      <td>645</td>
+      <td>6592</td>
     </tr>
     <tr>
       <th>lidl</th>
@@ -249,6 +242,13 @@ plus-de-bornes                                            -    184       7    19
       <td>-</td>
       <td>-</td>
       <td>4111</td>
+    </tr>
+    <tr>
+      <th>gireve-2</th>
+      <td>198</td>
+      <td>1474</td>
+      <td>2259</td>
+      <td>3931</td>
     </tr>
     <tr>
       <th>multiples</th>
@@ -265,11 +265,25 @@ plus-de-bornes                                            -    184       7    19
       <td>1004</td>
     </tr>
     <tr>
+      <th>le-reseau-de-recharge-pour-vehicules-electriques-de-la-metropole-du-grand-paris</th>
+      <td>-</td>
+      <td>177</td>
+      <td>760</td>
+      <td>937</td>
+    </tr>
+    <tr>
       <th>rossini-energy</th>
       <td>846</td>
       <td>-</td>
       <td>-</td>
       <td>846</td>
+    </tr>
+    <tr>
+      <th>morbihan-energies</th>
+      <td>-</td>
+      <td>188</td>
+      <td>614</td>
+      <td>802</td>
     </tr>
     <tr>
       <th>allego-1</th>
@@ -321,13 +335,6 @@ plus-de-bornes                                            -    184       7    19
       <td>465</td>
     </tr>
     <tr>
-      <th>syndicat-departemental-denergie-de-la-haute-garonne</th>
-      <td>-</td>
-      <td>95</td>
-      <td>297</td>
-      <td>392</td>
-    </tr>
-    <tr>
       <th>ev-cars</th>
       <td>-</td>
       <td>64</td>
@@ -343,10 +350,10 @@ plus-de-bornes                                            -    184       7    19
     </tr>
     <tr>
       <th>zeborne</th>
-      <td>377</td>
+      <td>373</td>
       <td>-</td>
       <td>-</td>
-      <td>377</td>
+      <td>373</td>
     </tr>
     <tr>
       <th>sowatt-solutions</th>
@@ -398,17 +405,17 @@ plus-de-bornes                                            -    184       7    19
       <td>152</td>
     </tr>
     <tr>
-      <th>greenspot-enersoft</th>
-      <td>-</td>
-      <td>128</td>
-      <td>14</td>
-      <td>142</td>
-    </tr>
-    <tr>
       <th>car2plug</th>
       <td>140</td>
       <td>-</td>
       <td>-</td>
+      <td>140</td>
+    </tr>
+    <tr>
+      <th>greenspot-enersoft</th>
+      <td>-</td>
+      <td>126</td>
+      <td>14</td>
       <td>140</td>
     </tr>
     <tr>
@@ -419,18 +426,18 @@ plus-de-bornes                                            -    184       7    19
       <td>132</td>
     </tr>
     <tr>
+      <th>mobilize-power-solutions</th>
+      <td>131</td>
+      <td>-</td>
+      <td>-</td>
+      <td>131</td>
+    </tr>
+    <tr>
       <th>ionity-gmbh</th>
       <td>121</td>
       <td>-</td>
       <td>-</td>
       <td>121</td>
-    </tr>
-    <tr>
-      <th>mobilize-power-solutions</th>
-      <td>113</td>
-      <td>-</td>
-      <td>-</td>
-      <td>113</td>
     </tr>
     <tr>
       <th>zeenco</th>
@@ -448,10 +455,10 @@ plus-de-bornes                                            -    184       7    19
     </tr>
     <tr>
       <th>lumiin</th>
-      <td>98</td>
+      <td>99</td>
       <td>-</td>
       <td>-</td>
-      <td>98</td>
+      <td>99</td>
     </tr>
     <tr>
       <th>qwello</th>
@@ -503,16 +510,16 @@ plus-de-bornes                                            -    184       7    19
       <td>34</td>
     </tr>
     <tr>
-      <th>e-motum-sas-1</th>
-      <td>-</td>
+      <th>properphi</th>
       <td>30</td>
+      <td>-</td>
       <td>-</td>
       <td>30</td>
     </tr>
     <tr>
-      <th>properphi</th>
-      <td>30</td>
+      <th>e-motum-sas-1</th>
       <td>-</td>
+      <td>30</td>
       <td>-</td>
       <td>30</td>
     </tr>
@@ -529,6 +536,13 @@ plus-de-bornes                                            -    184       7    19
       <td>-</td>
       <td>14</td>
       <td>28</td>
+    </tr>
+    <tr>
+      <th>ev-map</th>
+      <td>-</td>
+      <td>19</td>
+      <td>-</td>
+      <td>19</td>
     </tr>
     <tr>
       <th>maneo</th>
@@ -552,25 +566,11 @@ plus-de-bornes                                            -    184       7    19
       <td>17</td>
     </tr>
     <tr>
-      <th>ev-map</th>
-      <td>-</td>
-      <td>17</td>
-      <td>-</td>
-      <td>17</td>
-    </tr>
-    <tr>
       <th>energie-eure-et-loir</th>
       <td>17</td>
       <td>-</td>
       <td>-</td>
       <td>17</td>
-    </tr>
-    <tr>
-      <th>fuzed</th>
-      <td>-</td>
-      <td>5</td>
-      <td>11</td>
-      <td>16</td>
     </tr>
     <tr>
       <th>citeos-ingenierie-idf-est-cogelum-idf</th>
@@ -601,17 +601,17 @@ plus-de-bornes                                            -    184       7    19
       <td>13</td>
     </tr>
     <tr>
-      <th>voltania</th>
-      <td>-</td>
-      <td>9</td>
-      <td>3</td>
-      <td>12</td>
-    </tr>
-    <tr>
       <th>sas-satcoms</th>
       <td>12</td>
       <td>-</td>
       <td>-</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>voltania</th>
+      <td>-</td>
+      <td>9</td>
+      <td>3</td>
       <td>12</td>
     </tr>
     <tr>
@@ -629,17 +629,17 @@ plus-de-bornes                                            -    184       7    19
       <td>10</td>
     </tr>
     <tr>
-      <th>herve-thermique</th>
-      <td>7</td>
-      <td>-</td>
-      <td>2</td>
-      <td>9</td>
-    </tr>
-    <tr>
       <th>territoire-denergie-orne</th>
       <td>-</td>
       <td>4</td>
       <td>5</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>herve-thermique</th>
+      <td>7</td>
+      <td>-</td>
+      <td>2</td>
       <td>9</td>
     </tr>
     <tr>
@@ -657,11 +657,18 @@ plus-de-bornes                                            -    184       7    19
       <td>9</td>
     </tr>
     <tr>
-      <th>citeos-boulogne-sur-mer</th>
+      <th>inforomu</th>
       <td>-</td>
       <td>2</td>
+      <td>6</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>jerecharge-com</th>
+      <td>-</td>
+      <td>1</td>
       <td>7</td>
-      <td>9</td>
+      <td>8</td>
     </tr>
     <tr>
       <th>solveo-energies</th>
@@ -678,11 +685,11 @@ plus-de-bornes                                            -    184       7    19
       <td>8</td>
     </tr>
     <tr>
-      <th>jerecharge-com</th>
-      <td>-</td>
-      <td>1</td>
+      <th>see-you-sun</th>
       <td>7</td>
-      <td>8</td>
+      <td>-</td>
+      <td>-</td>
+      <td>7</td>
     </tr>
     <tr>
       <th>charge-in</th>
@@ -692,18 +699,11 @@ plus-de-bornes                                            -    184       7    19
       <td>7</td>
     </tr>
     <tr>
-      <th>installation-dune-borne-22kwa-hostellerie-des-ducs</th>
+      <th>citeos-boulogne-sur-mer</th>
       <td>-</td>
-      <td>1</td>
+      <td>-</td>
       <td>6</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <th>see-you-sun</th>
-      <td>7</td>
-      <td>-</td>
-      <td>-</td>
-      <td>7</td>
+      <td>6</td>
     </tr>
     <tr>
       <th>syndicat-intercommunal-de-lelectricite-et-du-gaz-de-leure</th>
@@ -711,6 +711,13 @@ plus-de-bornes                                            -    184       7    19
       <td>4</td>
       <td>-</td>
       <td>6</td>
+    </tr>
+    <tr>
+      <th>allcoms-technologies</th>
+      <td>5</td>
+      <td>-</td>
+      <td>-</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>2ems</th>
@@ -727,21 +734,14 @@ plus-de-bornes                                            -    184       7    19
       <td>5</td>
     </tr>
     <tr>
-      <th>allcoms-technologies</th>
-      <td>5</td>
-      <td>-</td>
+      <th>conectys</th>
+      <td>4</td>
+      <td>1</td>
       <td>-</td>
       <td>5</td>
     </tr>
     <tr>
-      <th>tenao60</th>
-      <td>-</td>
-      <td>4</td>
-      <td>-</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>nm-securelec</th>
+      <th>kap-enerj</th>
       <td>4</td>
       <td>-</td>
       <td>-</td>
@@ -755,7 +755,28 @@ plus-de-bornes                                            -    184       7    19
       <td>4</td>
     </tr>
     <tr>
+      <th>tenao60</th>
+      <td>-</td>
+      <td>4</td>
+      <td>-</td>
+      <td>4</td>
+    </tr>
+    <tr>
       <th>indelec-mobility</th>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>virta-global-gifi-caudebec-1</th>
+      <td>4</td>
+      <td>-</td>
+      <td>-</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>nm-securelec</th>
       <td>4</td>
       <td>-</td>
       <td>-</td>
@@ -769,18 +790,18 @@ plus-de-bornes                                            -    184       7    19
       <td>4</td>
     </tr>
     <tr>
-      <th>kap-enerj</th>
-      <td>4</td>
+      <th>hagenum</th>
+      <td>1</td>
+      <td>2</td>
       <td>-</td>
-      <td>-</td>
-      <td>4</td>
+      <td>3</td>
     </tr>
     <tr>
-      <th>virta-global-gifi-caudebec-1</th>
-      <td>4</td>
+      <th>france-solar-sas</th>
       <td>-</td>
+      <td>3</td>
       <td>-</td>
-      <td>4</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>imac2</th>
@@ -797,24 +818,10 @@ plus-de-bornes                                            -    184       7    19
       <td>3</td>
     </tr>
     <tr>
-      <th>france-solar-sas</th>
-      <td>-</td>
-      <td>3</td>
-      <td>-</td>
-      <td>3</td>
-    </tr>
-    <tr>
       <th>kallista-bdr</th>
       <td>-</td>
       <td>1</td>
       <td>2</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>hagenum</th>
-      <td>1</td>
-      <td>2</td>
-      <td>-</td>
       <td>3</td>
     </tr>
     <tr>
@@ -825,23 +832,16 @@ plus-de-bornes                                            -    184       7    19
       <td>3</td>
     </tr>
     <tr>
+      <th>philippi</th>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
       <th>acelec-charge</th>
       <td>-</td>
       <td>2</td>
-      <td>-</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>normatech</th>
-      <td>1</td>
-      <td>1</td>
-      <td>-</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>swish</th>
-      <td>2</td>
-      <td>-</td>
       <td>-</td>
       <td>2</td>
     </tr>
@@ -853,17 +853,17 @@ plus-de-bornes                                            -    184       7    19
       <td>2</td>
     </tr>
     <tr>
+      <th>ecarmobility</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
       <th>citeos-bordeaux</th>
       <td>-</td>
       <td>1</td>
       <td>1</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>conectys</th>
-      <td>1</td>
-      <td>1</td>
-      <td>-</td>
       <td>2</td>
     </tr>
     <tr>
@@ -874,14 +874,14 @@ plus-de-bornes                                            -    184       7    19
       <td>2</td>
     </tr>
     <tr>
-      <th>ecarmobility</th>
+      <th>idex-solar-charging-stations</th>
+      <td>-</td>
+      <td>-</td>
       <td>2</td>
-      <td>-</td>
-      <td>-</td>
       <td>2</td>
     </tr>
     <tr>
-      <th>peretti-groupe</th>
+      <th>lg-electricite</th>
       <td>2</td>
       <td>-</td>
       <td>-</td>
@@ -902,35 +902,7 @@ plus-de-bornes                                            -    184       7    19
       <td>2</td>
     </tr>
     <tr>
-      <th>idex-solar-charging-stations</th>
-      <td>-</td>
-      <td>-</td>
-      <td>2</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>lg-electricite</th>
-      <td>2</td>
-      <td>-</td>
-      <td>-</td>
-      <td>2</td>
-    </tr>
-    <tr>
       <th>wellborne</th>
-      <td>2</td>
-      <td>-</td>
-      <td>-</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>morbihan-energies</th>
-      <td>-</td>
-      <td>2</td>
-      <td>-</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>startn-move-1</th>
       <td>2</td>
       <td>-</td>
       <td>-</td>
@@ -944,13 +916,6 @@ plus-de-bornes                                            -    184       7    19
       <td>2</td>
     </tr>
     <tr>
-      <th>snmg2e</th>
-      <td>2</td>
-      <td>-</td>
-      <td>-</td>
-      <td>2</td>
-    </tr>
-    <tr>
       <th>spie-citynetworks</th>
       <td>2</td>
       <td>-</td>
@@ -958,10 +923,24 @@ plus-de-bornes                                            -    184       7    19
       <td>2</td>
     </tr>
     <tr>
-      <th>sb-energy</th>
+      <th>startn-move-1</th>
+      <td>2</td>
       <td>-</td>
-      <td>1</td>
-      <td>1</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>snmg2e</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>swish</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
       <td>2</td>
     </tr>
     <tr>
@@ -972,16 +951,16 @@ plus-de-bornes                                            -    184       7    19
       <td>2</td>
     </tr>
     <tr>
-      <th>philippi</th>
+      <th>sb-energy</th>
       <td>-</td>
       <td>1</td>
       <td>1</td>
       <td>2</td>
     </tr>
     <tr>
-      <th>nexteneo</th>
-      <td>-</td>
+      <th>peretti-groupe</th>
       <td>2</td>
+      <td>-</td>
       <td>-</td>
       <td>2</td>
     </tr>
@@ -993,14 +972,21 @@ plus-de-bornes                                            -    184       7    19
       <td>2</td>
     </tr>
     <tr>
-      <th>abe-electricite</th>
+      <th>normatech</th>
+      <td>1</td>
       <td>1</td>
       <td>-</td>
-      <td>-</td>
-      <td>1</td>
+      <td>2</td>
     </tr>
     <tr>
-      <th>agglomeration-montargoise-et-rives-du-loing</th>
+      <th>nexteneo</th>
+      <td>-</td>
+      <td>2</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>abe-electricite</th>
       <td>1</td>
       <td>-</td>
       <td>-</td>
@@ -1014,14 +1000,14 @@ plus-de-bornes                                            -    184       7    19
       <td>1</td>
     </tr>
     <tr>
-      <th>borne-de-recharge-ad-bauducel</th>
+      <th>agglomeration-montargoise-et-rives-du-loing</th>
       <td>1</td>
       <td>-</td>
       <td>-</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>chariag</th>
+      <th>borne-de-recharge-ad-bauducel</th>
       <td>1</td>
       <td>-</td>
       <td>-</td>
@@ -1036,13 +1022,6 @@ plus-de-bornes                                            -    184       7    19
     </tr>
     <tr>
       <th>l2b-lorette-beaucamp-bonnet</th>
-      <td>-</td>
-      <td>1</td>
-      <td>-</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>inforomu</th>
       <td>-</td>
       <td>1</td>
       <td>-</td>
@@ -1077,6 +1056,13 @@ plus-de-bornes                                            -    184       7    19
       <td>1</td>
     </tr>
     <tr>
+      <th>e-leclerc-millau</th>
+      <td>-</td>
+      <td>1</td>
+      <td>-</td>
+      <td>1</td>
+    </tr>
+    <tr>
       <th>ekleo-1</th>
       <td>1</td>
       <td>-</td>
@@ -1084,9 +1070,9 @@ plus-de-bornes                                            -    184       7    19
       <td>1</td>
     </tr>
     <tr>
-      <th>e-leclerc-millau</th>
-      <td>-</td>
+      <th>chariag</th>
       <td>1</td>
+      <td>-</td>
       <td>-</td>
       <td>1</td>
     </tr>
@@ -1207,7 +1193,7 @@ plus-de-bornes                                            -    184       7    19
     </tr>
     <tr>
       <th>alize-charge</th>
-      <th>16439</th>
+      <th>16550</th>
       <th>blocking</th>
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
@@ -1330,13 +1316,8 @@ plus-de-bornes                                            -    184       7    19
       <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">citeos-boulogne-sur-mer</th>
-      <th>2</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th>7</th>
+      <th>citeos-boulogne-sur-mer</th>
+      <th>6</th>
       <th>warning</th>
       <th>le numéro de téléphone de l'opérateur (telephone_operateur) est dans un format invalide</th>
     </tr>
@@ -1364,13 +1345,14 @@ plus-de-bornes                                            -    184       7    19
     </tr>
     <tr>
       <th rowspan="2" valign="top">conectys</th>
-      <th rowspan="2" valign="top">1</th>
-      <th>blocking</th>
-      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
-    </tr>
-    <tr>
+      <th>1</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>4</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
       <th rowspan="3" valign="top">driveco</th>
@@ -1476,7 +1458,7 @@ plus-de-bornes                                            -    184       7    19
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
-      <th>11078</th>
+      <th>11080</th>
       <th>blocking</th>
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
@@ -1533,7 +1515,7 @@ plus-de-bornes                                            -    184       7    19
     </tr>
     <tr>
       <th>ev-map</th>
-      <th>17</th>
+      <th>19</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -1555,24 +1537,6 @@ plus-de-bornes                                            -    184       7    19
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
-      <th rowspan="4" valign="top">fuzed</th>
-      <th>1</th>
-      <th>warning</th>
-      <th>plusieurs horaires pour une même station</th>
-    </tr>
-    <tr>
-      <th rowspan="3" valign="top">5</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">warning</th>
-      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
-    </tr>
-    <tr>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
       <th>garage-chene-total-energie-citroen</th>
       <th>1</th>
       <th>blocking</th>
@@ -1580,7 +1544,7 @@ plus-de-bornes                                            -    184       7    19
     </tr>
     <tr>
       <th rowspan="11" valign="top">gireve-2</th>
-      <th>1</th>
+      <th>2</th>
       <th>warning</th>
       <th>plusieurs horaires pour une même station</th>
     </tr>
@@ -1590,14 +1554,14 @@ plus-de-bornes                                            -    184       7    19
       <th>aucun type de prise précisé sur l'ensemble des points de charge</th>
     </tr>
     <tr>
-      <th>19</th>
-      <th>warning</th>
-      <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
-    </tr>
-    <tr>
-      <th>52</th>
+      <th>5</th>
       <th>warning</th>
       <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
+    </tr>
+    <tr>
+      <th>18</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
     </tr>
     <tr>
       <th>87</th>
@@ -1605,32 +1569,32 @@ plus-de-bornes                                            -    184       7    19
       <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
     </tr>
     <tr>
+      <th>125</th>
+      <th>warning</th>
+      <th>plusieurs infos de réservation pour une même station</th>
+    </tr>
+    <tr>
       <th>198</th>
       <th>blocking</th>
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th>309</th>
-      <th>warning</th>
-      <th>plusieurs infos de réservation pour une même station</th>
-    </tr>
-    <tr>
-      <th>534</th>
-      <th>warning</th>
-      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
-    </tr>
-    <tr>
-      <th>1006</th>
+      <th>448</th>
       <th>warning</th>
       <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
     <tr>
-      <th>1317</th>
+      <th>531</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
+    </tr>
+    <tr>
+      <th>1043</th>
       <th>warning</th>
       <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
     </tr>
     <tr>
-      <th>1733</th>
+      <th>1470</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -1649,7 +1613,7 @@ plus-de-bornes                                            -    184       7    19
       <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
     </tr>
     <tr>
-      <th>128</th>
+      <th>126</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -1727,29 +1691,8 @@ plus-de-bornes                                            -    184       7    19
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th>inforomu</th>
-      <th>1</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">inouid-smart-mobility</th>
-      <th>2</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th>3</th>
-      <th>blocking</th>
-      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
-    </tr>
-    <tr>
-      <th rowspan="6" valign="top">installation-dune-borne-22kwa-hostellerie-des-ducs</th>
-      <th rowspan="5" valign="top">1</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
+      <th rowspan="6" valign="top">inforomu</th>
+      <th rowspan="4" valign="top">1</th>
       <th rowspan="4" valign="top">warning</th>
       <th>plusieurs horaires pour une même station</th>
     </tr>
@@ -1763,9 +1706,24 @@ plus-de-bornes                                            -    184       7    19
       <th>plusieurs infos de réservation pour une même station</th>
     </tr>
     <tr>
-      <th>2</th>
+      <th rowspan="2" valign="top">2</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
       <th>warning</th>
       <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">inouid-smart-mobility</th>
+      <th>2</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>3</th>
+      <th>blocking</th>
+      <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
       <th>ionity-gmbh</th>
@@ -1781,22 +1739,22 @@ plus-de-bornes                                            -    184       7    19
     </tr>
     <tr>
       <th rowspan="4" valign="top">izivia</th>
-      <th>20</th>
+      <th>8</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
     </tr>
     <tr>
-      <th>105</th>
+      <th>88</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
     </tr>
     <tr>
-      <th>618</th>
+      <th>549</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
     </tr>
     <tr>
-      <th>6300</th>
+      <th>5947</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -1857,6 +1815,30 @@ plus-de-bornes                                            -    184       7    19
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
+      <th rowspan="5" valign="top">le-reseau-de-recharge-pour-vehicules-electriques-de-la-metropole-du-grand-paris</th>
+      <th>44</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
+    </tr>
+    <tr>
+      <th>177</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">179</th>
+      <th rowspan="2" valign="top">warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de réservation pour une même station</th>
+    </tr>
+    <tr>
+      <th>358</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
       <th>lg-electricite</th>
       <th>2</th>
       <th>blocking</th>
@@ -1870,7 +1852,7 @@ plus-de-bornes                                            -    184       7    19
     </tr>
     <tr>
       <th>lumiin</th>
-      <th>98</th>
+      <th>99</th>
       <th>blocking</th>
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
@@ -1903,15 +1885,45 @@ plus-de-bornes                                            -    184       7    19
     </tr>
     <tr>
       <th>mobilize-power-solutions</th>
-      <th>113</th>
+      <th>131</th>
       <th>blocking</th>
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th>morbihan-energies</th>
-      <th>2</th>
+      <th rowspan="7" valign="top">morbihan-energies</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
+    </tr>
+    <tr>
+      <th>3</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
+    </tr>
+    <tr>
+      <th>5</th>
+      <th>warning</th>
+      <th>plusieurs infos de réservation pour une même station</th>
+    </tr>
+    <tr>
+      <th>8</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
+    </tr>
+    <tr>
+      <th>188</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>199</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>398</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
     <tr>
       <th>multiples</th>
@@ -2204,22 +2216,6 @@ plus-de-bornes                                            -    184       7    19
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
-      <th rowspan="3" valign="top">syndicat-departemental-denergie-de-la-haute-garonne</th>
-      <th>95</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th>99</th>
-      <th>warning</th>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
-      <th>198</th>
-      <th>warning</th>
-      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
-    </tr>
-    <tr>
       <th rowspan="2" valign="top">syndicat-departemental-denergie-dille-et-vilaine</th>
       <th>2</th>
       <th>error</th>
@@ -2378,7 +2374,7 @@ plus-de-bornes                                            -    184       7    19
     </tr>
     <tr>
       <th>zeborne</th>
-      <th>377</th>
+      <th>373</th>
       <th>blocking</th>
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
@@ -2406,21 +2402,21 @@ plus-de-bornes                                            -    184       7    19
                 
                     
                         <pre><code class="language-python"> EF  |   T2  | Chademo |  CCS  |
-0.00   22.00     0.00     0.00 | 12253 stations
-0.00    7.36     0.00     0.00 | 3082 stations
-0.00    3.68     0.00     0.00 | 1590 stations
-0.00    0.00     0.00     0.00 | 1119 stations
+0.00   22.00     0.00     0.00 | 12221 stations
+0.00    7.36     0.00     0.00 | 3046 stations
+0.00    3.68     0.00     0.00 | 1588 stations
+0.00    0.00     0.00     0.00 | 1021 stations
 0.00   18.00     0.00     0.00 | 970 stations
-0.00    0.00     0.00   150.00 | 845 stations
 0.00   22.00     0.00    24.00 | 812 stations
-0.00    7.00     0.00     0.00 | 674 stations
+0.00    0.00     0.00   150.00 | 753 stations
+0.00    7.00     0.00     0.00 | 669 stations
 0.00   22.08     0.00     0.00 | 628 stations
 0.00   22.00     0.00   150.00 | 444 stations
 0.00    7.40     0.00     0.00 | 441 stations
 0.00   22.08     0.00    50.00 | 440 stations
-0.00    0.00     0.00    24.00 | 337 stations
-0.00   24.00     0.00     0.00 | 315 stations
-0.00    0.00     0.00    50.00 | 288 stations
+0.00    0.00     0.00    24.00 | 328 stations
+0.00   24.00     0.00     0.00 | 306 stations
+0.00    0.00     0.00    50.00 | 276 stations
 0.00   22.00     0.00    50.00 | 263 stations
 0.00   22.00     0.00    25.00 | 262 stations
 0.00    0.00    22.00     0.00 | 211 stations
@@ -2432,18 +2428,17 @@ plus-de-bornes                                            -    184       7    19
 0.00   22.00    50.00    50.00 | 157 stations
 0.00   11.00     0.00     0.00 | 150 stations
 0.00   44.00     0.00    50.00 | 150 stations
-0.00    0.00     0.00   180.00 | 144 stations
 0.00   22.00     0.00    60.00 | 138 stations
 2.30   22.00     0.00     0.00 | 134 stations
+0.00    0.00     0.00   180.00 | 125 stations
 0.00   22.00    25.00    25.00 | 106 stations
 0.00   36.00    36.00    36.00 | 103 stations
 0.00   22.00     0.00   180.00 | 96 stations
 0.00    0.00     0.00   300.00 | 90 stations
 4.00    0.00     0.00    22.00 | 86 stations
-0.00    0.00     0.00   200.00 | 83 stations
 0.00   43.00     0.00    50.00 | 77 stations
 0.00   43.00    50.00    50.00 | 75 stations
-0.00    0.00    50.00     0.00 | 71 stations
+0.00    0.00    50.00     0.00 | 69 stations
 0.00   22.00    50.00   120.00 | 69 stations
 0.00   22.00    50.00   187.50 | 68 stations
 0.00   22.08     0.00    24.00 | 66 stations
@@ -2452,12 +2447,13 @@ plus-de-bornes                                            -    184       7    19
 0.00   22.08     0.00   200.00 | 60 stations
 0.00   22.00    50.00   150.00 | 57 stations
 0.00    0.00    54.00   175.00 | 57 stations
+0.00    0.00     0.00   200.00 | 56 stations
 0.00    0.00     0.00    25.00 | 56 stations
 0.00   36.00     0.00    36.00 | 54 stations
 0.00   22.00    50.00    60.00 | 45 stations
 3.00    0.00     0.00     0.00 | 44 stations
 0.00   22.00    24.00    24.00 | 43 stations
-0.00    0.00     0.00   100.00 | 40 stations
+0.00    0.00     0.00   100.00 | 33 stations
 0.00   12.00     0.00   120.00 | 33 stations
 0.00   22.00     0.00    90.00 | 31 stations
 0.00   22.00    62.50   300.00 | 31 stations
@@ -2473,17 +2469,16 @@ plus-de-bornes                                            -    184       7    19
 0.00    0.00    54.00     0.00 | 22 stations
 0.00    0.00    54.00   150.00 | 22 stations
 0.00    0.00    11.00     0.00 | 19 stations
-0.00    0.00     0.00    63.00 | 18 stations
 0.00   36.00     0.00     0.00 | 18 stations
 0.00   43.00    50.00   300.00 | 17 stations
-0.00    0.00     0.00    60.00 | 16 stations
-0.00   22.00     0.00   160.00 | 16 stations
+0.00    0.00     0.00    60.00 | 17 stations
+0.00   22.00     0.00   160.00 | 17 stations
 0.00    0.00     0.00   320.00 | 16 stations
-3.68    0.00     0.00     0.00 | 15 stations
 0.00   44.00    50.00    50.00 | 14 stations
 0.00    0.00    50.00    50.00 | 14 stations
 0.00    3.70     0.00     0.00 | 13 stations
-0.00    0.00    63.00     0.00 | 13 stations
+0.00    0.00     0.00    63.00 | 13 stations
+3.68    0.00     0.00     0.00 | 13 stations
 0.00   22.00    50.00   180.00 | 13 stations
 0.00   22.00    43.00    50.00 | 12 stations
 0.00   22.00     0.00    22.00 | 12 stations
@@ -2499,6 +2494,7 @@ plus-de-bornes                                            -    184       7    19
 0.00   22.17    50.00   200.00 | 9 stations
 0.00   22.00     0.00   240.00 | 8 stations
 3.70    0.00     0.00     0.00 | 8 stations
+0.00    0.00    63.00     0.00 | 8 stations
 0.00   11.04     0.00     0.00 | 7 stations
 0.00    0.00     0.00   175.00 | 7 stations
 0.00   22.00     0.00   187.50 | 7 stations
@@ -2520,7 +2516,6 @@ plus-de-bornes                                            -    184       7    19
 0.00    0.00     0.00   350.00 | 5 stations
 0.00   22.00     0.00    80.00 | 5 stations
 3.00    0.00    50.00    50.00 | 5 stations
-0.00    0.00     0.00   160.00 | 5 stations
 0.00    0.00     0.00   400.00 | 5 stations
 0.00   14.00     0.00     0.00 | 5 stations
 0.00   22.00    50.00   400.00 | 4 stations
@@ -2535,6 +2530,7 @@ plus-de-bornes                                            -    184       7    19
 0.00    0.00    22.00   150.00 | 4 stations
 0.00   22.00    50.00    80.00 | 4 stations
 0.00   22.00     0.00    54.00 | 4 stations
+0.00    0.00     0.00   160.00 | 4 stations
 2.30    7.36     0.00     0.00 | 3 stations
 0.00   43.00    50.00   160.00 | 3 stations
 0.00    0.00     0.00   240.00 | 3 stations
@@ -2588,7 +2584,6 @@ plus-de-bornes                                            -    184       7    19
 0.00   15.00     0.00   300.00 | 1 stations
 0.00   22.00    22.00    22.00 | 1 stations
 0.00   22.08    50.00    50.00 | 1 stations
-0.00    0.00     0.00   184.00 | 1 stations
 0.00   27.00     0.00     0.00 | 1 stations
 0.00    7.40     0.00    22.00 | 1 stations
 0.00   22.00     0.00   130.00 | 1 stations
@@ -2602,6 +2597,7 @@ plus-de-bornes                                            -    184       7    19
 0.00   22.00    63.00   360.00 | 1 stations
 0.00   22.00     0.00   176.00 | 1 stations
 0.00    1.40     0.00     0.00 | 1 stations
+0.00   44.00     0.00     0.00 | 1 stations
 0.00   11.00     0.00   120.00 | 1 stations
 0.00   22.00    50.00    22.00 | 1 stations
 0.00    0.00    25.00    25.00 | 1 stations
@@ -2700,7 +2696,7 @@ plus-de-bornes                                            -    184       7    19
     </main>
     <footer class="container report-container report-foot">
         <small>
-            <p>Généré le 2025-01-10 06:54:35 UTC</p>
+            <p>Généré le 2025-01-11 06:54:41 UTC</p>
         </small>
     </footer>
     <script src='assets/prism.js'></script>
