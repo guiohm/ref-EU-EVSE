@@ -18,7 +18,7 @@
             <li>
                 <hgroup>
                     <h1>Rapport de run Jungle-Bus Group IRVE OpenData</h1>
-                    <p>2025-01-22 06:54:34 UTC</p>
+                    <p>2025-01-23 06:54:37 UTC</p>
                 </hgroup>
             </li>
         </ul>
@@ -121,12 +121,12 @@
                     <summary>Expand/Collapse</summary>
                 
                     
-                        <pre><code class="language-python">122199 lignes (PDCs) en entrée | 9552 PDCs en double
-29861 stations reconnues sur 50021 station_id distincts en entrée
-56917 problèmes trouvés pour 112647 PDCs distincts en entrée (il peut exister plusieurs problèmes par PDC/station):
- &gt; [blocking] 37884 x le format de l&#39;identifiant ref:EU:EVSE (id_station_itinerance) n&#39;est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l&#39;analyse Osmose
+                        <pre><code class="language-python">122211 lignes (PDCs) en entrée | 9552 PDCs en double
+29866 stations reconnues sur 50032 station_id distincts en entrée
+56924 problèmes trouvés pour 112659 PDCs distincts en entrée (il peut exister plusieurs problèmes par PDC/station):
+ &gt; [blocking] 37890 x le format de l&#39;identifiant ref:EU:EVSE (id_station_itinerance) n&#39;est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l&#39;analyse Osmose
  &gt;    [error]   241 x aucun type de prise précisé sur l&#39;ensemble des points de charge
- &gt;    [error] 10347 x le nombre de point de charge de la station n&#39;est pas cohérent avec la liste des points de charge fournie
+ &gt;    [error] 10349 x le nombre de point de charge de la station n&#39;est pas cohérent avec la liste des points de charge fournie
  &gt;    [error]  1447 x plusieurs sources pour un même id
  &gt;  [warning]   236 x le champ station_deux_roues n&#39;est pas valide
  &gt;  [warning]  1075 x le numéro de téléphone de l&#39;opérateur (telephone_operateur) est dans un format invalide
@@ -137,27 +137,29 @@
  &gt;  [warning]  1691 x plusieurs infos de paiement (paiement_cb) pour une même station
  &gt;  [warning]   311 x plusieurs infos de réservation pour une même station
  &gt;  [warning]   325 x puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)
- &gt;  [warning]   868 x puissance nominale déclarée pour prise EF supérieure à la norme (4)
+ &gt;  [warning]   867 x puissance nominale déclarée pour prise EF supérieure à la norme (4)
  &gt;  [warning]   677 x puissance nominale déclarée pour prise T2 supérieure à la norme (43)
 
 Severité
-blocking    37884
-error       12035
-warning      6998
+blocking    37890
+error       12037
+warning      6997
 
 Top 25 Organisations les plus problematiques:
 
 Sévérité                                blocking  error warning  TOTAL
 Organisation                                                          
-TOTAL                                      37884  12035    6998  56917
+TOTAL                                      37890  12037    6997  56924
 alize-charge                               16550      -       -  16550
-eco-movement                               11130      -       -  11130
-izivia                                         -   6407     781   7188
-gireve-2                                     198   1835    3633   5666
+eco-movement                               11135      -       -  11135
+izivia                                         -   6411     780   7191
 lidl                                        4111      -       -   4111
+gireve-2                                     198    839    2092   3129
+spbr1                                          -    805     916   1721
 multiples                                      -   1447       -   1447
 engie-mobilites-electriques                    -    603     613   1216
 rossini-energy                               846      -       -    846
+morbihan-energies                              -    188     614    802
 allego-1                                     650      -       -    650
 syndicat-departemental-denergie-du-tarn      634      -       -    634
 bump                                         577      -       -    577
@@ -167,14 +169,12 @@ soregies                                     478      -       -    478
 qovoltis                                       -    233     232    465
 ev-cars                                        -     63     334    397
 virta                                        376      2       -    378
-zeborne                                      373      -       -    373
+zeborne                                      377      -       -    377
 sowatt-solutions                             339      -       -    339
 evzen-smeg-developpement                       -      4     263    267
 ubitricity                                   257      -       -    257
 sieml                                          -    209       -    209
-plus-de-bornes                                 -    189       7    196
-sydela                                         -    192       -    192
-easycharge-services                            -      -     152    152</code></pre>
+plus-de-bornes                                 -    189       7    196</code></pre>
                     
                 
                 </details>
@@ -210,10 +210,10 @@ easycharge-services                            -      -     152    152</code></p
   <tbody>
     <tr>
       <th>TOTAL</th>
-      <td>37884</td>
-      <td>12035</td>
-      <td>6998</td>
-      <td>56917</td>
+      <td>37890</td>
+      <td>12037</td>
+      <td>6997</td>
+      <td>56924</td>
     </tr>
     <tr>
       <th>alize-charge</th>
@@ -224,24 +224,17 @@ easycharge-services                            -      -     152    152</code></p
     </tr>
     <tr>
       <th>eco-movement</th>
-      <td>11130</td>
+      <td>11135</td>
       <td>-</td>
       <td>-</td>
-      <td>11130</td>
+      <td>11135</td>
     </tr>
     <tr>
       <th>izivia</th>
       <td>-</td>
-      <td>6407</td>
-      <td>781</td>
-      <td>7188</td>
-    </tr>
-    <tr>
-      <th>gireve-2</th>
-      <td>198</td>
-      <td>1835</td>
-      <td>3633</td>
-      <td>5666</td>
+      <td>6411</td>
+      <td>780</td>
+      <td>7191</td>
     </tr>
     <tr>
       <th>lidl</th>
@@ -249,6 +242,20 @@ easycharge-services                            -      -     152    152</code></p
       <td>-</td>
       <td>-</td>
       <td>4111</td>
+    </tr>
+    <tr>
+      <th>gireve-2</th>
+      <td>198</td>
+      <td>839</td>
+      <td>2092</td>
+      <td>3129</td>
+    </tr>
+    <tr>
+      <th>spbr1</th>
+      <td>-</td>
+      <td>805</td>
+      <td>916</td>
+      <td>1721</td>
     </tr>
     <tr>
       <th>multiples</th>
@@ -270,6 +277,13 @@ easycharge-services                            -      -     152    152</code></p
       <td>-</td>
       <td>-</td>
       <td>846</td>
+    </tr>
+    <tr>
+      <th>morbihan-energies</th>
+      <td>-</td>
+      <td>188</td>
+      <td>614</td>
+      <td>802</td>
     </tr>
     <tr>
       <th>allego-1</th>
@@ -336,10 +350,10 @@ easycharge-services                            -      -     152    152</code></p
     </tr>
     <tr>
       <th>zeborne</th>
-      <td>373</td>
+      <td>377</td>
       <td>-</td>
       <td>-</td>
-      <td>373</td>
+      <td>377</td>
     </tr>
     <tr>
       <th>sowatt-solutions</th>
@@ -391,17 +405,17 @@ easycharge-services                            -      -     152    152</code></p
       <td>152</td>
     </tr>
     <tr>
-      <th>car2plug</th>
-      <td>140</td>
-      <td>-</td>
-      <td>-</td>
-      <td>140</td>
-    </tr>
-    <tr>
       <th>greenspot-enersoft</th>
       <td>-</td>
       <td>126</td>
       <td>14</td>
+      <td>140</td>
+    </tr>
+    <tr>
+      <th>car2plug</th>
+      <td>140</td>
+      <td>-</td>
+      <td>-</td>
       <td>140</td>
     </tr>
     <tr>
@@ -413,10 +427,10 @@ easycharge-services                            -      -     152    152</code></p
     </tr>
     <tr>
       <th>mobilize-power-solutions</th>
-      <td>137</td>
+      <td>138</td>
       <td>-</td>
       <td>-</td>
-      <td>137</td>
+      <td>138</td>
     </tr>
     <tr>
       <th>e-charge50</th>
@@ -477,9 +491,9 @@ easycharge-services                            -      -     152    152</code></p
     <tr>
       <th>reseau-alterbase-79</th>
       <td>-</td>
-      <td>18</td>
+      <td>16</td>
       <td>41</td>
-      <td>59</td>
+      <td>57</td>
     </tr>
     <tr>
       <th>sorel-energies</th>
@@ -510,16 +524,16 @@ easycharge-services                            -      -     152    152</code></p
       <td>34</td>
     </tr>
     <tr>
-      <th>properphi</th>
-      <td>30</td>
+      <th>e-motum-sas-1</th>
       <td>-</td>
+      <td>30</td>
       <td>-</td>
       <td>30</td>
     </tr>
     <tr>
-      <th>e-motum-sas-1</th>
-      <td>-</td>
+      <th>properphi</th>
       <td>30</td>
+      <td>-</td>
       <td>-</td>
       <td>30</td>
     </tr>
@@ -566,6 +580,13 @@ easycharge-services                            -      -     152    152</code></p
       <td>17</td>
     </tr>
     <tr>
+      <th>fuzed</th>
+      <td>-</td>
+      <td>5</td>
+      <td>11</td>
+      <td>16</td>
+    </tr>
+    <tr>
       <th>citeos-ingenierie-idf-est-cogelum-idf</th>
       <td>2</td>
       <td>13</td>
@@ -587,13 +608,6 @@ easycharge-services                            -      -     152    152</code></p
       <td>13</td>
     </tr>
     <tr>
-      <th>bornevo</th>
-      <td>13</td>
-      <td>-</td>
-      <td>-</td>
-      <td>13</td>
-    </tr>
-    <tr>
       <th>sodel</th>
       <td>13</td>
       <td>-</td>
@@ -601,11 +615,11 @@ easycharge-services                            -      -     152    152</code></p
       <td>13</td>
     </tr>
     <tr>
-      <th>sas-satcoms</th>
-      <td>12</td>
+      <th>bornevo</th>
+      <td>13</td>
       <td>-</td>
       <td>-</td>
-      <td>12</td>
+      <td>13</td>
     </tr>
     <tr>
       <th>voltania</th>
@@ -615,11 +629,18 @@ easycharge-services                            -      -     152    152</code></p
       <td>12</td>
     </tr>
     <tr>
+      <th>sas-satcoms</th>
+      <td>12</td>
+      <td>-</td>
+      <td>-</td>
+      <td>12</td>
+    </tr>
+    <tr>
       <th>autorecharge</th>
-      <td>12</td>
+      <td>11</td>
       <td>-</td>
       <td>-</td>
-      <td>12</td>
+      <td>11</td>
     </tr>
     <tr>
       <th>tesla-motors</th>
@@ -664,6 +685,13 @@ easycharge-services                            -      -     152    152</code></p
       <td>8</td>
     </tr>
     <tr>
+      <th>ekoplug</th>
+      <td>-</td>
+      <td>1</td>
+      <td>6</td>
+      <td>7</td>
+    </tr>
+    <tr>
       <th>charge-in</th>
       <td>6</td>
       <td>-</td>
@@ -676,20 +704,6 @@ easycharge-services                            -      -     152    152</code></p
       <td>-</td>
       <td>-</td>
       <td>7</td>
-    </tr>
-    <tr>
-      <th>installation-dune-borne-22kwa-hostellerie-des-ducs</th>
-      <td>-</td>
-      <td>1</td>
-      <td>6</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <th>citeos-boulogne-sur-mer</th>
-      <td>-</td>
-      <td>-</td>
-      <td>6</td>
-      <td>6</td>
     </tr>
     <tr>
       <th>territoire-denergie-orne</th>
@@ -706,9 +720,16 @@ easycharge-services                            -      -     152    152</code></p
       <td>6</td>
     </tr>
     <tr>
-      <th>conectys</th>
-      <td>4</td>
-      <td>1</td>
+      <th>citeos-boulogne-sur-mer</th>
+      <td>-</td>
+      <td>-</td>
+      <td>6</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>allcoms-technologies</th>
+      <td>5</td>
+      <td>-</td>
       <td>-</td>
       <td>5</td>
     </tr>
@@ -727,11 +748,11 @@ easycharge-services                            -      -     152    152</code></p
       <td>5</td>
     </tr>
     <tr>
-      <th>allcoms-technologies</th>
-      <td>5</td>
+      <th>kap-enerj</th>
+      <td>4</td>
       <td>-</td>
       <td>-</td>
-      <td>5</td>
+      <td>4</td>
     </tr>
     <tr>
       <th>eranovum-e-mobility-france</th>
@@ -755,13 +776,6 @@ easycharge-services                            -      -     152    152</code></p
       <td>4</td>
     </tr>
     <tr>
-      <th>indelec-mobility</th>
-      <td>4</td>
-      <td>-</td>
-      <td>-</td>
-      <td>4</td>
-    </tr>
-    <tr>
       <th>area-tech</th>
       <td>4</td>
       <td>-</td>
@@ -776,7 +790,7 @@ easycharge-services                            -      -     152    152</code></p
       <td>4</td>
     </tr>
     <tr>
-      <th>kap-enerj</th>
+      <th>indelec-mobility</th>
       <td>4</td>
       <td>-</td>
       <td>-</td>
@@ -790,6 +804,13 @@ easycharge-services                            -      -     152    152</code></p
       <td>3</td>
     </tr>
     <tr>
+      <th>france-solar-sas</th>
+      <td>-</td>
+      <td>3</td>
+      <td>-</td>
+      <td>3</td>
+    </tr>
+    <tr>
       <th>hagenum</th>
       <td>1</td>
       <td>2</td>
@@ -797,7 +818,7 @@ easycharge-services                            -      -     152    152</code></p
       <td>3</td>
     </tr>
     <tr>
-      <th>france-solar-sas</th>
+      <th>imac2</th>
       <td>-</td>
       <td>3</td>
       <td>-</td>
@@ -818,11 +839,11 @@ easycharge-services                            -      -     152    152</code></p
       <td>3</td>
     </tr>
     <tr>
-      <th>imac2</th>
+      <th>normatech</th>
+      <td>1</td>
+      <td>1</td>
       <td>-</td>
-      <td>3</td>
-      <td>-</td>
-      <td>3</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>acelec-charge</th>
@@ -832,21 +853,21 @@ easycharge-services                            -      -     152    152</code></p
       <td>2</td>
     </tr>
     <tr>
-      <th>philippi</th>
+      <th>suraya</th>
+      <td>2</td>
       <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>conectys</th>
       <td>1</td>
       <td>1</td>
+      <td>-</td>
       <td>2</td>
     </tr>
     <tr>
       <th>citeos-poitiers</th>
-      <td>2</td>
-      <td>-</td>
-      <td>-</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>guillaume</th>
       <td>2</td>
       <td>-</td>
       <td>-</td>
@@ -867,21 +888,7 @@ easycharge-services                            -      -     152    152</code></p
       <td>2</td>
     </tr>
     <tr>
-      <th>morbihan-energies</th>
-      <td>-</td>
-      <td>2</td>
-      <td>-</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>peretti-groupe</th>
-      <td>2</td>
-      <td>-</td>
-      <td>-</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>lg-electricite</th>
+      <th>guillaume</th>
       <td>2</td>
       <td>-</td>
       <td>-</td>
@@ -892,6 +899,13 @@ easycharge-services                            -      -     152    152</code></p
       <td>-</td>
       <td>1</td>
       <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>lg-electricite</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
       <td>2</td>
     </tr>
     <tr>
@@ -909,7 +923,7 @@ easycharge-services                            -      -     152    152</code></p
       <td>2</td>
     </tr>
     <tr>
-      <th>suraya</th>
+      <th>peretti-groupe</th>
       <td>2</td>
       <td>-</td>
       <td>-</td>
@@ -944,13 +958,6 @@ easycharge-services                            -      -     152    152</code></p
       <td>2</td>
     </tr>
     <tr>
-      <th>sas-road54</th>
-      <td>-</td>
-      <td>1</td>
-      <td>1</td>
-      <td>2</td>
-    </tr>
-    <tr>
       <th>sb-energy</th>
       <td>-</td>
       <td>1</td>
@@ -958,14 +965,14 @@ easycharge-services                            -      -     152    152</code></p
       <td>2</td>
     </tr>
     <tr>
-      <th>normatech</th>
-      <td>1</td>
-      <td>1</td>
+      <th>sas-road54</th>
       <td>-</td>
+      <td>1</td>
+      <td>1</td>
       <td>2</td>
     </tr>
     <tr>
-      <th>ma-borne-auto-bordeaux</th>
+      <th>philippi</th>
       <td>-</td>
       <td>1</td>
       <td>1</td>
@@ -979,6 +986,13 @@ easycharge-services                            -      -     152    152</code></p
       <td>2</td>
     </tr>
     <tr>
+      <th>ma-borne-auto-bordeaux</th>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
       <th>abe-electricite</th>
       <td>1</td>
       <td>-</td>
@@ -986,7 +1000,7 @@ easycharge-services                            -      -     152    152</code></p
       <td>1</td>
     </tr>
     <tr>
-      <th>dupuis-electricite</th>
+      <th>agglomeration-montargoise-et-rives-du-loing</th>
       <td>1</td>
       <td>-</td>
       <td>-</td>
@@ -1000,14 +1014,14 @@ easycharge-services                            -      -     152    152</code></p
       <td>1</td>
     </tr>
     <tr>
-      <th>agglomeration-montargoise-et-rives-du-loing</th>
+      <th>borne-de-recharge-ad-bauducel</th>
       <td>1</td>
       <td>-</td>
       <td>-</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>borne-de-recharge-ad-bauducel</th>
+      <th>chariag</th>
       <td>1</td>
       <td>-</td>
       <td>-</td>
@@ -1049,16 +1063,16 @@ easycharge-services                            -      -     152    152</code></p
       <td>1</td>
     </tr>
     <tr>
-      <th>dubois-1</th>
+      <th>dupuis-electricite</th>
       <td>1</td>
       <td>-</td>
       <td>-</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>e-leclerc-millau</th>
-      <td>-</td>
+      <th>dubois-1</th>
       <td>1</td>
+      <td>-</td>
       <td>-</td>
       <td>1</td>
     </tr>
@@ -1070,9 +1084,9 @@ easycharge-services                            -      -     152    152</code></p
       <td>1</td>
     </tr>
     <tr>
-      <th>chariag</th>
-      <td>1</td>
+      <th>e-leclerc-millau</th>
       <td>-</td>
+      <td>1</td>
       <td>-</td>
       <td>1</td>
     </tr>
@@ -1233,7 +1247,7 @@ easycharge-services                            -      -     152    152</code></p
     </tr>
     <tr>
       <th>autorecharge</th>
-      <th>12</th>
+      <th>11</th>
       <th>blocking</th>
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
@@ -1351,14 +1365,13 @@ easycharge-services                            -      -     152    152</code></p
     </tr>
     <tr>
       <th rowspan="2" valign="top">conectys</th>
-      <th>1</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th>4</th>
+      <th rowspan="2" valign="top">1</th>
       <th>blocking</th>
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
       <th rowspan="3" valign="top">driveco</th>
@@ -1449,7 +1462,7 @@ easycharge-services                            -      -     152    152</code></p
     </tr>
     <tr>
       <th>eco-movement</th>
-      <th>11130</th>
+      <th>11135</th>
       <th>blocking</th>
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
@@ -1458,6 +1471,30 @@ easycharge-services                            -      -     152    152</code></p
       <th>1</th>
       <th>blocking</th>
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="6" valign="top">ekoplug</th>
+      <th rowspan="5" valign="top">1</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="4" valign="top">warning</th>
+      <th>plusieurs horaires pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de réservation pour une même station</th>
+    </tr>
+    <tr>
+      <th>2</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
     <tr>
       <th>energie-eure-et-loir</th>
@@ -1533,29 +1570,42 @@ easycharge-services                            -      -     152    152</code></p
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
+      <th rowspan="4" valign="top">fuzed</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>plusieurs horaires pour une même station</th>
+    </tr>
+    <tr>
+      <th rowspan="3" valign="top">5</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">warning</th>
+      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
       <th>garage-chene-total-energie-citroen</th>
       <th>1</th>
       <th>blocking</th>
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th rowspan="11" valign="top">gireve-2</th>
-      <th>2</th>
-      <th>warning</th>
-      <th>plusieurs horaires pour une même station</th>
-    </tr>
-    <tr>
+      <th rowspan="10" valign="top">gireve-2</th>
       <th>4</th>
       <th>error</th>
       <th>aucun type de prise précisé sur l'ensemble des points de charge</th>
     </tr>
     <tr>
-      <th>19</th>
+      <th>9</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
     </tr>
     <tr>
-      <th>57</th>
+      <th>44</th>
       <th>warning</th>
       <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
     </tr>
@@ -1570,27 +1620,27 @@ easycharge-services                            -      -     152    152</code></p
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th>309</th>
+      <th>288</th>
       <th>warning</th>
       <th>plusieurs infos de réservation pour une même station</th>
     </tr>
     <tr>
-      <th>534</th>
-      <th>warning</th>
-      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
-    </tr>
-    <tr>
-      <th>1204</th>
-      <th>warning</th>
-      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
-    </tr>
-    <tr>
-      <th>1421</th>
+      <th>403</th>
       <th>warning</th>
       <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
     </tr>
     <tr>
-      <th>1831</th>
+      <th>455</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
+    </tr>
+    <tr>
+      <th>806</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
+      <th>835</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -1704,30 +1754,6 @@ easycharge-services                            -      -     152    152</code></p
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th rowspan="6" valign="top">installation-dune-borne-22kwa-hostellerie-des-ducs</th>
-      <th rowspan="5" valign="top">1</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th rowspan="4" valign="top">warning</th>
-      <th>plusieurs horaires pour une même station</th>
-    </tr>
-    <tr>
-      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
-    </tr>
-    <tr>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
-      <th>plusieurs infos de réservation pour une même station</th>
-    </tr>
-    <tr>
-      <th>2</th>
-      <th>warning</th>
-      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
-    </tr>
-    <tr>
       <th>ionity-gmbh</th>
       <th>121</th>
       <th>blocking</th>
@@ -1746,7 +1772,7 @@ easycharge-services                            -      -     152    152</code></p
       <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
     </tr>
     <tr>
-      <th>119</th>
+      <th>118</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
     </tr>
@@ -1756,7 +1782,7 @@ easycharge-services                            -      -     152    152</code></p
       <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
     </tr>
     <tr>
-      <th>6407</th>
+      <th>6411</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -1864,15 +1890,45 @@ easycharge-services                            -      -     152    152</code></p
     </tr>
     <tr>
       <th>mobilize-power-solutions</th>
-      <th>137</th>
+      <th>138</th>
       <th>blocking</th>
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th>morbihan-energies</th>
-      <th>2</th>
+      <th rowspan="7" valign="top">morbihan-energies</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
+    </tr>
+    <tr>
+      <th>3</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
+    </tr>
+    <tr>
+      <th>5</th>
+      <th>warning</th>
+      <th>plusieurs infos de réservation pour une même station</th>
+    </tr>
+    <tr>
+      <th>8</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
+    </tr>
+    <tr>
+      <th>188</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>199</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>398</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
     <tr>
       <th>multiples</th>
@@ -2016,7 +2072,7 @@ easycharge-services                            -      -     152    152</code></p
     </tr>
     <tr>
       <th rowspan="2" valign="top">reseau-alterbase-79</th>
-      <th>18</th>
+      <th>16</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -2127,6 +2183,37 @@ easycharge-services                            -      -     152    152</code></p
       <th>339</th>
       <th>blocking</th>
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
+    </tr>
+    <tr>
+      <th rowspan="6" valign="top">spbr1</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>plusieurs horaires pour une même station</th>
+    </tr>
+    <tr>
+      <th>9</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
+    </tr>
+    <tr>
+      <th>16</th>
+      <th>warning</th>
+      <th>plusieurs infos de réservation pour une même station</th>
+    </tr>
+    <tr>
+      <th>76</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
+    </tr>
+    <tr>
+      <th>805</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>814</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
     </tr>
     <tr>
       <th>spie-citynetworks</th>
@@ -2323,7 +2410,7 @@ easycharge-services                            -      -     152    152</code></p
     </tr>
     <tr>
       <th>zeborne</th>
-      <th>373</th>
+      <th>377</th>
       <th>blocking</th>
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
@@ -2351,14 +2438,14 @@ easycharge-services                            -      -     152    152</code></p
                 
                     
                         <pre><code class="language-python"> EF  |   T2  | Chademo |  CCS  |
-0.00   22.00     0.00     0.00 | 12327 stations
-0.00    7.36     0.00     0.00 | 3082 stations
+0.00   22.00     0.00     0.00 | 12334 stations
+0.00    7.36     0.00     0.00 | 3080 stations
 0.00    3.68     0.00     0.00 | 1593 stations
-0.00    0.00     0.00     0.00 | 1156 stations
-0.00   18.00     0.00     0.00 | 971 stations
+0.00    0.00     0.00     0.00 | 1155 stations
+0.00   18.00     0.00     0.00 | 970 stations
 0.00    0.00     0.00   150.00 | 879 stations
 0.00   22.00     0.00    24.00 | 822 stations
-0.00    7.00     0.00     0.00 | 687 stations
+0.00    7.00     0.00     0.00 | 688 stations
 0.00   22.08     0.00     0.00 | 632 stations
 0.00   22.08     0.00    50.00 | 467 stations
 0.00    7.40     0.00     0.00 | 457 stations
@@ -2368,16 +2455,16 @@ easycharge-services                            -      -     152    152</code></p
 0.00    0.00     0.00    50.00 | 288 stations
 0.00   22.00     0.00    50.00 | 272 stations
 0.00   22.00     0.00    25.00 | 263 stations
-0.00    0.00    22.00     0.00 | 212 stations
+0.00    0.00    22.00     0.00 | 211 stations
 0.00   22.00    50.00   200.00 | 210 stations
 0.00    0.00     0.00   250.00 | 209 stations
 0.00   22.00    50.00   100.00 | 208 stations
 0.00   22.00     0.00   300.00 | 205 stations
 0.00   22.00     0.00   120.00 | 183 stations
 0.00   22.00    50.00    50.00 | 157 stations
+0.00   11.00     0.00     0.00 | 151 stations
 0.00    0.00     0.00   180.00 | 151 stations
 0.00   44.00     0.00    50.00 | 151 stations
-0.00   11.00     0.00     0.00 | 150 stations
 0.00   22.00     0.00    60.00 | 139 stations
 2.30   22.00     0.00     0.00 | 134 stations
 0.00   22.00    25.00    25.00 | 125 stations
@@ -2410,10 +2497,10 @@ easycharge-services                            -      -     152    152</code></p
 0.00    0.00    47.00     0.00 | 29 stations
 0.00    0.00     0.00    44.00 | 25 stations
 0.00   44.00    44.00    50.00 | 24 stations
+0.00    0.00     7.40     0.00 | 24 stations
 0.00   43.00     0.00   100.00 | 24 stations
 2.30   11.00     0.00     0.00 | 23 stations
 0.00   22.00    50.00   160.00 | 23 stations
-0.00    0.00     7.40     0.00 | 23 stations
 0.00    0.00    54.00   300.00 | 23 stations
 0.00    0.00    54.00     0.00 | 22 stations
 0.00    0.00    54.00   150.00 | 22 stations
@@ -2422,7 +2509,7 @@ easycharge-services                            -      -     152    152</code></p
 0.00    0.00    11.00     0.00 | 18 stations
 0.00   43.00    50.00   300.00 | 17 stations
 0.00    0.00     0.00    60.00 | 17 stations
-0.00   22.00     0.00   160.00 | 16 stations
+0.00   22.00     0.00   160.00 | 17 stations
 0.00    0.00     0.00   320.00 | 16 stations
 0.00    3.70     0.00     0.00 | 14 stations
 0.00   44.00    50.00    50.00 | 14 stations
@@ -2466,7 +2553,6 @@ easycharge-services                            -      -     152    152</code></p
 0.00    0.00     0.00   350.00 | 5 stations
 0.00   22.00     0.00    80.00 | 5 stations
 3.00    0.00    50.00    50.00 | 5 stations
-0.00    0.00     0.00   160.00 | 5 stations
 0.00   14.00     0.00     0.00 | 5 stations
 0.00   22.00    50.00   400.00 | 4 stations
 0.00    0.00     0.00    75.00 | 4 stations
@@ -2481,6 +2567,7 @@ easycharge-services                            -      -     152    152</code></p
 0.00   22.00    50.00    80.00 | 4 stations
 0.00   43.00    50.00   100.00 | 4 stations
 0.00   22.00     0.00    54.00 | 4 stations
+0.00    0.00     0.00   160.00 | 4 stations
 0.00    7.00     0.00    50.00 | 4 stations
 2.30    7.36     0.00     0.00 | 3 stations
 0.00   43.00    50.00   160.00 | 3 stations
@@ -2646,7 +2733,7 @@ easycharge-services                            -      -     152    152</code></p
     </main>
     <footer class="container report-container report-foot">
         <small>
-            <p>Généré le 2025-01-22 06:54:34 UTC</p>
+            <p>Généré le 2025-01-23 06:54:37 UTC</p>
         </small>
     </footer>
     <script src='assets/prism.js'></script>
