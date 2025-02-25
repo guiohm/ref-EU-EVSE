@@ -18,7 +18,7 @@
             <li>
                 <hgroup>
                     <h1>Rapport de run Jungle-Bus Group IRVE OpenData</h1>
-                    <p>2025-02-24 06:54:44 UTC</p>
+                    <p>2025-02-25 06:54:45 UTC</p>
                 </hgroup>
             </li>
         </ul>
@@ -123,10 +123,10 @@
                     
                         <pre><code class="language-python">124511 lignes (PDCs) en entrée | 9707 PDCs en double
 30112 stations reconnues sur 50693 station_id distincts en entrée
-57503 problèmes trouvés pour 114804 PDCs distincts en entrée (il peut exister plusieurs problèmes par PDC/station):
+57502 problèmes trouvés pour 114804 PDCs distincts en entrée (il peut exister plusieurs problèmes par PDC/station):
  &gt; [blocking] 38793 x le format de l&#39;identifiant ref:EU:EVSE (id_station_itinerance) n&#39;est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l&#39;analyse Osmose
  &gt;    [error]   254 x aucun type de prise précisé sur l&#39;ensemble des points de charge
- &gt;    [error] 10232 x le nombre de point de charge de la station n&#39;est pas cohérent avec la liste des points de charge fournie
+ &gt;    [error] 10231 x le nombre de point de charge de la station n&#39;est pas cohérent avec la liste des points de charge fournie
  &gt;    [error]  1437 x plusieurs sources pour un même id
  &gt;  [warning]   236 x le champ station_deux_roues n&#39;est pas valide
  &gt;  [warning]   751 x le numéro de téléphone de l&#39;opérateur (telephone_operateur) est dans un format invalide
@@ -142,19 +142,20 @@
 
 Severité
 blocking    38793
-error       11923
+error       11922
 warning      6787
 
 Top 25 Organisations les plus problematiques:
 
 Sévérité                                           blocking  error warning  TOTAL
 Organisation                                                                     
-TOTAL                                                 38793  11923    6787  57503
+TOTAL                                                 38793  11922    6787  57502
 alize-charge                                          17045      -       -  17045
-eco-movement                                          11422     24      35  11481
-izivia                                                    -   6598     815   7413
-gireve-2                                                196   1634    2716   4546
+eco-movement                                          11422      -       -  11422
+izivia                                                    -   6597     815   7412
 lidl                                                   4111      -       -   4111
+gireve-2                                                196    751    1456   2403
+spbr1                                                     -    795     904   1699
 multiples                                                 -   1437       -   1437
 le-reseau-de-recharge-pour-vehicules-electrique...        -    177     760    937
 rossini-energy                                          846      -       -    846
@@ -162,19 +163,18 @@ allego-1                                                650      -       -    65
 syndicat-departemental-denergie-du-tarn                 634      -       -    634
 bump                                                    577      -       -    577
 soregies                                                488      -      87    575
-totalenergies-marketing-france                          232     25     306    563
+totalenergies-marketing-france                          232     26     308    566
 engie-mobilites-electriques                               -    263     281    544
 driveco                                                   -    322     213    535
 qovoltis                                                  -    233     232    465
+syndicat-intercommunal-delectricite-et-de-gaz-d...        -     90     369    459
 ev-cars                                                   -     63     334    397
 virta                                                   376      2       -    378
 zeborne                                                 373      -       -    373
 sowatt-solutions                                        343      -       -    343
 evzen-smeg-developpement                                  -      4     263    267
 ubitricity                                              257      -       -    257
-plus-de-bornes                                            -    201      13    214
-sieml                                                     -    209       -    209
-mobilize-power-solutions                                197      -       -    197</code></pre>
+plus-de-bornes                                            -    201      13    214</code></pre>
                     
                 
                 </details>
@@ -211,9 +211,9 @@ mobilize-power-solutions                                197      -       -    19
     <tr>
       <th>TOTAL</th>
       <td>38793</td>
-      <td>11923</td>
+      <td>11922</td>
       <td>6787</td>
-      <td>57503</td>
+      <td>57502</td>
     </tr>
     <tr>
       <th>alize-charge</th>
@@ -225,23 +225,16 @@ mobilize-power-solutions                                197      -       -    19
     <tr>
       <th>eco-movement</th>
       <td>11422</td>
-      <td>24</td>
-      <td>35</td>
-      <td>11481</td>
+      <td>-</td>
+      <td>-</td>
+      <td>11422</td>
     </tr>
     <tr>
       <th>izivia</th>
       <td>-</td>
-      <td>6598</td>
+      <td>6597</td>
       <td>815</td>
-      <td>7413</td>
-    </tr>
-    <tr>
-      <th>gireve-2</th>
-      <td>196</td>
-      <td>1634</td>
-      <td>2716</td>
-      <td>4546</td>
+      <td>7412</td>
     </tr>
     <tr>
       <th>lidl</th>
@@ -249,6 +242,20 @@ mobilize-power-solutions                                197      -       -    19
       <td>-</td>
       <td>-</td>
       <td>4111</td>
+    </tr>
+    <tr>
+      <th>gireve-2</th>
+      <td>196</td>
+      <td>751</td>
+      <td>1456</td>
+      <td>2403</td>
+    </tr>
+    <tr>
+      <th>spbr1</th>
+      <td>-</td>
+      <td>795</td>
+      <td>904</td>
+      <td>1699</td>
     </tr>
     <tr>
       <th>multiples</th>
@@ -302,9 +309,9 @@ mobilize-power-solutions                                197      -       -    19
     <tr>
       <th>totalenergies-marketing-france</th>
       <td>232</td>
-      <td>25</td>
-      <td>306</td>
-      <td>563</td>
+      <td>26</td>
+      <td>308</td>
+      <td>566</td>
     </tr>
     <tr>
       <th>engie-mobilites-electriques</th>
@@ -326,6 +333,13 @@ mobilize-power-solutions                                197      -       -    19
       <td>233</td>
       <td>232</td>
       <td>465</td>
+    </tr>
+    <tr>
+      <th>syndicat-intercommunal-delectricite-et-de-gaz-du-puy-de-dome-irve</th>
+      <td>-</td>
+      <td>90</td>
+      <td>369</td>
+      <td>459</td>
     </tr>
     <tr>
       <th>ev-cars</th>
@@ -468,18 +482,25 @@ mobilize-power-solutions                                197      -       -    19
       <td>103</td>
     </tr>
     <tr>
-      <th>regie-services-energie-irve</th>
-      <td>-</td>
-      <td>19</td>
-      <td>72</td>
-      <td>91</td>
-    </tr>
-    <tr>
       <th>e-totem</th>
       <td>-</td>
       <td>24</td>
       <td>52</td>
       <td>76</td>
+    </tr>
+    <tr>
+      <th>e-vadea</th>
+      <td>-</td>
+      <td>16</td>
+      <td>59</td>
+      <td>75</td>
+    </tr>
+    <tr>
+      <th>allego</th>
+      <td>-</td>
+      <td>25</td>
+      <td>36</td>
+      <td>61</td>
     </tr>
     <tr>
       <th>plenitude-on-the-road</th>
@@ -594,17 +615,17 @@ mobilize-power-solutions                                197      -       -    19
       <td>16</td>
     </tr>
     <tr>
-      <th>bornevo</th>
-      <td>15</td>
-      <td>-</td>
-      <td>-</td>
-      <td>15</td>
-    </tr>
-    <tr>
       <th>citeos-ingenierie-idf-est-cogelum-idf</th>
       <td>-</td>
       <td>13</td>
       <td>2</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>bornevo</th>
+      <td>15</td>
+      <td>-</td>
+      <td>-</td>
       <td>15</td>
     </tr>
     <tr>
@@ -615,13 +636,6 @@ mobilize-power-solutions                                197      -       -    19
       <td>14</td>
     </tr>
     <tr>
-      <th>sodel</th>
-      <td>13</td>
-      <td>-</td>
-      <td>-</td>
-      <td>13</td>
-    </tr>
-    <tr>
       <th>r3</th>
       <td>-</td>
       <td>-</td>
@@ -629,17 +643,24 @@ mobilize-power-solutions                                197      -       -    19
       <td>13</td>
     </tr>
     <tr>
-      <th>voltania</th>
+      <th>sodel</th>
+      <td>13</td>
       <td>-</td>
-      <td>9</td>
-      <td>3</td>
-      <td>12</td>
+      <td>-</td>
+      <td>13</td>
     </tr>
     <tr>
       <th>sas-satcoms</th>
       <td>12</td>
       <td>-</td>
       <td>-</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>voltania</th>
+      <td>-</td>
+      <td>9</td>
+      <td>3</td>
       <td>12</td>
     </tr>
     <tr>
@@ -650,17 +671,17 @@ mobilize-power-solutions                                197      -       -    19
       <td>12</td>
     </tr>
     <tr>
-      <th>tesla-motors</th>
-      <td>-</td>
-      <td>10</td>
-      <td>-</td>
-      <td>10</td>
-    </tr>
-    <tr>
       <th>jerecharge-com</th>
       <td>-</td>
       <td>2</td>
       <td>8</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>tesla-motors</th>
+      <td>-</td>
+      <td>10</td>
+      <td>-</td>
       <td>10</td>
     </tr>
     <tr>
@@ -678,11 +699,11 @@ mobilize-power-solutions                                197      -       -    19
       <td>9</td>
     </tr>
     <tr>
-      <th>territoire-denergie-orne</th>
-      <td>-</td>
+      <th>i-bornes</th>
+      <td>1</td>
       <td>4</td>
-      <td>5</td>
-      <td>9</td>
+      <td>3</td>
+      <td>8</td>
     </tr>
     <tr>
       <th>charge-in</th>
@@ -699,13 +720,6 @@ mobilize-power-solutions                                197      -       -    19
       <td>8</td>
     </tr>
     <tr>
-      <th>i-bornes</th>
-      <td>1</td>
-      <td>4</td>
-      <td>3</td>
-      <td>8</td>
-    </tr>
-    <tr>
       <th>see-you-sun</th>
       <td>7</td>
       <td>-</td>
@@ -713,10 +727,24 @@ mobilize-power-solutions                                197      -       -    19
       <td>7</td>
     </tr>
     <tr>
+      <th>syndicat-intercommunal-de-lelectricite-et-du-gaz-de-leure</th>
+      <td>2</td>
+      <td>4</td>
+      <td>-</td>
+      <td>6</td>
+    </tr>
+    <tr>
       <th>nexteneo</th>
       <td>-</td>
       <td>6</td>
       <td>-</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>territoire-denergie-orne</th>
+      <td>-</td>
+      <td>3</td>
+      <td>3</td>
       <td>6</td>
     </tr>
     <tr>
@@ -727,13 +755,6 @@ mobilize-power-solutions                                197      -       -    19
       <td>6</td>
     </tr>
     <tr>
-      <th>syndicat-intercommunal-de-lelectricite-et-du-gaz-de-leure</th>
-      <td>2</td>
-      <td>4</td>
-      <td>-</td>
-      <td>6</td>
-    </tr>
-    <tr>
       <th>2ems</th>
       <td>3</td>
       <td>1</td>
@@ -741,9 +762,9 @@ mobilize-power-solutions                                197      -       -    19
       <td>5</td>
     </tr>
     <tr>
-      <th>allcoms-technologies</th>
-      <td>5</td>
-      <td>-</td>
+      <th>inouid-smart-mobility</th>
+      <td>3</td>
+      <td>2</td>
       <td>-</td>
       <td>5</td>
     </tr>
@@ -755,21 +776,21 @@ mobilize-power-solutions                                197      -       -    19
       <td>5</td>
     </tr>
     <tr>
-      <th>inouid-smart-mobility</th>
-      <td>3</td>
-      <td>2</td>
+      <th>allcoms-technologies</th>
+      <td>5</td>
+      <td>-</td>
       <td>-</td>
       <td>5</td>
     </tr>
     <tr>
-      <th>eranovum-e-mobility-france</th>
+      <th>indelec-mobility</th>
       <td>4</td>
       <td>-</td>
       <td>-</td>
       <td>4</td>
     </tr>
     <tr>
-      <th>kap-enerj</th>
+      <th>area-tech</th>
       <td>4</td>
       <td>-</td>
       <td>-</td>
@@ -804,14 +825,14 @@ mobilize-power-solutions                                197      -       -    19
       <td>4</td>
     </tr>
     <tr>
-      <th>area-tech</th>
+      <th>kap-enerj</th>
       <td>4</td>
       <td>-</td>
       <td>-</td>
       <td>4</td>
     </tr>
     <tr>
-      <th>indelec-mobility</th>
+      <th>eranovum-e-mobility-france</th>
       <td>4</td>
       <td>-</td>
       <td>-</td>
@@ -825,17 +846,17 @@ mobilize-power-solutions                                197      -       -    19
       <td>3</td>
     </tr>
     <tr>
-      <th>enerjump</th>
-      <td>3</td>
-      <td>-</td>
-      <td>-</td>
-      <td>3</td>
-    </tr>
-    <tr>
       <th>kallista-bdr</th>
       <td>-</td>
       <td>1</td>
       <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>enerjump</th>
+      <td>3</td>
+      <td>-</td>
+      <td>-</td>
       <td>3</td>
     </tr>
     <tr>
@@ -867,7 +888,7 @@ mobilize-power-solutions                                197      -       -    19
       <td>2</td>
     </tr>
     <tr>
-      <th>ma-borne-auto-bordeaux</th>
+      <th>philippi</th>
       <td>-</td>
       <td>1</td>
       <td>1</td>
@@ -888,10 +909,10 @@ mobilize-power-solutions                                197      -       -    19
       <td>2</td>
     </tr>
     <tr>
-      <th>allego</th>
+      <th>citeos-poitiers</th>
+      <td>2</td>
       <td>-</td>
-      <td>1</td>
-      <td>1</td>
+      <td>-</td>
       <td>2</td>
     </tr>
     <tr>
@@ -902,28 +923,14 @@ mobilize-power-solutions                                197      -       -    19
       <td>2</td>
     </tr>
     <tr>
-      <th>lg-electricite</th>
-      <td>2</td>
+      <th>ma-borne-auto-bordeaux</th>
       <td>-</td>
-      <td>-</td>
+      <td>1</td>
+      <td>1</td>
       <td>2</td>
     </tr>
     <tr>
       <th>wellborne</th>
-      <td>2</td>
-      <td>-</td>
-      <td>-</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>swish</th>
-      <td>2</td>
-      <td>-</td>
-      <td>-</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>startn-move-1</th>
       <td>2</td>
       <td>-</td>
       <td>-</td>
@@ -937,6 +944,20 @@ mobilize-power-solutions                                197      -       -    19
       <td>2</td>
     </tr>
     <tr>
+      <th>swish</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>spie-citynetworks</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
       <th>snmg2e</th>
       <td>2</td>
       <td>-</td>
@@ -944,10 +965,10 @@ mobilize-power-solutions                                197      -       -    19
       <td>2</td>
     </tr>
     <tr>
-      <th>philippi</th>
+      <th>startn-move-1</th>
+      <td>2</td>
       <td>-</td>
-      <td>1</td>
-      <td>1</td>
+      <td>-</td>
       <td>2</td>
     </tr>
     <tr>
@@ -965,17 +986,17 @@ mobilize-power-solutions                                197      -       -    19
       <td>2</td>
     </tr>
     <tr>
+      <th>lg-electricite</th>
+      <td>2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2</td>
+    </tr>
+    <tr>
       <th>la-borne-electrique</th>
       <td>-</td>
       <td>1</td>
       <td>1</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>spie-citynetworks</th>
-      <td>2</td>
-      <td>-</td>
-      <td>-</td>
       <td>2</td>
     </tr>
     <tr>
@@ -986,7 +1007,7 @@ mobilize-power-solutions                                197      -       -    19
       <td>2</td>
     </tr>
     <tr>
-      <th>citeos-poitiers</th>
+      <th>guillaume</th>
       <td>2</td>
       <td>-</td>
       <td>-</td>
@@ -994,13 +1015,6 @@ mobilize-power-solutions                                197      -       -    19
     </tr>
     <tr>
       <th>peretti-groupe</th>
-      <td>2</td>
-      <td>-</td>
-      <td>-</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>guillaume</th>
       <td>2</td>
       <td>-</td>
       <td>-</td>
@@ -1021,14 +1035,21 @@ mobilize-power-solutions                                197      -       -    19
       <td>1</td>
     </tr>
     <tr>
-      <th>l2b-lorette-beaucamp-bonnet</th>
+      <th>chargepoly</th>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>lamia-jp</th>
       <td>-</td>
       <td>1</td>
       <td>-</td>
       <td>1</td>
     </tr>
     <tr>
-      <th>lamia-jp</th>
+      <th>l2b-lorette-beaucamp-bonnet</th>
       <td>-</td>
       <td>1</td>
       <td>-</td>
@@ -1084,10 +1105,10 @@ mobilize-power-solutions                                197      -       -    19
       <td>1</td>
     </tr>
     <tr>
-      <th>chargepoly</th>
-      <td>-</td>
-      <td>-</td>
+      <th>rsb-zni-non-parking-camping-supervision-non</th>
       <td>1</td>
+      <td>-</td>
+      <td>-</td>
       <td>1</td>
     </tr>
     <tr>
@@ -1105,6 +1126,13 @@ mobilize-power-solutions                                197      -       -    19
       <td>1</td>
     </tr>
     <tr>
+      <th>neogroup-consulting</th>
+      <td>-</td>
+      <td>-</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
       <th>mdg-fibre-sas</th>
       <td>1</td>
       <td>-</td>
@@ -1112,17 +1140,10 @@ mobilize-power-solutions                                197      -       -    19
       <td>1</td>
     </tr>
     <tr>
-      <th>rsb-zni-non-parking-camping-supervision-non</th>
-      <td>1</td>
-      <td>-</td>
+      <th>regie-services-energie-irve</th>
       <td>-</td>
       <td>1</td>
-    </tr>
-    <tr>
-      <th>neogroup-consulting</th>
       <td>-</td>
-      <td>-</td>
-      <td>1</td>
       <td>1</td>
     </tr>
     <tr>
@@ -1205,14 +1226,20 @@ mobilize-power-solutions                                197      -       -    19
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th rowspan="2" valign="top">allego</th>
-      <th rowspan="2" valign="top">1</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+      <th rowspan="3" valign="top">allego</th>
+      <th>14</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
     </tr>
     <tr>
+      <th>22</th>
       <th>warning</th>
       <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>25</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
       <th>allego-1</th>
@@ -1426,6 +1453,31 @@ mobilize-power-solutions                                197      -       -    19
       <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
     </tr>
     <tr>
+      <th rowspan="5" valign="top">e-vadea</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
+    </tr>
+    <tr>
+      <th>10</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">16</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>32</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
       <th>easycharge-services</th>
       <th>165</th>
       <th>warning</th>
@@ -1438,22 +1490,7 @@ mobilize-power-solutions                                197      -       -    19
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th rowspan="4" valign="top">eco-movement</th>
-      <th>14</th>
-      <th>warning</th>
-      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
-    </tr>
-    <tr>
-      <th>21</th>
-      <th>warning</th>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
-      <th>24</th>
-      <th>error</th>
-      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
+      <th>eco-movement</th>
       <th>11422</th>
       <th>blocking</th>
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
@@ -1546,7 +1583,7 @@ mobilize-power-solutions                                197      -       -    19
     </tr>
     <tr>
       <th rowspan="11" valign="top">gireve-2</th>
-      <th>3</th>
+      <th>2</th>
       <th>warning</th>
       <th>plusieurs horaires pour une même station</th>
     </tr>
@@ -1556,24 +1593,24 @@ mobilize-power-solutions                                197      -       -    19
       <th>aucun type de prise précisé sur l'ensemble des points de charge</th>
     </tr>
     <tr>
-      <th>14</th>
-      <th>warning</th>
-      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
-    </tr>
-    <tr>
-      <th>18</th>
+      <th>10</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
     </tr>
     <tr>
-      <th>87</th>
+      <th>13</th>
       <th>warning</th>
-      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
+      <th>plusieurs infos de paiement (paiement_acte) pour une même station</th>
     </tr>
     <tr>
-      <th>112</th>
+      <th>23</th>
       <th>warning</th>
       <th>plusieurs infos de réservation pour une même station</th>
+    </tr>
+    <tr>
+      <th>77</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
     </tr>
     <tr>
       <th>196</th>
@@ -1581,22 +1618,22 @@ mobilize-power-solutions                                197      -       -    19
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th>564</th>
-      <th>warning</th>
-      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
-    </tr>
-    <tr>
-      <th>808</th>
-      <th>warning</th>
-      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
-    </tr>
-    <tr>
-      <th>1110</th>
+      <th>217</th>
       <th>warning</th>
       <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
     </tr>
     <tr>
-      <th>1630</th>
+      <th>484</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
+    </tr>
+    <tr>
+      <th>630</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
+      <th>747</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -1761,7 +1798,7 @@ mobilize-power-solutions                                197      -       -    19
       <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
     </tr>
     <tr>
-      <th>6598</th>
+      <th>6597</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -2059,23 +2096,10 @@ mobilize-power-solutions                                197      -       -    19
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th rowspan="4" valign="top">regie-services-energie-irve</th>
-      <th rowspan="2" valign="top">18</th>
-      <th rowspan="2" valign="top">warning</th>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
-      <th>plusieurs infos de réservation pour une même station</th>
-    </tr>
-    <tr>
-      <th>19</th>
+      <th>regie-services-energie-irve</th>
+      <th>1</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
-    </tr>
-    <tr>
-      <th>36</th>
-      <th>warning</th>
-      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
     <tr>
       <th rowspan="2" valign="top">reseau-alterbase-79</th>
@@ -2202,6 +2226,37 @@ mobilize-power-solutions                                197      -       -    19
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
+      <th rowspan="6" valign="top">spbr1</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>plusieurs horaires pour une même station</th>
+    </tr>
+    <tr>
+      <th>8</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise T2 supérieure à la norme (43)</th>
+    </tr>
+    <tr>
+      <th>16</th>
+      <th>warning</th>
+      <th>plusieurs infos de réservation pour une même station</th>
+    </tr>
+    <tr>
+      <th>75</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
+    </tr>
+    <tr>
+      <th>795</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th>804</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
       <th>spie-citynetworks</th>
       <th>2</th>
       <th>blocking</th>
@@ -2297,6 +2352,30 @@ mobilize-power-solutions                                197      -       -    19
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
+      <th rowspan="5" valign="top">syndicat-intercommunal-delectricite-et-de-gaz-du-puy-de-dome-irve</th>
+      <th>5</th>
+      <th>warning</th>
+      <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
+    </tr>
+    <tr>
+      <th>90</th>
+      <th>error</th>
+      <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">91</th>
+      <th rowspan="2" valign="top">warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
+      <th>plusieurs infos de réservation pour une même station</th>
+    </tr>
+    <tr>
+      <th>182</th>
+      <th>warning</th>
+      <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
+    </tr>
+    <tr>
       <th>tenao60</th>
       <th>4</th>
       <th>error</th>
@@ -2309,13 +2388,8 @@ mobilize-power-solutions                                197      -       -    19
       <th>le format de l'identifiant ref:EU:EVSE (id_station_itinerance) n'est pas valide. Ce point de charge est ignoré et sa station ne sera pas présente dans l'analyse Osmose</th>
     </tr>
     <tr>
-      <th rowspan="3" valign="top">territoire-denergie-orne</th>
-      <th>1</th>
-      <th>warning</th>
-      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
-    </tr>
-    <tr>
-      <th rowspan="2" valign="top">4</th>
+      <th rowspan="2" valign="top">territoire-denergie-orne</th>
+      <th rowspan="2" valign="top">3</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -2330,7 +2404,12 @@ mobilize-power-solutions                                197      -       -    19
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
     <tr>
-      <th rowspan="7" valign="top">totalenergies-marketing-france</th>
+      <th rowspan="8" valign="top">totalenergies-marketing-france</th>
+      <th>1</th>
+      <th>warning</th>
+      <th>plusieurs infos de paiement (paiement_cb) pour une même station</th>
+    </tr>
+    <tr>
       <th>2</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise EF supérieure à la norme (4)</th>
@@ -2341,7 +2420,7 @@ mobilize-power-solutions                                197      -       -    19
       <th>plusieurs horaires pour une même station</th>
     </tr>
     <tr>
-      <th>25</th>
+      <th>26</th>
       <th>error</th>
       <th>le nombre de point de charge de la station n'est pas cohérent avec la liste des points de charge fournie</th>
     </tr>
@@ -2356,7 +2435,7 @@ mobilize-power-solutions                                197      -       -    19
       <th>plusieurs infos d'accessibilité PMR (accessibilite_pmr) pour une même station</th>
     </tr>
     <tr>
-      <th>180</th>
+      <th>181</th>
       <th>warning</th>
       <th>puissance nominale déclarée pour prise CHADEMO supérieure à la norme (63)</th>
     </tr>
@@ -2732,7 +2811,7 @@ mobilize-power-solutions                                197      -       -    19
     </main>
     <footer class="container report-container report-foot">
         <small>
-            <p>Généré le 2025-02-24 06:54:44 UTC</p>
+            <p>Généré le 2025-02-25 06:54:45 UTC</p>
         </small>
     </footer>
     <script src='assets/prism.js'></script>
