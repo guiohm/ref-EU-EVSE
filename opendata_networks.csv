@@ -42,6 +42,7 @@ Allego,Klépierre
 Altensys | FR*ALS,Altensys
 Atlante | FR*ATL,Atlante
 Autel Netherlands B.V. | FR*AUT,AUTEL EUROPE GmbH
+Avia Picoty | FR*PY2,Avia Picoty
 Aéroports de la Côte d'Azur | FR*ACA,Aéroports de la Côte d'Azur
 BE CHARGE,PLENITUDE on the road
 BIARS DISTRIBUTION,E. Leclerc
@@ -55,6 +56,7 @@ ChargePoint Austria GmbH | FR*CG0,ChargeGuru
 ChargePoint Austria GmbH | FR*CG0,RAIDEN SAS (ChargeGuru)
 DRIVECO,DRIVECO
 Dropnplug | FR*DNP,Dropnplug
+E-Motum | FR*EMO,e-Motum
 E-TOTEM,HYPER U AIZENAY
 E-TOTEM,HYPER U BLAIN
 E-TOTEM,HYPER U PONT DE BEAUVOISIN
@@ -110,7 +112,6 @@ EVzen (SMEG Développement),Simone
 EVzen (SMEG Développement),larecharge
 Easy Charge | FR*ECH,Easy Charge
 Easycharge services,Easycharge services
-Ekoplug,aucun
 Electra,Electra
 Electromaps,Ameublement Rognon
 Electromaps,Aubade - Comptoir des Fers
@@ -119,10 +120,12 @@ Electromaps,ECOPARK 5
 Electromaps,Electromaps
 Electromaps,I-Bornes
 Electromaps,Le COTONNIER NIEPPE
+Enerstock | FR*ENT,Enerstock
 Etablissement Combes,Etablissement Combes
 Evadea | FR*EVA,E-VADEA
 FAROAD,TEV
 Faroad | FR*EVE,FAROAD
+Freshmile,Freshmile
 Freshmile,Morbihan Energies
 Freshmile,Réseau de recharge DOMAINE DES BUFFLONNES
 Freshmile,Touquet Normal
@@ -169,7 +172,6 @@ GREENSPOT,CREDIT AGRICOLE SAINT ANDRE DE CUBZAC
 GREENSPOT,CREDIT AGRICOLE TARNOS
 GREENSPOT,Château Les Ormes de Pez
 GREENSPOT,Château Pey la Tour
-GREENSPOT,DOMAINE LA FONTAINE
 GREENSPOT,E. REMY & CIE
 GREENSPOT,GREENSPOT
 GREENSPOT,HOTEL LA ROBEYERE
@@ -623,6 +625,7 @@ TotalEnergies, SAMSE - GRENOBLE
 TotalEnergies, VIKINGS CASINO BUSSANG
 Virta,Groupama supports et services 
 Virta,Réseau de recharge Virta Public
+Voltalia Mobility | FR*USC,Yusco
 WAAT SAS | FR*W11,WAAT
 WAAT SAS | FR*WA1,WAAT
 WAAT SAS | FR*WA2,WAAT
