@@ -6,6 +6,8 @@ nom_operateur,nom_enseigne
 ,CPO CITEOS Mobive
 ,EPGML
 ,ESPACE CARROSSERIE DIJON
+,HOTEL SAINT FERREOL
+,ITM AUBIGNY SUR NERE
 ,ITM AUZANCES
 ,ITM BELLEU
 ,ITM BRASSAC LES MINES
@@ -16,6 +18,8 @@ nom_operateur,nom_enseigne
 ,ITM GUERIGNY
 ,ITM LAMORLAYE 
 ,ITM MONTLUCON
+,ITM NANTEUIL LE HAUDOUIN
+,ITM NEVERS
 ,ITM PIERRE DE BRESSE 
 ,ITM SAINT DIZIER
 ,ITM ST GEORGES DE MONS
@@ -87,7 +91,10 @@ E-TOTEM,SUPER U VIVONNE
 E-TOTEM,U EXPRESS MONTREDON
 E-TOTEM,U Express Saint Jean Du Gard
 E.Leclerc | FR*LE2,Leclerc
+EASYCHARGE,AVIA VOLT
+EASYCHARGE,AVIA VOLT by Easy Charge
 EKLEO,RÃ©seau EKLEO Montlouis sur Loire
+ELECTRIC 55 CHARGING,ELECTRIC 55 CHARGING
 ENERJUMP,Watt'up
 EV MAP,CAMPING LE PALACE
 EV MAP,Camping la Boutinardière
@@ -116,7 +123,7 @@ Eiffage Energie Systèmes | FR*WGO,We-Go
 Electra,Electra
 Electromaps,Ameublement Rognon
 Electromaps,Aubade - Comptoir des Fers
-Electromaps,Domaine de Fompeyre
+Electromaps,Carrefour Contact 
 Electromaps,ECOPARK 5
 Electromaps,Electromaps
 Electromaps,I-Bornes
@@ -219,6 +226,7 @@ HAEFELI,Réseau IRVE TE90
 IDEX SOLAR CHARGING STATIONS,Réseau de recharge Idex
 INOUID,Caliceo Sainte Cyr Public
 INOUID,Caliceo Sainte Foy Public
+Izivia, EARL THIBAUT LE CHEMIN VERT
 Izivia,ACC HUSSE
 Izivia,ADVANCED CONFORT SYSTEMS
 Izivia,AEROPORTS DE LYON
@@ -495,7 +503,6 @@ ProperPhi,PROPERPHI
 Proviridis | FR*PVD,Proviridis
 QOVOLTIS,LABODENT
 QOVOLTIS,QOVOLTIS
-QoWatt,QoWatt
 R3,R3
 Road | FR*EFL,Road
 Royal Champagne,Royal Champagne Hotel & Spa
@@ -659,6 +666,7 @@ Zephyre SAS,GHO Sophia Antipolis
 Zephyre SAS,Garage Beaudouin
 Zephyre SAS,Garage Chambault SARL 
 Zephyre SAS,Garage Gois Automobiles
+Zephyre SAS,Garage MECANIQUE 2000
 Zephyre SAS,Hostellerie Moulin des Ruats
 Zephyre SAS,Hotel - Les Fermes de Marie
 Zephyre SAS,Hôtel & Restaurant ARGI-EDER
@@ -731,7 +739,6 @@ Zephyre SAS,UNICAP - Garage Croix St Ladre
 Zephyre SAS,UNICAP - Garage Gois Automobiles
 Zephyre SAS,UNICAP - Garage Horizon Automobiles
 Zephyre SAS,UNICAP - Garage Pochet
-Zephyre SAS,UNICAP - Garage des 2 Caps
 Zephyre SAS,UNICAP - LOUE AUTOMOBILES
 Zephyre SAS,UNICAP - SARL DU COLOMBIER
 Zephyre SAS, Logis Hôtel la Ferme des Mares
