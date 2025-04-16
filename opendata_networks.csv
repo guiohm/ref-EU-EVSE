@@ -219,7 +219,6 @@ GreenFlux Assets B.V. | FR*EVZ,ENGIE MAMP - Bornes publiques
 GreenFlux Assets B.V. | FR*EVZ,EVzen
 GreenFlux Assets B.V. | FR*EVZ,Norauto - Bornes publiques
 GreenFlux Assets B.V. | FR*EVZ,SOMIMAR - Bornes publiques
-GreenYellow | FR*GYM,GreenYellow Shift Mobility
 Greenflux,ENGIE Vianeo
 HABT,Hotel Ibis Styles Toulouse Blagnac Aéroport
 HAEFELI,Réseau IRVE TE90
@@ -453,7 +452,6 @@ LMS,PARTAGE MA BORNE
 LMS Informatique,LMS Informatique
 Leclerc Millau,Leclerc Millau
 Mob-Energy | FR*MEI,Mob-Energy
-Mobilize Fast Charge France | FR*MFC,Mobilize Fast Charge
 Mobilygreen | FR*MW1,Mobilygreen CPO
 Mobilygreen | FR*VIS,ENRGETICA
 Morbihan énergies | FR*S56,Mobilité électrique 56
@@ -502,7 +500,6 @@ Plageco Distribution,E. Leclerc
 Plageco Distribution,Leclerc Express Labouheyre
 Power Dot France,Power Dot France
 ProperPhi,PROPERPHI
-Proviridis | FR*PVD,Proviridis
 QOVOLTIS,LABODENT
 QOVOLTIS,QOVOLTIS
 R3,R3
@@ -539,13 +536,13 @@ Syndicat Départemental d'Énergies de l'Yonne (SDEY89) | FR*S89,SDEY
 Syndicat Départemental d'Énergies du Gers (SDEG) | FR*S32,SDEG32
 Syndicat Départemental Énergie Aube (SDEA) | FR*S10,SDEA 10
 Syndicat Intercommunal d'Electricité de Côte d'Or (SICECO21) | FR*S21,SICECO
-Syndicat Intercommunal d'Electricité et de Gaz du Puy-de-Dôme (SIEG) | FR*S63,SIEG 63
 Syndicat Mixte Départemental d'Énergies du Calvados (SDEC Énergie) | FR*S14,MobiSDEC
 Syndicat d'Energie et des Déchets de la Marne (SDED52) | FR*S52,SDED52
 Syndicat intercommunal d'énergie du département de la Haute-Saône | FR*S70,SIED70
 Syndicat mixte d'Électricité du Doubs (SYDED) | FR*S25,SYDED
 Séolis,AlterBase
 TANAY Electricité,Riviera Car Center
+TERRITOIRE D'ENERGIE DU PUY-DE-DOME (TE 63) | FR*S63,SIEG 63
 TESLA France SARL,TESLA France SARL
 TEVGO,61mobility
 Territoire d'Energie 90 (TE90) | FR*S90,TE90
@@ -645,6 +642,7 @@ WAAT SAS | FR*WA7,WAAT
 WAAT SAS | FR*WA9,WAAT
 WAAT SAS | FR*WAT,WAAT
 WattzHub | FR*SMI,WattzHub
+Z-E-N | FR*PVD,Proviridis
 Zephyre SAS,AR Duen
 Zephyre SAS,Airria
 Zephyre SAS,Best Hotel Mayenne
